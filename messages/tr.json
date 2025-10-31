@@ -1,0 +1,106 @@
+{
+  "common": {
+    "company_name": "Msaddi",
+    "slogan": "Dijital Başarınızda Ortağınız",
+    "learn_more": "Daha Fazla Bilgi",
+    "contact_us": "Bize Ulaşın",
+    "get_started": "Başlayın",
+    "back_home": "Ana Sayfaya Dön"
+  },
+  "nav": {
+    "home": "Ana Sayfa",
+    "about": "Hakkımızda",
+    "services": "Hizmetler",
+    "contact": "İletişim"
+  },
+  "home": {
+    "hero_title": "Msaddi'ye Hoş Geldiniz",
+    "hero_subtitle": "İşinizi büyütmek için kapsamlı teknoloji çözümleri",
+    "hero_description": "Web sitesi ve uygulama geliştirme ve dijital dönüşüm çözümlerinde uzmanız",
+    "why_us_title": "Neden Msaddi?",
+    "why_us_subtitle": "Yüksek kalitede en iyi hizmetleri sunuyoruz",
+    "feature_1_title": "Geniş Deneyim",
+    "feature_1_desc": "10 yıldan fazla deneyime sahip profesyonel ekip",
+    "feature_2_title": "Yüksek Kalite",
+    "feature_2_desc": "Her projede en yüksek kalite standartlarına bağlıyız",
+    "feature_3_title": "Sürekli Destek",
+    "feature_3_desc": "Tüm müşterilerimize sürekli teknik destek sağlıyoruz",
+    "feature_4_title": "Rekabetçi Fiyatlar",
+    "feature_4_desc": "Kaliteyi korurken en iyi fiyatları sunuyoruz",
+    "cta_title": "Başlamaya Hazır mısınız?",
+    "cta_description": "Bugün bizimle iletişime geçin ve vizyonunuzu gerçeğe dönüştürelim"
+  },
+  "about": {
+    "page_title": "Hakkımızda",
+    "page_description": "Msaddi şirketi ve ekibimiz hakkında bilgi edinin",
+    "intro_title": "Msaddi Hakkında",
+    "intro_text": "Msaddi, dijital çözümler geliştirmede lider bir şirkettir. Gelişmiş teknoloji hizmetleri ve modern pazar ihtiyaçlarını karşılayan yenilikçi çözümler sunarak işletmelerin büyümesine yardımcı oluyoruz.",
+    "mission_title": "Vizyonumuz",
+    "mission_text": "Bölgede dijital dönüşüm arayan şirketler için ilk tercih olmak",
+    "vision_title": "Misyonumuz",
+    "vision_text": "Müşterilerimizin hedeflerine ulaşmasına ve işlerini geliştirmesine yardımcı olan yenilikçi teknolojik çözümler sunmak"
+  },
+  "services": {
+    "page_title": "Hizmetlerimiz",
+    "page_description": "Sunduğumuz hizmetleri keşfedin",
+    "intro_title": "Size Ne Sunuyoruz",
+    "intro_text": "Kapsamlı bir teknik hizmet yelpazesi sunuyoruz",
+    "service_1_title": "Web Geliştirme",
+    "service_1_desc": "Tüm cihazlarla uyumlu profesyonel, hızlı, güvenli web siteleri tasarlayın ve geliştirin",
+    "service_2_title": "Mobil Uygulamalar",
+    "service_2_desc": "Mükemmel performansa sahip yüksek kaliteli iOS ve Android uygulamaları geliştirin",
+    "service_3_title": "Dijital Dönüşüm",
+    "service_3_desc": "Şirketlere dijital dönüşüm ve süreç otomasyonunda yardımcı olun",
+    "service_4_title": "Dijital Pazarlama",
+    "service_4_desc": "Erişimi ve satışları artırmak için etkili dijital pazarlama stratejileri",
+    "service_5_title": "Teknik Danışmanlık",
+    "service_5_desc": "Doğru kararları vermenize yardımcı olacak özel teknik danışmanlık",
+    "service_6_title": "Destek ve Bakım",
+    "service_6_desc": "İş sürekliliğini sağlamak için sürekli teknik destek ve düzenli bakım"
+  },
+  "contact": {
+    "page_title": "İletişim",
+    "page_description": "Bizimle iletişime geçin, size yanıt vermekten mutluluk duyarız",
+    "intro_title": "Size Yardımcı Olmak İçin Buradayız",
+    "intro_text": "Bir projeniz veya sorunuz mu var? Şimdi bizimle iletişime geçin",
+    "form_title": "Mesaj Gönder",
+    "form_name": "Ad",
+    "form_name_placeholder": "Tam adınızı girin",
+    "form_email": "E-posta",
+    "form_email_placeholder": "ornek@domain.com",
+    "form_phone": "Telefon Numarası",
+    "form_phone_placeholder": "+90 XXX XXX XX XX",
+    "form_subject": "Konu",
+    "form_subject_placeholder": "Mesajınız ne hakkında?",
+    "form_message": "Mesaj",
+    "form_message_placeholder": "Mesajınızı buraya yazın...",
+    "form_submit": "Mesajı Gönder",
+    "form_sending": "Gönderiliyor...",
+    "form_success": "Mesajınız başarıyla gönderildi! Yakında sizinle iletişime geçeceğiz",
+    "form_error": "Gönderilirken bir hata oluştu. Lütfen tekrar deneyin",
+    "info_title": "İletişim Bilgileri",
+    "info_address": "Riyad, Suudi Arabistan",
+    "info_email": "info@msaddi.com",
+    "info_phone": "+966 XX XXX XXXX"
+  },
+  "errors": {
+    "404_title": "Sayfa Bulunamadı",
+    "404_description": "Üzgünüz, aradığınız sayfa mevcut değil",
+    "500_title": "Sunucu Hatası",
+    "500_description": "Üzgünüz, beklenmeyen bir hata oluştu",
+    "go_home": "Ana Sayfaya Git"
+  },
+  "footer": {
+    "description": "Msaddi Şirketi - Kapsamlı teknoloji çözümleri sunuyoruz",
+    "rights": "Tüm hakları saklıdır",
+    "links_title": "Hızlı Bağlantılar",
+    "follow_us": "Bizi takip edin"
+  },
+  "validation": {
+    "required": "Bu alan gereklidir",
+    "invalid_email": "Geçersiz e-posta adresi",
+    "invalid_phone": "Geçersiz telefon numarası",
+    "min_length": "Minimum uzunluk {min} karakter olmalıdır",
+    "max_length": "Maksimum uzunluk {max} karakter olmalıdır"
+  }
+}
