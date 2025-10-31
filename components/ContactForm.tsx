@@ -62,7 +62,7 @@ export default function ContactForm() {
         message: t('form_success'),
       });
       reset();
-    } catch (error) {
+    } catch {
       setSubmitStatus({
         type: 'error',
         message: t('form_error'),
@@ -72,7 +72,7 @@ export default function ContactForm() {
     }
   };
 
-  const getErrorMessage = (error: any) => {
+  const getErrorMessage = (error: { message?: string } | undefined) => {
     if (error?.message?.includes('min_length')) {
       return tValidation('min_length', { min: 2 });
     }

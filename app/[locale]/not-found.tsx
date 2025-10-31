@@ -5,7 +5,6 @@ import Footer from '@/components/Footer';
 
 export default function NotFound() {
   const t = useTranslations('errors');
-  const tCommon = useTranslations('common');
 
   return (
     <div className="min-h-screen flex flex-col">
