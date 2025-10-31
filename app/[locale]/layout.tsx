@@ -71,35 +71,21 @@ export default async function LocaleLayout({
       lang={locale}
       dir={config.dir}
       className={`${geistSans.variable} ${geistMono.variable} ${cairo.variable}`}
+      style={
+        locale === 'ar'
+          ? {
+              fontFeatureSettings: '"numr" 0',
+              fontVariantNumeric: 'lining-nums',
+            }
+          : undefined
+      }
       suppressHydrationWarning
     >
-      <head>
-        {/* Force Latin numbers for Arabic */}
-        {locale === 'ar' && (
-          <style
-            dangerouslySetInnerHTML={{
-              __html: `
-                * {
-                  font-variant-numeric: lining-nums;
-                }
-              `,
-            }}
-          />
-        )}
-      </head>
       <body
         className={`
           ${locale === 'ar' ? 'font-cairo' : 'font-sans'}
           antialiased
         `}
-        style={
-          locale === 'ar'
-            ? {
-                fontFeatureSettings: '"numr" 0',
-                fontVariantNumeric: 'lining-nums',
-              }
-            : undefined
-        }
       >
         <NextIntlClientProvider messages={messages}>
           {children}

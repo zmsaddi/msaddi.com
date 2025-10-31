@@ -24,3 +24,11 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Force Latin numerals for Arabic locale */
+html[dir="rtl"] * {
+  font-variant-numeric: lining-nums;
+  -moz-font-feature-settings: "numr" 0;
+  -webkit-font-feature-settings: "numr" 0;
+  font-feature-settings: "numr" 0;
+}
