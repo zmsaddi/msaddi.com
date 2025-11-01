@@ -16,20 +16,20 @@ export const getTheme = (direction: 'ltr' | 'rtl') => {
     direction,
 
     // ========================================
-    // COLOR PALETTE
+    // COLOR PALETTE - Industrial Modern
     // ========================================
     palette: {
       mode: 'light',
       primary: {
-        main: colors.primary[500],
-        light: colors.primary[400],
-        dark: colors.primary[700],
+        main: colors.primary[700],  // Dark slate - professional
+        light: colors.primary[600],
+        dark: colors.primary[900],
         contrastText: colors.neutral.white,
       },
       secondary: {
-        main: colors.secondary[600],
+        main: colors.secondary[500],  // Steel blue
         light: colors.secondary[400],
-        dark: colors.secondary[800],
+        dark: colors.secondary[700],
         contrastText: colors.neutral.white,
       },
       error: {
@@ -66,6 +66,13 @@ export const getTheme = (direction: 'ltr' | 'rtl') => {
         disabled: colors.text.disabled,
       },
       divider: colors.neutral[300],
+      // @ts-ignore - Custom accent color for industrial design
+      accent: {
+        main: colors.accent[500],  // Industrial orange
+        light: colors.accent[400],
+        dark: colors.accent[600],
+        contrastText: colors.neutral.white,
+      },
     },
 
     // ========================================
@@ -229,51 +236,64 @@ export const getTheme = (direction: 'ltr' | 'rtl') => {
     // COMPONENT OVERRIDES
     // ========================================
     components: {
-      // Button
+      // Button - Industrial Modern Design
       MuiButton: {
         styleOverrides: {
           root: {
-            borderRadius: borderRadius.md,
-            padding: `${spacing[3]} ${spacing[6]}`,
+            borderRadius: borderRadius.lg,
+            padding: `${spacing[3]} ${spacing[8]}`,
             fontSize: typography.fontSize.base,
-            fontWeight: typography.fontWeight.semibold,
+            fontWeight: typography.fontWeight.bold,
             boxShadow: 'none',
             transition: transitions.common.fast,
+            textTransform: 'none',
+            letterSpacing: '0.02em',
             '&:hover': {
-              boxShadow: shadows.md,
-              transform: 'translateY(-1px)',
+              boxShadow: shadows.lg,
+              transform: 'translateY(-2px)',
             },
             '&:active': {
               transform: 'translateY(0)',
             },
           },
           sizeSmall: {
-            padding: `${spacing[2]} ${spacing[4]}`,
+            padding: `${spacing[2]} ${spacing[5]}`,
             fontSize: typography.fontSize.sm,
+            fontWeight: typography.fontWeight.semibold,
           },
           sizeLarge: {
-            padding: `${spacing[4]} ${spacing[8]}`,
+            padding: `${spacing[4]} ${spacing[10]}`,
             fontSize: typography.fontSize.lg,
+            fontWeight: typography.fontWeight.bold,
           },
           contained: {
             '&:hover': {
-              boxShadow: shadows.lg,
+              boxShadow: shadows.xl,
+            },
+          },
+          containedPrimary: {
+            background: colors.primary[700],
+            '&:hover': {
+              background: colors.primary[800],
+              boxShadow: shadows.xl,
             },
           },
         },
       },
 
-      // Card
+      // Card - Industrial with strong elevation
       MuiCard: {
         styleOverrides: {
           root: {
-            borderRadius: borderRadius.xl,
-            boxShadow: shadows.md,
+            borderRadius: borderRadius['2xl'],
+            boxShadow: shadows.lg,
             border: `1px solid ${colors.neutral[200]}`,
-            transition: transitions.common.base,
+            transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+            overflow: 'hidden',
             '&:hover': {
-              boxShadow: shadows.xl,
-              transform: 'translateY(-2px)',
+              boxShadow: shadows['2xl'],
+              transform: 'translateY(-4px)',
+              borderColor: colors.primary[200],
             },
           },
         },
