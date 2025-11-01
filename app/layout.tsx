@@ -1,19 +1,15 @@
+import type { Metadata } from 'next';
 import './globals.css';
-import { headers } from 'next/headers';
 
-export default async function RootLayout({
+export const metadata: Metadata = {
+  title: 'Msaddi - Your Trusted Partner for Success',
+  description: 'Leading company providing integrated business solutions',
+};
+
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  // Get locale from middleware headers
-  const headersList = await headers();
-  const locale = headersList.get('x-locale') || 'ar';
-  const dir = headersList.get('x-locale-dir') || 'ltr';
-
-  return (
-    <html lang={locale} dir={dir} suppressHydrationWarning>
-      <body>{children}</body>
-    </html>
-  );
+  return children;
 }
