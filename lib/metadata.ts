@@ -18,7 +18,7 @@ export interface PageMetadata {
 export const pageMetadata: Record<string, Record<string, PageMetadata>> = {
   home: {
     en: {
-      title: 'MSADDI - Sheet Metal Fabrication | Laser Cutting & CNC Bending',
+      title: 'MSADDI - Sheet Metal Fabrication | Laser & CNC Bending',
       description: 'Industrial metal fabrication in Aleppo, Syria. Laser cutting ±0.127mm precision, CNC bending, metal spinning. Stainless steel, aluminum, custom parts.',
       keywords: [
         'sheet metal fabrication',
@@ -90,7 +90,7 @@ export const pageMetadata: Record<string, Record<string, PageMetadata>> = {
 
   services: {
     en: {
-      title: 'Metal Fabrication Services | Laser, Bending, Spinning - MSADDI',
+      title: 'Metal Fabrication Services | Laser, Bending - MSADDI',
       description: 'Professional metal services: Laser cutting (25mm max), CNC bending (±0.5°), metal spinning. Stainless steel 304/316, aluminum, carbon steel. Syria.',
       keywords: [
         'laser cutting services',
@@ -112,7 +112,7 @@ export const pageMetadata: Record<string, Record<string, PageMetadata>> = {
       ],
     },
     tr: {
-      title: 'Metal Fabrikasyon Hizmetleri | Lazer, Bükme, Döndürme - MSADDI',
+      title: 'Metal Fabrikasyon Hizmetleri | Lazer, Bükme - MSADDI',
       description: 'Profesyonel metal hizmetleri: Lazer kesim (25mm maks), CNC bükme (±0.5°), metal döndürme. Paslanmaz 304/316, alüminyum, karbon çelik. Suriye.',
       keywords: [
         'lazer kesim hizmetleri',
