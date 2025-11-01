@@ -1,1 +1,36 @@
 @import "tailwindcss";
+
+/* Custom Fonts */
+:root {
+  --font-cairo: 'Cairo', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+}
+
+/* Smooth font rendering */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Arabic typography improvements */
+[dir="rtl"] {
+  font-family: var(--font-cairo), sans-serif;
+  letter-spacing: 0.01em;
+}
+
+/* Latin typography improvements */
+[dir="ltr"] {
+  font-family: var(--font-inter), sans-serif;
+  letter-spacing: -0.011em;
+}
+
+/* Better line height for Arabic */
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] h4,
+[dir="rtl"] h5,
+[dir="rtl"] h6 {
+  line-height: 1.6;
+}

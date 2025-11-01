@@ -5,9 +5,8 @@
  */
 
 import { Metadata } from 'next';
-import { use } from 'react';
 import { Container, Typography, Box, Grid, Chip, Stack } from '@mui/material';
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import Link from 'next/link';
 import Image from 'next/image';
 import { getAllBlogPosts, getAllCategories, getAllTags, type BlogPost } from '@/lib/blog/mdx';
@@ -26,7 +25,7 @@ interface BlogPageProps {
 
 export default async function BlogPage({ params }: BlogPageProps) {
   const { locale } = await params;
-  const t = useTranslations('blog');
+  const t = await getTranslations('blog');
 
   const posts = await getAllBlogPosts(locale);
   const categories = await getAllCategories(locale);

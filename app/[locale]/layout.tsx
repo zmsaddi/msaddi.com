@@ -14,6 +14,22 @@ import {
 } from '@/components/LazyComponents';
 import PWAInit from '@/components/PWAInit';
 import PWAInstallPrompt from '@/components/PWAInstallPrompt';
+import { Cairo, Inter } from 'next/font/google';
+
+// Configure Google Fonts
+const cairo = Cairo({
+  subsets: ['arabic', 'latin'],
+  weight: ['300', '400', '500', '600', '700', '800', '900'],
+  display: 'swap',
+  variable: '--font-cairo',
+});
+
+const inter = Inter({
+  subsets: ['latin', 'latin-ext'],
+  weight: ['300', '400', '500', '600', '700', '800', '900'],
+  display: 'swap',
+  variable: '--font-inter',
+});
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -72,8 +88,11 @@ export default async function LocaleLayout({
   const messages = await getMessages();
   const config = localeConfig[locale as Locale];
 
+  // Choose font based on locale
+  const fontClass = locale === 'ar' ? cairo.className : inter.className;
+
   return (
-    <html lang={locale} dir={config.dir}>
+    <html lang={locale} dir={config.dir} className={`${cairo.variable} ${inter.variable}`}>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover" />
         <meta name="theme-color" content="#2196F3" />
@@ -98,7 +117,7 @@ export default async function LocaleLayout({
         <StructuredData />
         <AnalyticsProvider />
       </head>
-      <body style={{ margin: 0, padding: 0 }}>
+      <body className={fontClass} style={{ margin: 0, padding: 0 }}>
         <PWAInit />
         <ClientLayout direction={config.dir}>
           <NextIntlClientProvider messages={messages}>

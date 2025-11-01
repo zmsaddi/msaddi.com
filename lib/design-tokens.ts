@@ -148,8 +148,9 @@ export const colors = {
 export const typography = {
   // Font Families
   fontFamily: {
-    primary: '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", sans-serif',
-    secondary: '"Roboto", sans-serif',
+    primary: 'var(--font-inter, var(--font-cairo, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", sans-serif))',
+    arabic: 'var(--font-cairo, "Segoe UI", "Roboto", sans-serif)',
+    latin: 'var(--font-inter, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif)',
     mono: '"Roboto Mono", "Courier New", monospace',
   },
 
