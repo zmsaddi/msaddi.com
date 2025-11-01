@@ -31,6 +31,7 @@ const MotionPaper = motion(Paper);
 
 export default function AboutPage() {
   const t = useTranslations('about');
+  const tCommon = useTranslations('common');
 
   const capabilities = [
     {
@@ -302,7 +303,7 @@ export default function AboutPage() {
                       target="_blank"
                       sx={{ fontWeight: 600 }}
                     >
-                      {t('common.whatsapp_chat')}
+                      {tCommon('whatsapp_chat')}
                     </Button>
                   </Box>
                 </Box>
