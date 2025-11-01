@@ -16,50 +16,51 @@
 // ============================================================================
 
 /**
- * Core Brand Colors - Clean Professional Design
- * Clear, readable, professional aesthetic
+ * Core Brand Colors - Balanced Industrial Design
+ * Light gray backgrounds with dark charcoal elements
+ * Research-based 2024-2025 industrial website aesthetic
  */
 export const colors = {
-  // Primary - Professional Blue (Trust, Technology, Precision)
+  // Primary - Steel Blue (Modern, Industrial, Professional)
   primary: {
-    50: '#EFF6FF',
-    100: '#DBEAFE',
-    200: '#BFDBFE',
-    300: '#93C5FD',
-    400: '#60A5FA',
-    500: '#3B82F6',  // Main brand color - Clear professional blue
-    600: '#2563EB',
-    700: '#1D4ED8',  // Darker blue
-    800: '#1E40AF',
-    900: '#1E3A8A',
+    50: '#F0F4F8',
+    100: '#D9E2EC',
+    200: '#BCCCDC',
+    300: '#9FB3C8',
+    400: '#829AB1',
+    500: '#627D98',  // Steel blue - balanced and modern
+    600: '#486581',
+    700: '#334E68',
+    800: '#243B53',
+    900: '#102A43',
   },
 
-  // Secondary - Slate (Industry, Professional)
+  // Secondary - Charcoal (Industrial Strength, Foundation)
   secondary: {
-    50: '#F8FAFC',
-    100: '#F1F5F9',
-    200: '#E2E8F0',
-    300: '#CBD5E1',
-    400: '#94A3B8',
-    500: '#64748B',  // Medium slate
-    600: '#475569',
-    700: '#334155',  // Dark professional
-    800: '#1E293B',
-    900: '#0F172A',
+    50: '#F5F5F5',
+    100: '#E9E9E9',  // Light industrial gray - main background
+    200: '#D3D3D3',
+    300: '#BFBFBF',
+    400: '#8C8C8C',
+    500: '#5A5A5A',  // Medium charcoal
+    600: '#3D3D3D',
+    700: '#2A2A2A',
+    800: '#23282A',  // Dark charcoal - key industrial element
+    900: '#1A1A1A',  // Deepest charcoal
   },
 
-  // Accent - Industrial Orange (Energy, Action, CTA)
+  // Accent - Vibrant Gold (Energy, CTA, Premium Feel)
   accent: {
-    50: '#FFF7ED',
-    100: '#FFEDD5',
-    200: '#FED7AA',
-    300: '#FDBA74',
-    400: '#FB923C',
-    500: '#F97316',  // Main industrial orange
-    600: '#EA580C',  // Vibrant action color
-    700: '#C2410C',
-    800: '#9A3412',
-    900: '#7C2D12',
+    50: '#FFF8E1',
+    100: '#FFECB3',
+    200: '#FFE082',
+    300: '#FFD54F',
+    400: '#FFCA28',
+    500: '#F2A900',  // Vibrant gold - main CTA color
+    600: '#D99700',
+    700: '#BF8600',
+    800: '#A67600',
+    900: '#8C6500',
   },
 
   // Success - Industry Green (Quality, Approved)
@@ -120,34 +121,34 @@ export const colors = {
     black: '#000000',
   },
 
-  // Background colors - Clean & Clear
+  // Background colors - Balanced Industrial
   background: {
-    default: '#FFFFFF',                // Pure white background
-    paper: '#FFFFFF',                  // White cards/panels
-    light: '#F9FAFB',                  // Very light gray
-    dark: '#1E293B',                   // Dark backgrounds
-    darkSecondary: '#334155',          // Dark secondary
-    overlay: 'rgba(30, 41, 59, 0.75)', // Dark overlay
-    lightOverlay: 'rgba(255, 255, 255, 0.95)', // Light overlay
+    default: '#E9E9E9',                // Light industrial gray (main background)
+    paper: '#F5F5F5',                  // Lighter gray for cards/panels
+    light: '#FAFAFA',                  // Very light gray
+    dark: '#23282A',                   // Dark charcoal backgrounds
+    darkSecondary: '#2A2A2A',          // Dark charcoal secondary
+    overlay: 'rgba(35, 40, 42, 0.85)', // Dark charcoal overlay
+    lightOverlay: 'rgba(249, 250, 250, 0.95)', // Light overlay
   },
 
-  // Text colors - Maximum contrast & clarity
+  // Text colors - High contrast for industrial environments
   text: {
-    primary: '#111827',        // Almost black - maximum readability
-    secondary: '#6B7280',      // Medium gray - clear secondary text
-    disabled: '#9CA3AF',       // Light gray disabled
-    inverse: '#FFFFFF',        // Text on dark backgrounds
-    accent: '#EA580C',         // Orange accent text
+    primary: '#1A1A1A',        // Deep charcoal - maximum readability on light gray
+    secondary: '#5A5A5A',      // Medium charcoal - clear secondary text
+    disabled: '#8C8C8C',       // Light charcoal disabled
+    inverse: '#FFFFFF',        // White text on dark backgrounds
+    accent: '#F2A900',         // Gold accent text
   },
 
   // Gradient colors - Industrial design
   gradients: {
-    primary: 'linear-gradient(135deg, #1E293B 0%, #334155 100%)',
-    secondary: 'linear-gradient(135deg, #0EA5E9 0%, #0284C7 100%)',
-    accent: 'linear-gradient(135deg, #F97316 0%, #EA580C 100%)',
-    dark: 'linear-gradient(135deg, #0F172A 0%, #1E293B 100%)',
-    hero: 'linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.90) 100%)',
-    overlay: 'linear-gradient(180deg, rgba(15, 23, 42, 0) 0%, rgba(15, 23, 42, 0.8) 100%)',
+    primary: 'linear-gradient(135deg, #243B53 0%, #334E68 100%)',  // Steel blue gradient
+    secondary: 'linear-gradient(135deg, #627D98 0%, #486581 100%)', // Light steel gradient
+    accent: 'linear-gradient(135deg, #F2A900 0%, #D99700 100%)',    // Gold gradient
+    dark: 'linear-gradient(135deg, #1A1A1A 0%, #23282A 100%)',      // Charcoal gradient
+    hero: 'linear-gradient(135deg, rgba(35, 40, 42, 0.90) 0%, rgba(42, 42, 42, 0.85) 100%)',  // Hero overlay
+    overlay: 'linear-gradient(180deg, rgba(35, 40, 42, 0) 0%, rgba(35, 40, 42, 0.85) 100%)',  // Card overlay
   },
 } as const;
 
@@ -269,20 +270,20 @@ export const borderRadius = {
 
 /**
  * Box Shadow Scale - Industrial Design
- * Strong depth, professional elevation with industrial feel
+ * Strong depth with charcoal shadows for professional elevation
  */
 export const shadows = {
   none: 'none',
-  sm: '0 1px 2px 0 rgba(15, 23, 42, 0.08)',
-  base: '0 2px 4px 0 rgba(15, 23, 42, 0.10), 0 1px 2px 0 rgba(15, 23, 42, 0.06)',
-  md: '0 4px 8px -2px rgba(15, 23, 42, 0.12), 0 2px 4px -1px rgba(15, 23, 42, 0.08)',
-  lg: '0 12px 24px -4px rgba(15, 23, 42, 0.14), 0 4px 8px -2px rgba(15, 23, 42, 0.10)',
-  xl: '0 20px 40px -8px rgba(15, 23, 42, 0.16), 0 8px 16px -4px rgba(15, 23, 42, 0.12)',
-  '2xl': '0 32px 64px -12px rgba(15, 23, 42, 0.20), 0 12px 24px -6px rgba(15, 23, 42, 0.14)',
-  '3xl': '0 40px 80px -16px rgba(15, 23, 42, 0.25), 0 16px 32px -8px rgba(15, 23, 42, 0.18)',
-  inner: 'inset 0 2px 4px 0 rgba(15, 23, 42, 0.08)',
-  glow: '0 0 20px rgba(14, 165, 233, 0.3)',  // Blue glow effect
-  glowOrange: '0 0 20px rgba(249, 115, 22, 0.3)',  // Orange glow effect
+  sm: '0 1px 2px 0 rgba(26, 26, 26, 0.10)',
+  base: '0 2px 4px 0 rgba(26, 26, 26, 0.12), 0 1px 2px 0 rgba(26, 26, 26, 0.08)',
+  md: '0 4px 8px -2px rgba(26, 26, 26, 0.14), 0 2px 4px -1px rgba(26, 26, 26, 0.10)',
+  lg: '0 12px 24px -4px rgba(26, 26, 26, 0.16), 0 4px 8px -2px rgba(26, 26, 26, 0.12)',
+  xl: '0 20px 40px -8px rgba(26, 26, 26, 0.18), 0 8px 16px -4px rgba(26, 26, 26, 0.14)',
+  '2xl': '0 32px 64px -12px rgba(26, 26, 26, 0.22), 0 12px 24px -6px rgba(26, 26, 26, 0.16)',
+  '3xl': '0 40px 80px -16px rgba(26, 26, 26, 0.28), 0 16px 32px -8px rgba(26, 26, 26, 0.20)',
+  inner: 'inset 0 2px 4px 0 rgba(26, 26, 26, 0.10)',
+  glow: '0 0 20px rgba(98, 125, 152, 0.4)',      // Steel blue glow
+  glowGold: '0 0 20px rgba(242, 169, 0, 0.4)',   // Gold glow effect
 } as const;
 
 // ============================================================================
@@ -493,7 +494,7 @@ export const industry = {
   processes: {
     cutting: colors.primary[600],
     bending: colors.accent[600],
-    welding: colors.warning[700],
+    welding: colors.accent[700],
     finishing: colors.success[600],
     assembly: colors.secondary[600],
   },

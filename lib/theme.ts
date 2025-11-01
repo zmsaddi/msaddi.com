@@ -16,20 +16,20 @@ export const getTheme = (direction: 'ltr' | 'rtl') => {
     direction,
 
     // ========================================
-    // COLOR PALETTE - Clean & Professional
+    // COLOR PALETTE - Balanced Industrial
     // ========================================
     palette: {
       mode: 'light',
       primary: {
-        main: colors.primary[600],  // Professional blue - clear and readable
+        main: colors.primary[600],  // Steel blue - modern industrial
         light: colors.primary[400],
-        dark: colors.primary[700],
+        dark: colors.primary[800],
         contrastText: colors.neutral.white,
       },
       secondary: {
-        main: colors.secondary[600],  // Slate gray for contrast
+        main: colors.secondary[800],  // Dark charcoal for strength
         light: colors.secondary[400],
-        dark: colors.secondary[800],
+        dark: colors.secondary[900],
         contrastText: colors.neutral.white,
       },
       error: {
@@ -68,10 +68,10 @@ export const getTheme = (direction: 'ltr' | 'rtl') => {
       divider: colors.neutral[300],
       // @ts-ignore - Custom accent color for industrial design
       accent: {
-        main: colors.accent[500],  // Industrial orange
+        main: colors.accent[500],  // Vibrant gold for CTAs
         light: colors.accent[400],
-        dark: colors.accent[600],
-        contrastText: colors.neutral.white,
+        dark: colors.accent[700],
+        contrastText: colors.secondary[900],  // Dark text on gold
       },
     },
 
@@ -272,11 +272,12 @@ export const getTheme = (direction: 'ltr' | 'rtl') => {
             },
           },
           containedPrimary: {
-            background: colors.primary[600],
-            color: colors.neutral.white,
+            background: colors.accent[500],  // Gold gradient for strong CTAs
+            color: colors.secondary[900],    // Dark text on gold
+            fontWeight: typography.fontWeight.extrabold,
             '&:hover': {
-              background: colors.primary[700],
-              boxShadow: shadows.xl,
+              background: colors.accent[600],
+              boxShadow: shadows.glowGold,  // Gold glow on hover
             },
           },
         },
@@ -286,15 +287,16 @@ export const getTheme = (direction: 'ltr' | 'rtl') => {
       MuiCard: {
         styleOverrides: {
           root: {
-            borderRadius: borderRadius['2xl'],
-            boxShadow: shadows.lg,
-            border: `1px solid ${colors.neutral[200]}`,
+            borderRadius: borderRadius.xl,
+            boxShadow: shadows.md,
+            border: `1px solid ${colors.secondary[200]}`,
+            backgroundColor: colors.background.paper,  // Light gray cards
             transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
             overflow: 'hidden',
             '&:hover': {
-              boxShadow: shadows['2xl'],
-              transform: 'translateY(-4px)',
-              borderColor: colors.primary[200],
+              boxShadow: shadows.xl,
+              transform: 'translateY(-6px)',
+              borderColor: colors.primary[300],
             },
           },
         },
@@ -335,6 +337,7 @@ export const getTheme = (direction: 'ltr' | 'rtl') => {
         styleOverrides: {
           root: {
             backgroundImage: 'none',
+            backgroundColor: colors.background.paper,  // Light gray paper
           },
           rounded: {
             borderRadius: borderRadius.lg,

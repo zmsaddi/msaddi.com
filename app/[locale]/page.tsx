@@ -1,39 +1,57 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import Link from 'next/link';
+import { useParams } from 'next/navigation';
 import Image from 'next/image';
+import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import IndustryImage from '@/components/IndustryImage';
+import Hero from '@/components/Hero';
 import PageStructuredData from '@/components/PageStructuredData';
-import { stockImages } from '@/lib/stock-images';
 import {
   Box,
   Container,
   Typography,
-  Button,
   Grid,
   Card,
   CardContent,
-  Chip,
+  Button,
   Paper,
 } from '@mui/material';
 import {
   Speed as SpeedIcon,
   Engineering as EngineeringIcon,
   VerifiedUser as VerifiedIcon,
-  PlayArrow as PlayArrowIcon,
   Settings as PrecisionIcon,
 } from '@mui/icons-material';
 import { motion } from 'framer-motion';
 
-const MotionBox = motion(Box);
 const MotionCard = motion(Card);
+const MotionBox = motion(Box);
 const MotionPaper = motion(Paper);
+
+// Placeholder stock images - will be replaced with actual company photos
+const stockImages = {
+  services: {
+    laserCutting: {
+      url: 'https://images.unsplash.com/photo-1565688534245-05d6b5be184a?q=80&w=2940',
+      alt: 'Laser Cutting Service',
+    },
+    cncBending: {
+      url: 'https://images.unsplash.com/photo-1587293852726-70cdb56c2866?q=80&w=2940',
+      alt: 'CNC Bending Service',
+    },
+    metalSpinning: {
+      url: 'https://images.unsplash.com/photo-1590669152421-34036193e91c?q=80&w=2940',
+      alt: 'Metal Spinning Service',
+    },
+  },
+};
 
 export default function HomePage() {
   const t = useTranslations();
+  const params = useParams();
+  const locale = params.locale as string;
 
   const features = [
     {
@@ -65,166 +83,7 @@ export default function HomePage() {
 
       <Box component="main" sx={{ flexGrow: 1 }}>
         {/* Hero Section */}
-        <Box
-          sx={{
-            color: 'white',
-            py: { xs: 10, md: 16 },
-            position: 'relative',
-            overflow: 'hidden',
-            minHeight: { xs: '500px', md: '600px' },
-          }}
-        >
-          {/* Background Image */}
-          <Image
-            src={stockImages.hero.laserCutting.url}
-            alt={stockImages.hero.laserCutting.alt}
-            fill
-            priority
-            style={{
-              objectFit: 'cover',
-              objectPosition: 'center',
-            }}
-          />
-
-          {/* Dark Overlay for Text Readability */}
-          <Box
-            sx={{
-              position: 'absolute',
-              top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0,
-              background: 'linear-gradient(135deg, rgba(30, 58, 138, 0.85) 0%, rgba(59, 130, 246, 0.75) 50%, rgba(96, 165, 250, 0.70) 100%)',
-              zIndex: 1,
-            }}
-          />
-
-          {/* Animated pattern overlay */}
-          <Box
-            sx={{
-              position: 'absolute',
-              top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0,
-              opacity: 0.1,
-              backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.1) 35px, rgba(255,255,255,.1) 70px)',
-              zIndex: 2,
-            }}
-          />
-
-          <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 3 }}>
-            <MotionBox
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              textAlign="center"
-            >
-              <Chip
-                label={t('common.tagline')}
-                sx={{
-                  mb: 3,
-                  bgcolor: 'rgba(255,255,255,0.2)',
-                  color: 'white',
-                  fontWeight: 600,
-                  fontSize: '0.9rem',
-                  backdropFilter: 'blur(10px)',
-                }}
-              />
-
-              <Typography
-                variant="h1"
-                sx={{
-                  fontSize: { xs: '2.5rem', md: '4rem', lg: '4.5rem' },
-                  fontWeight: 800,
-                  mb: 2,
-                  textShadow: '2px 2px 4px rgba(0,0,0,0.2)',
-                }}
-              >
-                {t('home.hero_title')}
-              </Typography>
-
-              <Typography
-                variant="h5"
-                sx={{
-                  fontSize: { xs: '1.2rem', md: '1.8rem' },
-                  mb: 2,
-                  fontWeight: 500,
-                  opacity: 0.95,
-                }}
-              >
-                {t('home.hero_subtitle')}
-              </Typography>
-
-              <Typography
-                variant="body1"
-                sx={{
-                  fontSize: { xs: '1rem', md: '1.2rem' },
-                  mb: 5,
-                  maxWidth: '900px',
-                  mx: 'auto',
-                  opacity: 0.9,
-                  lineHeight: 1.7,
-                }}
-              >
-                {t('home.hero_description')}
-              </Typography>
-
-              <Box sx={{ display: 'flex', gap: 2, justifyContent: 'center', flexWrap: 'wrap' }}>
-                <Button
-                  component={Link}
-                  href="/contact"
-                  variant="contained"
-                  size="large"
-                  sx={{
-                    bgcolor: 'white',
-                    color: 'primary.main',
-                    px: 5,
-                    py: 2,
-                    fontSize: '1.1rem',
-                    fontWeight: 700,
-                    borderRadius: 3,
-                    '&:hover': {
-                      bgcolor: 'grey.100',
-                      transform: 'translateY(-2px)',
-                      boxShadow: 6,
-                    },
-                    transition: 'all 0.3s',
-                  }}
-                >
-                  {t('common.get_quote')}
-                </Button>
-
-                <Button
-                  component={Link}
-                  href="/services"
-                  variant="outlined"
-                  size="large"
-                  startIcon={<PlayArrowIcon />}
-                  sx={{
-                    borderColor: 'white',
-                    color: 'white',
-                    px: 5,
-                    py: 2,
-                    fontSize: '1.1rem',
-                    fontWeight: 700,
-                    borderRadius: 3,
-                    borderWidth: 2,
-                    '&:hover': {
-                      borderColor: 'white',
-                      bgcolor: 'rgba(255,255,255,0.1)',
-                      borderWidth: 2,
-                      transform: 'translateY(-2px)',
-                    },
-                    transition: 'all 0.3s',
-                  }}
-                >
-                  {t('common.our_services')}
-                </Button>
-              </Box>
-            </MotionBox>
-          </Container>
-        </Box>
+        <Hero locale={locale} />
 
         {/* Features Section */}
         <Container maxWidth="lg" sx={{ py: { xs: 8, md: 12 } }}>

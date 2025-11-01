@@ -34,3 +34,9 @@
 [dir="rtl"] h6 {
   line-height: 1.6;
 }
+
+/* Balanced Industrial Background */
+body {
+  background-color: #E9E9E9; /* Light industrial gray */
+  min-height: 100vh;
+}
