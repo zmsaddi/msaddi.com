@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { locales, localeConfig, type Locale } from '@/i18n';
 import type { Metadata } from 'next';
 import ClientLayout from './ClientLayout';
+import StructuredData from '@/components/StructuredData';
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -64,6 +65,7 @@ export default async function LocaleLayout({
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <StructuredData />
       </head>
       <body style={{ margin: 0, padding: 0 }}>
         <ClientLayout direction={config.dir}>

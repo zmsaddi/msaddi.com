@@ -1,69 +1,366 @@
+'use client';
+
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import {
+  Box,
+  Container,
+  Typography,
+  Button,
+  Grid,
+  Card,
+  CardContent,
+  Chip,
+  Paper,
+} from '@mui/material';
+import {
+  Speed as SpeedIcon,
+  Engineering as EngineeringIcon,
+  VerifiedUser as VerifiedIcon,
+  PlayArrow as PlayArrowIcon,
+  Settings as PrecisionIcon,
+} from '@mui/icons-material';
+import { motion } from 'framer-motion';
+
+const MotionBox = motion(Box);
+const MotionCard = motion(Card);
+const MotionPaper = motion(Paper);
 
 export default function HomePage() {
   const t = useTranslations();
 
+  const features = [
+    {
+      icon: <PrecisionIcon sx={{ fontSize: 48, color: 'primary.main' }} />,
+      title: t('home.feature_1_title'),
+      desc: t('home.feature_1_desc'),
+    },
+    {
+      icon: <EngineeringIcon sx={{ fontSize: 48, color: 'primary.main' }} />,
+      title: t('home.feature_2_title'),
+      desc: t('home.feature_2_desc'),
+    },
+    {
+      icon: <VerifiedIcon sx={{ fontSize: 48, color: 'primary.main' }} />,
+      title: t('home.feature_3_title'),
+      desc: t('home.feature_3_desc'),
+    },
+    {
+      icon: <SpeedIcon sx={{ fontSize: 48, color: 'primary.main' }} />,
+      title: t('home.feature_4_title'),
+      desc: t('home.feature_4_desc'),
+    },
+  ];
+
   return (
-    <div className="min-h-screen flex flex-col">
+    <Box sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
       <Header />
 
-      <main className="flex-grow">
-        <section className="bg-gradient-to-br from-blue-600 to-blue-800 text-white py-20">
-          <div className="container mx-auto px-4 text-center">
-            <h1 className="text-5xl font-bold mb-4">{t('home.hero_title')}</h1>
-            <p className="text-2xl mb-4">{t('home.hero_subtitle')}</p>
-            <p className="text-lg mb-8">{t('home.hero_description')}</p>
-            <div className="flex gap-4 justify-center">
-              <Link
-                href={`/contact`}
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50"
-              >
-                {t('common.get_started')}
-              </Link>
-              <Link
-                href={`/services`}
-                className="bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 border-2 border-white"
-              >
-                {t('common.learn_more')}
-              </Link>
-            </div>
-          </div>
-        </section>
+      <Box component="main" sx={{ flexGrow: 1 }}>
+        {/* Hero Section */}
+        <Box
+          sx={{
+            background: 'linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #60a5fa 100%)',
+            color: 'white',
+            py: { xs: 10, md: 16 },
+            position: 'relative',
+            overflow: 'hidden',
+          }}
+        >
+          {/* Animated background pattern */}
+          <Box
+            sx={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              opacity: 0.1,
+              backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.1) 35px, rgba(255,255,255,.1) 70px)',
+            }}
+          />
 
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-bold text-center mb-4">{t('home.why_us_title')}</h2>
-            <p className="text-center text-gray-600 mb-12">{t('home.why_us_subtitle')}</p>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {[1, 2, 3, 4].map((i) => (
-                <div key={i} className="p-6 border rounded-lg hover:shadow-lg transition-shadow">
-                  <h3 className="text-xl font-semibold mb-3">{t(`home.feature_${i}_title`)}</h3>
-                  <p className="text-gray-600">{t(`home.feature_${i}_desc`)}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="bg-blue-600 text-white py-20">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-4xl font-bold mb-4">{t('home.cta_title')}</h2>
-            <p className="text-xl mb-8">{t('home.cta_description')}</p>
-            <Link
-              href={`/contact`}
-              className="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50"
+          <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1 }}>
+            <MotionBox
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              textAlign="center"
             >
-              {t('common.contact_us')}
-            </Link>
-          </div>
-        </section>
-      </main>
+              <Chip
+                label={t('common.tagline')}
+                sx={{
+                  mb: 3,
+                  bgcolor: 'rgba(255,255,255,0.2)',
+                  color: 'white',
+                  fontWeight: 600,
+                  fontSize: '0.9rem',
+                  backdropFilter: 'blur(10px)',
+                }}
+              />
+
+              <Typography
+                variant="h1"
+                sx={{
+                  fontSize: { xs: '2.5rem', md: '4rem', lg: '4.5rem' },
+                  fontWeight: 800,
+                  mb: 2,
+                  textShadow: '2px 2px 4px rgba(0,0,0,0.2)',
+                }}
+              >
+                {t('home.hero_title')}
+              </Typography>
+
+              <Typography
+                variant="h5"
+                sx={{
+                  fontSize: { xs: '1.2rem', md: '1.8rem' },
+                  mb: 2,
+                  fontWeight: 500,
+                  opacity: 0.95,
+                }}
+              >
+                {t('home.hero_subtitle')}
+              </Typography>
+
+              <Typography
+                variant="body1"
+                sx={{
+                  fontSize: { xs: '1rem', md: '1.2rem' },
+                  mb: 5,
+                  maxWidth: '900px',
+                  mx: 'auto',
+                  opacity: 0.9,
+                  lineHeight: 1.7,
+                }}
+              >
+                {t('home.hero_description')}
+              </Typography>
+
+              <Box sx={{ display: 'flex', gap: 2, justifyContent: 'center', flexWrap: 'wrap' }}>
+                <Button
+                  component={Link}
+                  href="/contact"
+                  variant="contained"
+                  size="large"
+                  sx={{
+                    bgcolor: 'white',
+                    color: 'primary.main',
+                    px: 5,
+                    py: 2,
+                    fontSize: '1.1rem',
+                    fontWeight: 700,
+                    borderRadius: 3,
+                    '&:hover': {
+                      bgcolor: 'grey.100',
+                      transform: 'translateY(-2px)',
+                      boxShadow: 6,
+                    },
+                    transition: 'all 0.3s',
+                  }}
+                >
+                  {t('common.get_quote')}
+                </Button>
+
+                <Button
+                  component={Link}
+                  href="/services"
+                  variant="outlined"
+                  size="large"
+                  startIcon={<PlayArrowIcon />}
+                  sx={{
+                    borderColor: 'white',
+                    color: 'white',
+                    px: 5,
+                    py: 2,
+                    fontSize: '1.1rem',
+                    fontWeight: 700,
+                    borderRadius: 3,
+                    borderWidth: 2,
+                    '&:hover': {
+                      borderColor: 'white',
+                      bgcolor: 'rgba(255,255,255,0.1)',
+                      borderWidth: 2,
+                      transform: 'translateY(-2px)',
+                    },
+                    transition: 'all 0.3s',
+                  }}
+                >
+                  {t('common.our_services')}
+                </Button>
+              </Box>
+            </MotionBox>
+          </Container>
+        </Box>
+
+        {/* Features Section */}
+        <Container maxWidth="lg" sx={{ py: { xs: 8, md: 12 } }}>
+          <MotionBox
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <Typography
+              variant="h2"
+              textAlign="center"
+              sx={{
+                fontSize: { xs: '2rem', md: '3rem' },
+                fontWeight: 700,
+                mb: 2,
+                color: 'primary.main',
+              }}
+            >
+              {t('home.why_us_title')}
+            </Typography>
+
+            <Typography
+              variant="h6"
+              textAlign="center"
+              color="text.secondary"
+              sx={{ mb: 8, maxWidth: '700px', mx: 'auto' }}
+            >
+              {t('home.why_us_subtitle')}
+            </Typography>
+          </MotionBox>
+
+          <Grid container spacing={4}>
+            {features.map((feature, index) => (
+              <Grid item xs={12} sm={6} md={3} key={index}>
+                <MotionCard
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  sx={{
+                    height: '100%',
+                    borderRadius: 3,
+                    transition: 'all 0.3s',
+                    border: '1px solid',
+                    borderColor: 'divider',
+                    '&:hover': {
+                      transform: 'translateY(-8px)',
+                      boxShadow: 8,
+                    },
+                  }}
+                >
+                  <CardContent sx={{ p: 4, textAlign: 'center' }}>
+                    <Box sx={{ mb: 2 }}>{feature.icon}</Box>
+                    <Typography variant="h6" fontWeight={700} mb={2}>
+                      {feature.title}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary" lineHeight={1.7}>
+                      {feature.desc}
+                    </Typography>
+                  </CardContent>
+                </MotionCard>
+              </Grid>
+            ))}
+          </Grid>
+        </Container>
+
+        {/* Stats Section */}
+        <Box sx={{ bgcolor: 'grey.50', py: { xs: 6, md: 10 } }}>
+          <Container maxWidth="lg">
+            <Grid container spacing={4}>
+              {[
+                { number: '±0.127mm', label: 'Laser Cutting Precision' },
+                { number: '±0.5°', label: 'Bending Accuracy' },
+                { number: '25mm', label: 'Max Cutting Thickness' },
+                { number: '1500×3000mm', label: 'Max Cutting Size' },
+              ].map((stat, index) => (
+                <Grid item xs={6} md={3} key={index}>
+                  <MotionPaper
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: index * 0.1 }}
+                    elevation={0}
+                    sx={{
+                      p: 3,
+                      textAlign: 'center',
+                      borderRadius: 2,
+                      bgcolor: 'white',
+                    }}
+                  >
+                    <Typography
+                      variant="h4"
+                      fontWeight={800}
+                      color="primary.main"
+                      sx={{ fontSize: { xs: '1.5rem', md: '2rem' } }}
+                    >
+                      {stat.number}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary" mt={1}>
+                      {stat.label}
+                    </Typography>
+                  </MotionPaper>
+                </Grid>
+              ))}
+            </Grid>
+          </Container>
+        </Box>
+
+        {/* CTA Section */}
+        <Box
+          sx={{
+            background: 'linear-gradient(135deg, #2563eb 0%, #1e40af 100%)',
+            color: 'white',
+            py: { xs: 8, md: 12 },
+          }}
+        >
+          <Container maxWidth="md">
+            <MotionBox
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              textAlign="center"
+            >
+              <Typography
+                variant="h3"
+                fontWeight={700}
+                mb={2}
+                sx={{ fontSize: { xs: '2rem', md: '3rem' } }}
+              >
+                {t('home.cta_title')}
+              </Typography>
+
+              <Typography variant="h6" mb={5} sx={{ opacity: 0.95 }}>
+                {t('home.cta_description')}
+              </Typography>
+
+              <Button
+                component={Link}
+                href="/contact"
+                variant="contained"
+                size="large"
+                sx={{
+                  bgcolor: 'white',
+                  color: 'primary.main',
+                  px: 6,
+                  py: 2.5,
+                  fontSize: '1.2rem',
+                  fontWeight: 700,
+                  borderRadius: 3,
+                  '&:hover': {
+                    bgcolor: 'grey.100',
+                    transform: 'scale(1.05)',
+                    boxShadow: 8,
+                  },
+                  transition: 'all 0.3s',
+                }}
+              >
+                {t('common.contact_us')}
+              </Button>
+            </MotionBox>
+          </Container>
+        </Box>
+      </Box>
 
       <Footer />
-    </div>
+    </Box>
   );
 }
