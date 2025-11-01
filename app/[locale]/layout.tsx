@@ -1,11 +1,14 @@
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages, getTranslations } from 'next-intl/server';
+import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { locales, localeConfig, type Locale } from '@/i18n';
 import type { Metadata } from 'next';
+import { getPageMetadata } from '@/lib/metadata';
 import ClientLayout from './ClientLayout';
 import StructuredData from '@/components/StructuredData';
 import WhatsAppButton from '@/components/WhatsAppButton';
+import MachineTranslationBadge from '@/components/MachineTranslationBadge';
+import GoogleTranslateWidget from '@/components/GoogleTranslateWidget';
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -17,11 +20,12 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'common' });
+  const metadata = getPageMetadata('home', locale);
 
   return {
-    title: t('company_name'),
-    description: t('slogan'),
+    title: metadata.title,
+    description: metadata.description,
+    keywords: metadata.keywords,
     alternates: {
       canonical: `/${locale}`,
       languages: {
@@ -32,12 +36,17 @@ export async function generateMetadata({
       },
     },
     openGraph: {
-      title: t('company_name'),
-      description: t('slogan'),
+      title: metadata.title,
+      description: metadata.description,
       url: `/${locale}`,
-      siteName: t('company_name'),
+      siteName: 'MSADDI EST.',
       locale: locale,
       type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: metadata.title,
+      description: metadata.description,
     },
   };
 }
@@ -71,8 +80,10 @@ export default async function LocaleLayout({
       <body style={{ margin: 0, padding: 0 }}>
         <ClientLayout direction={config.dir}>
           <NextIntlClientProvider messages={messages}>
+            <MachineTranslationBadge />
             {children}
             <WhatsAppButton />
+            <GoogleTranslateWidget enabledByDefault={false} />
           </NextIntlClientProvider>
         </ClientLayout>
       </body>

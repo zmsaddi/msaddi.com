@@ -1,0 +1,275 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "title": "MSADDI Translation Memory (TM)",
+  "description": "Translation memory system storing approved translations for reuse. Helps maintain consistency, reduce translation costs, and ensure quality across all content updates.",
+  "version": "1.0.0",
+  "lastUpdated": "2025-11-01",
+  "metadata": {
+    "purpose": "Store and reuse approved translations",
+    "languages": ["ar", "en", "tr"],
+    "totalSegments": 0,
+    "createdBy": "MSADDI Translation Team",
+    "translationEngines": ["Human", "Google Translate API", "DeepL", "Microsoft Translator"]
+  },
+  "segments": [
+    {
+      "id": "TM-001",
+      "source": {
+        "lang": "en",
+        "text": "Precision Metal Fabrication"
+      },
+      "targets": {
+        "ar": {
+          "text": "تصنيع معدني عالي الدقة",
+          "approved": true,
+          "approvedBy": "Human Translator",
+          "approvedDate": "2025-11-01",
+          "confidence": 1.0
+        },
+        "tr": {
+          "text": "Hassas Metal Fabrikasyonu",
+          "approved": true,
+          "approvedBy": "Human Translator",
+          "approvedDate": "2025-11-01",
+          "confidence": 1.0
+        }
+      },
+      "context": "Hero section main title",
+      "category": "marketing",
+      "tags": ["hero", "title", "main-heading"]
+    },
+    {
+      "id": "TM-002",
+      "source": {
+        "lang": "en",
+        "text": "Specialized in Laser Cutting, Bending & Forming, and Metal Spinning"
+      },
+      "targets": {
+        "ar": {
+          "text": "متخصصون في القص بالليزر، الثني والتشكيل، ودوران المعادن",
+          "approved": true,
+          "approvedBy": "Human Translator",
+          "approvedDate": "2025-11-01",
+          "confidence": 1.0
+        },
+        "tr": {
+          "text": "Lazer Kesim, Bükme ve Şekillendirme, Metal Döndürme Konusunda Uzmanız",
+          "approved": true,
+          "approvedBy": "Human Translator",
+          "approvedDate": "2025-11-01",
+          "confidence": 1.0
+        }
+      },
+      "context": "Hero subtitle describing core services",
+      "category": "marketing",
+      "tags": ["hero", "subtitle", "services"]
+    },
+    {
+      "id": "TM-003",
+      "source": {
+        "lang": "en",
+        "text": "Excellence in Metal Fabrication"
+      },
+      "targets": {
+        "ar": {
+          "text": "التميز في تصنيع المعادن",
+          "approved": true,
+          "approvedBy": "Human Translator",
+          "approvedDate": "2025-11-01",
+          "confidence": 1.0
+        },
+        "tr": {
+          "text": "Metal İşlemede Mükemmellik",
+          "approved": true,
+          "approvedBy": "Human Translator",
+          "approvedDate": "2025-11-01",
+          "confidence": 1.0
+        }
+      },
+      "context": "Company slogan/tagline",
+      "category": "brand",
+      "tags": ["slogan", "tagline", "brand"]
+    },
+    {
+      "id": "TM-004",
+      "source": {
+        "lang": "en",
+        "text": "Get a free consultation and quote for your project"
+      },
+      "targets": {
+        "ar": {
+          "text": "احصل على استشارة مجانية وعرض سعر لمشروعك",
+          "approved": true,
+          "approvedBy": "Human Translator",
+          "approvedDate": "2025-11-01",
+          "confidence": 1.0
+        },
+        "tr": {
+          "text": "Projeniz için ücretsiz danışmanlık ve teklif alın",
+          "approved": true,
+          "approvedBy": "Human Translator",
+          "approvedDate": "2025-11-01",
+          "confidence": 1.0
+        }
+      },
+      "context": "Call-to-action text for consultation",
+      "category": "cta",
+      "tags": ["cta", "consultation", "quote"]
+    },
+    {
+      "id": "TM-005",
+      "source": {
+        "lang": "en",
+        "text": "Precise cutting up to 25mm thickness, sizes up to 1500×3000mm"
+      },
+      "targets": {
+        "ar": {
+          "text": "قص دقيق حتى 25 مم سماكة، مقاسات حتى 1500×3000 مم",
+          "approved": true,
+          "approvedBy": "Human Translator",
+          "approvedDate": "2025-11-01",
+          "confidence": 1.0
+        },
+        "tr": {
+          "text": "25mm kalınlığa kadar hassas kesim, 1500×3000mm'ye kadar boyutlar",
+          "approved": true,
+          "approvedBy": "Human Translator",
+          "approvedDate": "2025-11-01",
+          "confidence": 1.0
+        }
+      },
+      "context": "Technical specifications for laser cutting capability",
+      "category": "technical",
+      "tags": ["specifications", "laser-cutting", "capabilities"],
+      "notes": "Note: Numbers and units (mm) remain in Latin numerals in all languages"
+    },
+    {
+      "id": "TM-006",
+      "source": {
+        "lang": "en",
+        "text": "CNC bending with angular precision ±0.5°"
+      },
+      "targets": {
+        "ar": {
+          "text": "ثني CNC بدقة زاوية ±0.5 درجة",
+          "approved": true,
+          "approvedBy": "Human Translator",
+          "approvedDate": "2025-11-01",
+          "confidence": 1.0
+        },
+        "tr": {
+          "text": "±0.5° açısal hassasiyetle CNC bükme",
+          "approved": true,
+          "approvedBy": "Human Translator",
+          "approvedDate": "2025-11-01",
+          "confidence": 1.0
+        }
+      },
+      "context": "Technical specifications for bending precision",
+      "category": "technical",
+      "tags": ["specifications", "cnc-bending", "precision"],
+      "notes": "CNC acronym remains in English, degree symbol and numbers in Latin"
+    },
+    {
+      "id": "TM-007",
+      "source": {
+        "lang": "en",
+        "text": "We provide advanced sheet metal fabrication solutions with cutting-edge technology"
+      },
+      "targets": {
+        "ar": {
+          "text": "نقدم حلولاً متقدمة في تصنيع الصفائح المعدنية بأحدث التقنيات",
+          "approved": true,
+          "approvedBy": "Human Translator",
+          "approvedDate": "2025-11-01",
+          "confidence": 1.0
+        },
+        "tr": {
+          "text": "Son teknoloji ile gelişmiş sac metal üretim çözümleri sunuyoruz",
+          "approved": true,
+          "approvedBy": "Human Translator",
+          "approvedDate": "2025-11-01",
+          "confidence": 1.0
+        }
+      },
+      "context": "Company description - value proposition",
+      "category": "marketing",
+      "tags": ["description", "value-proposition", "technology"]
+    }
+  ],
+  "statistics": {
+    "totalSegments": 7,
+    "approvedSegments": 7,
+    "pendingSegments": 0,
+    "languageCoverage": {
+      "ar": {
+        "total": 7,
+        "approved": 7,
+        "coverage": "100%"
+      },
+      "tr": {
+        "total": 7,
+        "approved": 7,
+        "coverage": "100%"
+      }
+    },
+    "categoryBreakdown": {
+      "marketing": 3,
+      "brand": 1,
+      "cta": 1,
+      "technical": 2
+    }
+  },
+  "usageGuidelines": {
+    "whenToUse": [
+      "When translating similar or identical content segments",
+      "To maintain consistency across website updates",
+      "As reference for translators working on new content",
+      "For quality assurance and validation"
+    ],
+    "matchingRules": {
+      "exactMatch": {
+        "description": "Use when source text matches 100%",
+        "confidence": 1.0,
+        "action": "Reuse translation directly"
+      },
+      "fuzzyMatch": {
+        "description": "Use when source text matches 70-99%",
+        "confidence": 0.7,
+        "action": "Use as reference, review and adjust"
+      },
+      "contextMatch": {
+        "description": "Same text in different context",
+        "confidence": 0.8,
+        "action": "Review context, may need adjustment"
+      }
+    },
+    "approvalWorkflow": [
+      "1. Translation created (human or machine)",
+      "2. Quality review by native speaker",
+      "3. Technical review for domain-specific terms",
+      "4. Final approval and addition to TM",
+      "5. Periodic review for consistency"
+    ]
+  },
+  "integrationNotes": {
+    "multiEngineTranslation": {
+      "description": "Use multiple translation engines and compare results",
+      "engines": [
+        "Google Translate API (primary)",
+        "DeepL API (technical content)",
+        "Microsoft Translator (formal content)"
+      ],
+      "workflow": [
+        "1. Generate translation from all engines",
+        "2. Compare results and select best match",
+        "3. Human review and adjustment",
+        "4. Add approved translation to TM"
+      ]
+    },
+    "glossaryIntegration": {
+      "description": "Always check glossary before using TM",
+      "priority": "Glossary terms take precedence over TM suggestions"
+    }
+  }
+}

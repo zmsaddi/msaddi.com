@@ -1,0 +1,298 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "title": "MSADDI Translation Glossary",
+  "description": "Brand terminology and technical terms that must be translated consistently across all languages. This glossary ensures terminology consistency and brand integrity.",
+  "version": "1.0.0",
+  "lastUpdated": "2025-11-01",
+  "terms": {
+    "company": {
+      "MSADDI EST.": {
+        "ar": "مؤسسة مسدي",
+        "en": "MSADDI EST.",
+        "tr": "MSADDI EST.",
+        "notes": "Company legal name - use full name in formal contexts, 'MSADDI' in casual contexts",
+        "category": "brand",
+        "doNotTranslate": false
+      },
+      "MSADDI": {
+        "ar": "مسدي",
+        "en": "MSADDI",
+        "tr": "MSADDI",
+        "notes": "Short brand name - always capitalize all letters",
+        "category": "brand",
+        "doNotTranslate": true
+      }
+    },
+    "technical": {
+      "laser_cutting": {
+        "ar": "القص بالليزر",
+        "en": "Laser Cutting",
+        "tr": "Lazer Kesim",
+        "notes": "Core service offering",
+        "category": "technical",
+        "alternativeTerms": {
+          "ar": ["قطع الليزر", "قص بالليزر"],
+          "en": ["Laser Cut", "Laser Precision Cutting"],
+          "tr": ["Lazer Kesme"]
+        }
+      },
+      "cnc_bending": {
+        "ar": "الثني CNC",
+        "en": "CNC Bending",
+        "tr": "CNC Bükme",
+        "notes": "CNC acronym should remain in English",
+        "category": "technical",
+        "doNotTranslate": false
+      },
+      "metal_spinning": {
+        "ar": "دوران المعادن",
+        "en": "Metal Spinning",
+        "tr": "Metal Döndürme",
+        "notes": "Specialized manufacturing process",
+        "category": "technical",
+        "alternativeTerms": {
+          "ar": ["الدوران المعدني", "لف المعادن"],
+          "en": ["Spin Forming", "Metal Turning"],
+          "tr": ["Metal Şekillendirme"]
+        }
+      },
+      "sheet_metal": {
+        "ar": "الصفائح المعدنية",
+        "en": "Sheet Metal",
+        "tr": "Sac Metal",
+        "notes": "Primary material type",
+        "category": "technical"
+      },
+      "precision": {
+        "ar": "الدقة",
+        "en": "Precision",
+        "tr": "Hassasiyet",
+        "notes": "Key quality attribute - emphasize in all languages",
+        "category": "quality"
+      },
+      "tolerance": {
+        "ar": "التفاوت",
+        "en": "Tolerance",
+        "tr": "Tolerans",
+        "notes": "Technical measurement term",
+        "category": "technical"
+      },
+      "fabrication": {
+        "ar": "التصنيع",
+        "en": "Fabrication",
+        "tr": "Fabrikasyon",
+        "notes": "General manufacturing term",
+        "category": "technical",
+        "alternativeTerms": {
+          "ar": ["الإنتاج", "التشكيل"],
+          "en": ["Manufacturing", "Production"],
+          "tr": ["Üretim", "İmalat"]
+        }
+      }
+    },
+    "materials": {
+      "stainless_steel": {
+        "ar": "الفولاذ المقاوم للصدأ",
+        "en": "Stainless Steel",
+        "tr": "Paslanmaz Çelik",
+        "notes": "Primary material - include grade numbers (304, 316, 321) when applicable",
+        "category": "material"
+      },
+      "aluminum": {
+        "ar": "الألمنيوم",
+        "en": "Aluminum",
+        "tr": "Alüminyum",
+        "notes": "Common material for lightweight applications",
+        "category": "material"
+      },
+      "carbon_steel": {
+        "ar": "الفولاذ الكربوني",
+        "en": "Carbon Steel",
+        "tr": "Karbon Çelik",
+        "notes": "Structural steel material",
+        "category": "material"
+      },
+      "copper": {
+        "ar": "النحاس",
+        "en": "Copper",
+        "tr": "Bakır",
+        "notes": "Conductive material",
+        "category": "material"
+      },
+      "brass": {
+        "ar": "النحاس الأصفر",
+        "en": "Brass",
+        "tr": "Pirinç",
+        "notes": "Copper-zinc alloy",
+        "category": "material"
+      }
+    },
+    "locations": {
+      "alshqaeef": {
+        "ar": "الشقيف",
+        "en": "Alshqaeef",
+        "tr": "Alshqaeef",
+        "notes": "Company location - transliteration in non-Arabic languages",
+        "category": "location",
+        "doNotTranslate": false
+      },
+      "aleppo": {
+        "ar": "حلب",
+        "en": "Aleppo",
+        "tr": "Halep",
+        "notes": "City name",
+        "category": "location"
+      },
+      "syria": {
+        "ar": "سوريا",
+        "en": "Syria",
+        "tr": "Suriye",
+        "notes": "Country name",
+        "category": "location"
+      }
+    },
+    "quality": {
+      "quality_control": {
+        "ar": "مراقبة الجودة",
+        "en": "Quality Control",
+        "tr": "Kalite Kontrol",
+        "notes": "QC/QA processes",
+        "category": "quality"
+      },
+      "iso_standards": {
+        "ar": "معايير ISO",
+        "en": "ISO Standards",
+        "tr": "ISO Standartları",
+        "notes": "ISO should remain in English",
+        "category": "quality",
+        "doNotTranslate": false
+      },
+      "inspection": {
+        "ar": "الفحص",
+        "en": "Inspection",
+        "tr": "İnceleme",
+        "notes": "Quality inspection process",
+        "category": "quality"
+      }
+    },
+    "services": {
+      "prototyping": {
+        "ar": "النماذج الأولية",
+        "en": "Prototyping",
+        "tr": "Prototipleme",
+        "notes": "Rapid prototyping service",
+        "category": "service"
+      },
+      "custom_fabrication": {
+        "ar": "تصنيع حسب الطلب",
+        "en": "Custom Fabrication",
+        "tr": "Özel Üretim",
+        "notes": "Bespoke manufacturing service",
+        "category": "service"
+      },
+      "volume_production": {
+        "ar": "الإنتاج بالجملة",
+        "en": "Volume Production",
+        "tr": "Toplu Üretim",
+        "notes": "Large-scale manufacturing",
+        "category": "service",
+        "alternativeTerms": {
+          "ar": ["الإنتاج الكبير", "الإنتاج الضخم"],
+          "en": ["Mass Production", "Large-Scale Production"],
+          "tr": ["Seri Üretim", "Yüksek Hacimli Üretim"]
+        }
+      }
+    },
+    "businessTerms": {
+      "quote": {
+        "ar": "عرض سعر",
+        "en": "Quote",
+        "tr": "Teklif",
+        "notes": "Price quotation",
+        "category": "business",
+        "alternativeTerms": {
+          "ar": ["تسعيرة", "عرض أسعار"],
+          "en": ["Quotation", "Price Estimate"],
+          "tr": ["Fiyat Teklifi"]
+        }
+      },
+      "consultation": {
+        "ar": "استشارة",
+        "en": "Consultation",
+        "tr": "Danışmanlık",
+        "notes": "Free consultation service",
+        "category": "business"
+      },
+      "delivery_time": {
+        "ar": "وقت التسليم",
+        "en": "Delivery Time",
+        "tr": "Teslimat Süresi",
+        "notes": "Lead time for orders",
+        "category": "business",
+        "alternativeTerms": {
+          "ar": ["مدة التسليم", "موعد التسليم"],
+          "en": ["Lead Time", "Turnaround Time"],
+          "tr": ["Teslim Süresi"]
+        }
+      }
+    }
+  },
+  "translationGuidelines": {
+    "general": [
+      "Always use the preferred term from this glossary for consistency",
+      "Alternative terms can be used for variety but maintain the same meaning",
+      "Terms marked 'doNotTranslate: true' should never be translated",
+      "Include notes context when translating to ensure accuracy"
+    ],
+    "brandGuidelines": [
+      "MSADDI should always be in uppercase",
+      "Full company name 'MSADDI EST.' used in legal/formal contexts",
+      "Short name 'MSADDI' for casual/marketing contexts",
+      "Taglines should emphasize precision, quality, and technology"
+    ],
+    "technicalGuidelines": [
+      "Technical specifications (measurements, tolerances) use Latin numerals in all languages including Arabic",
+      "Industry-standard acronyms (CNC, ISO, etc.) remain in English",
+      "Material grade numbers (304, 316, 321) remain as numbers",
+      "Units of measurement: use mm, degrees (°), etc. in all languages"
+    ],
+    "toneAndStyle": {
+      "ar": "رسمي ومهني مع التركيز على الخبرة والجودة",
+      "en": "Professional and authoritative, emphasizing expertise and quality",
+      "tr": "Profesyonel ve güvenilir, uzmanlık ve kaliteyi vurgulayan"
+    }
+  },
+  "forbiddenTranslations": [
+    {
+      "term": "MSADDI",
+      "reason": "Brand name - never translate",
+      "correctUsage": "MSADDI (always uppercase)"
+    },
+    {
+      "term": "CNC",
+      "reason": "Industry-standard acronym",
+      "correctUsage": "CNC (Computer Numerical Control)"
+    },
+    {
+      "term": "ISO",
+      "reason": "International standards acronym",
+      "correctUsage": "ISO (International Organization for Standardization)"
+    }
+  ],
+  "usageExamples": {
+    "combining_terms": {
+      "example_1": {
+        "en": "High-precision CNC bending with ±0.5° tolerance",
+        "ar": "ثني CNC عالي الدقة بتفاوت ±0.5 درجة",
+        "tr": "±0.5° toleranslı yüksek hassasiyetli CNC bükme",
+        "notes": "Shows proper use of technical terms with measurements"
+      },
+      "example_2": {
+        "en": "MSADDI EST. - Excellence in Metal Fabrication",
+        "ar": "مؤسسة مسدي - التميز في تصنيع المعادن",
+        "tr": "MSADDI EST. - Metal İşlemede Mükemmellik",
+        "notes": "Formal brand usage with tagline"
+      }
+    }
+  }
+}

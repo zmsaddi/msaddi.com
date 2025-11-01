@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import GoogleMap from '@/components/GoogleMap';
+import PageStructuredData from '@/components/PageStructuredData';
 import {
   Box,
   Container,
@@ -56,6 +57,7 @@ export default function AboutPage() {
 
   return (
     <Box sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+      <PageStructuredData pageType="about" />
       <Header />
 
       <Box component="main" sx={{ flexGrow: 1 }}>
@@ -261,7 +263,7 @@ export default function AboutPage() {
                   textAlign="center"
                   color="primary.main"
                 >
-                  Find Us
+                  {t('find_us_title')}
                 </Typography>
 
                 <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
@@ -300,7 +302,7 @@ export default function AboutPage() {
                       target="_blank"
                       sx={{ fontWeight: 600 }}
                     >
-                      Chat on WhatsApp
+                      {t('common.whatsapp_chat')}
                     </Button>
                   </Box>
                 </Box>

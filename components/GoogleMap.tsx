@@ -1,8 +1,11 @@
 'use client';
 
 import { Box, Paper } from '@mui/material';
+import { useTranslations } from 'next-intl';
 
 export default function GoogleMap() {
+  const t = useTranslations('common');
+
   return (
     <Paper
       elevation={4}
@@ -23,7 +26,7 @@ export default function GoogleMap() {
         }}
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
-        title="MSADDI EST. Location - Alshqaeef, Aleppo, Syria"
+        title={t('map_title')}
       />
     </Paper>
   );

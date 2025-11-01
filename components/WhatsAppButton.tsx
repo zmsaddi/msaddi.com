@@ -3,8 +3,10 @@
 import { Fab, Tooltip, Zoom } from '@mui/material';
 import { WhatsApp as WhatsAppIcon } from '@mui/icons-material';
 import { useState, useEffect } from 'react';
+import { useTranslations } from 'next-intl';
 
 export default function WhatsAppButton() {
+  const t = useTranslations('common');
   const [isVisible, setIsVisible] = useState(false);
   const phoneNumber = '963944244604'; // Phone number without + or spaces
 
@@ -16,14 +18,14 @@ export default function WhatsAppButton() {
 
   const handleClick = () => {
     // WhatsApp click-to-chat URL that works on all devices
-    const message = encodeURIComponent('Hello! I would like to inquire about your metal fabrication services.');
+    const message = encodeURIComponent(t('whatsapp_message'));
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
     window.open(whatsappURL, '_blank');
   };
 
   return (
     <Zoom in={isVisible}>
-      <Tooltip title="Chat on WhatsApp" placement="left" arrow>
+      <Tooltip title={t('whatsapp_chat')} placement="left" arrow>
         <Fab
           color="success"
           aria-label="whatsapp"

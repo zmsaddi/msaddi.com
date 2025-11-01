@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import IndustryImage from '@/components/IndustryImage';
+import PageStructuredData from '@/components/PageStructuredData';
 import {
   Box,
   Container,
@@ -57,6 +58,7 @@ export default function HomePage() {
 
   return (
     <Box sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+      <PageStructuredData pageType="home" />
       <Header />
 
       <Box component="main" sx={{ flexGrow: 1 }}>
@@ -267,10 +269,10 @@ export default function HomePage() {
           <Container maxWidth="lg">
             <Grid container spacing={4}>
               {[
-                { number: '±0.127mm', label: 'Laser Cutting Precision' },
-                { number: '±0.5°', label: 'Bending Accuracy' },
-                { number: '25mm', label: 'Max Cutting Thickness' },
-                { number: '1500×3000mm', label: 'Max Cutting Size' },
+                { number: '±0.127mm', label: t('home.stat_laser_precision_label') },
+                { number: '±0.5°', label: t('home.stat_bending_accuracy_label') },
+                { number: '25mm', label: t('home.stat_max_thickness_label') },
+                { number: '1500×3000mm', label: t('home.stat_max_size_label') },
               ].map((stat, index) => (
                 <Grid item xs={6} md={3} key={index}>
                   <MotionPaper
@@ -327,9 +329,9 @@ export default function HomePage() {
 
           <Grid container spacing={4}>
             {[
-              { type: 'laser' as const, delay: 0 },
-              { type: 'bending' as const, delay: 0.1 },
-              { type: 'spinning' as const, delay: 0.2 },
+              { type: 'laser' as const, titleKey: 'services.service_1_title', delay: 0 },
+              { type: 'bending' as const, titleKey: 'services.service_2_title', delay: 0.1 },
+              { type: 'spinning' as const, titleKey: 'services.service_3_title', delay: 0.2 },
             ].map((service, index) => (
               <Grid item xs={12} md={4} key={index}>
                 <MotionBox
@@ -338,7 +340,7 @@ export default function HomePage() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: service.delay }}
                 >
-                  <IndustryImage type={service.type} height={300} />
+                  <IndustryImage type={service.type} title={t(service.titleKey)} height={300} />
                 </MotionBox>
               </Grid>
             ))}

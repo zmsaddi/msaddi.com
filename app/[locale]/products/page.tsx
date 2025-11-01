@@ -11,80 +11,62 @@ import {
   Typography,
   Grid,
   Card,
+  CardMedia,
   CardContent,
-  Button,
   Chip,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
-  Divider,
+  Button,
 } from '@mui/material';
 import {
   CheckCircle as CheckIcon,
-  Build as BuildIcon,
-  Bolt as BoltIcon,
-  Loop as LoopIcon,
-  Category as CategoryIcon,
-  Science as ScienceIcon,
-  Factory as FactoryIcon,
+  ArrowForward as ArrowIcon,
 } from '@mui/icons-material';
 import { motion } from 'framer-motion';
 
 const MotionCard = motion(Card);
 const MotionBox = motion(Box);
 
-export default function ServicesPage() {
-  const t = useTranslations('services');
+export default function ProductsPage() {
+  const t = useTranslations('products');
 
-  const services = [
+  // الفئات الرئيسية للمنتجات المعدنية
+  const productCategories = [
     {
-      icon: <BoltIcon sx={{ fontSize: 60 }} />,
-      title: t('service_1_title'),
-      desc: t('service_1_desc'),
-      features: t('service_1_features'),
+      id: 'enclosures',
+      titleKey: 'cat_1_title',
+      descKey: 'cat_1_desc',
+      materialsKey: 'cat_1_materials',
+      specificationsKey: 'cat_1_specs',
       color: '#ef4444',
     },
     {
-      icon: <BuildIcon sx={{ fontSize: 60 }} />,
-      title: t('service_2_title'),
-      desc: t('service_2_desc'),
-      features: t('service_2_features'),
+      id: 'brackets',
+      titleKey: 'cat_2_title',
+      descKey: 'cat_2_desc',
+      materialsKey: 'cat_2_materials',
+      specificationsKey: 'cat_2_specs',
       color: '#3b82f6',
     },
     {
-      icon: <LoopIcon sx={{ fontSize: 60 }} />,
-      title: t('service_3_title'),
-      desc: t('service_3_desc'),
-      features: t('service_3_features'),
+      id: 'panels',
+      titleKey: 'cat_3_title',
+      descKey: 'cat_3_desc',
+      materialsKey: 'cat_3_materials',
+      specificationsKey: 'cat_3_specs',
       color: '#10b981',
     },
     {
-      icon: <CategoryIcon sx={{ fontSize: 60 }} />,
-      title: t('service_4_title'),
-      desc: t('service_4_desc'),
-      features: '',
-      color: '#8b5cf6',
-    },
-    {
-      icon: <ScienceIcon sx={{ fontSize: 60 }} />,
-      title: t('service_5_title'),
-      desc: t('service_5_desc'),
-      features: '',
+      id: 'components',
+      titleKey: 'cat_4_title',
+      descKey: 'cat_4_desc',
+      materialsKey: 'cat_4_materials',
+      specificationsKey: 'cat_4_specs',
       color: '#f59e0b',
-    },
-    {
-      icon: <FactoryIcon sx={{ fontSize: 60 }} />,
-      title: t('service_6_title'),
-      desc: t('service_6_desc'),
-      features: '',
-      color: '#06b6d4',
     },
   ];
 
   return (
     <Box sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
-      <PageStructuredData pageType="services" />
+      <PageStructuredData pageType="products" />
       <Header />
 
       <Box component="main" sx={{ flexGrow: 1 }}>
@@ -128,11 +110,30 @@ export default function ServicesPage() {
           </Container>
         </Box>
 
-        {/* Services Grid */}
+        {/* Product Categories */}
         <Container maxWidth="lg" sx={{ py: { xs: 8, md: 12 } }}>
+          <MotionBox
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            textAlign="center"
+            mb={6}
+          >
+            <Typography
+              variant="h2"
+              fontWeight={700}
+              mb={2}
+              color="primary.main"
+              sx={{ fontSize: { xs: '2rem', md: '2.5rem' } }}
+            >
+              {t('categories_title')}
+            </Typography>
+          </MotionBox>
+
           <Grid container spacing={4}>
-            {services.map((service, index) => (
-              <Grid item xs={12} md={6} key={index}>
+            {productCategories.map((category, index) => (
+              <Grid item xs={12} md={6} key={category.id}>
                 <MotionCard
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -142,8 +143,6 @@ export default function ServicesPage() {
                     height: '100%',
                     borderRadius: 3,
                     overflow: 'hidden',
-                    border: '1px solid',
-                    borderColor: 'divider',
                     transition: 'all 0.3s',
                     '&:hover': {
                       transform: 'translateY(-6px)',
@@ -151,53 +150,85 @@ export default function ServicesPage() {
                     },
                   }}
                 >
+                  {/* Category Header */}
                   <Box
                     sx={{
-                      bgcolor: service.color,
+                      bgcolor: category.color,
                       color: 'white',
                       p: 3,
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: 2,
                     }}
                   >
-                    {service.icon}
-                    <Typography variant="h5" fontWeight={700}>
-                      {service.title}
+                    <Typography variant="h4" fontWeight={700}>
+                      {t(category.titleKey)}
                     </Typography>
                   </Box>
 
-                  <CardContent sx={{ p: 3 }}>
+                  <CardContent sx={{ p: 4 }}>
+                    {/* Description */}
                     <Typography
                       variant="body1"
                       color="text.secondary"
-                      mb={2}
+                      mb={3}
                       lineHeight={1.8}
                     >
-                      {service.desc}
+                      {t(category.descKey)}
                     </Typography>
 
-                    {service.features && (
-                      <>
-                        <Divider sx={{ my: 2 }} />
-                        <List dense disablePadding>
-                          {service.features.split('\n').map((feature: string, i: number) => (
-                            <ListItem key={i} disablePadding sx={{ py: 0.5 }}>
-                              <ListItemIcon sx={{ minWidth: 32 }}>
-                                <CheckIcon color="primary" fontSize="small" />
-                              </ListItemIcon>
-                              <ListItemText
-                                primary={feature.replace('• ', '')}
-                                primaryTypographyProps={{
-                                  fontSize: '0.95rem',
-                                  fontWeight: 500,
-                                }}
-                              />
-                            </ListItem>
+                    {/* Materials */}
+                    <Box mb={3}>
+                      <Typography
+                        variant="subtitle2"
+                        fontWeight={700}
+                        mb={1.5}
+                        color="text.primary"
+                      >
+                        {t('materials_label')}
+                      </Typography>
+                      <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
+                        {t(category.materialsKey)
+                          .split(',')
+                          .map((material: string, i: number) => (
+                            <Chip
+                              key={i}
+                              label={material.trim()}
+                              size="small"
+                              sx={{
+                                bgcolor: 'grey.100',
+                                fontWeight: 600,
+                              }}
+                            />
                           ))}
-                        </List>
-                      </>
-                    )}
+                      </Box>
+                    </Box>
+
+                    {/* Specifications */}
+                    <Box>
+                      <Typography
+                        variant="subtitle2"
+                        fontWeight={700}
+                        mb={1.5}
+                        color="text.primary"
+                      >
+                        {t('specifications_label')}
+                      </Typography>
+                      <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
+                        {t(category.specificationsKey)
+                          .split('\n')
+                          .map((spec: string, i: number) => (
+                            <Box
+                              key={i}
+                              sx={{ display: 'flex', alignItems: 'center', gap: 1 }}
+                            >
+                              <CheckIcon
+                                sx={{ fontSize: 18, color: category.color }}
+                              />
+                              <Typography variant="body2" color="text.secondary">
+                                {spec.replace('• ', '')}
+                              </Typography>
+                            </Box>
+                          ))}
+                      </Box>
+                    </Box>
                   </CardContent>
                 </MotionCard>
               </Grid>
@@ -205,7 +236,7 @@ export default function ServicesPage() {
           </Grid>
         </Container>
 
-        {/* Materials Section */}
+        {/* Technical Standards */}
         <Box sx={{ bgcolor: 'grey.50', py: { xs: 8, md: 12 } }}>
           <Container maxWidth="md">
             <MotionBox
@@ -222,39 +253,37 @@ export default function ServicesPage() {
                 color="primary.main"
                 sx={{ fontSize: { xs: '2rem', md: '2.5rem' } }}
               >
-                {t('materials_title')}
+                {t('standards_title')}
               </Typography>
 
               <Box
                 sx={{
                   display: 'flex',
-                  flexWrap: 'wrap',
+                  flexDirection: 'column',
                   gap: 2,
-                  justifyContent: 'center',
-                  mb: 4,
+                  bgcolor: 'white',
+                  p: 4,
+                  borderRadius: 3,
+                  boxShadow: 2,
                 }}
               >
-                {t('materials')
+                {t('standards_list')
                   .split('\n')
-                  .map((material: string, index: number) => (
-                    <Chip
+                  .map((standard: string, index: number) => (
+                    <Box
                       key={index}
-                      label={material.replace('• ', '')}
                       sx={{
-                        bgcolor: 'white',
-                        px: 2,
-                        py: 3,
-                        fontSize: '1rem',
-                        fontWeight: 600,
-                        border: '2px solid',
-                        borderColor: 'primary.main',
-                        '&:hover': {
-                          bgcolor: 'primary.main',
-                          color: 'white',
-                        },
-                        transition: 'all 0.3s',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: 2,
+                        textAlign: 'left',
                       }}
-                    />
+                    >
+                      <CheckIcon color="primary" />
+                      <Typography variant="body1" fontWeight={600}>
+                        {standard.replace('• ', '')}
+                      </Typography>
+                    </Box>
                   ))}
               </Box>
             </MotionBox>
@@ -280,6 +309,7 @@ export default function ServicesPage() {
               href="/contact"
               variant="contained"
               size="large"
+              endIcon={<ArrowIcon />}
               sx={{
                 px: 6,
                 py: 2.5,

@@ -7,13 +7,20 @@
     "home": "Ana Sayfa",
     "about": "Hakkımızda",
     "services": "Hizmetler",
+    "products": "Ürünler",
+    "capabilities": "Yetenekler",
     "contact": "İletişim",
     "get_quote": "Teklif Al",
     "learn_more": "Daha Fazla Bilgi",
     "contact_us": "Bize Ulaşın",
     "our_services": "Hizmetlerimiz",
     "view_all": "Tümünü Gör",
-    "location": "Konum"
+    "location": "Konum",
+    "whatsapp_chat": "WhatsApp'ta Sohbet Et",
+    "whatsapp_message": "Merhaba! Metal fabrikasyon hizmetleriniz hakkında bilgi almak istiyorum.",
+    "map_title": "MSADDI EST. Konumu - Alshqaeef, Halep, Suriye",
+    "email": "E-posta",
+    "phone": "Telefon"
   },
   "home": {
     "hero_title": "Hassas Metal Fabrikasyonu",
@@ -32,7 +39,11 @@
     "cta_title": "Projeniz mi Var?",
     "cta_description": "Projeniz için ücretsiz danışmanlık ve teklif almak için bugün bizimle iletişime geçin",
     "services_title": "Özel Hizmetlerimiz",
-    "capabilities_title": "Üretim Yeteneklerimiz"
+    "capabilities_title": "Üretim Yeteneklerimiz",
+    "stat_laser_precision_label": "Lazer Kesim Hassasiyeti",
+    "stat_bending_accuracy_label": "Bükme Hassasiyeti",
+    "stat_max_thickness_label": "Maks. Kesim Kalınlığı",
+    "stat_max_size_label": "Maks. Kesim Boyutu"
   },
   "about": {
     "title": "Hakkımızda",
@@ -50,7 +61,8 @@
     "cap_3_title": "Metal Döndürme",
     "cap_3_desc": "Silindirik parçaların hassas şekillendirilmesi, 0.5 - 50mm kalınlıklar",
     "cap_4_title": "Kalite Kontrol",
-    "cap_4_desc": "Uluslararası standartlara göre tüm ürünlerin kapsamlı incelemesi"
+    "cap_4_desc": "Uluslararası standartlara göre tüm ürünlerin kapsamlı incelemesi",
+    "find_us_title": "Bizi Bulun"
   },
   "services": {
     "title": "Özel Hizmetlerimiz",
@@ -71,7 +83,10 @@
     "service_6_title": "Toplu Üretim",
     "service_6_desc": "Kalite ve hassasiyeti koruyarak büyük siparişler için yüksek üretim kapasitesi.",
     "materials_title": "Çalıştığımız Malzemeler",
-    "materials": "• Paslanmaz Çelik (304, 316, 321)\n• Alüminyum ve alaşımları\n• Karbon Çelik\n• Bakır ve Pirinç\n• Titanyum\n• Nikel Alaşımları"
+    "materials": "• Paslanmaz Çelik (304, 316, 321)\n• Alüminyum ve alaşımları\n• Karbon Çelik\n• Bakır ve Pirinç\n• Titanyum\n• Nikel Alaşımları",
+    "cta_title": "Projenize Başlamaya Hazır mısınız?",
+    "cta_description": "Metal fabrikasyon ihtiyaçlarınız için ücretsiz danışmanlık ve teklif alın",
+    "cta_button": "Bugün Bizimle İletişime Geçin"
   },
   "contact": {
     "title": "İletişim",
@@ -102,5 +117,58 @@
     "metal_spinning": "Metal Döndürme",
     "custom_fabrication": "Özel Üretim",
     "other": "Diğer"
+  },
+  "products": {
+    "title": "Sac Metal Ürünler",
+    "subtitle": "Endüstriyel Uygulamalar için Hassas Mühendislik Metal Bileşenler",
+    "categories_title": "Ürün Kategorileri",
+    "cat_1_title": "Metal Muhafazalar ve Kabinler",
+    "cat_1_desc": "Paslanmaz çelik, alüminyum ve galvanizli çelikten üretilen özel tasarım elektrik muhafazaları, kontrol kabinleri ve koruyucu kasalar. Kesin toleranslar için hassas lazer kesim ve CNC bükme.",
+    "cat_1_materials": "Paslanmaz Çelik 304/316, Alüminyum 5052/6061, Galvanizli Çelik",
+    "cat_1_specs": "• Kalınlık: 0.5mm - 6mm\n• IP Derecesi: IP54, IP65, IP66 mevcut\n• Yüzey: Toz boya, eloksal, çinko kaplama\n• Maks. boyut: 1500×3000mm",
+    "cat_2_title": "Yapısal Braketler ve Montaj Donanımı",
+    "cat_2_desc": "Endüstriyel makineler, HVAC sistemleri ve bina inşaatı için ağır hizmet tipi L-braketler, Z-braketler, montaj plakaları ve yapısal destekler. ±0.5° açısal hassasiyetle CNC bükme.",
+    "cat_2_materials": "Karbon Çelik Q235/Q345, Paslanmaz Çelik 304, Alüminyum 6061",
+    "cat_2_specs": "• Kalınlık: 1mm - 12mm\n• Bükme hassasiyeti: ±0.5°\n• Yük kapasitesi: 500kg'a kadar\n• Kaplamalar: Çinko kaplama, toz boya, siyah oksit",
+    "cat_3_title": "Dekoratif ve Mimari Paneller",
+    "cat_3_desc": "Lazer kesim dekoratif paneller, perfore metal ekranlar, cephe kaplaması ve özel mimari metal işçiliği. İç ve dış mekan uygulamaları için çeşitli desenler ve kaplamalar mevcuttur.",
+    "cat_3_materials": "Paslanmaz Çelik 304/316, Alüminyum 5052, Corten Çelik",
+    "cat_3_specs": "• Kalınlık: 1mm - 4mm\n• Perforasyon: Özel desenler mevcut\n• Kaplamalar: Fırçalanmış, ayna, toz boya\n• Hava koşullarına dayanıklı seçenekler",
+    "cat_4_title": "Özel İşlenmiş Bileşenler",
+    "cat_4_desc": "Flanşlar, pullar, aralayıcılar, şimler ve özel endüstriyel bileşenler dahil olmak üzere müşteri spesifikasyonlarına göre üretilen hassas metal parçalar. ±0.127mm toleranslı CNC lazer kesim.",
+    "cat_4_materials": "Paslanmaz Çelik, Alüminyum, Pirinç, Bakır, Titanyum",
+    "cat_4_specs": "• Tolerans: ±0.127mm (lazer kesim)\n• Kalınlık: 0.5mm - 25mm\n• Miktar: Prototipten yüksek hacme\n• Kalite: %100 inceleme",
+    "materials_label": "Mevcut Malzemeler",
+    "specifications_label": "Teknik Özellikler",
+    "standards_title": "Üretim Standartları ve Sertifikalar",
+    "standards_list": "• ISO 9001:2015 Kalite Yönetim Sistemi\n• Malzeme sertifikaları ve test raporları\n• Boyutsal muayene raporları\n• Yüzey kalitesi kontrol\n• Müşteri gereksinimlerine göre ambalajlama",
+    "cta_title": "Özel Metal Parçalara mı İhtiyacınız Var?",
+    "cta_description": "Teknik çizimler ve spesifikasyonlarla ücretsiz teklif alın",
+    "cta_button": "Teklif İste"
+  },
+  "capabilities": {
+    "title": "Üretim Yetenekleri",
+    "subtitle": "Hassas Metal Fabrikasyonu için İleri Ekipman ve Teknik Uzmanlık",
+    "equipment_title": "Üretim Ekipmanı ve Teknik Özellikler",
+    "eq_1_name": "Fiber Lazer Kesim Sistemi",
+    "eq_1_specs": "• Lazer Gücü: 3000W - 6000W fiber lazer\n• Kesim Tezgahı: 1500mm × 3000mm çalışma alanı\n• Maks. Kalınlık: 25mm (yumuşak çelik), 15mm (paslanmaz), 12mm (alüminyum)\n• Hassasiyet: ±0.127mm konumsal doğruluk\n• Hız: 40m/dk'ya kadar hızlı hareket",
+    "eq_2_name": "CNC Abkant ve Bükme",
+    "eq_2_specs": "• Bükme Kuvveti: 125 ton hidrolik abkant\n• Bükme Uzunluğu: Maksimum 3000mm\n• Açısal Hassasiyet: ±0.5° tekrarlanabilirlik\n• Kalınlık Aralığı: 0.5mm - 12mm\n• Arka Dayama: Çok eksenli konumlandırmalı CNC kontrollü",
+    "eq_3_name": "Metal Döndürme Torna",
+    "eq_3_specs": "• Döndürme Çapı: 1200mm'ye kadar\n• Kalınlık Kapasitesi: 0.5mm - 50mm\n• Ayna Hızı: Değişken 50-1500 RPM\n• Tipler: Manuel ve CNC döndürme mevcut\n• Uygulamalar: Silindirik, konik, yarı küresel parçalar",
+    "eq_4_name": "Kalite Kontrol Ekipmanı",
+    "eq_4_specs": "• Boyutsal muayene için CMM (Koordinat Ölçüm Makinesi)\n• Dijital kumpaslar, mikrometreler (±0.01mm hassasiyet)\n• Yüzey pürüzlülük test cihazı\n• Sertlik test ekipmanı\n• Malzeme kalınlık ölçerler",
+    "materials_title": "Malzeme İşleme Yetenekleri",
+    "table_material": "Malzeme Türü",
+    "table_thickness": "Kalınlık Aralığı",
+    "table_processes": "Mevcut İşlemler",
+    "materials_table": "Paslanmaz Çelik 304/316|0.5mm - 25mm|Lazer Kesim, Bükme, Döndürme\nAlüminyum 5052/6061|0.5mm - 12mm|Lazer Kesim, Bükme, Şekillendirme\nKarbon Çelik Q235/Q345|1mm - 25mm|Lazer Kesim, Bükme, Kaynak\nGalvanizli Çelik|0.5mm - 6mm|Lazer Kesim, Bükme\nBakır ve Pirinç|0.5mm - 8mm|Lazer Kesim, Döndürme\nTitanyum Derece 2/5|0.5mm - 6mm|Lazer Kesim, Şekillendirme",
+    "capacity_title": "Günlük Üretim Kapasitesi",
+    "capacity_stats": "Lazer Kesim: 500+ parça\nBükme İşlemleri: 300+ adet\nMetal Döndürme: 50+ ünite\nKalite Denetimleri: %100",
+    "certifications_title": "Kalite Sertifikaları ve Standartlar",
+    "certifications_list": "• ISO 9001:2015 Kalite Yönetim Sistemi\n• Malzeme test sertifikaları ve izlenebilirlik\n• İlk Parça Muayene (FAI) raporları\n• İstatistiksel Süreç Kontrolü (SPC)\n• Sertifikalı kaynak prosedürleri (uygulanabilir olduğunda)\n• Sertifikalı kalibre edilmiş ölçüm ekipmanı",
+    "cta_title": "Proje Gereksinimlerinizi Tartışalım",
+    "cta_description": "Yetenek değerlendirmesi ve teklif için teknik ekibimizle iletişime geçin",
+    "cta_button": "Teknik Danışmanlık Alın"
   }
 }

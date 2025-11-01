@@ -20,6 +20,8 @@ export default function Header() {
     { href: '', label: t('home') },
     { href: '/about', label: t('about') },
     { href: '/services', label: t('services') },
+    { href: '/products', label: t('products') },
+    { href: '/capabilities', label: t('capabilities') },
     { href: '/contact', label: t('contact') },
   ];
 

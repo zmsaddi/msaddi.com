@@ -7,13 +7,20 @@
     "home": "Home",
     "about": "About",
     "services": "Services",
+    "products": "Products",
+    "capabilities": "Capabilities",
     "contact": "Contact",
     "get_quote": "Get Quote",
     "learn_more": "Learn More",
     "contact_us": "Contact Us",
     "our_services": "Our Services",
     "view_all": "View All",
-    "location": "Location"
+    "location": "Location",
+    "whatsapp_chat": "Chat on WhatsApp",
+    "whatsapp_message": "Hello! I would like to inquire about your metal fabrication services.",
+    "map_title": "MSADDI EST. Location - Alshqaeef, Aleppo, Syria",
+    "email": "Email",
+    "phone": "Phone"
   },
   "home": {
     "hero_title": "Precision Metal Fabrication",
@@ -32,7 +39,11 @@
     "cta_title": "Have a Project?",
     "cta_description": "Contact us today for a free consultation and quote for your project",
     "services_title": "Our Specialized Services",
-    "capabilities_title": "Our Production Capabilities"
+    "capabilities_title": "Our Production Capabilities",
+    "stat_laser_precision_label": "Laser Cutting Precision",
+    "stat_bending_accuracy_label": "Bending Accuracy",
+    "stat_max_thickness_label": "Max Cutting Thickness",
+    "stat_max_size_label": "Max Cutting Size"
   },
   "about": {
     "title": "About Us",
@@ -50,7 +61,8 @@
     "cap_3_title": "Metal Spinning",
     "cap_3_desc": "Precise forming of cylindrical parts, thicknesses from 0.5 to 50mm",
     "cap_4_title": "Quality Control",
-    "cap_4_desc": "Comprehensive inspection of all products according to international standards"
+    "cap_4_desc": "Comprehensive inspection of all products according to international standards",
+    "find_us_title": "Find Us"
   },
   "services": {
     "title": "Our Specialized Services",
@@ -71,7 +83,10 @@
     "service_6_title": "Volume Production",
     "service_6_desc": "High production capacity for large orders while maintaining quality and precision.",
     "materials_title": "Materials We Work With",
-    "materials": "• Stainless Steel (304, 316, 321)\n• Aluminum and alloys\n• Carbon Steel\n• Copper and Brass\n• Titanium\n• Nickel Alloys"
+    "materials": "• Stainless Steel (304, 316, 321)\n• Aluminum and alloys\n• Carbon Steel\n• Copper and Brass\n• Titanium\n• Nickel Alloys",
+    "cta_title": "Ready to Start Your Project?",
+    "cta_description": "Get a free consultation and quote for your metal fabrication needs",
+    "cta_button": "Contact Us Today"
   },
   "contact": {
     "title": "Contact Us",
@@ -102,5 +117,58 @@
     "metal_spinning": "Metal Spinning",
     "custom_fabrication": "Custom Fabrication",
     "other": "Other"
+  },
+  "products": {
+    "title": "Sheet Metal Products",
+    "subtitle": "Precision-Engineered Metal Components for Industrial Applications",
+    "categories_title": "Product Categories",
+    "cat_1_title": "Metal Enclosures & Cabinets",
+    "cat_1_desc": "Custom-designed electrical enclosures, control cabinets, and protective housings manufactured from stainless steel, aluminum, and galvanized steel. Precision laser-cut and CNC bent for exact tolerances.",
+    "cat_1_materials": "Stainless Steel 304/316, Aluminum 5052/6061, Galvanized Steel",
+    "cat_1_specs": "• Thickness: 0.5mm - 6mm\n• IP Rating: IP54, IP65, IP66 available\n• Surface: Powder coating, anodizing, zinc plating\n• Max size: 1500×3000mm",
+    "cat_2_title": "Structural Brackets & Mounting Hardware",
+    "cat_2_desc": "Heavy-duty L-brackets, Z-brackets, mounting plates, and structural supports for industrial machinery, HVAC systems, and building construction. CNC bent with angular precision ±0.5°.",
+    "cat_2_materials": "Carbon Steel Q235/Q345, Stainless Steel 304, Aluminum 6061",
+    "cat_2_specs": "• Thickness: 1mm - 12mm\n• Bending accuracy: ±0.5°\n• Load capacity: Up to 500kg\n• Finishes: Zinc plating, powder coating, black oxide",
+    "cat_3_title": "Decorative & Architectural Panels",
+    "cat_3_desc": "Laser-cut decorative panels, perforated metal screens, facade cladding, and custom architectural metalwork. Available in various patterns and finishes for interior and exterior applications.",
+    "cat_3_materials": "Stainless Steel 304/316, Aluminum 5052, Corten Steel",
+    "cat_3_specs": "• Thickness: 1mm - 4mm\n• Perforation: Custom patterns available\n• Finishes: Brushed, mirror, powder coated\n• Weather resistant options",
+    "cat_4_title": "Custom Machined Components",
+    "cat_4_desc": "Precision metal parts manufactured to customer specifications including flanges, washers, spacers, shims, and specialized industrial components. CNC laser cutting with ±0.127mm tolerance.",
+    "cat_4_materials": "Stainless Steel, Aluminum, Brass, Copper, Titanium",
+    "cat_4_specs": "• Tolerance: ±0.127mm (laser cutting)\n• Thickness: 0.5mm - 25mm\n• Quantity: Prototype to high-volume\n• Quality: 100% inspection",
+    "materials_label": "Available Materials",
+    "specifications_label": "Technical Specifications",
+    "standards_title": "Manufacturing Standards & Certifications",
+    "standards_list": "• ISO 9001:2015 Quality Management System\n• Material certifications and test reports\n• Dimensional inspection reports\n• Surface finish quality control\n• Packaging according to customer requirements",
+    "cta_title": "Need Custom Metal Parts?",
+    "cta_description": "Get a free quote with technical drawings and specifications",
+    "cta_button": "Request Quote"
+  },
+  "capabilities": {
+    "title": "Manufacturing Capabilities",
+    "subtitle": "Advanced Equipment & Technical Expertise for Precision Metal Fabrication",
+    "equipment_title": "Production Equipment & Specifications",
+    "eq_1_name": "Fiber Laser Cutting System",
+    "eq_1_specs": "• Laser Power: 3000W - 6000W fiber laser\n• Cutting Bed: 1500mm × 3000mm work area\n• Max Thickness: 25mm (mild steel), 15mm (stainless), 12mm (aluminum)\n• Precision: ±0.127mm positional accuracy\n• Speed: Up to 40m/min rapid traverse",
+    "eq_2_name": "CNC Press Brake & Bending",
+    "eq_2_specs": "• Bending Force: 125 tons hydraulic press brake\n• Bending Length: 3000mm maximum\n• Angular Accuracy: ±0.5° repeatability\n• Thickness Range: 0.5mm - 12mm\n• Back Gauge: CNC-controlled with multi-axis positioning",
+    "eq_3_name": "Metal Spinning Lathe",
+    "eq_3_specs": "• Spinning Diameter: Up to 1200mm\n• Thickness Capacity: 0.5mm - 50mm\n• Chuck Speed: Variable 50-1500 RPM\n• Types: Manual & CNC spinning available\n• Applications: Cylindrical, conical, hemispherical parts",
+    "eq_4_name": "Quality Control Equipment",
+    "eq_4_specs": "• CMM (Coordinate Measuring Machine) for dimensional inspection\n• Digital calipers, micrometers (±0.01mm accuracy)\n• Surface roughness tester\n• Hardness testing equipment\n• Material thickness gauges",
+    "materials_title": "Material Processing Capabilities",
+    "table_material": "Material Type",
+    "table_thickness": "Thickness Range",
+    "table_processes": "Available Processes",
+    "materials_table": "Stainless Steel 304/316|0.5mm - 25mm|Laser Cutting, Bending, Spinning\nAluminum 5052/6061|0.5mm - 12mm|Laser Cutting, Bending, Forming\nCarbon Steel Q235/Q345|1mm - 25mm|Laser Cutting, Bending, Welding\nGalvanized Steel|0.5mm - 6mm|Laser Cutting, Bending\nCopper & Brass|0.5mm - 8mm|Laser Cutting, Spinning\nTitanium Grade 2/5|0.5mm - 6mm|Laser Cutting, Forming",
+    "capacity_title": "Daily Production Capacity",
+    "capacity_stats": "Laser Cutting: 500+ parts\nBending Operations: 300+ pieces\nMetal Spinning: 50+ units\nQuality Inspections: 100%",
+    "certifications_title": "Quality Certifications & Standards",
+    "certifications_list": "• ISO 9001:2015 Quality Management System\n• Material test certificates and traceability\n• First Article Inspection (FAI) reports\n• Statistical Process Control (SPC)\n• Certified welding procedures (where applicable)\n• Calibrated measurement equipment with certificates",
+    "cta_title": "Let's Discuss Your Project Requirements",
+    "cta_description": "Contact our technical team for capability assessment and quotation",
+    "cta_button": "Get Technical Consultation"
   }
 }

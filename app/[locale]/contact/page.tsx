@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import PageStructuredData from '@/components/PageStructuredData';
 import {
   Box,
   Container,
@@ -67,6 +68,7 @@ export default function ContactPage() {
 
   return (
     <Box sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+      <PageStructuredData pageType="contact" />
       <Header />
 
       <Box component="main" sx={{ flexGrow: 1 }}>
