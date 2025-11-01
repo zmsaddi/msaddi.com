@@ -16,36 +16,36 @@
 // ============================================================================
 
 /**
- * Core Brand Colors - Industrial Modern Design
- * Dark, sophisticated, metal fabrication aesthetic
+ * Core Brand Colors - Clean Professional Design
+ * Clear, readable, professional aesthetic
  */
 export const colors = {
-  // Primary - Dark Slate (Industry, Professional, Modern)
+  // Primary - Professional Blue (Trust, Technology, Precision)
   primary: {
+    50: '#EFF6FF',
+    100: '#DBEAFE',
+    200: '#BFDBFE',
+    300: '#93C5FD',
+    400: '#60A5FA',
+    500: '#3B82F6',  // Main brand color - Clear professional blue
+    600: '#2563EB',
+    700: '#1D4ED8',  // Darker blue
+    800: '#1E40AF',
+    900: '#1E3A8A',
+  },
+
+  // Secondary - Slate (Industry, Professional)
+  secondary: {
     50: '#F8FAFC',
     100: '#F1F5F9',
     200: '#E2E8F0',
     300: '#CBD5E1',
     400: '#94A3B8',
-    500: '#64748B',  // Mid slate
+    500: '#64748B',  // Medium slate
     600: '#475569',
-    700: '#334155',  // Main brand color - Dark professional
-    800: '#1E293B',  // Very dark slate
-    900: '#0F172A',  // Almost black
-  },
-
-  // Secondary - Steel Blue (Technology, Trust, Precision)
-  secondary: {
-    50: '#F0F9FF',
-    100: '#E0F2FE',
-    200: '#BAE6FD',
-    300: '#7DD3FC',
-    400: '#38BDF8',
-    500: '#0EA5E9',  // Main steel blue
-    600: '#0284C7',
-    700: '#0369A1',
-    800: '#075985',
-    900: '#0C4A6E',
+    700: '#334155',  // Dark professional
+    800: '#1E293B',
+    900: '#0F172A',
   },
 
   // Accent - Industrial Orange (Energy, Action, CTA)
@@ -120,21 +120,22 @@ export const colors = {
     black: '#000000',
   },
 
-  // Background colors - Industrial palette
+  // Background colors - Clean & Clear
   background: {
-    default: '#F8FAFC',           // Very light slate background
-    paper: '#FFFFFF',              // White cards/panels
-    dark: '#0F172A',               // Very dark slate background
-    darkSecondary: '#1E293B',      // Dark secondary background
-    overlay: 'rgba(15, 23, 42, 0.75)',  // Dark overlay
-    lightOverlay: 'rgba(248, 250, 252, 0.95)',  // Light overlay
+    default: '#FFFFFF',                // Pure white background
+    paper: '#FFFFFF',                  // White cards/panels
+    light: '#F9FAFB',                  // Very light gray
+    dark: '#1E293B',                   // Dark backgrounds
+    darkSecondary: '#334155',          // Dark secondary
+    overlay: 'rgba(30, 41, 59, 0.75)', // Dark overlay
+    lightOverlay: 'rgba(255, 255, 255, 0.95)', // Light overlay
   },
 
-  // Text colors - High contrast
+  // Text colors - Maximum contrast & clarity
   text: {
-    primary: '#0F172A',        // Very dark text
-    secondary: '#475569',      // Medium gray text
-    disabled: '#94A3B8',       // Light gray disabled
+    primary: '#111827',        // Almost black - maximum readability
+    secondary: '#6B7280',      // Medium gray - clear secondary text
+    disabled: '#9CA3AF',       // Light gray disabled
     inverse: '#FFFFFF',        // Text on dark backgrounds
     accent: '#EA580C',         // Orange accent text
   },

@@ -16,20 +16,20 @@ export const getTheme = (direction: 'ltr' | 'rtl') => {
     direction,
 
     // ========================================
-    // COLOR PALETTE - Industrial Modern
+    // COLOR PALETTE - Clean & Professional
     // ========================================
     palette: {
       mode: 'light',
       primary: {
-        main: colors.primary[700],  // Dark slate - professional
-        light: colors.primary[600],
-        dark: colors.primary[900],
+        main: colors.primary[600],  // Professional blue - clear and readable
+        light: colors.primary[400],
+        dark: colors.primary[700],
         contrastText: colors.neutral.white,
       },
       secondary: {
-        main: colors.secondary[500],  // Steel blue
+        main: colors.secondary[600],  // Slate gray for contrast
         light: colors.secondary[400],
-        dark: colors.secondary[700],
+        dark: colors.secondary[800],
         contrastText: colors.neutral.white,
       },
       error: {
@@ -272,9 +272,10 @@ export const getTheme = (direction: 'ltr' | 'rtl') => {
             },
           },
           containedPrimary: {
-            background: colors.primary[700],
+            background: colors.primary[600],
+            color: colors.neutral.white,
             '&:hover': {
-              background: colors.primary[800],
+              background: colors.primary[700],
               boxShadow: shadows.xl,
             },
           },

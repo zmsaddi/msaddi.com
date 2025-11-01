@@ -20,7 +20,7 @@ export default function Header() {
   // Handle scroll effect
   useEffect(() => {
     const unsubscribe = scrollY.on('change', (latest) => {
-      setScrolled(latest > 50);
+      setScrolled(latest > 20);
     });
     return () => unsubscribe();
   }, [scrollY]);
@@ -41,12 +41,12 @@ export default function Header() {
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-slate-900/95 backdrop-blur-md shadow-2xl'
-          : 'bg-transparent'
+          ? 'bg-white shadow-lg'
+          : 'bg-white/95 backdrop-blur-sm'
       }`}
     >
       <nav className="container mx-auto px-4 lg:px-8" role="navigation" aria-label={t('main_navigation')}>
-        <div className="flex justify-between items-center h-20 lg:h-24">
+        <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -58,18 +58,18 @@ export default function Header() {
               aria-label={t('company_name')}
               className="flex items-center space-x-3 rtl:space-x-reverse group"
             >
-              <div className={`transition-all duration-300 ${scrolled ? 'scale-90' : 'scale-100'}`}>
-                <Logo size="small" color={scrolled ? "light" : "light"} />
+              <div className="transition-all duration-300">
+                <Logo size="small" color="dark" />
               </div>
-              <div className={`hidden md:block ${scrolled || !scrolled ? 'text-white' : 'text-slate-900'}`}>
-                <div className="text-xl font-bold tracking-tight">MSADDI</div>
-                <div className="text-xs text-orange-500 font-medium">Metal Fabrication</div>
+              <div className="hidden md:block">
+                <div className="text-xl font-bold tracking-tight text-slate-900">MSADDI</div>
+                <div className="text-xs text-orange-600 font-semibold">Metal Fabrication</div>
               </div>
             </Link>
           </motion.div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-2">
+          <div className="hidden lg:flex items-center gap-1">
             {navLinks.map((link, index) => (
               <motion.div
                 key={link.href}
@@ -79,24 +79,14 @@ export default function Header() {
               >
                 <Link
                   href={`/${locale}${link.href}`}
-                  className={`relative px-4 py-2 font-medium transition-all duration-200 ${
+                  className={`relative px-4 py-2 font-semibold transition-all duration-200 rounded-lg ${
                     isActive(link.href)
-                      ? 'text-orange-500'
-                      : scrolled
-                      ? 'text-white hover:text-orange-500'
-                      : 'text-white hover:text-orange-500'
+                      ? 'text-orange-600 bg-orange-50'
+                      : 'text-slate-700 hover:text-orange-600 hover:bg-slate-50'
                   }`}
                   aria-current={isActive(link.href) ? 'page' : undefined}
                 >
                   {link.label}
-                  {isActive(link.href) && (
-                    <motion.div
-                      layoutId="activeNav"
-                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-orange-500"
-                      initial={false}
-                      transition={{ type: 'spring', stiffness: 380, damping: 30 }}
-                    />
-                  )}
                 </Link>
               </motion.div>
             ))}
@@ -120,12 +110,11 @@ export default function Header() {
             >
               <Link
                 href={`/${locale}/contact`}
-                className="relative inline-flex items-center px-6 py-2.5 bg-gradient-to-r from-orange-600 to-orange-500 text-white font-bold rounded-lg shadow-lg hover:shadow-orange-500/50 hover:shadow-2xl transition-all duration-300 hover:scale-105 group overflow-hidden"
+                className="inline-flex items-center px-6 py-2.5 bg-gradient-to-r from-orange-600 to-orange-500 text-white font-bold rounded-lg shadow-md hover:shadow-lg hover:from-orange-700 hover:to-orange-600 transition-all duration-300 hover:scale-105"
               >
-                <span className="relative z-10">{t('contact')}</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-orange-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                {t('contact')}
                 <svg
-                  className="w-4 h-4 ml-2 rtl:mr-2 rtl:ml-0 rtl:rotate-180 transition-transform group-hover:translate-x-1 rtl:group-hover:-translate-x-1"
+                  className="w-4 h-4 ml-2 rtl:mr-2 rtl:ml-0 rtl:rotate-180"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -144,9 +133,7 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className={`lg:hidden p-2 rounded-md transition-colors ${
-              scrolled ? 'text-white hover:bg-slate-800' : 'text-white hover:bg-slate-800/50'
-            }`}
+            className="lg:hidden p-2 rounded-md text-slate-700 hover:bg-slate-100 transition-colors"
             aria-label={t('toggle_menu')}
             aria-expanded={mobileMenuOpen}
           >
@@ -181,18 +168,18 @@ export default function Header() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden pb-6 bg-slate-900/95 backdrop-blur-md rounded-b-2xl"
+            className="lg:hidden pb-4 border-t border-slate-200 mt-2"
           >
-            <div className="flex flex-col gap-2 pt-4">
+            <div className="flex flex-col gap-1 pt-4">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={`/${locale}${link.href}`}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`px-4 py-3 font-medium rounded-lg transition-all ${
+                  className={`px-4 py-3 font-semibold rounded-lg transition-all ${
                     isActive(link.href)
-                      ? 'bg-orange-500 text-white'
-                      : 'text-white hover:bg-slate-800'
+                      ? 'bg-orange-600 text-white'
+                      : 'text-slate-700 hover:bg-slate-100'
                   }`}
                   aria-current={isActive(link.href) ? 'page' : undefined}
                 >
@@ -204,13 +191,13 @@ export default function Header() {
               <Link
                 href={`/${locale}/contact`}
                 onClick={() => setMobileMenuOpen(false)}
-                className="mt-2 px-4 py-3 bg-gradient-to-r from-orange-600 to-orange-500 text-white font-bold rounded-lg text-center shadow-lg"
+                className="mt-2 px-4 py-3 bg-gradient-to-r from-orange-600 to-orange-500 text-white font-bold rounded-lg text-center shadow-md"
               >
                 {t('contact')}
               </Link>
 
               {/* Mobile Language Switcher */}
-              <div className="pt-4 mt-2 border-t border-slate-700">
+              <div className="pt-3 mt-2 border-t border-slate-200">
                 <LanguageSwitcher />
               </div>
             </div>
