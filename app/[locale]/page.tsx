@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import IndustryImage from '@/components/IndustryImage';
 import {
   Box,
   Container,
@@ -302,6 +303,47 @@ export default function HomePage() {
             </Grid>
           </Container>
         </Box>
+
+        {/* Services Showcase with Images */}
+        <Container maxWidth="lg" sx={{ py: { xs: 8, md: 12 } }}>
+          <MotionBox
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            textAlign="center"
+            mb={6}
+          >
+            <Typography
+              variant="h3"
+              fontWeight={700}
+              mb={2}
+              color="primary.main"
+              sx={{ fontSize: { xs: '2rem', md: '2.5rem' } }}
+            >
+              {t('home.services_title')}
+            </Typography>
+          </MotionBox>
+
+          <Grid container spacing={4}>
+            {[
+              { type: 'laser' as const, delay: 0 },
+              { type: 'bending' as const, delay: 0.1 },
+              { type: 'spinning' as const, delay: 0.2 },
+            ].map((service, index) => (
+              <Grid item xs={12} md={4} key={index}>
+                <MotionBox
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: service.delay }}
+                >
+                  <IndustryImage type={service.type} height={300} />
+                </MotionBox>
+              </Grid>
+            ))}
+          </Grid>
+        </Container>
 
         {/* CTA Section */}
         <Box

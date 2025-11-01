@@ -3,6 +3,7 @@
 import { useTranslations } from 'next-intl';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import GoogleMap from '@/components/GoogleMap';
 import {
   Box,
   Container,
@@ -11,6 +12,7 @@ import {
   Card,
   CardContent,
   Paper,
+  Button,
 } from '@mui/material';
 import {
   LocationOn as LocationIcon,
@@ -18,6 +20,7 @@ import {
   Phone as PhoneIcon,
   WorkHistory as WorkHistoryIcon,
   Visibility as VisibilityIcon,
+  WhatsApp as WhatsAppIcon,
 } from '@mui/icons-material';
 import { motion } from 'framer-motion';
 
@@ -284,11 +287,29 @@ export default function AboutPage() {
                   <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
                     <PhoneIcon sx={{ fontSize: 32, color: 'primary.main' }} />
                     <Typography variant="body1" fontSize="1.1rem">
-                      +963 XXX XXX XXX
+                      +963 944 244 604
                     </Typography>
+                  </Box>
+
+                  <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+                    <WhatsAppIcon sx={{ fontSize: 32, color: '#25D366' }} />
+                    <Button
+                      variant="outlined"
+                      color="success"
+                      href="https://wa.me/963944244604"
+                      target="_blank"
+                      sx={{ fontWeight: 600 }}
+                    >
+                      Chat on WhatsApp
+                    </Button>
                   </Box>
                 </Box>
               </Paper>
+
+              {/* Google Map */}
+              <Box sx={{ mt: 4 }}>
+                <GoogleMap />
+              </Box>
             </MotionBox>
           </Container>
         </Box>

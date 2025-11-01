@@ -5,6 +5,7 @@ import { locales, localeConfig, type Locale } from '@/i18n';
 import type { Metadata } from 'next';
 import ClientLayout from './ClientLayout';
 import StructuredData from '@/components/StructuredData';
+import WhatsAppButton from '@/components/WhatsAppButton';
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -71,6 +72,7 @@ export default async function LocaleLayout({
         <ClientLayout direction={config.dir}>
           <NextIntlClientProvider messages={messages}>
             {children}
+            <WhatsAppButton />
           </NextIntlClientProvider>
         </ClientLayout>
       </body>

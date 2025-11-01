@@ -29,19 +29,20 @@ export default function StructuredData({ type = 'organization' }: StructuredData
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: 36.2021,
-      longitude: 37.1343,
+      latitude: 36.2065,
+      longitude: 37.1398,
     },
     contactPoint: [
       {
         '@type': 'ContactPoint',
-        telephone: '+963-XXX-XXX-XXX',
+        telephone: '+963-944-244-604',
         contactType: 'customer service',
         email: 'info@msaddi.com',
         availableLanguage: ['Arabic', 'English', 'Turkish'],
       },
       {
         '@type': 'ContactPoint',
+        telephone: '+963-944-244-604',
         email: 'sales@msaddi.com',
         contactType: 'sales',
         availableLanguage: ['Arabic', 'English', 'Turkish'],
@@ -119,7 +120,7 @@ export default function StructuredData({ type = 'organization' }: StructuredData
     image: 'https://www.msaddi.com/logo.png',
     description: 'Professional sheet metal fabrication services in Aleppo, Syria',
     url: 'https://www.msaddi.com',
-    telephone: '+963-XXX-XXX-XXX',
+    telephone: '+963-944-244-604',
     email: 'info@msaddi.com',
     address: {
       '@type': 'PostalAddress',
@@ -130,9 +131,10 @@ export default function StructuredData({ type = 'organization' }: StructuredData
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: 36.2021,
-      longitude: 37.1343,
+      latitude: 36.2065,
+      longitude: 37.1398,
     },
+    hasMap: 'https://maps.app.goo.gl/CvUXMKhsqQRdQSg8A',
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',

@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useParams, usePathname } from 'next/navigation';
 import { useState } from 'react';
 import LanguageSwitcher from './LanguageSwitcher';
+import Logo from './Logo';
 
 export default function Header() {
   const t = useTranslations('common');
@@ -29,10 +30,9 @@ export default function Header() {
           {/* Logo */}
           <Link
             href={`/${locale}`}
-            className="text-xl sm:text-2xl font-bold text-blue-600 hover:text-blue-700 transition-colors"
             aria-label={t('company_name')}
           >
-            {t('company_name')}
+            <Logo size="small" color="dark" />
           </Link>
 
           {/* Desktop Navigation */}
