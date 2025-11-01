@@ -3,7 +3,6 @@ import { getMessages, getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { Geist, Geist_Mono, Cairo } from 'next/font/google';
 import { locales, localeConfig, type Locale } from '@/i18n';
-import '../globals.css';
 
 // Latin fonts
 const geistSans = Geist({
@@ -67,10 +66,12 @@ export default async function LocaleLayout({
   const config = localeConfig[locale as Locale];
 
   return (
-    <html
+    <div
       lang={locale}
       dir={config.dir}
-      className={`${geistSans.variable} ${geistMono.variable} ${cairo.variable}`}
+      className={`${geistSans.variable} ${geistMono.variable} ${cairo.variable} ${
+        locale === 'ar' ? 'font-cairo' : 'font-sans'
+      } antialiased min-h-screen`}
       style={
         locale === 'ar'
           ? {
@@ -79,18 +80,10 @@ export default async function LocaleLayout({
             }
           : undefined
       }
-      suppressHydrationWarning
     >
-      <body
-        className={`
-          ${locale === 'ar' ? 'font-cairo' : 'font-sans'}
-          antialiased
-        `}
-      >
-        <NextIntlClientProvider messages={messages}>
-          {children}
-        </NextIntlClientProvider>
-      </body>
-    </html>
+      <NextIntlClientProvider messages={messages}>
+        {children}
+      </NextIntlClientProvider>
+    </div>
   );
 }

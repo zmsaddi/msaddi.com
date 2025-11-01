@@ -14,6 +14,15 @@ export default function middleware(request: NextRequest) {
   // First, apply internationalization
   const response = intlMiddleware(request);
 
+  // Extract locale from pathname and pass to layout via request headers
+  const pathname = request.nextUrl.pathname;
+  const localeMatch = pathname.match(/^\/(ar|en|tr)/);
+  if (localeMatch) {
+    const requestHeaders = new Headers(request.headers);
+    requestHeaders.set('x-locale', localeMatch[1]);
+    requestHeaders.set('x-locale-dir', localeMatch[1] === 'ar' ? 'rtl' : 'ltr');
+  }
+
   // Add security headers
   response.headers.set('X-DNS-Prefetch-Control', 'on');
 
