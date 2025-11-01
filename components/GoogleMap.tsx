@@ -8,12 +8,13 @@ export default function GoogleMap() {
   const t = useTranslations('common');
 
   // Exact coordinates for MSADDI EST. in Alshqaeef, Aleppo, Syria
-  const latitude = 36.2065;
-  const longitude = 37.1398;
+  // Source: https://maps.app.goo.gl/rMCedXqi6vPJTRck6
+  const latitude = 36.253684;
+  const longitude = 37.1688932;
 
   // Open Google Maps with direct navigation from user's current location
   const handleGetDirections = () => {
-    const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${latitude},${longitude}&destination_place_id=ChIJiU2zc2b_JxURnFyc7I3Wkoo`;
+    const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${latitude},${longitude}&destination_place_id=ChIJD94vLyb5LxURUhxDsrEM1iY`;
     window.open(directionsUrl, '_blank', 'noopener,noreferrer');
   };
 

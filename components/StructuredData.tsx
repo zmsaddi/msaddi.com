@@ -29,8 +29,8 @@ export default function StructuredData({ type = 'organization' }: StructuredData
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: 36.2065,
-      longitude: 37.1398,
+      latitude: 36.253684,
+      longitude: 37.1688932,
     },
     contactPoint: [
       {
@@ -131,10 +131,10 @@ export default function StructuredData({ type = 'organization' }: StructuredData
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: 36.2065,
-      longitude: 37.1398,
+      latitude: 36.253684,
+      longitude: 37.1688932,
     },
-    hasMap: 'https://maps.app.goo.gl/CvUXMKhsqQRdQSg8A',
+    hasMap: 'https://maps.app.goo.gl/rMCedXqi6vPJTRck6',
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
