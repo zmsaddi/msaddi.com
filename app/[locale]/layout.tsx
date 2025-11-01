@@ -1,28 +1,7 @@
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
-import { Geist, Geist_Mono, Cairo } from 'next/font/google';
 import { locales, localeConfig, type Locale } from '@/i18n';
-
-// Latin fonts
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
-  display: 'swap',
-});
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
-  display: 'swap',
-});
-
-// Arabic font with Latin numerals support
-const cairo = Cairo({
-  variable: '--font-cairo',
-  subsets: ['arabic', 'latin'],
-  display: 'swap',
-});
 
 export function generateStaticParams(): { locale: Locale }[] {
   return locales.map((locale) => ({ locale: locale as Locale }));
@@ -65,21 +44,33 @@ export default async function LocaleLayout({
   const messages = await getMessages();
   const config = localeConfig[locale as Locale];
 
+  let fontClassName: string;
+  let fontStyle:
+    | {
+        fontFeatureSettings: string;
+        fontVariantNumeric: string;
+      }
+    | undefined;
+
+  if (locale === 'ar') {
+    const { cairo } = await import('./fonts-arabic');
+    fontClassName = `${cairo.variable} font-cairo`;
+    fontStyle = {
+      fontFeatureSettings: '"numr" 0',
+      fontVariantNumeric: 'lining-nums',
+    };
+  } else {
+    const { geistSans, geistMono } = await import('./fonts-latin');
+    fontClassName = `${geistSans.variable} ${geistMono.variable} font-sans`;
+    fontStyle = undefined;
+  }
+
   return (
     <div
       lang={locale}
       dir={config.dir}
-      className={`${geistSans.variable} ${geistMono.variable} ${cairo.variable} ${
-        locale === 'ar' ? 'font-cairo' : 'font-sans'
-      } antialiased min-h-screen`}
-      style={
-        locale === 'ar'
-          ? {
-              fontFeatureSettings: '"numr" 0',
-              fontVariantNumeric: 'lining-nums',
-            }
-          : undefined
-      }
+      className={`${fontClassName} antialiased min-h-screen`}
+      style={fontStyle}
     >
       <NextIntlClientProvider messages={messages}>
         {children}
