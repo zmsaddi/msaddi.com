@@ -22,12 +22,13 @@ export default function Header() {
     { href: '/services', label: t('services') },
     { href: '/products', label: t('products') },
     { href: '/capabilities', label: t('capabilities') },
+    { href: '/blog', label: t('blog') },
     { href: '/contact', label: t('contact') },
   ];
 
   return (
     <header className="bg-white shadow-md sticky top-0 z-50">
-      <nav className="container mx-auto px-4 py-4" role="navigation" aria-label="Main navigation">
+      <nav className="container mx-auto px-4 py-4" role="navigation" aria-label={t('main_navigation')}>
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link
@@ -60,7 +61,7 @@ export default function Header() {
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="md:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors"
-            aria-label="Toggle menu"
+            aria-label={t('toggle_menu')}
             aria-expanded={mobileMenuOpen}
           >
             <svg

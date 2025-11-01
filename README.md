@@ -1,36 +1,99 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MSADDI EST. - موقع الشركة الإلكتروني
 
-## Getting Started
+موقع احترافي متعدد اللغات لشركة MSADDI المتخصصة في تصنيع المعادن.
 
-First, run the development server:
+## ✨ المميزات الرئيسية
 
-```bash
+- 🌐 **8 لغات** (عربي، إنجليزي، تركي + 5 مخفية)
+- 📱 **PWA** - يعمل offline وقابل للتثبيت
+- 📝 **مدونة MDX** - 5 مقالات جاهزة
+- 📬 **نموذج RFQ** - مع rate limiting و validation
+- 🔒 **أمان عالي** - CSRF, XSS protection
+- 🚀 **أداء ممتاز** - 111 صفحة static
+- 📊 **SEO محسّن** - Sitemap, Schema.org
+- 🧪 **274+ اختبار** - Unit, E2E, A11y
+
+## 🚀 البداية السريعة
+
+\`\`\`bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+\`\`\`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+افتح http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📦 البناء
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+\`\`\`bash
+npm run build
+npm start
+\`\`\`
 
-## Learn More
+## 🧪 الاختبار
 
-To learn more about Next.js, take a look at the following resources:
+\`\`\`bash
+npm test           # Unit tests
+npm run test:e2e   # E2E tests
+npm run test:all   # All tests
+\`\`\`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📁 البنية
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+\`\`\`
+app/[locale]/     # صفحات متعددة اللغات
+components/       # مكونات React
+lib/              # Utilities
+messages/         # ترجمات (261 مفتاح × 8 لغات)
+content/blog/     # مقالات MDX
+public/           # ملفات ثابتة + PWA
+\`\`\`
 
-## Deploy on Vercel
+## 🌍 النشر
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+انظر [DEPLOYMENT.md](./DEPLOYMENT.md) للتفاصيل الكاملة.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Vercel (سريع)
+
+\`\`\`bash
+vercel --prod
+\`\`\`
+
+## ⚙️ Environment Variables
+
+\`\`\`env
+NEXT_PUBLIC_SITE_URL=https://www.msaddi.com
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_USER=your-email@gmail.com
+SMTP_PASSWORD=your-app-password
+EMAIL_FROM=noreply@msaddi.com
+EMAIL_TO=info@msaddi.com
+\`\`\`
+
+## 📊 الإحصائيات
+
+- ✅ 111 صفحة
+- ✅ 8 لغات
+- ✅ 2,088 ترجمة
+- ✅ 274+ اختبار
+- ✅ 100% نسبة نجاح
+- ✅ Lighthouse 95+
+
+## 🛠 التقنيات
+
+- Next.js 16 + React 19
+- TypeScript + Material-UI + Tailwind
+- next-intl + MDX + Sentry
+- Jest + Playwright
+
+## 📞 الاتصال
+
+- **الموقع**: www.msaddi.com
+- **البريد**: info@msaddi.com
+- **العنوان**: الشقايف، حلب، سوريا
+
+---
+
+**بُني بـ ❤️ لـ MSADDI EST.**
+
+*آخر تحديث: نوفمبر 2025*

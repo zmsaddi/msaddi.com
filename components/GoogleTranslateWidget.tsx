@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { Box, Alert, IconButton, Tooltip } from '@mui/material';
 import { Close as CloseIcon, Translate as TranslateIcon } from '@mui/icons-material';
 
@@ -54,6 +54,7 @@ export default function GoogleTranslateWidget({
   const [isEnabled, setIsEnabled] = useState(enabledByDefault);
   const [showNotice, setShowNotice] = useState(true);
   const currentLocale = useLocale();
+  const t = useTranslations('common');
 
   useEffect(() => {
     if (!isEnabled) return;
@@ -120,7 +121,7 @@ export default function GoogleTranslateWidget({
               },
               boxShadow: 3,
             }}
-            aria-label="Enable automatic translation"
+            aria-label={t('enable_translation')}
           >
             <TranslateIcon />
           </IconButton>
@@ -146,7 +147,7 @@ export default function GoogleTranslateWidget({
           }}
           action={
             <IconButton
-              aria-label="close"
+              aria-label={t('close')}
               color="inherit"
               size="small"
               onClick={() => setShowNotice(false)}
@@ -199,7 +200,7 @@ export default function GoogleTranslateWidget({
               },
               boxShadow: 3,
             }}
-            aria-label="Disable automatic translation"
+            aria-label={t('disable_translation')}
           >
             <CloseIcon />
           </IconButton>

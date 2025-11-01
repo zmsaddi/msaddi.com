@@ -4,6 +4,7 @@ import { Fab, Tooltip, Zoom } from '@mui/material';
 import { WhatsApp as WhatsAppIcon } from '@mui/icons-material';
 import { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
+import { trackWhatsAppClick } from '@/components/analytics/GoogleAnalytics';
 
 export default function WhatsAppButton() {
   const t = useTranslations('common');
@@ -17,6 +18,9 @@ export default function WhatsAppButton() {
   }, []);
 
   const handleClick = () => {
+    // Track WhatsApp click
+    trackWhatsAppClick();
+
     // WhatsApp click-to-chat URL that works on all devices
     const message = encodeURIComponent(t('whatsapp_message'));
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
@@ -28,7 +32,7 @@ export default function WhatsAppButton() {
       <Tooltip title={t('whatsapp_chat')} placement="left" arrow>
         <Fab
           color="success"
-          aria-label="whatsapp"
+          aria-label={t('whatsapp_link')}
           onClick={handleClick}
           sx={{
             position: 'fixed',

@@ -1,7 +1,7 @@
 'use client';
 
 import { useParams, usePathname, useRouter } from 'next/navigation';
-import { locales, localeConfig } from '@/i18n';
+import { activeLocales, localeConfig } from '@/i18n';
 import { Box, Button, ButtonGroup } from '@mui/material';
 import LanguageIcon from '@mui/icons-material/Language';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
@@ -52,7 +52,7 @@ export default function LanguageSwitcher() {
           },
         }}
       >
-        {locales.map((locale) => {
+        {activeLocales.map((locale) => {
           const isActive = locale === currentLocale;
           const config = localeConfig[locale];
 
