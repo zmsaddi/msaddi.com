@@ -2,10 +2,12 @@
 
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
+import Image from 'next/image';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import IndustryImage from '@/components/IndustryImage';
 import PageStructuredData from '@/components/PageStructuredData';
+import { stockImages } from '@/lib/stock-images';
 import {
   Box,
   Container,
@@ -65,14 +67,39 @@ export default function HomePage() {
         {/* Hero Section */}
         <Box
           sx={{
-            background: 'linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #60a5fa 100%)',
             color: 'white',
             py: { xs: 10, md: 16 },
             position: 'relative',
             overflow: 'hidden',
+            minHeight: { xs: '500px', md: '600px' },
           }}
         >
-          {/* Animated background pattern */}
+          {/* Background Image */}
+          <Image
+            src={stockImages.hero.laserCutting.url}
+            alt={stockImages.hero.laserCutting.alt}
+            fill
+            priority
+            style={{
+              objectFit: 'cover',
+              objectPosition: 'center',
+            }}
+          />
+
+          {/* Dark Overlay for Text Readability */}
+          <Box
+            sx={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              background: 'linear-gradient(135deg, rgba(30, 58, 138, 0.85) 0%, rgba(59, 130, 246, 0.75) 50%, rgba(96, 165, 250, 0.70) 100%)',
+              zIndex: 1,
+            }}
+          />
+
+          {/* Animated pattern overlay */}
           <Box
             sx={{
               position: 'absolute',
@@ -82,10 +109,11 @@ export default function HomePage() {
               bottom: 0,
               opacity: 0.1,
               backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.1) 35px, rgba(255,255,255,.1) 70px)',
+              zIndex: 2,
             }}
           />
 
-          <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1 }}>
+          <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 3 }}>
             <MotionBox
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -329,21 +357,83 @@ export default function HomePage() {
 
           <Grid container spacing={4}>
             {[
-              { type: 'laser' as const, titleKey: 'services.service_1_title', delay: 0 },
-              { type: 'bending' as const, titleKey: 'services.service_2_title', delay: 0.1 },
-              { type: 'spinning' as const, titleKey: 'services.service_3_title', delay: 0.2 },
-            ].map((service, index) => (
-              <Grid item xs={12} md={4} key={index}>
-                <MotionBox
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: service.delay }}
-                >
-                  <IndustryImage type={service.type} title={t(service.titleKey)} height={300} />
-                </MotionBox>
-              </Grid>
-            ))}
+              {
+                imageKey: 'laserCutting' as const,
+                titleKey: 'services.service_1_title',
+                delay: 0,
+              },
+              {
+                imageKey: 'cncBending' as const,
+                titleKey: 'services.service_2_title',
+                delay: 0.1,
+              },
+              {
+                imageKey: 'metalSpinning' as const,
+                titleKey: 'services.service_3_title',
+                delay: 0.2,
+              },
+            ].map((service, index) => {
+              const serviceImage = stockImages.services[service.imageKey];
+              return (
+                <Grid item xs={12} md={4} key={index}>
+                  <MotionBox
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: service.delay }}
+                  >
+                    <Box
+                      sx={{
+                        position: 'relative',
+                        height: 300,
+                        borderRadius: 3,
+                        overflow: 'hidden',
+                        boxShadow: 4,
+                        '&:hover': {
+                          transform: 'translateY(-8px)',
+                          boxShadow: 8,
+                          transition: 'all 0.3s ease',
+                        },
+                        transition: 'all 0.3s ease',
+                      }}
+                    >
+                      <Image
+                        src={serviceImage.url}
+                        alt={serviceImage.alt}
+                        fill
+                        style={{
+                          objectFit: 'cover',
+                        }}
+                      />
+                      {/* Gradient overlay for text */}
+                      <Box
+                        sx={{
+                          position: 'absolute',
+                          bottom: 0,
+                          left: 0,
+                          right: 0,
+                          padding: 3,
+                          background:
+                            'linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 60%, transparent 100%)',
+                          zIndex: 1,
+                        }}
+                      >
+                        <Typography
+                          variant="h5"
+                          sx={{
+                            color: 'white',
+                            fontWeight: 700,
+                            textAlign: 'center',
+                          }}
+                        >
+                          {t(service.titleKey)}
+                        </Typography>
+                      </Box>
+                    </Box>
+                  </MotionBox>
+                </Grid>
+              );
+            })}
           </Grid>
         </Container>
 
