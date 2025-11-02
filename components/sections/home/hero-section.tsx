@@ -34,7 +34,6 @@ export function HeroSection() {
           src="/images/hero-metal-workshop.jpg"
           alt="MSADDI Metal Fabrication Workshop - Professional Laser Cutting Services Aleppo Syria"
           fill
-          priority
           quality={75}
           sizes="100vw"
           className="object-cover object-center"

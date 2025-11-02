@@ -35,7 +35,6 @@ export function Footer() {
                 width={160}
                 height={58}
                 className="w-[160px] h-[58px] object-contain"
-                priority
               />
             </Link>
             <p className="text-base text-text-secondary leading-relaxed">

@@ -97,6 +97,15 @@ export default function RootLayout({
       className={`${inter.variable} ${cairo.variable} ${tajawal.variable}`}
       suppressHydrationWarning
     >
+      <head>
+        <link
+          rel="preload"
+          href="/logo.png"
+          as="image"
+          type="image/png"
+          fetchPriority="high"
+        />
+      </head>
       <body className="font-inter antialiased min-h-screen flex flex-col bg-surface-light">{children}</body>
     </html>
   );

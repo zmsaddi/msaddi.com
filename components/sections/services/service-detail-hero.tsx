@@ -27,7 +27,6 @@ export function ServiceDetailHero({ serviceKey }: ServiceDetailHeroProps) {
           src={serviceImages[serviceKey]}
           alt={t("title")}
           fill
-          priority
           quality={85}
           sizes="100vw"
           className="object-cover object-center"
