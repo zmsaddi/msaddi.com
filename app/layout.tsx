@@ -1,19 +1,29 @@
 import type { Metadata } from "next";
-import { Poppins, Roboto } from "next/font/google";
+import { Inter, Cairo, Tajawal } from "next/font/google";
 import "./globals.css";
 
-const poppins = Poppins({
+// Material Design 3 Typography - English
+const inter = Inter({
   weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-poppins",
+  variable: "--font-inter",
 });
 
-const roboto = Roboto({
-  weight: ["300", "400", "500", "700"],
-  subsets: ["latin"],
+// Material Design 3 Typography - Arabic (Headers)
+const cairo = Cairo({
+  weight: ["400", "500", "600", "700"],
+  subsets: ["arabic", "latin"],
   display: "swap",
-  variable: "--font-roboto",
+  variable: "--font-cairo",
+});
+
+// Material Design 3 Typography - Arabic (Body)
+const tajawal = Tajawal({
+  weight: ["400", "500", "700"],
+  subsets: ["arabic", "latin"],
+  display: "swap",
+  variable: "--font-tajawal",
 });
 
 export const metadata: Metadata = {
@@ -69,10 +79,10 @@ export default function RootLayout({
 }) {
   return (
     <html
-      className={`${poppins.variable} ${roboto.variable}`}
+      className={`${inter.variable} ${cairo.variable} ${tajawal.variable}`}
       suppressHydrationWarning
     >
-      <body className="font-body antialiased min-h-screen flex flex-col">{children}</body>
+      <body className="font-inter antialiased min-h-screen flex flex-col bg-surface-light">{children}</body>
     </html>
   );
 }
