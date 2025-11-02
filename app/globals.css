@@ -4,12 +4,15 @@
 
 @layer base {
   :root {
-    /* Material You Color System */
+    /* Material Design 3 Color System - Per MD3 Specifications */
     --primary: #007BFF;
     --primary-hover: #005AC1;
-    --accent: #00C0FF;
-    --surface: #FFFFFF;
-    --surface-container: #F5F6F7;
+    --secondary: #0D1116;
+    --accent: #1E88E5;
+    --surface: #F8FAFC;
+    --surface-white: #FFFFFF;
+    --surface-container: #F8FAFC;
+    --surface-footer: #F3F4F6;
     --text-primary: #0D1116;
     --text-secondary: #5E646A;
     --divider: #D5D8DC;
@@ -160,9 +163,9 @@
     @apply max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12;
   }
 
-  /* Section padding - Material Design spacing */
+  /* Section padding - Material Design spacing (48px mobile / 80px desktop) */
   .section-padding {
-    @apply py-md-4xl md:py-md-5xl;
+    @apply py-md-2xl md:py-md-4xl;
   }
 
   /* Gradient text - Updated colors */

@@ -10,19 +10,26 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Material You Color System - Updated per directive
+        // Material Design 3 Color System - Per MD3 Specifications
         primary: {
-          DEFAULT: "#007BFF",  // Electric blue primary
+          DEFAULT: "#007BFF",  // Electric blue from logo
           hover: "#005AC1",    // Hover/active state
           light: "#4DA3FF",
           dark: "#005AC1",
         },
-        accent: "#00C0FF",     // Highlight accent
+        secondary: {
+          DEFAULT: "#0D1116",  // Metallic black
+          light: "#1E2329",
+          dark: "#000000",
+        },
+        accent: "#1E88E5",     // Links and important text
         surface: {
-          DEFAULT: "#FFFFFF",
+          DEFAULT: "#F8FAFC",  // Card backgrounds
+          white: "#FFFFFF",
           light: "#FAFAFA",
-          container: "#F5F6F7",  // Cards and sections
-          dark: "#0E1114",       // Dark mode background
+          container: "#F8FAFC",
+          footer: "#F3F4F6",   // Footer background
+          dark: "#0E1114",     // Dark mode background
         },
         text: {
           primary: "#0D1116",    // Primary text

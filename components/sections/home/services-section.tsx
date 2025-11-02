@@ -11,6 +11,7 @@ export function ServicesSection() {
   const tServices = useTranslations("services.services");
   const locale = useLocale();
 
+  // Only 3 service cards as per MD3 specifications
   const services = [
     {
       icon: Zap,
@@ -27,11 +28,6 @@ export function ServicesSection() {
       title: tServices("flanging.title"),
       description: tServices("flanging.description")
     },
-    {
-      icon: Package,
-      title: tServices("customFabrication.title"),
-      description: tServices("customFabrication.description")
-    },
   ];
 
   return (
@@ -46,12 +42,13 @@ export function ServicesSection() {
           <h2 className="text-responsive-3xl font-heading font-bold mb-4">
             {t("title")}
           </h2>
-          <p className="text-responsive-lg text-metal-gray dark:text-silver-accent">
+          <p className="text-responsive-lg text-text-secondary">
             {t("subtitle")}
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {/* Grid Gap: 32px (Desktop) / 20px (Mobile) as per MD3 specs */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (

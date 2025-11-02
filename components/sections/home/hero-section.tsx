@@ -19,9 +19,17 @@ export function HeroSection() {
   ];
 
   return (
-    <section className="relative min-h-screen flex items-center bg-gradient-to-b from-gray-50 to-white">
-      {/* Simple gradient background - Material Design 3 */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 via-transparent to-cyan-50/20" />
+    <section className="relative min-h-screen flex items-center overflow-hidden">
+      {/* Industrial background image with overlay - Material Design 3 */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: "url('/images/msaddi-metal-fabrication-workshop-hero.jpg')",
+        }}
+      >
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-br from-secondary/90 via-secondary/85 to-primary/80" />
+      </div>
 
       {/* Content Container with proper spacing from header */}
       <div className="container mx-auto px-6 lg:px-12 pt-[120px] lg:pt-[136px] pb-20 relative z-10">
@@ -38,17 +46,17 @@ export function HeroSection() {
             <h1 className={cn(
               "text-[42px] lg:text-[48px] leading-[1.2]",
               isRTL ? "font-cairo" : "font-inter",
-              "font-bold text-text-primary mb-6"
+              "font-bold text-white mb-6"
             )}>
               {t("title")}
-              <span className="block text-primary mt-2">
+              <span className="block text-accent mt-2">
                 {t("subtitle")}
               </span>
             </h1>
 
             {/* Description - Material body text */}
             <p className={cn(
-              "text-body-lg text-text-secondary mb-8",
+              "text-body-lg text-white/90 mb-8",
               "max-w-xl leading-[1.8]",
               isRTL ? "font-tajawal" : "font-inter"
             )}>
@@ -65,9 +73,9 @@ export function HeroSection() {
                   transition={{ delay: 0.2 + index * 0.1 }}
                   className="flex items-center gap-3"
                 >
-                  <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                  <CheckCircle className="h-5 w-5 text-accent flex-shrink-0" />
                   <span className={cn(
-                    "text-body-md text-text-primary",
+                    "text-body-md text-white",
                     isRTL ? "font-tajawal" : "font-inter"
                   )}>
                     {feature}
@@ -225,7 +233,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.5 }}
-          className="mt-24 pt-12 border-t border-outline"
+          className="mt-24 pt-12 border-t border-white/20"
         >
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {[
@@ -242,14 +250,14 @@ export function HeroSection() {
                 className="text-center"
               >
                 <p className={cn(
-                  "text-headline-lg font-bold text-primary",
+                  "text-headline-lg font-bold text-accent latin-numerals",
                   isRTL ? "font-cairo" : "font-inter"
                 )}>
                   {stat.value}
                   {stat.unit && <span className="text-body-lg font-normal">{stat.unit}</span>}
                 </p>
                 <p className={cn(
-                  "text-label-lg text-text-secondary mt-1",
+                  "text-label-lg text-white/80 mt-1",
                   isRTL ? "font-tajawal" : "font-inter"
                 )}>
                   {stat.label}

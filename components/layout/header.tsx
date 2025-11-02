@@ -49,12 +49,12 @@ export function Header() {
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        "bg-white/95 backdrop-blur-md border-b border-gray-100",
+        "bg-surface-white border-b border-outline",
         // Desktop height: 88px normal, 76px scrolled
         // Mobile height: 72px normal, 64px scrolled
         isScrolled
-          ? "lg:h-[76px] h-[64px] shadow-md"
-          : "lg:h-[88px] h-[72px] shadow-sm"
+          ? "lg:h-[76px] h-[64px] shadow-elevation-2"
+          : "lg:h-[88px] h-[72px] shadow-elevation-1"
       )}
     >
       <nav className="h-full container-custom flex items-center justify-between">
@@ -72,20 +72,20 @@ export function Header() {
             // Safe area padding: Desktop 20px, Mobile 16px
             "py-4 lg:py-5"
           )}>
-            {/* Logo with responsive dimensions maintaining aspect ratio 2.77:1 */}
+            {/* Logo with responsive dimensions - MD3 specs: 260px min width with 16px clearance */}
             <Image
               src="/logo.png"
               alt={tCommon("companyLogo")}
-              width={240}
-              height={87}  // Actual aspect ratio: 240/87 = 2.76
+              width={260}
+              height={94}  // Maintaining aspect ratio: 260/94 = 2.77
               priority
               className={cn(
                 "object-contain transition-all duration-300",
-                // Desktop: 240px width when normal, 200px when scrolled
-                // Mobile: 140px width when normal, 120px when scrolled
+                // Desktop: 260px width when normal, 220px when scrolled
+                // Mobile: 160px width when normal, 140px when scrolled
                 isScrolled
-                  ? "lg:w-[200px] lg:h-[72px] w-[120px] h-[43px]"
-                  : "lg:w-[240px] lg:h-[87px] w-[140px] h-[50px]"
+                  ? "lg:w-[220px] lg:h-[79px] w-[140px] h-[51px]"
+                  : "lg:w-[260px] lg:h-[94px] w-[160px] h-[58px]"
               )}
             />
           </div>
@@ -101,8 +101,8 @@ export function Header() {
                     "px-5 py-2.5 rounded-xl text-sm font-medium",
                     "transition-all duration-200",
                     pathname === item.href
-                      ? "bg-blue-600 text-white shadow-md"
-                      : "text-gray-700 hover:bg-blue-50 hover:text-blue-600"
+                      ? "bg-primary text-white shadow-elevation-2"
+                      : "text-text-primary hover:bg-primary/10 hover:text-primary"
                   )}
                   href={item.href}
                 >
@@ -118,9 +118,9 @@ export function Header() {
             {/* CTA Button */}
             <Link
               className={cn(
-                "px-6 py-2.5 bg-blue-600 text-white rounded-xl",
-                "font-medium text-sm shadow-md",
-                "hover:bg-blue-700 hover:shadow-lg",
+                "px-6 py-2.5 bg-primary text-white rounded-xl",
+                "font-medium text-sm shadow-elevation-2",
+                "hover:bg-primary-hover hover:shadow-elevation-3",
                 "transition-all duration-200",
                 "whitespace-nowrap"
               )}
@@ -135,15 +135,15 @@ export function Header() {
         <button
           className={cn(
             "lg:hidden p-2.5 rounded-lg",
-            "hover:bg-gray-100 transition-colors"
+            "hover:bg-surface transition-colors"
           )}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label={tCommon("toggleMenu")}
         >
           {isMobileMenuOpen ? (
-            <X className="h-5 w-5 text-gray-700" />
+            <X className="h-5 w-5 text-text-primary" />
           ) : (
-            <Menu className="h-5 w-5 text-gray-700" />
+            <Menu className="h-5 w-5 text-text-primary" />
           )}
         </button>
       </nav>
@@ -151,8 +151,8 @@ export function Header() {
       {/* Mobile Menu Drawer */}
       <div
         className={cn(
-          "lg:hidden fixed left-0 right-0 bg-white border-t border-gray-100",
-          "transition-all duration-300 shadow-lg",
+          "lg:hidden fixed left-0 right-0 bg-surface-white border-t border-outline",
+          "transition-all duration-300 shadow-elevation-3",
           isMobileMenuOpen
             ? cn(
                 isScrolled ? "top-[64px]" : "top-[72px]",
@@ -173,8 +173,8 @@ export function Header() {
                     "block px-4 py-3 rounded-lg text-sm font-medium",
                     "transition-all duration-200",
                     pathname === item.href
-                      ? "bg-blue-600 text-white"
-                      : "text-gray-700 hover:bg-blue-50 hover:text-blue-600"
+                      ? "bg-primary text-white shadow-elevation-1"
+                      : "text-text-primary hover:bg-primary/10 hover:text-primary"
                   )}
                   href={item.href}
                   onClick={() => setIsMobileMenuOpen(false)}
@@ -185,13 +185,13 @@ export function Header() {
             ))}
           </ul>
 
-          <div className="mt-4 pt-4 border-t border-gray-200 space-y-3">
+          <div className="mt-4 pt-4 border-t border-divider space-y-3">
             <LanguageSwitcher />
             <Link
               className={cn(
                 "block text-center px-6 py-3",
-                "bg-blue-600 text-white rounded-xl",
-                "font-medium text-sm shadow-md"
+                "bg-primary text-white rounded-xl",
+                "font-medium text-sm shadow-elevation-2"
               )}
               href={`/${locale}/contact`}
               onClick={() => setIsMobileMenuOpen(false)}
