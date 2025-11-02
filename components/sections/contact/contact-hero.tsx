@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export function ContactHero() {
   const t = useTranslations("contact.page");
@@ -9,13 +10,16 @@ export function ContactHero() {
   return (
     <section className="relative pt-32 pb-16 overflow-hidden">
       {/* Industrial background with MD3 overlay */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: "url('/images/msaddi-contact-workshop-facility.jpg')",
-        }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-br from-secondary/90 via-secondary/85 to-primary/80" />
+      <div className="absolute inset-0">
+        <Image
+          src="/images/hero-metal-workshop.jpg"
+          alt="Contact MSADDI - Professional Metal Fabrication Services Aleppo Syria"
+          fill
+          quality={90}
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-secondary/60 via-secondary/50 to-primary/55" />
       </div>
 
       <div className="container-custom relative z-10">

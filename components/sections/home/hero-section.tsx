@@ -33,7 +33,7 @@ export function HeroSection() {
           className="object-cover object-center"
         />
         {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-br from-secondary/90 via-secondary/85 to-primary/80" />
+        <div className="absolute inset-0 bg-gradient-to-br from-secondary/60 via-secondary/50 to-primary/55" />
       </div>
 
       {/* Content Container with proper spacing from header */}
