@@ -79,6 +79,7 @@ export function Header() {
               width={260}
               height={94}  // Maintaining aspect ratio: 260/94 = 2.77
               priority
+              fetchPriority="high"
               className={cn(
                 "object-contain transition-all duration-300",
                 // Desktop: 260px width when normal, 220px when scrolled
