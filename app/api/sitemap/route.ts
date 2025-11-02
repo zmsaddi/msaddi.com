@@ -1,7 +1,8 @@
 import { NextResponse } from "next/server";
+import { env } from "@/lib/env";
 
 export async function GET() {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.msaddi.com";
+  const baseUrl = env.NEXT_PUBLIC_SITE_URL;
   const languages = ["en", "ar", "tr"];
 
   // Pages with their priorities and change frequencies for better SEO
