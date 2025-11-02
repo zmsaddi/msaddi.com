@@ -1,20 +1,48 @@
-# Robots.txt for MSADDI.EST
+# MSADDI.EST Robots.txt - Optimized for Search Engine Crawling & AI Discovery
 # https://www.msaddi.com
 
 # Allow all crawlers
 User-agent: *
 Allow: /
-Disallow: /api/contact
-Disallow: /_next/
-Disallow: /node_modules/
-Crawl-delay: 1
 
-# Google
+# High-priority pages - All 9 Languages (Explicit Allows for Better Crawling)
+Allow: /en/
+Allow: /ar/
+Allow: /tr/
+Allow: /fr/
+Allow: /de/
+Allow: /es/
+Allow: /it/
+Allow: /nl/
+Allow: /pt/
+Allow: /*/services
+Allow: /*/about
+Allow: /*/contact
+
+# Disallow admin/system pages
+Disallow: /api/
+Disallow: /_next/static/
+Disallow: /_next/image/
+Disallow: /node_modules/
+
+# Disallow duplicate content via query parameters
+Disallow: /*?*print=*
+Disallow: /*?*sort=*
+Disallow: /*?*filter=*
+
+# Allow tracking parameters (important for analytics & attribution)
+Allow: /*?utm_source=*
+Allow: /*?utm_medium=*
+Allow: /*?utm_campaign=*
+Allow: /*?ref=*
+Allow: /*?source=*
+
+# Google (prioritize for fastest indexing)
 User-agent: Googlebot
 Allow: /
 Crawl-delay: 0
 
-# Google Images
+# Google Images (allow all images for image search)
 User-agent: Googlebot-Image
 Allow: /
 Allow: /images/
@@ -22,15 +50,49 @@ Allow: *.jpg
 Allow: *.jpeg
 Allow: *.png
 Allow: *.webp
+Allow: *.avif
+Allow: *.svg
 
-# Bing
+# Bing (second priority search engine)
 User-agent: Bingbot
+Allow: /
+Crawl-delay: 0
+
+# Yahoo/Slurp
+User-agent: Slurp
+Allow: /
+Crawl-delay: 0
+
+# Yandex (Russian market)
+User-agent: Yandex
 Allow: /
 Crawl-delay: 1
 
-# Sitemap location
-Sitemap: https://www.msaddi.com/api/sitemap
-Sitemap: https://www.msaddi.com/sitemap.xml
+# AI Crawlers (ChatGPT, Claude, Bard, etc. - Allow for AI Search Visibility)
+User-agent: GPTBot
+Allow: /
 
-# Host directive (for Yandex)
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+# Sitemap locations (multi-language)
+Sitemap: https://www.msaddi.com/sitemap.xml
+Sitemap: https://www.msaddi.com/en/sitemap.xml
+Sitemap: https://www.msaddi.com/ar/sitemap.xml
+Sitemap: https://www.msaddi.com/tr/sitemap.xml
+Sitemap: https://www.msaddi.com/api/sitemap
+
+# Host specification (primary domain)
 Host: https://www.msaddi.com
