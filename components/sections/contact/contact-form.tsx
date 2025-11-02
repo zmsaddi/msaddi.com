@@ -8,7 +8,7 @@ import * as z from "zod";
 import { motion } from "framer-motion";
 import { Send, Loader2 } from "lucide-react";
 import { GoogleReCaptchaProvider, useGoogleReCaptcha } from "react-google-recaptcha-v3";
-import { env } from "@/lib/env";
+import { envPublic } from "@/lib/env-public";
 import { trackFormSubmission, trackQuoteRequest } from "@/lib/gtag";
 
 const formSchema = z.object({
@@ -192,7 +192,7 @@ function ContactFormContent() {
 
 export function ContactForm() {
   return (
-    <GoogleReCaptchaProvider reCaptchaKey={env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}>
+    <GoogleReCaptchaProvider reCaptchaKey={envPublic.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}>
       <ContactFormContent />
     </GoogleReCaptchaProvider>
   );

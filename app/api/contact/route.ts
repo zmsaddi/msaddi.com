@@ -1,10 +1,14 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 import * as z from "zod";
+import he from "he";
 import { env } from "@/lib/env";
 
 // Initialize Resend with API key from centralized environment variables
 const resend = new Resend(env.RESEND_API_KEY);
+
+// Rate limiting: track request counts per IP address
+const requestCounts = new Map<string, { count: number; resetTime: number }>();
 
 const contactSchema = z.object({
   name: z.string().min(2),
@@ -17,6 +21,28 @@ const contactSchema = z.object({
 
 export async function POST(request: NextRequest) {
   try {
+    // Rate limiting: prevent spam by limiting requests per IP
+    const ip = request.headers.get('x-forwarded-for') || request.headers.get('x-real-ip') || 'unknown';
+    const now = Date.now();
+    const rateLimit = requestCounts.get(ip);
+
+    if (rateLimit) {
+      if (now < rateLimit.resetTime) {
+        if (rateLimit.count >= 3) { // Max 3 requests per hour
+          return NextResponse.json(
+            { error: "Too many requests. Please try again later." },
+            { status: 429 }
+          );
+        }
+        rateLimit.count++;
+      } else {
+        // Reset counter after 1 hour
+        requestCounts.set(ip, { count: 1, resetTime: now + 3600000 });
+      }
+    } else {
+      requestCounts.set(ip, { count: 1, resetTime: now + 3600000 });
+    }
+
     const body = await request.json();
 
     // Validate input
@@ -34,6 +60,15 @@ export async function POST(request: NextRequest) {
       }
     );
 
+    // Check if Google reCAPTCHA service responded successfully
+    if (!recaptchaResponse.ok) {
+      console.error('reCAPTCHA service error:', recaptchaResponse.status, recaptchaResponse.statusText);
+      return NextResponse.json(
+        { error: "reCAPTCHA service unavailable. Please try again later." },
+        { status: 502 }
+      );
+    }
+
     const recaptchaData = await recaptchaResponse.json();
 
     if (!recaptchaData.success || recaptchaData.score < 0.5) {
@@ -43,11 +78,18 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // Sanitize user inputs to prevent XSS attacks in emails
+    const safeName = he.encode(validatedData.name);
+    const safeEmail = he.encode(validatedData.email);
+    const safePhone = he.encode(validatedData.phone);
+    const safeSubject = he.encode(validatedData.subject);
+    const safeMessage = he.encode(validatedData.message);
+
     // Send email to company
-    await resend.emails.send({
+    const companyEmailResult = await resend.emails.send({
       from: env.EMAIL_FROM,
       to: env.EMAIL_TO,
-      subject: `New Contact Form Submission: ${validatedData.subject}`,
+      subject: `New Contact Form Submission: ${safeSubject}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
           <h2 style="color: #333; border-bottom: 2px solid #0066cc; padding-bottom: 10px;">
@@ -56,15 +98,15 @@ export async function POST(request: NextRequest) {
 
           <div style="background-color: #f5f5f5; padding: 20px; border-radius: 8px; margin: 20px 0;">
             <h3 style="color: #0066cc; margin-top: 0;">Contact Details</h3>
-            <p><strong>Name:</strong> ${validatedData.name}</p>
-            <p><strong>Email:</strong> ${validatedData.email}</p>
-            <p><strong>Phone:</strong> ${validatedData.phone}</p>
-            <p><strong>Subject:</strong> ${validatedData.subject}</p>
+            <p><strong>Name:</strong> ${safeName}</p>
+            <p><strong>Email:</strong> ${safeEmail}</p>
+            <p><strong>Phone:</strong> ${safePhone}</p>
+            <p><strong>Subject:</strong> ${safeSubject}</p>
           </div>
 
           <div style="background-color: #fff; padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px;">
             <h3 style="color: #0066cc; margin-top: 0;">Message</h3>
-            <p style="line-height: 1.6; color: #333;">${validatedData.message}</p>
+            <p style="line-height: 1.6; color: #333; white-space: pre-wrap;">${safeMessage}</p>
           </div>
 
           <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #e0e0e0; color: #666; font-size: 12px;">
@@ -75,8 +117,17 @@ export async function POST(request: NextRequest) {
       `,
     });
 
+    // Check if company email was sent successfully
+    if (companyEmailResult.error) {
+      console.error('Failed to send company email:', companyEmailResult.error);
+      return NextResponse.json(
+        { error: "Failed to send message. Please try again." },
+        { status: 500 }
+      );
+    }
+
     // Send confirmation email to user
-    await resend.emails.send({
+    const userEmailResult = await resend.emails.send({
       from: env.EMAIL_FROM,
       to: validatedData.email,
       subject: "Thank you for contacting MSADDI.EST",
@@ -91,7 +142,7 @@ export async function POST(request: NextRequest) {
             <h2 style="color: #333; margin-top: 0;">Thank You for Contacting Us!</h2>
 
             <p style="color: #666; line-height: 1.6;">
-              Dear ${validatedData.name},
+              Dear ${safeName},
             </p>
 
             <p style="color: #666; line-height: 1.6;">
@@ -101,9 +152,9 @@ export async function POST(request: NextRequest) {
 
             <div style="background-color: #f5f5f5; padding: 20px; border-radius: 8px; margin: 20px 0;">
               <h3 style="color: #0066cc; margin-top: 0;">Your Message Details:</h3>
-              <p><strong>Subject:</strong> ${validatedData.subject}</p>
+              <p><strong>Subject:</strong> ${safeSubject}</p>
               <p><strong>Message:</strong></p>
-              <p style="color: #666; line-height: 1.6;">${validatedData.message}</p>
+              <p style="color: #666; line-height: 1.6; white-space: pre-wrap;">${safeMessage}</p>
             </div>
 
             <div style="background-color: #e8f4f8; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #0066cc;">
@@ -133,6 +184,11 @@ export async function POST(request: NextRequest) {
         </div>
       `,
     });
+
+    // Log if user confirmation email failed (but don't block the request since main email succeeded)
+    if (userEmailResult.error) {
+      console.error('Failed to send user confirmation email:', userEmailResult.error);
+    }
 
     return NextResponse.json({
       success: true,

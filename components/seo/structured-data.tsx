@@ -1,4 +1,5 @@
 import Script from "next/script";
+import { getTranslations } from "next-intl/server";
 import { seoConfig, generateBreadcrumbData, generateFAQData } from "@/config/seo";
 
 interface StructuredDataProps {
@@ -6,7 +7,10 @@ interface StructuredDataProps {
   locale: string;
 }
 
-export function StructuredData({ page, locale }: StructuredDataProps) {
+export async function StructuredData({ page, locale }: StructuredDataProps) {
+  const tNav = await getTranslations({ locale, namespace: "common.nav" });
+  const tSeo = await getTranslations({ locale, namespace: "seo" });
+
   // Organization structured data (appears on all pages)
   const organizationData = seoConfig.structuredData.organization;
 
@@ -16,20 +20,20 @@ export function StructuredData({ page, locale }: StructuredDataProps) {
   // Services data (appears on services page)
   const servicesData = seoConfig.structuredData.services;
 
-  // Breadcrumb data
+  // Breadcrumb data - using translated navigation labels
   const breadcrumbPaths = {
     home: [],
     services: [
-      { name: "Home", url: "/" },
-      { name: "Services", url: "/services" }
+      { name: tNav("home"), url: "/" },
+      { name: tNav("services"), url: "/services" }
     ],
     about: [
-      { name: "Home", url: "/" },
-      { name: "About", url: "/about" }
+      { name: tNav("home"), url: "/" },
+      { name: tNav("about"), url: "/about" }
     ],
     contact: [
-      { name: "Home", url: "/" },
-      { name: "Contact", url: "/contact" }
+      { name: tNav("home"), url: "/" },
+      { name: tNav("contact"), url: "/contact" }
     ]
   };
 
@@ -37,8 +41,13 @@ export function StructuredData({ page, locale }: StructuredDataProps) {
     ? generateBreadcrumbData(breadcrumbPaths[page], locale)
     : null;
 
-  // FAQ data (appears on home page)
-  const faqData = page === "home" ? generateFAQData() : null;
+  // FAQ data (appears on home page) - using translated FAQ content
+  const faqData = page === "home" ? generateFAQData(
+    Array.from({ length: 7 }, (_, i) => ({
+      question: tSeo(`faq.items.${i}.question`),
+      answer: tSeo(`faq.items.${i}.answer`)
+    }))
+  ) : null;
 
   // Combine all structured data
   const structuredDataArray = [

@@ -435,67 +435,17 @@ export function generateBreadcrumbData(path: { name: string; url: string }[], lo
 }
 
 // Helper function for FAQ structured data (optimized for location-based searches)
-export function generateFAQData() {
+export function generateFAQData(faqItems: Array<{ question: string; answer: string }>) {
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Where can I find laser cutting services in Aleppo Syria?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "MSADDI.EST provides professional laser cutting services in Aleppo, Syria. Located in Al-Shaqeef Industrial Zone, we offer sheet metal laser cutting up to 40mm thickness with 30+ years of experience."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What materials can MSADDI laser cut in Aleppo?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "MSADDI.EST in Aleppo, Syria can laser cut stainless steel up to 40mm, regular steel up to 40mm, aluminum up to 20mm, and copper/brass up to 12mm thickness. Our laser cutting working size is 6000mm x 2500mm."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is the maximum working size for laser cutting at MSADDI Aleppo?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Our laser cutting facility in Aleppo, Syria has a working size of 6000mm x 2500mm, suitable for large-scale industrial sheet metal fabrication projects."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Does MSADDI offer CNC bending services in Aleppo Syria?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, MSADDI.EST in Aleppo provides CNC press brake bending services with 135 ton capacity and 3200mm length for precise sheet metal forming."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What industries does MSADDI serve in Aleppo Syria?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "MSADDI.EST serves various industries in Syria including Oil & Gas, Construction, Agriculture, Transportation, Manufacturing, and Energy & Power with custom metal fabrication solutions."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Where is MSADDI metal fabrication located in Aleppo?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "MSADDI.EST is located in Al-Shaqeef Industrial Zone, Aleppo, Syria. Contact us at +963 944 244 604 or info@msaddi.com for laser cutting and metal fabrication services."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How long has MSADDI been providing laser cutting services in Syria?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "MSADDI.EST has over 30 years of experience in sheet metal laser cutting and fabrication services in Aleppo, Syria, making us a trusted leader in the Syrian metal industry."
-        }
+    "mainEntity": faqItems.map(item => ({
+      "@type": "Question",
+      "name": item.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.answer
       }
-    ]
+    }))
   };
 }

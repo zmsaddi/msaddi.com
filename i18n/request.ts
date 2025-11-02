@@ -11,7 +11,7 @@ export default getRequestConfig(async ({ locale }) => {
   if (!locales.includes(locale as any)) notFound();
 
   // Import all translation files
-  const [common, home, services, servicesDetails, about, contact, privacy, terms] = await Promise.all([
+  const [common, home, services, servicesDetails, about, contact, privacy, terms, seo] = await Promise.all([
     import(`../locales/${locale}/common.json`),
     import(`../locales/${locale}/home.json`),
     import(`../locales/${locale}/services.json`),
@@ -20,6 +20,7 @@ export default getRequestConfig(async ({ locale }) => {
     import(`../locales/${locale}/contact.json`),
     import(`../locales/${locale}/privacy.json`),
     import(`../locales/${locale}/terms.json`),
+    import(`../locales/${locale}/seo.json`),
   ]);
 
   // Merge all translations with proper namespacing to support both flat and nested access
@@ -38,6 +39,7 @@ export default getRequestConfig(async ({ locale }) => {
     contact: contact.default,
     privacy: privacy.default,
     terms: terms.default,
+    seo: seo.default,
   };
 
   return {

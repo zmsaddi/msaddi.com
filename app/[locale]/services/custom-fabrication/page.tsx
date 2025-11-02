@@ -6,6 +6,7 @@ import { ServiceDetailSpecs } from "@/components/sections/services/service-detai
 import { ServiceDetailProcess } from "@/components/sections/services/service-detail-process";
 import { ServiceDetailGallery } from "@/components/sections/services/service-detail-gallery";
 import { ServiceDetailCTA } from "@/components/sections/services/service-detail-cta";
+import { generateAlternates, getFullUrl, getSchemaId, ORGANIZATION_ID, LOGO_URL, SITE_URL, getImageUrl } from "@/lib/seo-helpers";
 
 interface CustomFabricationPageProps {
   params: { locale: string };
@@ -22,24 +23,17 @@ export async function generateMetadata({
   return {
     title: t("title"),
     description: t("description"),
-    alternates: {
-      canonical: `/${locale}/services/custom-fabrication`,
-      languages: {
-        en: "/en/services/custom-fabrication",
-        ar: "/ar/services/custom-fabrication",
-        tr: "/tr/services/custom-fabrication",
-      },
-    },
+    alternates: generateAlternates("services/custom-fabrication", locale),
     openGraph: {
       title: t("title"),
       description: t("description"),
-      url: `/${locale}/services/custom-fabrication`,
+      url: getFullUrl(locale, "services/custom-fabrication"),
       siteName: "MSADDI.EST",
       locale: locale,
       type: "website",
       images: [
         {
-          url: "/images/demo/service-custom-fabrication-demo.webp",
+          url: getImageUrl("/images/demo/service-custom-fabrication-demo.webp"),
           width: 1200,
           height: 630,
           alt: t("title"),
@@ -50,7 +44,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: t("title"),
       description: t("description"),
-      images: ["/images/demo/service-custom-fabrication-demo.webp"],
+      images: [getImageUrl("/images/demo/service-custom-fabrication-demo.webp")],
     },
   };
 }
@@ -72,15 +66,15 @@ export default async function CustomFabricationPage({
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "@id": `https://msaddi.com/${locale}/services/custom-fabrication`,
+    "@id": getSchemaId(`${locale}/services/custom-fabrication`),
     name: t("hero.title"),
     description: t("hero.description"),
     provider: {
       "@type": "Organization",
-      "@id": "https://msaddi.com/#organization",
+      "@id": ORGANIZATION_ID,
       name: "MSADDI.EST",
-      url: "https://msaddi.com",
-      logo: "https://msaddi.com/logo.png",
+      url: SITE_URL,
+      logo: LOGO_URL,
       address: {
         "@type": "PostalAddress",
         addressLocality: "Aleppo",
@@ -102,7 +96,7 @@ export default async function CustomFabricationPage({
       name: "Syria",
     },
     category: "Metal Fabrication",
-    image: "https://msaddi.com/images/demo/service-custom-fabrication-demo.webp",
+    image: getImageUrl("/images/demo/service-custom-fabrication-demo.webp"),
   };
 
   return (

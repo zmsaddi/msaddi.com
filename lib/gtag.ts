@@ -1,7 +1,7 @@
 // Google Analytics tracking utilities
-import { env } from "@/lib/env";
+import { envPublic } from "@/lib/env-public";
 
-export const GA_MEASUREMENT_ID = env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+export const GA_MEASUREMENT_ID = envPublic.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
 // Types for Google Analytics events
 type GTagEvent = {

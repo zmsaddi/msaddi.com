@@ -1,6 +1,6 @@
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
-import { env } from "@/lib/env";
+import { envPublic } from "@/lib/env-public";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -38,8 +38,8 @@ export function truncateText(text: string, maxLength: number): string {
 }
 
 export function getBaseUrl(): string {
-  if (env.NEXT_PUBLIC_SITE_URL) {
-    return env.NEXT_PUBLIC_SITE_URL;
+  if (envPublic.NEXT_PUBLIC_SITE_URL) {
+    return envPublic.NEXT_PUBLIC_SITE_URL;
   }
   if (process.env.VERCEL_URL) {
     return `https://${process.env.VERCEL_URL}`;

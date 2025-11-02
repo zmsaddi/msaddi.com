@@ -6,6 +6,7 @@ import { ServiceDetailSpecs } from "@/components/sections/services/service-detai
 import { ServiceDetailProcess } from "@/components/sections/services/service-detail-process";
 import { ServiceDetailGallery } from "@/components/sections/services/service-detail-gallery";
 import { ServiceDetailCTA } from "@/components/sections/services/service-detail-cta";
+import { generateAlternates, getFullUrl, getSchemaId, ORGANIZATION_ID, LOGO_URL, SITE_URL, getImageUrl } from "@/lib/seo-helpers";
 
 interface FlangingDishingPageProps {
   params: { locale: string };
@@ -22,24 +23,17 @@ export async function generateMetadata({
   return {
     title: t("title"),
     description: t("description"),
-    alternates: {
-      canonical: `/${locale}/services/flanging-dishing`,
-      languages: {
-        en: "/en/services/flanging-dishing",
-        ar: "/ar/services/flanging-dishing",
-        tr: "/tr/services/flanging-dishing",
-      },
-    },
+    alternates: generateAlternates("services/flanging-dishing", locale),
     openGraph: {
       title: t("title"),
       description: t("description"),
-      url: `/${locale}/services/flanging-dishing`,
+      url: getFullUrl(locale, "services/flanging-dishing"),
       siteName: "MSADDI.EST",
       locale: locale,
       type: "website",
       images: [
         {
-          url: "/images/demo/service-flanging-dishing-demo.webp",
+          url: getImageUrl("/images/demo/service-flanging-dishing-demo.webp"),
           width: 1200,
           height: 630,
           alt: t("title"),
@@ -50,7 +44,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: t("title"),
       description: t("description"),
-      images: ["/images/demo/service-flanging-dishing-demo.webp"],
+      images: [getImageUrl("/images/demo/service-flanging-dishing-demo.webp")],
     },
   };
 }
@@ -72,15 +66,15 @@ export default async function FlangingDishingPage({
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "@id": `https://msaddi.com/${locale}/services/flanging-dishing`,
+    "@id": getSchemaId(`${locale}/services/flanging-dishing`),
     name: t("hero.title"),
     description: t("hero.description"),
     provider: {
       "@type": "Organization",
-      "@id": "https://msaddi.com/#organization",
+      "@id": ORGANIZATION_ID,
       name: "MSADDI.EST",
-      url: "https://msaddi.com",
-      logo: "https://msaddi.com/logo.png",
+      url: SITE_URL,
+      logo: LOGO_URL,
       address: {
         "@type": "PostalAddress",
         addressLocality: "Aleppo",
@@ -102,7 +96,7 @@ export default async function FlangingDishingPage({
       name: "Syria",
     },
     category: "Metal Fabrication",
-    image: "https://msaddi.com/images/demo/service-flanging-dishing-demo.webp",
+    image: getImageUrl("/images/demo/service-flanging-dishing-demo.webp"),
   };
 
   return (

@@ -3,7 +3,7 @@
 import Script from "next/script";
 import { usePathname, useSearchParams } from "next/navigation";
 import { useEffect, Suspense } from "react";
-import { env } from "@/lib/env";
+import { envPublic } from "@/lib/env-public";
 
 declare global {
   interface Window {
@@ -15,7 +15,7 @@ declare global {
 function GoogleAnalyticsInner() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
-  const GA_MEASUREMENT_ID = env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+  const GA_MEASUREMENT_ID = envPublic.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
   useEffect(() => {
     if (pathname && GA_MEASUREMENT_ID) {
