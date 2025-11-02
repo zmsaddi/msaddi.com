@@ -6,6 +6,8 @@
     "cta1": "احصل على عرض سعر مجاني",
     "cta2": "عرض الخدمات",
     "stats": {
+      "years": "30+",
+      "yearsLabel": "سنة خبرة",
       "cuttingArea": "6000×2500",
       "cuttingAreaLabel": "مساحة القص",
       "bendingForce": "135T",

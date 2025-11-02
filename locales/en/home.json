@@ -6,6 +6,8 @@
     "cta1": "Get Free Quote",
     "cta2": "View Services",
     "stats": {
+      "years": "30+",
+      "yearsLabel": "Years Experience",
       "cuttingArea": "6000×2500",
       "cuttingAreaLabel": "Cutting Area",
       "bendingForce": "135T",

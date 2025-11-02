@@ -6,6 +6,8 @@
     "cta1": "Ücretsiz Teklif Al",
     "cta2": "Hizmetleri Görüntüle",
     "stats": {
+      "years": "30+",
+      "yearsLabel": "Yıl Deneyim",
       "cuttingArea": "6000×2500",
       "cuttingAreaLabel": "Kesim Alanı",
       "bendingForce": "135T",
