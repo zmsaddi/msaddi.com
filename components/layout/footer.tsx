@@ -120,7 +120,7 @@ export function Footer() {
         <div className="mt-12 pt-6 border-t border-divider">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-text-secondary">
-              © <span className="latin-numerals" dir="ltr">{currentYear}</span> MSADDI.EST – {t("allRightsReserved")}
+              © <span className="latin-numerals" dir="ltr">{currentYear}</span> {t("companyName")} – {t("allRightsReserved")}
             </p>
             <div className="flex gap-6">
               <Link

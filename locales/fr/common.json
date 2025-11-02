@@ -24,7 +24,8 @@
     "email": "Email",
     "phone": "Téléphone",
     "address": "Adresse",
-    "location": "Zone industrielle Al-Shaqeef, Alep, Syrie"
+    "location": "Zone industrielle Al-Shaqeef, Alep, Syrie",
+    "companyName": "MSADDI.EST"
   },
   "buttons": {
     "learnMore": "En savoir plus",
