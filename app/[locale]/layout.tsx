@@ -1,4 +1,5 @@
-import { NextIntlClientProvider, useMessages } from "next-intl";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { LayoutDirection } from "@/components/providers/layout-direction";
@@ -10,7 +11,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const locales = ["en", "ar", "tr"];
 
-export default function LocaleLayout({
+export default async function LocaleLayout({
   children,
   params: { locale },
 }: {
@@ -21,26 +22,24 @@ export default function LocaleLayout({
     notFound();
   }
 
-  const messages = useMessages();
+  const messages = await getMessages();
 
   return (
-    <>
+    <NextIntlClientProvider locale={locale} messages={messages}>
       <LayoutDirection />
-      <NextIntlClientProvider locale={locale} messages={messages}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Header />
-          <main className="flex-grow">{children}</main>
-          <Footer />
-        </ThemeProvider>
-      </NextIntlClientProvider>
+      <ThemeProvider
+        attribute="class"
+        defaultTheme="system"
+        enableSystem
+        disableTransitionOnChange
+      >
+        <Header />
+        <main className="flex-grow">{children}</main>
+        <Footer />
+      </ThemeProvider>
       <GoogleAnalytics />
       <Analytics />
       <SpeedInsights />
-    </>
+    </NextIntlClientProvider>
   );
 }
