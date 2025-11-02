@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { seoConfig, getKeywordsForPage } from "@/config/seo";
+import { locales } from "@/config/locales";
 
 interface GenerateMetadataProps {
   title?: string;
@@ -26,15 +27,19 @@ export function generatePageMetadata({
   const seoDescription = description || seoConfig.metaDescriptions[locale as keyof typeof seoConfig.metaDescriptions]?.[page] || seoConfig.metaDescriptions.en[page];
   const seoKeywords = keywords || getKeywordsForPage(page, locale);
 
-  // Generate alternate languages
-  const languages = ["en", "ar", "tr"];
+  // Generate alternate languages including x-default
+  const alternateLanguages = [...locales].reduce((acc, lang) => {
+    const pagePath = path.replace(`/${locale}`, `/${lang}`);
+    acc[lang] = `${baseUrl}${pagePath}`;
+    return acc;
+  }, {} as Record<string, string>);
+
+  // Add x-default pointing to English version
+  alternateLanguages['x-default'] = `${baseUrl}${path.replace(`/${locale}`, '/en')}`;
+
   const alternates = {
     canonical: url,
-    languages: languages.reduce((acc, lang) => {
-      const pagePath = path.replace(`/${locale}`, `/${lang}`);
-      acc[lang] = `${baseUrl}${pagePath}`;
-      return acc;
-    }, {} as Record<string, string>)
+    languages: alternateLanguages
   };
 
   return {

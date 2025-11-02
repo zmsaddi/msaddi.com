@@ -107,5 +107,6 @@ export interface FAQ {
   category?: string;
 }
 
-export type Locale = "en" | "ar" | "tr";
+// Import Locale type from centralized config
+export type { Locale } from "@/config/locales";
 export type Direction = "ltr" | "rtl";
