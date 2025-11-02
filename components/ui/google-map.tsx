@@ -11,8 +11,8 @@ export function GoogleMap({ className }: GoogleMapProps) {
 
   // MSADDI.EST Location in Al-Shaqeef Industrial Zone
   // Coordinates from the provided Google Maps link
-  const latitude = "36.253684";
-  const longitude = "37.1688932";
+  const _latitude = "36.253684";
+  const _longitude = "37.1688932";
   const mapUrl = "https://maps.app.goo.gl/fJug9ePVizwekFcJA";
 
   // Embed map URL - Direct embed for MSADDI.EST location
