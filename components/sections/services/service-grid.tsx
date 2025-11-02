@@ -17,10 +17,8 @@ export function ServiceGrid() {
         t("laserCutting.features.workSize"),
         t("laserCutting.features.materials"),
         t("laserCutting.features.thickness.steel"),
-        t("laserCutting.features.thickness.aluminum"),
-        t("laserCutting.features.thickness.copper"),
       ],
-      color: "from-blue-500 to-cyan-500",
+      color: "from-primary to-accent",
     },
     {
       id: "bending",
@@ -32,7 +30,7 @@ export function ServiceGrid() {
         t("bending.features.capacity"),
         t("bending.features.length"),
       ],
-      color: "from-purple-500 to-pink-500",
+      color: "from-secondary to-primary",
     },
     {
       id: "flanging",
@@ -43,10 +41,8 @@ export function ServiceGrid() {
         t("flanging.applications.0"),
         t("flanging.applications.1"),
         t("flanging.applications.2"),
-        t("flanging.applications.3"),
-        t("flanging.applications.4"),
       ],
-      color: "from-green-500 to-teal-500",
+      color: "from-accent to-primary",
     },
     {
       id: "custom",
@@ -57,18 +53,16 @@ export function ServiceGrid() {
         t("customFabrication.process.0"),
         t("customFabrication.process.1"),
         t("customFabrication.process.2"),
-        t("customFabrication.process.3"),
-        t("customFabrication.process.4"),
-        t("customFabrication.process.5"),
       ],
-      color: "from-orange-500 to-red-500",
+      color: "from-primary to-secondary",
     },
   ];
 
   return (
-    <section className="section-padding bg-light-neutral dark:bg-dark-base">
+    <section className="section-padding bg-surface">
       <div className="container-custom">
-        <div className="grid md:grid-cols-2 gap-8">
+        {/* MD3 Grid: 2-3 columns with 20px/32px gap */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-5 md:gap-8">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
@@ -78,23 +72,23 @@ export function ServiceGrid() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white dark:bg-metal-gray/10 rounded-xl p-8 shadow-lg hover:shadow-2xl transition-shadow"
+                className="card-md3 p-8 hover:shadow-elevation-3 transition-shadow"
               >
-                <div className={`bg-gradient-to-r ${service.color} w-20 h-20 rounded-xl flex items-center justify-center mb-6`}>
+                <div className={`bg-gradient-to-r ${service.color} w-20 h-20 rounded-md-lg flex items-center justify-center mb-6`}>
                   <Icon className="h-10 w-10 text-white" />
                 </div>
 
-                <h3 className="text-2xl font-heading font-bold mb-4">{service.title}</h3>
-                <p className="text-metal-gray dark:text-silver-accent mb-6">{service.description}</p>
+                <h3 className="text-headline-md font-heading font-bold mb-4 text-text-primary">{service.title}</h3>
+                <p className="text-body-lg text-text-secondary mb-6">{service.description}</p>
 
                 {service.features && (
                   <div>
-                    <h4 className="font-semibold mb-3">{t("labels.features")}</h4>
+                    <h4 className="font-semibold mb-3 text-text-primary">{t("labels.features")}</h4>
                     <ul className="space-y-2">
                       {service.features.map((feature, idx) => (
                         <li key={idx} className="flex items-start gap-2">
                           <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                          <span className="text-sm text-metal-gray dark:text-light-neutral">{feature}</span>
+                          <span className="text-body-md text-text-secondary">{feature}</span>
                         </li>
                       ))}
                     </ul>
@@ -103,12 +97,12 @@ export function ServiceGrid() {
 
                 {service.applications && (
                   <div>
-                    <h4 className="font-semibold mb-3">{t("labels.applications")}</h4>
+                    <h4 className="font-semibold mb-3 text-text-primary">{t("labels.applications")}</h4>
                     <ul className="space-y-2">
                       {service.applications.map((app, idx) => (
                         <li key={idx} className="flex items-start gap-2">
                           <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                          <span className="text-sm text-metal-gray dark:text-light-neutral">{app}</span>
+                          <span className="text-body-md text-text-secondary">{app}</span>
                         </li>
                       ))}
                     </ul>
@@ -117,14 +111,14 @@ export function ServiceGrid() {
 
                 {service.process && (
                   <div>
-                    <h4 className="font-semibold mb-3">{t("labels.process")}</h4>
+                    <h4 className="font-semibold mb-3 text-text-primary">{t("labels.process")}</h4>
                     <ol className="space-y-2">
                       {service.process.map((step, idx) => (
                         <li key={idx} className="flex items-start gap-3">
-                          <span className="bg-primary/10 text-primary w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0">
+                          <span className="bg-primary/10 text-primary w-6 h-6 rounded-full flex items-center justify-center text-label-lg font-bold flex-shrink-0 latin-numerals">
                             {idx + 1}
                           </span>
-                          <span className="text-sm text-metal-gray dark:text-light-neutral">{step}</span>
+                          <span className="text-body-md text-text-secondary">{step}</span>
                         </li>
                       ))}
                     </ol>

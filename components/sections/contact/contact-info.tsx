@@ -43,8 +43,8 @@ export function ContactInfo() {
   return (
     <div className="space-y-8">
       {/* Contact Info */}
-      <div className="bg-white dark:bg-metal-gray/10 rounded-xl p-8 shadow-lg">
-        <h3 className="text-2xl font-heading font-bold mb-6">{t("title")}</h3>
+      <div className="card-md3 p-8">
+        <h3 className="text-headline-md font-heading font-bold mb-6 text-text-primary">{t("title")}</h3>
         <div className="space-y-4">
           {contactItems.map((item) => {
             const Icon = item.icon;
@@ -59,14 +59,14 @@ export function ContactInfo() {
                     trackContactClick(item.trackingType);
                   }
                 }}
-                className="flex items-start gap-4 p-3 rounded-lg hover:bg-light-neutral dark:hover:bg-metal-gray/20 transition-colors"
+                className="flex items-start gap-4 p-3 rounded-md-md hover:bg-surface transition-colors"
               >
-                <div className="bg-primary/10 p-2 rounded-lg">
+                <div className="bg-primary/10 p-2 rounded-md-sm">
                   <Icon className="h-5 w-5 text-primary" />
                 </div>
                 <div>
-                  <p className="text-sm text-metal-gray dark:text-silver-accent">{item.label}</p>
-                  <p className="font-medium">{item.value}</p>
+                  <p className="text-label-lg text-text-secondary">{item.label}</p>
+                  <p className="font-medium text-text-primary latin-numerals" dir="ltr">{item.value}</p>
                 </div>
               </a>
             );
@@ -75,21 +75,21 @@ export function ContactInfo() {
       </div>
 
       {/* Business Hours */}
-      <div className="bg-gradient-to-br from-primary/10 to-blue-500/5 rounded-xl p-8">
+      <div className="bg-gradient-to-br from-primary/10 to-accent/5 rounded-md-lg p-8 border border-outline">
         <div className="flex items-center gap-3 mb-4">
           <Clock className="h-6 w-6 text-primary" />
-          <h3 className="text-xl font-heading font-bold">{tHours("title")}</h3>
+          <h3 className="text-title-lg font-heading font-bold text-text-primary">{tHours("title")}</h3>
         </div>
         <div className="space-y-2">
           <div className="flex justify-between">
-            <span className="font-medium">{tHours("days.weekdays")}</span>
-            <span className="text-metal-gray dark:text-silver-accent">
+            <span className="font-medium text-text-primary">{tHours("days.weekdays")}</span>
+            <span className="text-text-secondary latin-numerals" dir="ltr">
               {tHours("times.weekdays")}
             </span>
           </div>
           <div className="flex justify-between">
-            <span className="font-medium">{tHours("days.weekend")}</span>
-            <span className="text-metal-gray dark:text-silver-accent">
+            <span className="font-medium text-text-primary">{tHours("days.weekend")}</span>
+            <span className="text-text-secondary">
               {tHours("times.weekend")}
             </span>
           </div>
