@@ -1,5 +1,3 @@
-import { generatePageMetadata } from "@/components/seo/seo-meta";
-import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
 
 interface PrivacyPageProps {

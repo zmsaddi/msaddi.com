@@ -44,7 +44,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Send email to company
-    const companyEmail = await resend.emails.send({
+    await resend.emails.send({
       from: env.EMAIL_FROM,
       to: env.EMAIL_TO,
       subject: `New Contact Form Submission: ${validatedData.subject}`,
@@ -76,7 +76,7 @@ export async function POST(request: NextRequest) {
     });
 
     // Send confirmation email to user
-    const userEmail = await resend.emails.send({
+    await resend.emails.send({
       from: env.EMAIL_FROM,
       to: validatedData.email,
       subject: "Thank you for contacting MSADDI.EST",

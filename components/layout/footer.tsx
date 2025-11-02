@@ -4,7 +4,6 @@ import { useTranslations, useLocale } from "next-intl";
 import Link from "next/link";
 import Image from "next/image";
 import { Phone, Mail, MapPin } from "lucide-react";
-import { cn } from "@/lib/utils";
 
 export function Footer() {
   const t = useTranslations("footer");
