@@ -3,7 +3,7 @@ import { env } from "@/lib/env";
 
 export async function GET() {
   const baseUrl = env.NEXT_PUBLIC_SITE_URL;
-  const languages = ["en", "ar", "tr"];
+  const languages = ["en", "ar", "tr", "fr", "de", "es", "it", "nl", "pt"];
 
   // Pages with their priorities and change frequencies for better SEO
   const pages = [
