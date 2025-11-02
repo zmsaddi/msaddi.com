@@ -114,20 +114,6 @@ export function Header() {
 
           <div className="flex items-center gap-3">
             <LanguageSwitcher />
-
-            {/* CTA Button */}
-            <Link
-              className={cn(
-                "px-6 py-2.5 bg-primary text-white rounded-xl",
-                "font-medium text-sm shadow-elevation-2",
-                "hover:bg-primary-hover hover:shadow-elevation-3",
-                "transition-all duration-200",
-                "whitespace-nowrap"
-              )}
-              href={`/${locale}/contact`}
-            >
-              {t("requestQuote")}
-            </Link>
           </div>
         </div>
 
@@ -185,19 +171,8 @@ export function Header() {
             ))}
           </ul>
 
-          <div className="mt-4 pt-4 border-t border-divider space-y-3">
+          <div className="mt-4 pt-4 border-t border-divider">
             <LanguageSwitcher />
-            <Link
-              className={cn(
-                "block text-center px-6 py-3",
-                "bg-primary text-white rounded-xl",
-                "font-medium text-sm shadow-elevation-2"
-              )}
-              href={`/${locale}/contact`}
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              {t("requestQuote")}
-            </Link>
           </div>
         </div>
       </div>
