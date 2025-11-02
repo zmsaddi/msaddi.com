@@ -24,11 +24,11 @@
     "custom": {
       "title": "Maßanfertigung",
       "description": "Komplette Blechverarbeitungslösungen"
+    },
+    "labels": {
+      "features": "Eigenschaften:",
+      "applications": "Anwendungen:",
+      "process": "Unser Prozess:"
     }
-  },
-  "labels": {
-    "features": "Eigenschaften:",
-    "applications": "Anwendungen:",
-    "process": "Unser Prozess:"
   }
 }

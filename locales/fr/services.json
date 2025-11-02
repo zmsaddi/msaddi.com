@@ -57,6 +57,11 @@
         "assembly": "Services d'assemblage",
         "finishing": "Options de finition"
       }
+    },
+    "labels": {
+      "features": "Caractéristiques:",
+      "applications": "Applications:",
+      "process": "Notre processus:"
     }
   },
   "capabilities": {
@@ -84,10 +89,5 @@
     "title": "Besoin d'un Devis?",
     "subtitle": "Contactez-nous pour vos besoins en fabrication métallique",
     "button": "Demander un Devis"
-  },
-  "labels": {
-    "features": "Caractéristiques:",
-    "applications": "Applications:",
-    "process": "Notre processus:"
   }
 }

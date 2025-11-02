@@ -1,4 +1,18 @@
 {
   "title": "Contact",
-  "content": "contact page for MSADDI.EST"
+  "content": "contact page for MSADDI.EST",
+  "map": {
+    "address": "Zona Industrial Al-Shaqeef, Alepo, Siria",
+    "companyName": "MSADDI.EST Fabricación de Metal",
+    "getDirections": "Obtener direcciones",
+    "location": "Ubicación",
+    "alShaqeef": "Zona Al-Shaqeef",
+    "zoneType": "Tipo de zona",
+    "industrialArea": "Zona industrial",
+    "transportation": "Transporte",
+    "easyAccess": "Fácil acceso"
+  },
+  "accessibility": {
+    "mapTitle": "Mapa de ubicación MSADDI.EST"
+  }
 }

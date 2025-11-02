@@ -80,12 +80,24 @@
   },
   "map": {
     "title": "موقعنا",
-    "subtitle": "زيارة منشأتنا"
+    "subtitle": "زيارة منشأتنا",
+    "address": "منطقة الشقيف الصناعية، حلب، سوريا",
+    "companyName": "MSADDI.EST لتصنيع المعادن",
+    "getDirections": "الحصول على الاتجاهات",
+    "location": "الموقع",
+    "alShaqeef": "منطقة الشقيف",
+    "zoneType": "نوع المنطقة",
+    "industrialArea": "منطقة صناعية",
+    "transportation": "المواصلات",
+    "easyAccess": "وصول سهل"
   },
   "cta": {
     "title": "هل أنت مستعد لبدء مشروع تصنيع المعادن الخاص بك؟",
     "subtitle": "احصل على خدمات قص الليزر وتصنيع الصاج الاحترافية في سوريا",
     "whatsapp": "محادثة على واتساب",
     "call": "اتصل الآن"
+  },
+  "accessibility": {
+    "mapTitle": "خريطة موقع MSADDI.EST"
   }
 }

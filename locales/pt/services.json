@@ -21,11 +21,11 @@
     "custom": {
       "title": "Fabricação Personalizada",
       "description": "Soluções completas"
+    },
+    "labels": {
+      "features": "Características:",
+      "applications": "Aplicações:",
+      "process": "Nosso processo:"
     }
-  },
-  "labels": {
-    "features": "Características:",
-    "applications": "Aplicações:",
-    "process": "Nosso processo:"
   }
 }

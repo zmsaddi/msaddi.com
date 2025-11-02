@@ -45,6 +45,18 @@
     }
   },
   "map": {
-    "title": "Notre Localisation"
+    "title": "Notre Localisation",
+    "address": "Zone industrielle d'Al-Shaqeef, Alep, Syrie",
+    "companyName": "MSADDI.EST Fabrication Métallique",
+    "getDirections": "Obtenir l'itinéraire",
+    "location": "Emplacement",
+    "alShaqeef": "Zone d'Al-Shaqeef",
+    "zoneType": "Type de zone",
+    "industrialArea": "Zone industrielle",
+    "transportation": "Transport",
+    "easyAccess": "Accès facile"
+  },
+  "accessibility": {
+    "mapTitle": "Carte de localisation MSADDI.EST"
   }
 }

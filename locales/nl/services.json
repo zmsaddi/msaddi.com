@@ -21,11 +21,11 @@
     "custom": {
       "title": "Maatwerk",
       "description": "Complete oplossingen"
+    },
+    "labels": {
+      "features": "Kenmerken:",
+      "applications": "Toepassingen:",
+      "process": "Ons proces:"
     }
-  },
-  "labels": {
-    "features": "Kenmerken:",
-    "applications": "Toepassingen:",
-    "process": "Ons proces:"
   }
 }

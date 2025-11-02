@@ -80,7 +80,19 @@
   },
   "map": {
     "title": "Our Location",
-    "subtitle": "Visit our facility"
+    "subtitle": "Visit our facility",
+    "address": "Al-Shaqeef Industrial Zone, Aleppo, Syria",
+    "companyName": "MSADDI.EST Metal Fabrication",
+    "getDirections": "Get Directions",
+    "location": "Location",
+    "alShaqeef": "Al-Shaqeef Zone",
+    "zoneType": "Zone Type",
+    "industrialArea": "Industrial Area",
+    "transportation": "Transportation",
+    "easyAccess": "Easy Access"
+  },
+  "accessibility": {
+    "mapTitle": "MSADDI.EST Location Map"
   },
   "cta": {
     "title": "Ready to Start Your Metal Fabrication Project?",

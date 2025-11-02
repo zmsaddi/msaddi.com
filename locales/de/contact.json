@@ -5,5 +5,19 @@
   "form": {
     "title": "Angebotsanfrage",
     "submit": "Senden"
+  },
+  "map": {
+    "address": "Al-Shaqeef Industriegebiet, Aleppo, Syrien",
+    "companyName": "MSADDI.EST Metallverarbeitung",
+    "getDirections": "Route abrufen",
+    "location": "Standort",
+    "alShaqeef": "Al-Shaqeef Zone",
+    "zoneType": "Zonentyp",
+    "industrialArea": "Industriegebiet",
+    "transportation": "Transport",
+    "easyAccess": "Einfacher Zugang"
+  },
+  "accessibility": {
+    "mapTitle": "MSADDI.EST Standortkarte"
   }
 }

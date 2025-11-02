@@ -74,12 +74,12 @@
         "Prototip geliştirme",
         "Küçük ve büyük parti üretimi"
       ]
+    },
+    "labels": {
+      "features": "Özellikler:",
+      "applications": "Uygulamalar:",
+      "process": "Sürecimiz:"
     }
-  },
-  "labels": {
-    "features": "Özellikler:",
-    "applications": "Uygulamalar:",
-    "process": "Sürecimiz:"
   },
   "industries": {
     "title": "Hizmet Verdiğimiz Sektörler",

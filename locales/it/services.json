@@ -21,11 +21,11 @@
     "custom": {
       "title": "Fabbricazione su Misura",
       "description": "Soluzioni complete"
+    },
+    "labels": {
+      "features": "Caratteristiche:",
+      "applications": "Applicazioni:",
+      "process": "Il nostro processo:"
     }
-  },
-  "labels": {
-    "features": "Caratteristiche:",
-    "applications": "Applicazioni:",
-    "process": "Il nostro processo:"
   }
 }

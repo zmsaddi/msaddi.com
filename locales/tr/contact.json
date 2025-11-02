@@ -80,12 +80,24 @@
   },
   "map": {
     "title": "Konumumuz",
-    "subtitle": "Tesisimizi ziyaret edin"
+    "subtitle": "Tesisimizi ziyaret edin",
+    "address": "Al-Shaqeef Endüstri Bölgesi, Halep, Suriye",
+    "companyName": "MSADDI.EST Metal İşleme",
+    "getDirections": "Yol Tarifi Al",
+    "location": "Konum",
+    "alShaqeef": "Al-Shaqeef Bölgesi",
+    "zoneType": "Bölge Türü",
+    "industrialArea": "Endüstri Bölgesi",
+    "transportation": "Ulaşım",
+    "easyAccess": "Kolay Erişim"
   },
   "cta": {
     "title": "Projenize Başlamaya Hazır mısınız?",
     "subtitle": "Uzmanlarımız size yardımcı olmak için hazır",
     "whatsapp": "WhatsApp'ta Sohbet",
     "call": "Hemen Ara"
+  },
+  "accessibility": {
+    "mapTitle": "MSADDI.EST Konum Haritası"
   }
 }
