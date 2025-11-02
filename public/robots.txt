@@ -87,11 +87,8 @@ Allow: /
 User-agent: ClaudeBot
 Allow: /
 
-# Sitemap locations (multi-language)
+# Sitemap locations (contains all 9 languages)
 Sitemap: https://www.msaddi.com/sitemap.xml
-Sitemap: https://www.msaddi.com/en/sitemap.xml
-Sitemap: https://www.msaddi.com/ar/sitemap.xml
-Sitemap: https://www.msaddi.com/tr/sitemap.xml
 Sitemap: https://www.msaddi.com/api/sitemap
 
 # Host specification (primary domain)

@@ -75,29 +75,22 @@ Value: google-site-verification=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 1. In Google Search Console, click **"Sitemaps"** in the left sidebar
 2. You'll see a field: **"Add a new sitemap"**
 
-### Step 2: Submit All Sitemap URLs
+### Step 2: Submit Sitemap URLs
 
-Submit **EACH** of these sitemap URLs **ONE BY ONE**:
+Submit **BOTH** of these sitemap URLs:
 
 ```
 sitemap.xml
 api/sitemap
-en/sitemap.xml
-ar/sitemap.xml
-tr/sitemap.xml
-fr/sitemap.xml
-de/sitemap.xml
-es/sitemap.xml
-it/sitemap.xml
-nl/sitemap.xml
-pt/sitemap.xml
 ```
+
+**Note:** Both sitemaps contain all 9 languages (en, ar, tr, fr, de, es, it, nl, pt) and all 36+ pages.
 
 **How to Submit:**
 1. Paste the sitemap path (e.g., `sitemap.xml`) into the field
 2. Click **"Submit"**
 3. Wait 5-10 seconds for confirmation
-4. Repeat for all 11 sitemap URLs above
+4. Repeat for the second sitemap URL
 
 **Expected Result:**
 - Status: "Success" (green checkmark)
@@ -355,27 +348,20 @@ Metrics monitored:
 
 ## الخطوة 3: إرسال خرائط الموقع
 
-أرسل كل عنوان من عناوين خرائط الموقع التالية (واحدًا تلو الآخر):
+أرسل كلا عنواني خرائط الموقع التاليين:
 
 ```
 sitemap.xml
 api/sitemap
-en/sitemap.xml
-ar/sitemap.xml
-tr/sitemap.xml
-fr/sitemap.xml
-de/sitemap.xml
-es/sitemap.xml
-it/sitemap.xml
-nl/sitemap.xml
-pt/sitemap.xml
 ```
+
+**ملاحظة:** كلا خريطتي الموقع تحتويان على جميع اللغات التسع (en, ar, tr, fr, de, es, it, nl, pt) وجميع الـ 36+ صفحة.
 
 ### كيفية الإرسال:
 1. في Search Console، انقر على **"خرائط الموقع"** في القائمة اليمنى
 2. الصق مسار خريطة الموقع (مثل: `sitemap.xml`)
 3. انقر على **"إرسال"**
-4. كرر العملية لجميع خرائط الموقع الـ 11
+4. كرر العملية لخريطة الموقع الثانية
 
 ## الخطوة 4: المراقبة اليومية
 
@@ -418,7 +404,7 @@ pt/sitemap.xml
 - [ ] Visit https://search.google.com/search-console
 - [ ] Add property: www.msaddi.com
 - [ ] Verify ownership (choose DNS, HTML, or meta tag method)
-- [ ] Submit 11 sitemaps (listed in Part 2)
+- [ ] Submit 2 sitemaps: sitemap.xml and api/sitemap
 - [ ] Enable email notifications
 - [ ] Request indexing for top 5 priority pages
 
@@ -446,11 +432,8 @@ pt/sitemap.xml
 - **Google Search Central:** https://developers.google.com/search
 
 ### Your Sitemap URLs:
-- **Main sitemap:** https://www.msaddi.com/sitemap.xml
-- **Dynamic sitemap:** https://www.msaddi.com/api/sitemap
-- **English sitemap:** https://www.msaddi.com/en/sitemap.xml
-- **Arabic sitemap:** https://www.msaddi.com/ar/sitemap.xml
-- **Turkish sitemap:** https://www.msaddi.com/tr/sitemap.xml
+- **Static sitemap:** https://www.msaddi.com/sitemap.xml (contains all 9 languages)
+- **Dynamic sitemap:** https://www.msaddi.com/api/sitemap (contains all 9 languages)
 
 ### Testing Tools:
 - **Sitemap Validator:** https://www.xml-sitemaps.com/validate-xml-sitemap.html
