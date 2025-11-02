@@ -37,6 +37,21 @@ export const metadata: Metadata = {
   authors: [{ name: "MSADDI.EST" }],
   creator: "MSADDI.EST",
   publisher: "MSADDI.EST",
+  alternates: {
+    canonical: "https://www.msaddi.com",
+    languages: {
+      'en': 'https://www.msaddi.com/en',
+      'ar': 'https://www.msaddi.com/ar',
+      'tr': 'https://www.msaddi.com/tr',
+      'fr': 'https://www.msaddi.com/fr',
+      'de': 'https://www.msaddi.com/de',
+      'es': 'https://www.msaddi.com/es',
+      'it': 'https://www.msaddi.com/it',
+      'pt': 'https://www.msaddi.com/pt',
+      'nl': 'https://www.msaddi.com/nl',
+      'x-default': 'https://www.msaddi.com/en',
+    },
+  },
   robots: {
     index: true,
     follow: true,

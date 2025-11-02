@@ -1,0 +1,14 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Servizi",
+    "about": "Chi siamo",
+    "contact": "Contatti",
+    "requestQuote": "Richiedi preventivo",
+    "language": "Lingua"
+  },
+  "footer": {
+    "companyDescription": "MSADDI.EST - Leader nella lavorazione lamiere con oltre 30 anni.",
+    "location": "Zona Industriale Al-Shaqeef, Aleppo, Siria"
+  }
+}

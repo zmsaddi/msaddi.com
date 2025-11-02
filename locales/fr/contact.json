@@ -1,0 +1,50 @@
+{
+  "page": {
+    "title": "Contactez MSADDI - Devis Fabrication Métallique",
+    "subtitle": "Obtenez un devis pour vos projets de découpe laser et pliage"
+  },
+  "form": {
+    "title": "Demande de Devis",
+    "name": {
+      "label": "Nom",
+      "placeholder": "Votre nom"
+    },
+    "email": {
+      "label": "Email",
+      "placeholder": "votre@email.com"
+    },
+    "phone": {
+      "label": "Téléphone",
+      "placeholder": "+33..."
+    },
+    "subject": {
+      "label": "Sujet",
+      "placeholder": "Objet de votre demande"
+    },
+    "message": {
+      "label": "Message",
+      "placeholder": "Décrivez votre projet..."
+    },
+    "submit": "Envoyer"
+  },
+  "info": {
+    "title": "Informations de Contact",
+    "items": {
+      "email": {
+        "label": "Email",
+        "value": "info@msaddi.com"
+      },
+      "phone": {
+        "label": "Téléphone",
+        "value": "+963 944 244 604"
+      },
+      "address": {
+        "label": "Adresse",
+        "value": "Zone industrielle Al-Shaqeef, Alep, Syrie"
+      }
+    }
+  },
+  "map": {
+    "title": "Notre Localisation"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "services": "Dienstleistungen",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "requestQuote": "Angebot anfordern",
+    "language": "Sprache"
+  },
+  "footer": {
+    "companyDescription": "MSADDI.EST - Führender Blechverarbeiter mit über 30 Jahren Erfahrung.",
+    "location": "Al-Shaqeef Industriezone, Aleppo, Syrien",
+    "email": "E-Mail",
+    "phone": "Telefon",
+    "address": "Adresse"
+  }
+}

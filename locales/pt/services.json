@@ -1,0 +1,20 @@
+{
+  "services": {
+    "laserCutting": {
+      "title": "Corte a Laser",
+      "description": "Corte a laser até 40mm aço"
+    },
+    "bending": {
+      "title": "Dobra CNC",
+      "description": "Prensa dobradeira 135T"
+    },
+    "flanging": {
+      "title": "Flangeamento",
+      "description": "Tampos de tanques e silos"
+    },
+    "custom": {
+      "title": "Fabricação Personalizada",
+      "description": "Soluções completas"
+    }
+  }
+}

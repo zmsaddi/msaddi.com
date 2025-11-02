@@ -1,0 +1,22 @@
+{
+  "title": "Politique de Confidentialité",
+  "lastUpdated": "Dernière mise à jour",
+  "sections": {
+    "intro": {
+      "title": "Introduction",
+      "content": "MSADDI.EST respecte votre vie privée."
+    },
+    "data": {
+      "title": "Données Collectées",
+      "content": "Nous collectons uniquement les données nécessaires."
+    },
+    "usage": {
+      "title": "Utilisation",
+      "content": "Vos données sont utilisées pour améliorer nos services."
+    },
+    "security": {
+      "title": "Sécurité",
+      "content": "Nous protégeons vos informations."
+    }
+  }
+}

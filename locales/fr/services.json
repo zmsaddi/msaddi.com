@@ -1,0 +1,82 @@
+{
+  "page": {
+    "title": "Services de Découpe Laser et Pliage CNC - MSADDI.EST",
+    "subtitle": "Solutions professionnelles de fabrication métallique en Syrie"
+  },
+  "hero": {
+    "title": "Services de Fabrication Métallique de Précision",
+    "description": "Découpe laser haute précision, pliage CNC et solutions sur mesure depuis 1994"
+  },
+  "services": {
+    "laserCutting": {
+      "title": "Découpe Laser",
+      "subtitle": "Précision jusqu'à ±0.1mm",
+      "description": "Découpe laser de pointe pour acier jusqu'à 40mm, aluminium 20mm, cuivre et laiton 12mm. Surface de travail maximale 6000×2500mm.",
+      "features": {
+        "precision": "Précision ±0.1mm",
+        "thickness": "Jusqu'à 40mm acier",
+        "size": "6000×2500mm max",
+        "materials": "Acier, aluminium, cuivre"
+      }
+    },
+    "bending": {
+      "title": "Pliage CNC",
+      "subtitle": "Press Brake 135T/3200mm",
+      "description": "Services de pliage de précision avec presse plieuse CNC 135 tonnes, longueur de pliage jusqu'à 3200mm.",
+      "features": {
+        "capacity": "135 tonnes force",
+        "length": "3200mm longueur max",
+        "precision": "Angles précis",
+        "versatility": "Formes complexes"
+      }
+    },
+    "flanging": {
+      "title": "Bordage et Emboutissage",
+      "subtitle": "Fabrication de réservoirs et silos",
+      "description": "Services spécialisés de bordage et emboutissage pour têtes de réservoirs, silos et citernes routières.",
+      "features": {
+        "tankHeads": "Têtes de réservoirs",
+        "silos": "Construction de silos",
+        "tankers": "Citernes routières",
+        "custom": "Formes personnalisées"
+      }
+    },
+    "custom": {
+      "title": "Fabrication Sur Mesure",
+      "subtitle": "Solutions complètes de tôlerie",
+      "description": "Fabrication métallique complète de la conception à la livraison, y compris assemblage et finition.",
+      "features": {
+        "design": "Assistance conception",
+        "fabrication": "Production complète",
+        "assembly": "Services d'assemblage",
+        "finishing": "Options de finition"
+      }
+    }
+  },
+  "capabilities": {
+    "title": "Nos Capacités",
+    "items": {
+      "materials": {
+        "title": "Matériaux",
+        "description": "Acier, inox, aluminium, cuivre, laiton"
+      },
+      "thickness": {
+        "title": "Épaisseurs",
+        "description": "De 0.5mm à 40mm selon le matériau"
+      },
+      "precision": {
+        "title": "Précision",
+        "description": "Tolérance ±0.1mm sur découpe laser"
+      },
+      "capacity": {
+        "title": "Capacité",
+        "description": "Production grande série disponible"
+      }
+    }
+  },
+  "cta": {
+    "title": "Besoin d'un Devis?",
+    "subtitle": "Contactez-nous pour vos besoins en fabrication métallique",
+    "button": "Demander un Devis"
+  }
+}

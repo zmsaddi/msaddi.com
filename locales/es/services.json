@@ -1,0 +1,20 @@
+{
+  "services": {
+    "laserCutting": {
+      "title": "Corte Láser",
+      "description": "Corte láser hasta 40mm acero"
+    },
+    "bending": {
+      "title": "Plegado CNC",
+      "description": "Prensa plegadora 135T"
+    },
+    "flanging": {
+      "title": "Rebordeado",
+      "description": "Cabezales de tanques y silos"
+    },
+    "custom": {
+      "title": "Fabricación a Medida",
+      "description": "Soluciones completas"
+    }
+  }
+}

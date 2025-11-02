@@ -1,0 +1,58 @@
+{
+  "page": {
+    "title": "À Propos de MSADDI - Fabrication Métallique Syrie",
+    "subtitle": "Leaders en découpe laser et fabrication de tôles depuis 1994"
+  },
+  "intro": {
+    "title": "Plus de 30 Ans d'Excellence en Fabrication Métallique en Syrie",
+    "description": "MSADDI.EST est une entreprise leader dans la fabrication métallique à Alep, Syrie, spécialisée dans la découpe laser, le pliage CNC et les solutions de tôlerie sur mesure. Avec plus de 30 ans d'expérience, notre capacité de découpe laser 6000×2500mm et notre presse 135T servent les secteurs de la construction, automobile et industriel en Syrie et au Moyen-Orient."
+  },
+  "mission": {
+    "title": "Notre Mission",
+    "description": "Fournir des services supérieurs de fabrication de tôles et de découpe laser en Syrie, offrant des pièces métalliques conçues avec précision grâce à la technologie CNC avancée, l'artisanat qualifié et les normes de qualité ISO 9001."
+  },
+  "vision": {
+    "title": "Notre Vision",
+    "description": "Être le principal fournisseur de services de fabrication métallique et de découpe laser en Syrie et au Moyen-Orient, reconnu pour notre capacité de découpe de 40mm, notre haute précision et nos solutions métalliques industrielles fiables."
+  },
+  "values": {
+    "title": "Nos Valeurs",
+    "items": {
+      "quality": {
+        "title": "Excellence Qualité",
+        "description": "Nous maintenons les normes les plus élevées dans chaque projet."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "Investissement continu dans les dernières technologies."
+      },
+      "integrity": {
+        "title": "Intégrité",
+        "description": "Relations durables basées sur la confiance."
+      },
+      "safety": {
+        "title": "Sécurité",
+        "description": "Priorité à la sécurité dans toutes les opérations."
+      }
+    }
+  },
+  "expertise": {
+    "title": "Notre Expertise",
+    "description": "Avec trois décennies d'expérience, nous apportons une expertise inégalée",
+    "stats": {
+      "years": "30+",
+      "yearsLabel": "Années d'expérience",
+      "projects": "500+",
+      "projectsLabel": "Projets réalisés",
+      "clients": "100+",
+      "clientsLabel": "Clients satisfaits",
+      "team": "50+",
+      "teamLabel": "Équipe d'experts"
+    }
+  },
+  "cta": {
+    "title": "Prêt à travailler avec nous?",
+    "subtitle": "Discutons de votre prochain projet",
+    "button": "Contactez-nous"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "page": {
+    "title": "Laserschneiden und CNC-Biegen Dienstleistungen - MSADDI.EST"
+  },
+  "services": {
+    "laserCutting": {
+      "title": "Laserschneiden",
+      "description": "Hochpräzises Laserschneiden bis 40mm Stahl"
+    },
+    "bending": {
+      "title": "CNC-Biegen",
+      "description": "135T Abkantpresse für präzises Biegen"
+    },
+    "flanging": {
+      "title": "Bördeln & Wölben",
+      "description": "Spezialisiert auf Tankköpfe und Silos"
+    },
+    "custom": {
+      "title": "Maßanfertigung",
+      "description": "Komplette Blechverarbeitungslösungen"
+    }
+  }
+}

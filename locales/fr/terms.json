@@ -1,0 +1,18 @@
+{
+  "title": "Conditions d'Utilisation",
+  "lastUpdated": "Dernière mise à jour",
+  "sections": {
+    "acceptance": {
+      "title": "Acceptation",
+      "content": "En utilisant ce site, vous acceptez nos conditions."
+    },
+    "services": {
+      "title": "Services",
+      "content": "MSADDI.EST fournit des services de fabrication métallique."
+    },
+    "liability": {
+      "title": "Responsabilité",
+      "content": "Limitation de responsabilité selon la loi applicable."
+    }
+  }
+}

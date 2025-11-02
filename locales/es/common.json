@@ -1,0 +1,14 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "about": "Nosotros",
+    "contact": "Contacto",
+    "requestQuote": "Solicitar presupuesto",
+    "language": "Idioma"
+  },
+  "footer": {
+    "companyDescription": "MSADDI.EST - Líder en fabricación de chapa metálica con más de 30 años.",
+    "location": "Zona Industrial Al-Shaqeef, Alepo, Siria"
+  }
+}

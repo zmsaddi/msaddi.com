@@ -1,0 +1,20 @@
+{
+  "services": {
+    "laserCutting": {
+      "title": "Lasersnijden",
+      "description": "Lasersnijden tot 40mm staal"
+    },
+    "bending": {
+      "title": "CNC Buigen",
+      "description": "Kantpers 135T"
+    },
+    "flanging": {
+      "title": "Flensen",
+      "description": "Tankbodems en silo's"
+    },
+    "custom": {
+      "title": "Maatwerk",
+      "description": "Complete oplossingen"
+    }
+  }
+}

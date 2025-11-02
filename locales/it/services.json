@@ -1,0 +1,20 @@
+{
+  "services": {
+    "laserCutting": {
+      "title": "Taglio Laser",
+      "description": "Taglio laser fino a 40mm acciaio"
+    },
+    "bending": {
+      "title": "Piegatura CNC",
+      "description": "Pressa piegatrice 135T"
+    },
+    "flanging": {
+      "title": "Flangiatura",
+      "description": "Fondi per serbatoi e silos"
+    },
+    "custom": {
+      "title": "Fabbricazione su Misura",
+      "description": "Soluzioni complete"
+    }
+  }
+}
