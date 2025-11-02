@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
 
 export function AboutSection() {
-  const t = useTranslations("about");
+  const t = useTranslations("home.about");
   const locale = useLocale();
 
   const features = [
