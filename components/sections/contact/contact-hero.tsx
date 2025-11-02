@@ -7,8 +7,16 @@ export function ContactHero() {
   const t = useTranslations("contact.page");
 
   return (
-    <section className="relative pt-32 pb-16 bg-gradient-to-br from-primary to-blue-600">
-      <div className="absolute inset-0 metal-shine opacity-10" />
+    <section className="relative pt-32 pb-16 overflow-hidden">
+      {/* Industrial background with MD3 overlay */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: "url('/images/msaddi-contact-workshop-facility.jpg')",
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-br from-secondary/90 via-secondary/85 to-primary/80" />
+      </div>
 
       <div className="container-custom relative z-10">
         <motion.div

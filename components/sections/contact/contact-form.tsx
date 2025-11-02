@@ -74,9 +74,9 @@ function ContactFormContent() {
   };
 
   return (
-    <div className="bg-white dark:bg-metal-gray/10 rounded-xl p-8 shadow-lg">
-      <h3 className="text-2xl font-heading font-bold mb-2">{t("title")}</h3>
-      <p className="text-metal-gray dark:text-silver-accent mb-6">{t("subtitle")}</p>
+    <div className="card-md3 p-8">
+      <h3 className="text-headline-md font-heading font-bold mb-2 text-text-primary">{t("title")}</h3>
+      <p className="text-body-lg text-text-secondary mb-6">{t("subtitle")}</p>
 
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
         <div className="grid md:grid-cols-2 gap-6">
