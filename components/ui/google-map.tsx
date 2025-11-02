@@ -27,7 +27,7 @@ export function GoogleMap({ className }: GoogleMapProps) {
             {t("map.title")}
           </h3>
           <p className="text-sm text-gray-600 mt-1">
-            Al-Shaqeef Industrial Zone, Aleppo, Syria
+            {t("map.address")}
           </p>
         </div>
 
@@ -42,7 +42,7 @@ export function GoogleMap({ className }: GoogleMapProps) {
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
             className="w-full h-full"
-            title="MSADDI.EST Location Map"
+            title={t("accessibility.mapTitle")}
           />
         </div>
 
@@ -51,10 +51,10 @@ export function GoogleMap({ className }: GoogleMapProps) {
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="text-center sm:text-left">
               <p className="text-sm font-medium text-gray-900">
-                MSADDI.EST Metal Fabrication
+                {t("map.companyName")}
               </p>
               <p className="text-xs text-gray-600 mt-0.5">
-                Al-Shaqeef Industrial Zone, Aleppo
+                {t("map.address")}
               </p>
             </div>
             <a
@@ -82,7 +82,7 @@ export function GoogleMap({ className }: GoogleMapProps) {
                   d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                 />
               </svg>
-              Get Directions
+              {t("map.getDirections")}
             </a>
           </div>
         </div>
@@ -100,8 +100,8 @@ export function GoogleMap({ className }: GoogleMapProps) {
               </svg>
             </div>
             <div>
-              <p className="text-xs text-gray-500">Location</p>
-              <p className="text-sm font-semibold text-gray-900">Al-Shaqeef Zone</p>
+              <p className="text-xs text-gray-500">{t("map.location")}</p>
+              <p className="text-sm font-semibold text-gray-900">{t("map.alShaqeef")}</p>
             </div>
           </div>
         </div>
@@ -115,8 +115,8 @@ export function GoogleMap({ className }: GoogleMapProps) {
               </svg>
             </div>
             <div>
-              <p className="text-xs text-gray-500">Zone Type</p>
-              <p className="text-sm font-semibold text-gray-900">Industrial Area</p>
+              <p className="text-xs text-gray-500">{t("map.zoneType")}</p>
+              <p className="text-sm font-semibold text-gray-900">{t("map.industrialArea")}</p>
             </div>
           </div>
         </div>
@@ -130,8 +130,8 @@ export function GoogleMap({ className }: GoogleMapProps) {
               </svg>
             </div>
             <div>
-              <p className="text-xs text-gray-500">Transportation</p>
-              <p className="text-sm font-semibold text-gray-900">Easy Access</p>
+              <p className="text-xs text-gray-500">{t("map.transportation")}</p>
+              <p className="text-sm font-semibold text-gray-900">{t("map.easyAccess")}</p>
             </div>
           </div>
         </div>

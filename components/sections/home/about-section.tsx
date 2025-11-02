@@ -8,6 +8,7 @@ import { CheckCircle } from "lucide-react";
 
 export function AboutSection() {
   const t = useTranslations("home.about");
+  const tCommon = useTranslations("common.placeholders");
   const locale = useLocale();
 
   const features = [
@@ -33,7 +34,7 @@ export function AboutSection() {
               <div className="absolute inset-0 metal-shine opacity-30" />
               {/* Placeholder for workshop image */}
               <div className="flex items-center justify-center h-full text-metal-gray/50">
-                <span className="text-lg">Workshop Image</span>
+                <span className="text-lg">{tCommon("workshopImage")}</span>
               </div>
             </div>
           </motion.div>

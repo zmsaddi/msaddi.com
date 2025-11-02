@@ -11,6 +11,7 @@ import { cn } from "@/lib/utils";
 
 export function Header() {
   const t = useTranslations("nav");
+  const tCommon = useTranslations("common.accessibility");
   const locale = useLocale();
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -74,7 +75,7 @@ export function Header() {
             {/* Logo with responsive dimensions maintaining aspect ratio 2.77:1 */}
             <Image
               src="/logo.png"
-              alt="MSADDI.EST"
+              alt={tCommon("companyLogo")}
               width={240}
               height={87}  // Actual aspect ratio: 240/87 = 2.76
               priority
@@ -137,7 +138,7 @@ export function Header() {
             "hover:bg-gray-100 transition-colors"
           )}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          aria-label="Toggle menu"
+          aria-label={tCommon("toggleMenu")}
         >
           {isMobileMenuOpen ? (
             <X className="h-5 w-5 text-gray-700" />

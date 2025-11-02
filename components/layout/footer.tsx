@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils";
 export function Footer() {
   const t = useTranslations("footer");
   const tNav = useTranslations("nav");
+  const tCommon = useTranslations("common.accessibility");
   const locale = useLocale();
   const currentYear = new Date().getFullYear();
   const isRTL = locale === "ar";
@@ -29,7 +30,7 @@ export function Footer() {
             <Link href={`/${locale}`} className="inline-block hover:opacity-90 transition-opacity">
               <Image
                 src="/logo.png"
-                alt="MSADDI.EST"
+                alt={tCommon("companyLogo")}
                 width={160}
                 height={58}
                 className="w-[160px] h-[58px] object-contain"

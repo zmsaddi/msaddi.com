@@ -10,5 +10,41 @@
   "footer": {
     "companyDescription": "MSADDI.EST - Líder em fabricação de chapas metálicas com mais de 30 anos.",
     "location": "Zona Industrial Al-Shaqeef, Alepo, Síria"
+  },
+  "whatsapp": {
+    "button": "WhatsApp",
+    "label": "Conversar no WhatsApp",
+    "tooltip": "Converse conosco no WhatsApp",
+    "quickQuote": "Obtenha orçamento instantâneo e suporte",
+    "chatNow": "Iniciar conversa",
+    "quickResponse": "Resposta rápida garantida",
+    "message": "Olá MSADDI.EST, estou interessado em seus serviços de fabricação de metal."
+  },
+  "theme": {
+    "lightMode": "Modo claro",
+    "darkMode": "Modo escuro",
+    "switchTo": "Mudar para"
+  },
+  "map": {
+    "title": "Nossa localização",
+    "getDirections": "Obter direções",
+    "location": "Localização",
+    "zoneType": "Tipo de zona",
+    "industrialArea": "Área industrial",
+    "transportation": "Transporte",
+    "easyAccess": "Acesso fácil",
+    "alShaqeef": "Zona Al-Shaqeef",
+    "address": "Zona Industrial Al-Shaqeef, Aleppo, Síria",
+    "companyName": "MSADDI.EST Fabricação de Metais"
+  },
+  "accessibility": {
+    "contactWhatsApp": "Contato no WhatsApp",
+    "selectLanguage": "Selecionar idioma",
+    "toggleMenu": "Alternar menu",
+    "mapTitle": "Mapa de localização MSADDI.EST",
+    "companyLogo": "MSADDI.EST"
+  },
+  "placeholders": {
+    "workshopImage": "Imagem da oficina"
   }
 }

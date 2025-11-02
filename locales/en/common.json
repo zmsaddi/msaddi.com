@@ -42,5 +42,41 @@
     "error": "Error",
     "sending": "Sending...",
     "sent": "Message Sent Successfully!"
+  },
+  "whatsapp": {
+    "button": "WhatsApp",
+    "label": "Chat on WhatsApp",
+    "tooltip": "Chat with us on WhatsApp",
+    "quickQuote": "Get instant quote & support",
+    "chatNow": "Start Chat",
+    "quickResponse": "Quick response guaranteed",
+    "message": "Hello MSADDI.EST, I'm interested in your metal fabrication services."
+  },
+  "theme": {
+    "lightMode": "Light Mode",
+    "darkMode": "Dark Mode",
+    "switchTo": "Switch to"
+  },
+  "map": {
+    "title": "Our Location",
+    "getDirections": "Get Directions",
+    "location": "Location",
+    "zoneType": "Zone Type",
+    "industrialArea": "Industrial Area",
+    "transportation": "Transportation",
+    "easyAccess": "Easy Access",
+    "alShaqeef": "Al-Shaqeef Zone",
+    "address": "Al-Shaqeef Industrial Zone, Aleppo, Syria",
+    "companyName": "MSADDI.EST Metal Fabrication"
+  },
+  "accessibility": {
+    "contactWhatsApp": "Contact on WhatsApp",
+    "selectLanguage": "Select language",
+    "toggleMenu": "Toggle menu",
+    "mapTitle": "MSADDI.EST Location Map",
+    "companyLogo": "MSADDI.EST"
+  },
+  "placeholders": {
+    "workshopImage": "Workshop Image"
   }
 }

@@ -13,5 +13,41 @@
     "email": "E-Mail",
     "phone": "Telefon",
     "address": "Adresse"
+  },
+  "whatsapp": {
+    "button": "WhatsApp",
+    "label": "Auf WhatsApp chatten",
+    "tooltip": "Chatten Sie mit uns auf WhatsApp",
+    "quickQuote": "Sofortiges Angebot und Support",
+    "chatNow": "Chat starten",
+    "quickResponse": "Schnelle Antwort garantiert",
+    "message": "Hallo MSADDI.EST, ich bin an Ihren Metallverarbeitungsdiensten interessiert."
+  },
+  "theme": {
+    "lightMode": "Heller Modus",
+    "darkMode": "Dunkler Modus",
+    "switchTo": "Wechseln zu"
+  },
+  "map": {
+    "title": "Unser Standort",
+    "getDirections": "Route berechnen",
+    "location": "Standort",
+    "zoneType": "Zonentyp",
+    "industrialArea": "Industriegebiet",
+    "transportation": "Transport",
+    "easyAccess": "Einfacher Zugang",
+    "alShaqeef": "Al-Shaqeef Zone",
+    "address": "Al-Shaqeef Industriezone, Aleppo, Syrien",
+    "companyName": "MSADDI.EST Metallverarbeitung"
+  },
+  "accessibility": {
+    "contactWhatsApp": "Kontakt über WhatsApp",
+    "selectLanguage": "Sprache auswählen",
+    "toggleMenu": "Menü umschalten",
+    "mapTitle": "MSADDI.EST Standortkarte",
+    "companyLogo": "MSADDI.EST"
+  },
+  "placeholders": {
+    "workshopImage": "Werkstattbild"
   }
 }

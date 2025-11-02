@@ -1,0 +1,39 @@
+
+=== COMPONENTS TO UPDATE ===
+
+1. components/ui/whatsapp-button.tsx
+   - Lines 31, 58-61, 79, 96, 102: Replace hardcoded text with translation keys
+   - Use: t("whatsapp.tooltip"), t("whatsapp.quickQuote"), etc.
+
+2. components/ui/google-map.tsx
+   - Lines 30, 45, 54, 57, 85, 103-104, 118-119, 133-134: Replace hardcoded text
+   - Use: t("map.address"), t("map.getDirections"), t("map.location"), etc.
+
+3. components/ui/theme-switcher.tsx
+   - Lines 39, 44: Replace "Light Mode" and "Dark Mode"
+   - Use: t("theme.lightMode"), t("theme.darkMode")
+
+4. components/sections/contact/contact-info.tsx
+   - Lines 101-102, 110: Replace hardcoded WhatsApp text
+   - Use: t("whatsapp.label"), t("whatsapp.quickResponse"), t("whatsapp.chatNow")
+
+5. components/sections/home/about-section.tsx
+   - Line 36: Replace "Workshop Image"
+   - Use: t("placeholders.workshopImage")
+
+6. components/layout/header.tsx
+   - Line 77, 140: Replace alt and aria-label
+   - Use: t("accessibility.companyLogo"), t("accessibility.toggleMenu")
+
+7. components/layout/footer.tsx
+   - Line 32: Replace alt text
+   - Use: t("accessibility.companyLogo")
+
+8. components/ui/language-switcher.tsx
+   - Line 87: Replace aria-label
+   - Use: t("accessibility.selectLanguage")
+
+=== API RESPONSE MESSAGE ===
+9. app/api/contact/route.ts
+   - Line 152: Consider moving error message to translations
+   - Or keep as is since it's a server-side API response

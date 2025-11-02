@@ -42,5 +42,41 @@
     "error": "Hata",
     "sending": "Gönderiliyor...",
     "sent": "Mesaj Başarıyla Gönderildi!"
+  },
+  "whatsapp": {
+    "button": "WhatsApp",
+    "label": "WhatsApp'ta sohbet edin",
+    "tooltip": "WhatsApp'ta bizimle sohbet edin",
+    "quickQuote": "Anında teklif ve destek alın",
+    "chatNow": "Sohbeti Başlat",
+    "quickResponse": "Hızlı yanıt garantili",
+    "message": "Merhaba MSADDI.EST, metal fabrikasyon hizmetlerinizle ilgileniyorum."
+  },
+  "theme": {
+    "lightMode": "Aydınlık Mod",
+    "darkMode": "Karanlık Mod",
+    "switchTo": "Geç"
+  },
+  "map": {
+    "title": "Konumumuz",
+    "getDirections": "Yol Tarifi Al",
+    "location": "Konum",
+    "zoneType": "Bölge Tipi",
+    "industrialArea": "Sanayi Bölgesi",
+    "transportation": "Ulaşım",
+    "easyAccess": "Kolay Erişim",
+    "alShaqeef": "Al-Shaqeef Bölgesi",
+    "address": "Al-Shaqeef Sanayi Bölgesi, Halep, Suriye",
+    "companyName": "MSADDI.EST Metal Fabrikasyon"
+  },
+  "accessibility": {
+    "contactWhatsApp": "WhatsApp ile iletişim",
+    "selectLanguage": "Dil seçin",
+    "toggleMenu": "Menüyü aç/kapat",
+    "mapTitle": "MSADDI.EST Konum Haritası",
+    "companyLogo": "MSADDI.EST"
+  },
+  "placeholders": {
+    "workshopImage": "Atölye Resmi"
   }
 }

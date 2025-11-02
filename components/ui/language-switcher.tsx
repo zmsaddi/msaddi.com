@@ -1,6 +1,6 @@
 "use client";
 
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { useRouter, usePathname } from "next/navigation";
 import { useState, useRef, useEffect } from "react";
 import { Globe, Check } from "lucide-react";
@@ -43,6 +43,7 @@ interface LanguageSwitcherProps {
 
 export function LanguageSwitcher({ className }: LanguageSwitcherProps) {
   const locale = useLocale();
+  const t = useTranslations("common.accessibility");
   const router = useRouter();
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
@@ -84,7 +85,7 @@ export function LanguageSwitcher({ className }: LanguageSwitcherProps) {
           "text-sm font-medium text-gray-700",
           "focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-1"
         )}
-        aria-label="Select language"
+        aria-label={t("selectLanguage")}
         aria-expanded={isOpen}
       >
         {currentLanguage?.flag && (

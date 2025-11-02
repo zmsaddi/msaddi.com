@@ -4,6 +4,7 @@ import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { Moon, Sun } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useTranslations } from "next-intl";
 
 interface ThemeSwitcherProps {
   className?: string;
@@ -11,6 +12,7 @@ interface ThemeSwitcherProps {
 }
 
 export function ThemeSwitcher({ className, showLabel = false }: ThemeSwitcherProps) {
+  const t = useTranslations("common");
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
 
@@ -31,17 +33,17 @@ export function ThemeSwitcher({ className, showLabel = false }: ThemeSwitcherPro
         "focus:outline-none focus:ring-2 focus:ring-primary",
         className
       )}
-      aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
+      aria-label={`${t("theme.switchTo")} ${theme === "dark" ? t("theme.lightMode") : t("theme.darkMode")}`}
     >
       {theme === "dark" ? (
         <>
           <Sun className="h-5 w-5" />
-          {showLabel && <span className="text-sm">Light Mode</span>}
+          {showLabel && <span className="text-sm">{t("theme.lightMode")}</span>}
         </>
       ) : (
         <>
           <Moon className="h-5 w-5" />
-          {showLabel && <span className="text-sm">Dark Mode</span>}
+          {showLabel && <span className="text-sm">{t("theme.darkMode")}</span>}
         </>
       )}
     </button>

@@ -10,5 +10,41 @@
   "footer": {
     "companyDescription": "MSADDI.EST - Leader nella lavorazione lamiere con oltre 30 anni.",
     "location": "Zona Industriale Al-Shaqeef, Aleppo, Siria"
+  },
+  "whatsapp": {
+    "button": "WhatsApp",
+    "label": "Chatta su WhatsApp",
+    "tooltip": "Chatta con noi su WhatsApp",
+    "quickQuote": "Ottieni preventivo istantaneo e supporto",
+    "chatNow": "Inizia chat",
+    "quickResponse": "Risposta rapida garantita",
+    "message": "Ciao MSADDI.EST, sono interessato ai vostri servizi di fabbricazione metalli."
+  },
+  "theme": {
+    "lightMode": "Modalità chiara",
+    "darkMode": "Modalità scura",
+    "switchTo": "Passa a"
+  },
+  "map": {
+    "title": "La nostra posizione",
+    "getDirections": "Ottieni indicazioni",
+    "location": "Posizione",
+    "zoneType": "Tipo di zona",
+    "industrialArea": "Area industriale",
+    "transportation": "Trasporto",
+    "easyAccess": "Accesso facile",
+    "alShaqeef": "Zona Al-Shaqeef",
+    "address": "Zona Industriale Al-Shaqeef, Aleppo, Siria",
+    "companyName": "MSADDI.EST Fabbricazione Metalli"
+  },
+  "accessibility": {
+    "contactWhatsApp": "Contatto su WhatsApp",
+    "selectLanguage": "Seleziona lingua",
+    "toggleMenu": "Attiva/disattiva menu",
+    "mapTitle": "Mappa posizione MSADDI.EST",
+    "companyLogo": "MSADDI.EST"
+  },
+  "placeholders": {
+    "workshopImage": "Immagine officina"
   }
 }

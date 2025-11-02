@@ -42,5 +42,41 @@
     "error": "Erreur",
     "sending": "Envoi...",
     "sent": "Message envoyé avec succès!"
+  },
+  "whatsapp": {
+    "button": "WhatsApp",
+    "label": "Discuter sur WhatsApp",
+    "tooltip": "Discutez avec nous sur WhatsApp",
+    "quickQuote": "Obtenez un devis instantané et de l'aide",
+    "chatNow": "Commencer le chat",
+    "quickResponse": "Réponse rapide garantie",
+    "message": "Bonjour MSADDI.EST, je suis intéressé par vos services de fabrication métallique."
+  },
+  "theme": {
+    "lightMode": "Mode clair",
+    "darkMode": "Mode sombre",
+    "switchTo": "Passer en"
+  },
+  "map": {
+    "title": "Notre emplacement",
+    "getDirections": "Obtenir l'itinéraire",
+    "location": "Emplacement",
+    "zoneType": "Type de zone",
+    "industrialArea": "Zone industrielle",
+    "transportation": "Transport",
+    "easyAccess": "Accès facile",
+    "alShaqeef": "Zone Al-Shaqeef",
+    "address": "Zone industrielle Al-Shaqeef, Alep, Syrie",
+    "companyName": "MSADDI.EST Fabrication Métallique"
+  },
+  "accessibility": {
+    "contactWhatsApp": "Contact sur WhatsApp",
+    "selectLanguage": "Sélectionner la langue",
+    "toggleMenu": "Basculer le menu",
+    "mapTitle": "Carte de localisation MSADDI.EST",
+    "companyLogo": "MSADDI.EST"
+  },
+  "placeholders": {
+    "workshopImage": "Image de l'atelier"
   }
 }

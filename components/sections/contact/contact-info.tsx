@@ -7,6 +7,7 @@ import { trackContactClick } from "@/lib/gtag";
 export function ContactInfo() {
   const t = useTranslations("contact.info");
   const tHours = useTranslations("contact.hours");
+  const tCommon = useTranslations("common.whatsapp");
 
   const contactItems = [
     {
@@ -98,8 +99,8 @@ export function ContactInfo() {
       {/* WhatsApp CTA */}
       <div className="bg-gradient-to-r from-green-500 to-green-600 rounded-xl p-6 text-white text-center">
         <MessageCircle className="h-12 w-12 mx-auto mb-3" />
-        <h4 className="font-heading font-semibold mb-2">Chat on WhatsApp</h4>
-        <p className="text-sm mb-4">Quick response guaranteed</p>
+        <h4 className="font-heading font-semibold mb-2">{tCommon("label")}</h4>
+        <p className="text-sm mb-4">{tCommon("quickResponse")}</p>
         <a
           href="https://wa.me/963944244604"
           target="_blank"
@@ -107,7 +108,7 @@ export function ContactInfo() {
           onClick={() => trackContactClick("whatsapp")}
           className="inline-flex items-center gap-2 bg-white text-green-600 px-6 py-2 rounded-md font-semibold hover:shadow-lg transition-all"
         >
-          Start Chat
+          {tCommon("chatNow")}
         </a>
       </div>
     </div>
