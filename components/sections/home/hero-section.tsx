@@ -38,14 +38,13 @@ export function HeroSection() {
 
       {/* Content Container with proper spacing from header */}
       <div className="container mx-auto px-6 lg:px-12 pt-[120px] lg:pt-[136px] pb-20 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+        <div className="max-w-4xl mx-auto">
 
           {/* Text Content - Material Design 3 Typography */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="order-2 lg:order-1"
           >
             {/* Main Heading - 48px as specified */}
             <h1 className={cn(
@@ -111,125 +110,6 @@ export function HeroSection() {
                 )} />
               </Link>
             </motion.div>
-          </motion.div>
-
-          {/* Hero Visual - Material Design 3 Card */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
-            className="order-1 lg:order-2"
-          >
-            <div className="relative">
-              {/* Main card with Material elevation */}
-              <div className={cn(
-                "relative rounded-md-xl overflow-hidden",
-                "bg-surface shadow-elevation-2",
-                "border border-outline"
-              )}>
-                <div className="aspect-[4/3] relative bg-gradient-to-br from-primary/10 to-secondary/10">
-                  {/* Hero visual placeholder */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center p-8">
-                      <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-primary/20 flex items-center justify-center">
-                        <svg
-                          className="w-16 h-16 text-primary"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={1.5}
-                            d="M13 10V3L4 14h7v7l9-11h-7z"
-                          />
-                        </svg>
-                      </div>
-                      <p className={cn(
-                        "text-headline-sm text-text-primary font-medium",
-                        isRTL ? "font-cairo" : "font-inter"
-                      )}>
-                        {locale === "ar" ? "تصنيع معادن احترافي" : "Professional Metal Fabrication"}
-                      </p>
-                      <p className={cn(
-                        "text-body-md text-text-secondary mt-2",
-                        isRTL ? "font-tajawal" : "font-inter"
-                      )}>
-                        {locale === "ar" ? "جودة عالية • دقة متناهية" : "High Quality • Precision Engineering"}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Floating stat cards - Material Design 3 */}
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 1 }}
-                className={cn(
-                  "absolute -bottom-6",
-                  isRTL ? "-right-6" : "-left-6",
-                  "bg-surface rounded-md-lg p-4",
-                  "shadow-elevation-3 border border-outline"
-                )}
-              >
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-md-full bg-success/20 flex items-center justify-center">
-                    <CheckCircle className="w-6 h-6 text-success" />
-                  </div>
-                  <div>
-                    <p className="text-headline-sm font-bold text-text-primary">30+</p>
-                    <p className={cn(
-                      "text-label-lg text-text-secondary",
-                      isRTL ? "font-tajawal" : "font-inter"
-                    )}>
-                      {locale === "ar" ? "سنوات خبرة" : "Years Experience"}
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 1.2 }}
-                className={cn(
-                  "absolute -top-6",
-                  isRTL ? "-left-6" : "-right-6",
-                  "bg-surface rounded-md-lg p-4",
-                  "shadow-elevation-3 border border-outline"
-                )}
-              >
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-md-full bg-primary/20 flex items-center justify-center">
-                    <svg
-                      className="w-6 h-6 text-primary"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M13 10V3L4 14h7v7l9-11h-7z"
-                      />
-                    </svg>
-                  </div>
-                  <div>
-                    <p className="text-headline-sm font-bold text-text-primary">40mm</p>
-                    <p className={cn(
-                      "text-label-lg text-text-secondary",
-                      isRTL ? "font-tajawal" : "font-inter"
-                    )}>
-                      {locale === "ar" ? "قص ليزر" : "Laser Cutting"}
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-            </div>
           </motion.div>
         </div>
 
