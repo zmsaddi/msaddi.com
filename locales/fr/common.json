@@ -1,0 +1,46 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "services": "Services",
+    "about": "À propos",
+    "contact": "Contact",
+    "requestQuote": "Demander un devis",
+    "darkMode": "Mode sombre",
+    "lightMode": "Mode clair",
+    "language": "Langue"
+  },
+  "footer": {
+    "companyDescription": "MSADDI.EST - Leader dans la fabrication de tôles métalliques avec plus de 30 ans d'excellence dans la fabrication de précision.",
+    "quickLinks": "Liens rapides",
+    "contactInfo": "Informations de contact",
+    "businessHours": "Heures d'ouverture",
+    "workDays": "Samedi - Jeudi",
+    "friday": "Vendredi",
+    "closed": "Fermé",
+    "followUs": "Suivez-nous",
+    "allRightsReserved": "Tous droits réservés",
+    "privacyPolicy": "Politique de confidentialité",
+    "termsOfService": "Conditions d'utilisation",
+    "email": "Email",
+    "phone": "Téléphone",
+    "address": "Adresse",
+    "location": "Zone industrielle Al-Shaqeef, Alep, Syrie"
+  },
+  "buttons": {
+    "learnMore": "En savoir plus",
+    "viewAll": "Voir tout",
+    "getStarted": "Commencer",
+    "submit": "Soumettre",
+    "send": "Envoyer le message",
+    "close": "Fermer",
+    "back": "Retour",
+    "next": "Suivant"
+  },
+  "status": {
+    "loading": "Chargement...",
+    "success": "Succès!",
+    "error": "Erreur",
+    "sending": "Envoi...",
+    "sent": "Message envoyé avec succès!"
+  }
+}

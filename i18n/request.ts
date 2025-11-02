@@ -1,10 +1,17 @@
 import { notFound } from 'next/navigation';
 import { getRequestConfig } from 'next-intl/server';
 
-export const locales = ['en', 'ar', 'tr'] as const;
+// Main visible languages in the navigation
+export const mainLocales = ['en', 'ar', 'tr'] as const;
+
+// All supported languages including SEO silent pages
+export const locales = ['en', 'ar', 'tr', 'fr', 'de', 'es', 'it', 'pt', 'nl'] as const;
 export type Locale = (typeof locales)[number];
 
 export const defaultLocale: Locale = 'en';
+
+// SEO-only languages (not shown in navigation)
+export const seoLocales = ['fr', 'de', 'es', 'it', 'pt', 'nl'] as const;
 
 export default getRequestConfig(async ({ locale }) => {
   if (!locales.includes(locale as any)) notFound();

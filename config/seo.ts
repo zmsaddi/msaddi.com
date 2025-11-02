@@ -86,38 +86,44 @@ export const seoConfig = {
       "description": "Leading sheet metal fabrication company in Syria specializing in laser cutting, bending, and custom manufacturing.",
       "address": {
         "@type": "PostalAddress",
+        "streetAddress": "Al-Shaqeef Industrial Zone",
         "addressLocality": "Aleppo",
+        "addressRegion": "Aleppo",
         "addressCountry": "SY"
       },
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+963-944-244-604",
+        "telephone": "+963944244604",
         "contactType": "sales",
         "email": "info@msaddi.com",
-        "areaServed": ["SY", "TR", "LB", "JO", "IQ"],
-        "availableLanguage": ["ar", "en", "tr"]
+        "areaServed": ["Syria", "Middle East", "Turkey", "France", "Germany", "Spain", "Italy", "Netherlands", "Portugal"],
+        "availableLanguage": ["ar", "en", "tr", "fr", "de", "es", "it", "nl", "pt"]
       },
       "sameAs": []
     },
     localBusiness: {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      "name": "MSADDI.EST Metal Fabrication",
+      "name": "MSADDI.EST",
+      "alternateName": "مؤسسة مسدي",
       "image": "https://www.msaddi.com/logo.png",
-      "telephone": "+963-944-244-604",
+      "telephone": "+963944244604",
       "email": "info@msaddi.com",
+      "url": "https://www.msaddi.com",
       "address": {
         "@type": "PostalAddress",
+        "streetAddress": "Al-Shaqeef Industrial Zone",
         "addressLocality": "Aleppo",
+        "addressRegion": "Aleppo",
         "addressCountry": "Syria"
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": 36.2084,
-        "longitude": 37.1588
+        "latitude": 36.253684,
+        "longitude": 37.1688932
       },
-      "url": "https://www.msaddi.com",
       "priceRange": "$$",
+      "openingHours": "Sa-Th 08:00-18:00",
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
@@ -126,15 +132,23 @@ export const seoConfig = {
           "closes": "18:00"
         }
       ],
-      "areaServed": {
-        "@type": "GeoCircle",
-        "geoMidpoint": {
-          "@type": "GeoCoordinates",
-          "latitude": 36.2084,
-          "longitude": 37.1588
-        },
-        "geoRadius": "1000"
-      }
+      "serviceType": [
+        "Laser Cutting",
+        "CNC Bending",
+        "Flanging & Dishing",
+        "Custom Sheet Metal Fabrication"
+      ],
+      "areaServed": [
+        "Syria",
+        "Middle East",
+        "Turkey",
+        "France",
+        "Germany",
+        "Spain",
+        "Italy",
+        "Netherlands",
+        "Portugal"
+      ]
     },
     services: [
       {
