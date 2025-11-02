@@ -10,11 +10,11 @@ export function Timeline() {
   const _isRTL = locale === "ar";
 
   const milestones = [
-    { year: "1994", title: "Foundation", description: "MSADDI.EST established in Aleppo with a vision to revolutionize metal fabrication" },
-    { year: "2005", title: "Expansion", description: "Major facility expansion and introduction of advanced laser cutting technology" },
-    { year: "2015", title: "Innovation", description: "Implementation of state-of-the-art CNC machinery and quality management systems" },
-    { year: "2020", title: "Excellence", description: "Achieved ISO certification and expanded services to international markets" },
-    { year: "2024", title: "Future", description: "Continuing our legacy with cutting-edge technology and sustainable practices" },
+    { year: t("milestones.0.year"), title: t("milestones.0.title"), description: t("milestones.0.description") },
+    { year: t("milestones.1.year"), title: t("milestones.1.title"), description: t("milestones.1.description") },
+    { year: t("milestones.2.year"), title: t("milestones.2.title"), description: t("milestones.2.description") },
+    { year: t("milestones.3.year"), title: t("milestones.3.title"), description: t("milestones.3.description") },
+    { year: t("milestones.4.year"), title: t("milestones.4.title"), description: t("milestones.4.description") },
   ];
 
   return (

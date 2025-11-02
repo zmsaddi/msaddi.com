@@ -8,12 +8,12 @@ export function IndustriesSection() {
   const t = useTranslations("services.industries");
 
   const industries = [
-    { icon: Factory, name: "Oil & Gas", color: "from-amber-500 to-orange-500" },
-    { icon: Building2, name: "Construction", color: "from-gray-500 to-slate-500" },
-    { icon: Tractor, name: "Agriculture", color: "from-green-500 to-emerald-500" },
-    { icon: Truck, name: "Transportation", color: "from-blue-500 to-indigo-500" },
-    { icon: Cpu, name: "Manufacturing", color: "from-purple-500 to-violet-500" },
-    { icon: Zap, name: "Energy & Power", color: "from-yellow-500 to-red-500" },
+    { icon: Factory, name: t("list.0"), color: "from-amber-500 to-orange-500" },
+    { icon: Building2, name: t("list.1"), color: "from-gray-500 to-slate-500" },
+    { icon: Tractor, name: t("list.2"), color: "from-green-500 to-emerald-500" },
+    { icon: Truck, name: t("list.3"), color: "from-blue-500 to-indigo-500" },
+    { icon: Cpu, name: t("list.4"), color: "from-purple-500 to-violet-500" },
+    { icon: Zap, name: t("list.5"), color: "from-yellow-500 to-red-500" },
   ];
 
   return (
