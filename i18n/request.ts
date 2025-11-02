@@ -29,7 +29,8 @@ export default getRequestConfig(async ({ locale }) => {
 
   // Merge all translations with proper namespacing to support both flat and nested access
   const messages = {
-    // Common translations at root level
+    // Common translations - keep as namespace AND spread for backward compatibility
+    common: common.default,
     ...common.default,
     // Home translations at root level (for HeroSection, AboutSection, etc.)
     ...home.default,
