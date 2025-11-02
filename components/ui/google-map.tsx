@@ -15,8 +15,8 @@ export function GoogleMap({ className }: GoogleMapProps) {
   const longitude = "37.1688932";
   const mapUrl = "https://maps.app.goo.gl/fJug9ePVizwekFcJA";
 
-  // Embed map URL with proper coordinates
-  const embedUrl = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3224.8923456789!2d${longitude}!3d${latitude}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzbCsDE4JzMyLjAiTiAzN8KwMDQnMTYuNyJF!5e0!3m2!1sen!2s!4v${Date.now()}`;
+  // Embed map URL - Direct embed for MSADDI.EST location
+  const embedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d804.3539281240228!2d37.169536930357005!3d36.253685079751314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x152ff96f2f51de0f%3A0x261c0cb1b2431c52!2z2YXYpNiz2LPYqSDZhdiz2K_Zig!5e0!3m2!1sar!2ses!4v1762063927618!5m2!1sar!2ses";
 
   return (
     <div className={className}>
