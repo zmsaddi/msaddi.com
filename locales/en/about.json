@@ -1,0 +1,88 @@
+{
+  "page": {
+    "title": "About MSADDI.EST - Metal Fabrication Syria",
+    "subtitle": "Leading Sheet Metal Fabrication & Laser Cutting Services Since 1994"
+  },
+  "intro": {
+    "title": "30+ Years of Metal Fabrication Excellence in Syria",
+    "description": "MSADDI.EST is a premier metal fabrication company in Aleppo, Syria, specializing in laser cutting services, CNC bending, and custom sheet metal solutions. With over 30 years of experience, our 6000×2500mm laser cutting capacity and 135T press brake serve construction, automotive, and industrial sectors across Syria and the Middle East."
+  },
+  "mission": {
+    "title": "Our Mission",
+    "description": "To provide superior sheet metal fabrication and laser cutting services in Syria, delivering precision-engineered metal parts with advanced CNC technology, skilled craftsmanship, and ISO 9001 quality standards."
+  },
+  "vision": {
+    "title": "Our Vision",
+    "description": "To be the leading metal fabrication and laser cutting service provider in Syria and the Middle East, recognized for 40mm cutting capacity, precision tolerances, and reliable industrial metal solutions."
+  },
+  "values": {
+    "title": "Our Core Values",
+    "items": {
+      "quality": {
+        "title": "Quality Excellence",
+        "description": "We maintain the highest standards in every project, ensuring precision and durability in all our products."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "We continuously invest in cutting-edge technology and techniques to provide the best solutions for our clients."
+      },
+      "integrity": {
+        "title": "Integrity",
+        "description": "We build lasting relationships through honest communication, transparent pricing, and reliable service."
+      },
+      "safety": {
+        "title": "Safety First",
+        "description": "We prioritize the safety of our workforce and maintain strict safety protocols in all operations."
+      }
+    }
+  },
+  "timeline": {
+    "title": "Our Journey",
+    "milestones": [
+      {
+        "year": "1994",
+        "title": "Foundation",
+        "description": "MSADDI.EST established in Aleppo with a vision to revolutionize metal fabrication"
+      },
+      {
+        "year": "2005",
+        "title": "Expansion",
+        "description": "Major facility expansion and introduction of advanced laser cutting technology"
+      },
+      {
+        "year": "2015",
+        "title": "Innovation",
+        "description": "Implementation of state-of-the-art CNC machinery and quality management systems"
+      },
+      {
+        "year": "2020",
+        "title": "Excellence",
+        "description": "Achieved ISO certification and expanded services to international markets"
+      },
+      {
+        "year": "2024",
+        "title": "Future",
+        "description": "Continuing our legacy with cutting-edge technology and sustainable practices"
+      }
+    ]
+  },
+  "expertise": {
+    "title": "Our Expertise",
+    "description": "With three decades of experience, we bring unmatched expertise to every project",
+    "stats": {
+      "years": "30+",
+      "yearsLabel": "Years Experience",
+      "projects": "500+",
+      "projectsLabel": "Completed Projects",
+      "clients": "100+",
+      "clientsLabel": "Happy Clients",
+      "team": "50+",
+      "teamLabel": "Expert Team"
+    }
+  },
+  "cta": {
+    "title": "Ready to Work With Us?",
+    "subtitle": "Let's discuss how we can help with your next project",
+    "button": "Get in Touch"
+  }
+}

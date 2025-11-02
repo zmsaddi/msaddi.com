@@ -1,0 +1,42 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact",
+    "requestQuote": "Request Quote",
+    "darkMode": "Dark Mode",
+    "lightMode": "Light Mode",
+    "language": "Language"
+  },
+  "footer": {
+    "companyDescription": "MSADDI.EST - Leading sheet metal fabrication company with 30+ years of excellence in precision manufacturing.",
+    "quickLinks": "Quick Links",
+    "contactInfo": "Contact Info",
+    "followUs": "Follow Us",
+    "allRightsReserved": "All rights reserved",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "email": "Email",
+    "phone": "Phone",
+    "address": "Address",
+    "location": "Aleppo, Syria"
+  },
+  "buttons": {
+    "learnMore": "Learn More",
+    "viewAll": "View All",
+    "getStarted": "Get Started",
+    "submit": "Submit",
+    "send": "Send Message",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next"
+  },
+  "status": {
+    "loading": "Loading...",
+    "success": "Success!",
+    "error": "Error",
+    "sending": "Sending...",
+    "sent": "Message Sent Successfully!"
+  }
+}

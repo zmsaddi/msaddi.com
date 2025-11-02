@@ -1,0 +1,91 @@
+{
+  "page": {
+    "title": "MSADDI.EST İletişim - Suriye Metal İşleme",
+    "subtitle": "Lazer Kesim & Sac Metal İşleme Teklifi Alın",
+    "description": "Halep, Suriye'de profesyonel metal işleme hizmetleri için MSADDI.EST ile iletişime geçin. 40mm'ye kadar lazer kesim, CNC bükme ve özel sac metal çözümleri için teklif alın."
+  },
+  "form": {
+    "title": "Metal İşleme Teklifi İste",
+    "subtitle": "24 saat içinde lazer kesim ve sac metal teklifleri alın",
+    "fields": {
+      "name": {
+        "label": "Ad Soyad",
+        "placeholder": "Ahmet Yılmaz",
+        "error": "İsim gereklidir"
+      },
+      "email": {
+        "label": "E-posta Adresi",
+        "placeholder": "ornek@email.com",
+        "error": "Geçerli e-posta gereklidir"
+      },
+      "phone": {
+        "label": "Telefon Numarası",
+        "placeholder": "+901234567890",
+        "error": "Telefon numarası gereklidir"
+      },
+      "subject": {
+        "label": "Konu",
+        "placeholder": "Proje Sorgusu",
+        "error": "Konu gereklidir"
+      },
+      "message": {
+        "label": "Mesaj",
+        "placeholder": "Proje gereksinimlerinizi bize anlatın...",
+        "error": "Mesaj en az 20 karakter olmalıdır"
+      }
+    },
+    "submit": "Mesaj Gönder",
+    "sending": "Gönderiliyor...",
+    "success": {
+      "title": "Mesaj Başarıyla Gönderildi!",
+      "description": "Bizimle iletişime geçtiğiniz için teşekkür ederiz. En kısa sürede size döneceğiz."
+    },
+    "error": {
+      "title": "Mesaj Gönderilemedi",
+      "description": "Bir şeyler yanlış gitti. Lütfen tekrar deneyin veya doğrudan bizimle iletişime geçin."
+    }
+  },
+  "info": {
+    "title": "İletişim Bilgileri",
+    "subtitle": "Doğrudan bize ulaşın",
+    "items": {
+      "email": {
+        "label": "E-posta",
+        "value": "info@msaddi.com"
+      },
+      "phone": {
+        "label": "Telefon",
+        "value": "+963 944 244 604"
+      },
+      "whatsapp": {
+        "label": "WhatsApp",
+        "value": "+963 944 244 604"
+      },
+      "address": {
+        "label": "Adres",
+        "value": "Halep, Suriye"
+      }
+    }
+  },
+  "hours": {
+    "title": "Çalışma Saatleri",
+    "days": {
+      "weekdays": "Cumartesi - Perşembe",
+      "weekend": "Cuma"
+    },
+    "times": {
+      "weekdays": "08:00 - 18:00",
+      "weekend": "Kapalı"
+    }
+  },
+  "map": {
+    "title": "Konumumuz",
+    "subtitle": "Tesisimizi ziyaret edin"
+  },
+  "cta": {
+    "title": "Projenize Başlamaya Hazır mısınız?",
+    "subtitle": "Uzmanlarımız size yardımcı olmak için hazır",
+    "whatsapp": "WhatsApp'ta Sohbet",
+    "call": "Hemen Ara"
+  }
+}

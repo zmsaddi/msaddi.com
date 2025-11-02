@@ -1,0 +1,95 @@
+{
+  "page": {
+    "title": "Metal İşleme Hizmetleri Suriye",
+    "subtitle": "Profesyonel Lazer Kesim & Sac Metal İşleme",
+    "description": "Halep'te komple metal işleme hizmetleri: 40mm'ye kadar hassas lazer kesim, CNC bükme, endüstriyel uygulamalar için özel sac metal çözümleri"
+  },
+  "services": {
+    "laserCutting": {
+      "title": "Lazer Kesim Hizmetleri",
+      "description": "40mm kalınlığa kadar paslanmaz çelik, alüminyum, bakır ve pirinç levhalar için 6000×2500mm kapasiteli endüstriyel lazer kesim hizmetleri",
+      "features": {
+        "workSize": "Büyük Format: 6000×2500mm Lazer Kesim",
+        "materials": "Malzemeler: Paslanmaz Çelik, Karbon Çelik, Alüminyum, Bakır, Pirinç",
+        "thickness": {
+          "title": "Maksimum Kesim Kalınlığı:",
+          "steel": "40mm - Paslanmaz Çelik & Karbon Çelik",
+          "aluminum": "20mm - Alüminyum Levhalar",
+          "copper": "12mm - Bakır & Pirinç"
+        }
+      },
+      "benefits": [
+        "CNC hassas lazer kesim ±0.1mm tolerans",
+        "Minimum malzeme kaybı & temiz kenarlar",
+        "Karmaşık şekiller & özel metal parçalar",
+        "Endüstriyel projeler için hızlı teslimat"
+      ]
+    },
+    "bending": {
+      "title": "Metal Bükme",
+      "description": "Gelişmiş Press Brake teknolojisiyle hassas bükme hizmetleri",
+      "features": {
+        "equipment": "Press Brake 135T/3200mm",
+        "capacity": "135 tona kadar bükme kuvveti",
+        "length": "Maksimum bükme uzunluğu 3200mm"
+      },
+      "benefits": [
+        "Doğru açılı bükme",
+        "Tutarlı tekrarlanabilirlik",
+        "Çeşitli malzeme kalınlıkları",
+        "Karmaşık çoklu bükümlü parçalar"
+      ]
+    },
+    "flanging": {
+      "title": "Flanşlama ve Bombeleştirme",
+      "description": "Endüstriyel uygulamalar için özel şekillendirme operasyonları",
+      "applications": [
+        "Tank Başlığı İmalatı",
+        "Silolar ve Depolama Tankları",
+        "Karayolu ve Demiryolu Tankerleri",
+        "Basınçlı Kap Bileşenleri",
+        "Endüstriyel Ekipmanlar"
+      ],
+      "benefits": [
+        "Özel şekillendirme çözümleri",
+        "Büyük çap kapasiteleri",
+        "Çeşitli malzeme sınıfları",
+        "Kalite sertifikalı süreçler"
+      ]
+    },
+    "customFabrication": {
+      "title": "Özel İmalat",
+      "description": "Tasarımdan bitmiş ürüne kadar eksiksiz özel metal imalatı",
+      "process": [
+        "Tasarım danışmanlığı",
+        "Malzeme seçimi",
+        "Hassas üretim",
+        "Kalite kontrolü",
+        "Yüzey bitirme",
+        "Teslimat ve kurulum desteği"
+      ],
+      "benefits": [
+        "Özel çözümler",
+        "Mühendislik desteği",
+        "Prototip geliştirme",
+        "Küçük ve büyük parti üretimi"
+      ]
+    }
+  },
+  "industries": {
+    "title": "Hizmet Verdiğimiz Sektörler",
+    "list": [
+      "Petrol ve Gaz",
+      "İnşaat",
+      "Tarım",
+      "Ulaşım",
+      "İmalat",
+      "Enerji ve Güç"
+    ]
+  },
+  "cta": {
+    "title": "Özel Bir Çözüme mi İhtiyacınız Var?",
+    "subtitle": "Proje gereksinimlerinizi görüşmek için uzmanlarımızla iletişime geçin",
+    "button": "Teklif İste"
+  }
+}

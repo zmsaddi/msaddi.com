@@ -1,0 +1,90 @@
+"use client";
+
+import { useTranslations } from "next-intl";
+import Link from "next/link";
+import { useLocale } from "next-intl";
+import { motion } from "framer-motion";
+import { Zap, Settings, Layers, Package } from "lucide-react";
+
+export function ServicesSection() {
+  const t = useTranslations("services");
+  const tServices = useTranslations("services.services");
+  const locale = useLocale();
+
+  const services = [
+    {
+      icon: Zap,
+      title: tServices("laserCutting.title"),
+      description: tServices("laserCutting.description")
+    },
+    {
+      icon: Settings,
+      title: tServices("bending.title"),
+      description: tServices("bending.description")
+    },
+    {
+      icon: Layers,
+      title: tServices("flanging.title"),
+      description: tServices("flanging.description")
+    },
+    {
+      icon: Package,
+      title: tServices("customFabrication.title"),
+      description: tServices("customFabrication.description")
+    },
+  ];
+
+  return (
+    <section className="section-padding">
+      <div className="container-custom">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-responsive-3xl font-heading font-bold mb-4">
+            {t("title")}
+          </h2>
+          <p className="text-responsive-lg text-metal-gray dark:text-silver-accent">
+            {t("subtitle")}
+          </p>
+        </motion.div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {services.map((service, index) => {
+            const Icon = service.icon;
+            return (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="group"
+              >
+                <div className="bg-white dark:bg-metal-gray/10 rounded-lg p-6 h-full border border-metal-light/20 card-hover">
+                  <div className="bg-primary/10 w-16 h-16 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary transition-colors">
+                    <Icon className="h-8 w-8 text-primary group-hover:text-white transition-colors" />
+                  </div>
+                  <h3 className="text-xl font-heading font-semibold mb-3">
+                    {service.title}
+                  </h3>
+                  <p className="text-sm text-metal-gray dark:text-silver-accent mb-4">
+                    {service.description}
+                  </p>
+                  <Link
+                    href={`/${locale}/services`}
+                    className="text-primary font-medium text-sm hover:underline"
+                  >
+                    Learn More →
+                  </Link>
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}

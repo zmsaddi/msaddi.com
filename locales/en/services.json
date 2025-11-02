@@ -1,0 +1,95 @@
+{
+  "page": {
+    "title": "Metal Fabrication Services Syria",
+    "subtitle": "Professional Laser Cutting & Sheet Metal Fabrication",
+    "description": "Complete metal fabrication services in Aleppo: precision laser cutting up to 40mm, CNC bending, custom sheet metal solutions for industrial applications"
+  },
+  "services": {
+    "laserCutting": {
+      "title": "Laser Cutting Services",
+      "description": "Industrial laser cutting services with 6000×2500mm capacity for stainless steel, aluminum, copper, and brass sheets up to 40mm thickness",
+      "features": {
+        "workSize": "Large Format: 6000×2500mm Laser Cutting",
+        "materials": "Materials: Stainless Steel, Carbon Steel, Aluminum, Copper, Brass",
+        "thickness": {
+          "title": "Maximum Cutting Thickness:",
+          "steel": "40mm - Stainless Steel & Carbon Steel",
+          "aluminum": "20mm - Aluminum Sheets",
+          "copper": "12mm - Copper & Brass"
+        }
+      },
+      "benefits": [
+        "CNC precision laser cutting ±0.1mm tolerance",
+        "Minimal material waste & clean edges",
+        "Complex shapes & custom metal parts",
+        "Fast turnaround for industrial projects"
+      ]
+    },
+    "bending": {
+      "title": "CNC Metal Bending Services",
+      "description": "Professional sheet metal bending with 135T CNC Press Brake for precision metal fabrication up to 3200mm",
+      "features": {
+        "equipment": "CNC Press Brake 135T/3200mm",
+        "capacity": "135 Ton bending force capacity",
+        "length": "3200mm maximum bending length"
+      },
+      "benefits": [
+        "Precision angle bending ±0.5° accuracy",
+        "Consistent repeatability for production runs",
+        "Sheet metal up to 20mm thickness",
+        "Complex multi-bend custom metal parts"
+      ]
+    },
+    "flanging": {
+      "title": "Flanging & Dishing Services",
+      "description": "Industrial metal forming for tanks, pressure vessels, and heavy equipment manufacturing in Syria",
+      "applications": [
+        "Tank Head Manufacturing for Oil & Gas",
+        "Industrial Silos & Storage Tanks",
+        "Road & Railway Tanker Components",
+        "Pressure Vessel Heads & Dished Ends",
+        "Heavy Industrial Equipment Parts"
+      ],
+      "benefits": [
+        "Custom metal forming solutions",
+        "Large diameter tank heads",
+        "Stainless steel & carbon steel grades",
+        "ISO 9001 certified metal fabrication"
+      ]
+    },
+    "customFabrication": {
+      "title": "Custom Sheet Metal Fabrication",
+      "description": "Complete custom metal fabrication services in Syria - from CAD design to finished industrial metal parts",
+      "process": [
+        "CAD design & engineering consultation",
+        "Material selection (steel, stainless, aluminum)",
+        "Precision laser cutting & CNC machining",
+        "Quality inspection & tolerance verification",
+        "Surface finishing & powder coating",
+        "Delivery & installation support Syria-wide"
+      ],
+      "benefits": [
+        "Custom metal parts manufacturing",
+        "Engineering support & CAD services",
+        "Prototype to production capabilities",
+        "Small batch to mass production runs"
+      ]
+    }
+  },
+  "industries": {
+    "title": "Industries We Serve in Syria & Middle East",
+    "list": [
+      "Oil & Gas Industry",
+      "Construction & Infrastructure",
+      "Agricultural Equipment",
+      "Transportation & Automotive",
+      "Industrial Manufacturing",
+      "Energy & Power Generation"
+    ]
+  },
+  "cta": {
+    "title": "Need Custom Metal Fabrication in Syria?",
+    "subtitle": "Get professional laser cutting and sheet metal fabrication quotes from MSADDI.EST",
+    "button": "Get Free Quote"
+  }
+}

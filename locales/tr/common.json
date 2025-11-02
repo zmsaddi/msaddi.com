@@ -1,0 +1,42 @@
+{
+  "nav": {
+    "home": "Ana Sayfa",
+    "services": "Hizmetler",
+    "about": "Hakkımızda",
+    "contact": "İletişim",
+    "requestQuote": "Teklif Al",
+    "darkMode": "Karanlık Mod",
+    "lightMode": "Aydınlık Mod",
+    "language": "Dil"
+  },
+  "footer": {
+    "companyDescription": "MSADDI.EST - 30 yılı aşkın hassas üretim mükemmelliği ile önde gelen sac metal işleme şirketi.",
+    "quickLinks": "Hızlı Bağlantılar",
+    "contactInfo": "İletişim Bilgileri",
+    "followUs": "Bizi Takip Edin",
+    "allRightsReserved": "Tüm hakları saklıdır",
+    "privacyPolicy": "Gizlilik Politikası",
+    "termsOfService": "Hizmet Şartları",
+    "email": "E-posta",
+    "phone": "Telefon",
+    "address": "Adres",
+    "location": "Halep, Suriye"
+  },
+  "buttons": {
+    "learnMore": "Daha Fazla Bilgi",
+    "viewAll": "Tümünü Gör",
+    "getStarted": "Başla",
+    "submit": "Gönder",
+    "send": "Mesaj Gönder",
+    "close": "Kapat",
+    "back": "Geri",
+    "next": "İleri"
+  },
+  "status": {
+    "loading": "Yükleniyor...",
+    "success": "Başarılı!",
+    "error": "Hata",
+    "sending": "Gönderiliyor...",
+    "sent": "Mesaj Başarıyla Gönderildi!"
+  }
+}

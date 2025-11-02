@@ -1,0 +1,36 @@
+# Robots.txt for MSADDI.EST
+# https://www.msaddi.com
+
+# Allow all crawlers
+User-agent: *
+Allow: /
+Disallow: /api/contact
+Disallow: /_next/
+Disallow: /node_modules/
+Crawl-delay: 1
+
+# Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Google Images
+User-agent: Googlebot-Image
+Allow: /
+Allow: /images/
+Allow: *.jpg
+Allow: *.jpeg
+Allow: *.png
+Allow: *.webp
+
+# Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://www.msaddi.com/api/sitemap
+Sitemap: https://www.msaddi.com/sitemap.xml
+
+# Host directive (for Yandex)
+Host: https://www.msaddi.com

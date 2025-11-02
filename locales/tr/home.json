@@ -1,0 +1,47 @@
+{
+  "hero": {
+    "title": "Hassas Lazer Kesim Hizmetleri",
+    "subtitle": "Sac Metal İşlemede Mükemmellik",
+    "description": "Suriye'de 40mm'ye kadar gelişmiş lazer kesim, CNC bükme 135T/3200mm ve endüstriyel uygulamalar için özel sac metal çözümleri ile lider metal işleme",
+    "cta1": "Ücretsiz Teklif Al",
+    "cta2": "Hizmetleri Görüntüle",
+    "stats": {
+      "years": "30+ Yıl",
+      "yearsLabel": "Metal İşleme Deneyimi",
+      "projects": "500+",
+      "projectsLabel": "Endüstriyel Proje",
+      "satisfaction": "%99",
+      "satisfactionLabel": "Müşteri Memnuniyeti"
+    }
+  },
+  "about": {
+    "title": "MSADDI.EST - Suriye Metal İşleme",
+    "subtitle": "Önde Gelen Sac Metal İşleme & Lazer Kesim Hizmetleri",
+    "description": "MSADDI.EST endüstriyel metal işlemede uzmanlaşmış, paslanmaz çelik, alüminyum, bakır ve pirinç için lazer kesim hizmetleri sunmaktadır. 6000x2500mm lazer kesim kapasitemiz ve 135T CNC bükme makinelerimiz Halep ve Suriye'de inşaat, otomotiv ve imalat sektörlerine hassas metal parçalar üretmektedir.",
+    "features": {
+      "quality": "ISO 9001 Sertifikalı Metal İşleme",
+      "technology": "40mm Lazer Kesim Teknolojisi",
+      "team": "Uzman Metal İşleme Ekibi",
+      "delivery": "Hızlı Teslimat"
+    },
+    "cta": "Yeteneklerimizi Keşfedin"
+  },
+  "services": {
+    "title": "Metal İşleme Hizmetleri",
+    "subtitle": "Lazer Kesim, CNC Bükme & Özel Sac Metal Çözümleri"
+  },
+  "capabilities": {
+    "title": "Gelişmiş Metal İşleme Yetenekleri",
+    "subtitle": "6000x2500mm Lazer Kesim & 135T CNC Abkant Pres",
+    "description": "40mm'ye kadar paslanmaz çelik, alüminyum levhalar ve endüstriyel uygulamalar için hassas toleranslarla özel metal parçalar işleyen tam hizmet metal işleme tesisi"
+  },
+  "clients": {
+    "title": "Suriye'de Güvenilir Metal İşleme Ortağı",
+    "subtitle": "İnşaat, otomotiv ve imalat sektörlerine kaliteli sac metal çözümleri sunuyoruz"
+  },
+  "cta": {
+    "title": "Metal İşleme Projenizi Başlatın",
+    "subtitle": "Özel lazer kesim ve sac metal işleme teklifleri alın",
+    "button": "Ücretsiz Teklif İste"
+  }
+}

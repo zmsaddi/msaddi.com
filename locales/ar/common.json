@@ -1,0 +1,42 @@
+{
+  "nav": {
+    "home": "الرئيسية",
+    "services": "الخدمات",
+    "about": "من نحن",
+    "contact": "اتصل بنا",
+    "requestQuote": "طلب عرض سعر",
+    "darkMode": "الوضع الليلي",
+    "lightMode": "الوضع النهاري",
+    "language": "اللغة"
+  },
+  "footer": {
+    "companyDescription": "مصدي للصناعات المعدنية - شركة رائدة في تصنيع المعادن بخبرة تزيد عن 30 عاماً في التصنيع الدقيق.",
+    "quickLinks": "روابط سريعة",
+    "contactInfo": "معلومات الاتصال",
+    "followUs": "تابعنا",
+    "allRightsReserved": "جميع الحقوق محفوظة",
+    "privacyPolicy": "سياسة الخصوصية",
+    "termsOfService": "شروط الخدمة",
+    "email": "البريد الإلكتروني",
+    "phone": "الهاتف",
+    "address": "العنوان",
+    "location": "حلب، سوريا"
+  },
+  "buttons": {
+    "learnMore": "اعرف المزيد",
+    "viewAll": "عرض الكل",
+    "getStarted": "ابدأ الآن",
+    "submit": "إرسال",
+    "send": "إرسال الرسالة",
+    "close": "إغلاق",
+    "back": "رجوع",
+    "next": "التالي"
+  },
+  "status": {
+    "loading": "جاري التحميل...",
+    "success": "نجح!",
+    "error": "خطأ",
+    "sending": "جاري الإرسال...",
+    "sent": "تم إرسال الرسالة بنجاح!"
+  }
+}

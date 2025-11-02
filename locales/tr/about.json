@@ -1,0 +1,88 @@
+{
+  "page": {
+    "title": "MSADDI.EST Hakkında - Suriye Metal İşleme",
+    "subtitle": "1994'ten Beri Lider Sac Metal İşleme & Lazer Kesim Hizmetleri"
+  },
+  "intro": {
+    "title": "Suriye'de 30+ Yıllık Metal İşleme Mükemmelliği",
+    "description": "MSADDI.EST, Halep, Suriye'de lazer kesim hizmetleri, CNC bükme ve özel sac metal çözümlerinde uzmanlaşmış lider bir metal işleme şirketidir. 30 yılı aşkın deneyimimiz, 6000×2500mm lazer kesim kapasitemiz ve 135T abkant presimizle Suriye ve Orta Doğu'da inşaat, otomotiv ve endüstriyel sektörlere hizmet veriyoruz."
+  },
+  "mission": {
+    "title": "Misyonumuz",
+    "description": "Suriye'de üstün sac metal işleme ve lazer kesim hizmetleri sunmak, gelişmiş CNC teknolojisi, yetenekli işçilik ve ISO 9001 kalite standartlarıyla hassas mühendislik metal parçaları üretmek."
+  },
+  "vision": {
+    "title": "Vizyonumuz",
+    "description": "40mm kesim kapasitesi, hassas toleranslar ve güvenilir endüstriyel metal çözümleriyle tanınan, Suriye ve Orta Doğu'nun lider metal işleme ve lazer kesim hizmet sağlayıcısı olmak."
+  },
+  "values": {
+    "title": "Temel Değerlerimiz",
+    "items": {
+      "quality": {
+        "title": "Kalite Mükemmelliği",
+        "description": "Her projede en yüksek standartları koruyarak tüm ürünlerimizde hassasiyet ve dayanıklılık sağlıyoruz."
+      },
+      "innovation": {
+        "title": "Yenilik",
+        "description": "Müşterilerimize en iyi çözümleri sunmak için sürekli olarak en son teknolojiye ve tekniklere yatırım yapıyoruz."
+      },
+      "integrity": {
+        "title": "Dürüstlük",
+        "description": "Dürüst iletişim, şeffaf fiyatlandırma ve güvenilir hizmet yoluyla kalıcı ilişkiler kuruyoruz."
+      },
+      "safety": {
+        "title": "Önce Güvenlik",
+        "description": "İş gücümüzün güvenliğine öncelik veriyor ve tüm operasyonlarda sıkı güvenlik protokolleri uyguluyoruz."
+      }
+    }
+  },
+  "timeline": {
+    "title": "Yolculuğumuz",
+    "milestones": [
+      {
+        "year": "1994",
+        "title": "Kuruluş",
+        "description": "MSADDI.EST, metal işlemede devrim yaratma vizyonuyla Halep'te kuruldu"
+      },
+      {
+        "year": "2005",
+        "title": "Genişleme",
+        "description": "Büyük tesis genişlemesi ve gelişmiş lazer kesim teknolojisinin tanıtımı"
+      },
+      {
+        "year": "2015",
+        "title": "Yenilik",
+        "description": "Son teknoloji CNC makinelerinin ve kalite yönetim sistemlerinin uygulanması"
+      },
+      {
+        "year": "2020",
+        "title": "Mükemmellik",
+        "description": "ISO sertifikası alındı ve hizmetler uluslararası pazarlara genişletildi"
+      },
+      {
+        "year": "2024",
+        "title": "Gelecek",
+        "description": "İleri teknoloji ve sürdürülebilir uygulamalarla mirasımızı sürdürüyoruz"
+      }
+    ]
+  },
+  "expertise": {
+    "title": "Uzmanlığımız",
+    "description": "Otuz yıllık deneyimimizle her projeye eşsiz uzmanlık getiriyoruz",
+    "stats": {
+      "years": "30+",
+      "yearsLabel": "Yıllık Deneyim",
+      "projects": "500+",
+      "projectsLabel": "Tamamlanan Proje",
+      "clients": "100+",
+      "clientsLabel": "Mutlu Müşteri",
+      "team": "50+",
+      "teamLabel": "Uzman Ekip"
+    }
+  },
+  "cta": {
+    "title": "Bizimle Çalışmaya Hazır mısınız?",
+    "subtitle": "Bir sonraki projenizde nasıl yardımcı olabileceğimizi konuşalım",
+    "button": "İletişime Geçin"
+  }
+}

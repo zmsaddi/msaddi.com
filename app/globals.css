@@ -1,0 +1,232 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: 0 113 215;
+    --metal-gray: 94 94 94;
+    --metal-light: 176 176 176;
+    --dark-base: 35 40 42;
+    --light-neutral: 233 233 233;
+    --silver-accent: 159 163 167;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-[#5E5E5E] dark:bg-[#23282A] dark:text-[#E9E9E9];
+  }
+
+  /* RTL Support */
+  [dir="rtl"] {
+    @apply text-right;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-[#E9E9E9] dark:bg-[#23282A];
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-[#B0B0B0] dark:bg-[#5E5E5E] rounded-md;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-[#5E5E5E] dark:bg-[#9FA3A7];
+  }
+}
+
+@layer components {
+  /* Button styles */
+  .btn-primary {
+    @apply bg-[#0078D7] text-white px-6 py-3 rounded-md font-semibold
+    hover:shadow-lg hover:shadow-[#0078D7]/25 transition-all duration-300
+    active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply border-2 border-[#0078D7] text-[#0078D7] px-6 py-3 rounded-md font-semibold
+    hover:bg-[#0078D7] hover:text-white transition-all duration-300
+    active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-ghost {
+    @apply text-[#5E5E5E] dark:text-[#E9E9E9] px-6 py-3 rounded-md font-semibold
+    hover:bg-[#E9E9E9] dark:hover:bg-[#5E5E5E]/20 transition-all duration-300
+    active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  /* Container */
+  .container-custom {
+    @apply max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Section padding */
+  .section-padding {
+    @apply py-16 md:py-20 lg:py-24;
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-[#0078D7] to-blue-600 bg-clip-text text-transparent;
+  }
+
+  /* Metal shine effect */
+  .metal-shine {
+    background: linear-gradient(
+      45deg,
+      transparent 30%,
+      rgba(255, 255, 255, 0.2) 50%,
+      transparent 70%
+    );
+    background-size: 200% 100%;
+    background-position: -100% 0;
+    animation: shine 3s ease-in-out infinite;
+  }
+
+  /* Laser beam effect */
+  .laser-beam {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .laser-beam::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      #0078d7,
+      #00a8ff,
+      #0078d7,
+      transparent
+    );
+    animation: laser 3s ease-in-out infinite;
+    opacity: 0;
+  }
+
+  @keyframes shine {
+    0% {
+      background-position: -100% 0;
+    }
+    100% {
+      background-position: 100% 0;
+    }
+  }
+
+  @keyframes laser {
+    0%,
+    100% {
+      left: -100%;
+      opacity: 0;
+    }
+    50% {
+      left: 100%;
+      opacity: 1;
+    }
+  }
+
+  /* Card hover effects */
+  .card-hover {
+    @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl;
+  }
+
+  /* Form inputs */
+  .input-field {
+    @apply w-full px-4 py-3 rounded-md border border-[#B0B0B0]/30
+    bg-white dark:bg-[#5E5E5E]/10 text-[#5E5E5E] dark:text-[#E9E9E9]
+    focus:outline-none focus:ring-2 focus:ring-[#0078D7] focus:border-transparent
+    transition-all duration-200;
+  }
+
+  /* Loading spinner */
+  .spinner {
+    @apply inline-block w-6 h-6 border-3 border-current border-t-transparent rounded-full animate-spin;
+  }
+}
+
+@layer utilities {
+  /* Text selection color */
+  ::selection {
+    @apply bg-[#0078D7] text-white;
+  }
+
+  /* Focus visible for accessibility */
+  .focus-visible-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0078D7] focus-visible:ring-offset-2;
+  }
+
+  /* Responsive text sizes */
+  .text-responsive-xs {
+    @apply text-xs sm:text-sm;
+  }
+
+  .text-responsive-sm {
+    @apply text-sm sm:text-base;
+  }
+
+  .text-responsive-base {
+    @apply text-base sm:text-lg;
+  }
+
+  .text-responsive-lg {
+    @apply text-lg sm:text-xl md:text-2xl;
+  }
+
+  .text-responsive-xl {
+    @apply text-xl sm:text-2xl md:text-3xl;
+  }
+
+  .text-responsive-2xl {
+    @apply text-2xl sm:text-3xl md:text-4xl;
+  }
+
+  .text-responsive-3xl {
+    @apply text-3xl sm:text-4xl md:text-5xl;
+  }
+
+  .text-responsive-4xl {
+    @apply text-4xl sm:text-5xl md:text-6xl;
+  }
+
+  /* Animations */
+  .animate-fade-up {
+    animation: fadeUp 0.6s ease-out;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}

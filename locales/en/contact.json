@@ -1,0 +1,91 @@
+{
+  "page": {
+    "title": "Contact MSADDI.EST - Metal Fabrication Syria",
+    "subtitle": "Get Laser Cutting & Sheet Metal Fabrication Quote",
+    "description": "Contact MSADDI.EST for professional metal fabrication services in Aleppo, Syria. Get quotes for laser cutting up to 40mm, CNC bending, and custom sheet metal solutions."
+  },
+  "form": {
+    "title": "Request Metal Fabrication Quote",
+    "subtitle": "Get laser cutting and sheet metal quotes within 24 hours",
+    "fields": {
+      "name": {
+        "label": "Full Name",
+        "placeholder": "John Doe",
+        "error": "Name is required"
+      },
+      "email": {
+        "label": "Email Address",
+        "placeholder": "john@example.com",
+        "error": "Valid email is required"
+      },
+      "phone": {
+        "label": "Phone Number",
+        "placeholder": "+1234567890",
+        "error": "Phone number is required"
+      },
+      "subject": {
+        "label": "Subject",
+        "placeholder": "Project Inquiry",
+        "error": "Subject is required"
+      },
+      "message": {
+        "label": "Project Details",
+        "placeholder": "Describe your metal fabrication requirements (material type, thickness, quantity, dimensions)...",
+        "error": "Message must be at least 20 characters"
+      }
+    },
+    "submit": "Send Message",
+    "sending": "Sending...",
+    "success": {
+      "title": "Message Sent Successfully!",
+      "description": "Thank you for contacting us. We'll get back to you soon."
+    },
+    "error": {
+      "title": "Failed to Send Message",
+      "description": "Something went wrong. Please try again or contact us directly."
+    }
+  },
+  "info": {
+    "title": "Contact Information",
+    "subtitle": "Reach out to us directly",
+    "items": {
+      "email": {
+        "label": "Email",
+        "value": "info@msaddi.com"
+      },
+      "phone": {
+        "label": "Phone",
+        "value": "+963 944 244 604"
+      },
+      "whatsapp": {
+        "label": "WhatsApp",
+        "value": "+963 944 244 604"
+      },
+      "address": {
+        "label": "Address",
+        "value": "Aleppo, Syria"
+      }
+    }
+  },
+  "hours": {
+    "title": "Business Hours",
+    "days": {
+      "weekdays": "Saturday - Thursday",
+      "weekend": "Friday"
+    },
+    "times": {
+      "weekdays": "8:00 AM - 6:00 PM",
+      "weekend": "Closed"
+    }
+  },
+  "map": {
+    "title": "Our Location",
+    "subtitle": "Visit our facility"
+  },
+  "cta": {
+    "title": "Ready to Start Your Metal Fabrication Project?",
+    "subtitle": "Get professional laser cutting and sheet metal fabrication services in Syria",
+    "whatsapp": "Chat on WhatsApp",
+    "call": "Call Now"
+  }
+}
