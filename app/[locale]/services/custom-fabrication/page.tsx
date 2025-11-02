@@ -90,8 +90,8 @@ export default async function CustomFabricationPage({
       },
       contactPoint: {
         "@type": "ContactPoint",
-        telephone: tContact("phone"),
-        email: tContact("email"),
+        telephone: tContact("items.phone.value"),
+        email: tContact("items.email.value"),
         contactType: "Customer Service",
         availableLanguage: ["English", "Arabic", "Turkish"],
       },

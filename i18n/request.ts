@@ -17,10 +17,11 @@ export default getRequestConfig(async ({ locale }) => {
   if (!locales.includes(locale as any)) notFound();
 
   // Import all translation files
-  const [common, home, services, about, contact, privacy, terms] = await Promise.all([
+  const [common, home, services, servicesDetails, about, contact, privacy, terms] = await Promise.all([
     import(`../locales/${locale}/common.json`),
     import(`../locales/${locale}/home.json`),
     import(`../locales/${locale}/services.json`),
+    import(`../locales/${locale}/services-details.json`),
     import(`../locales/${locale}/about.json`),
     import(`../locales/${locale}/contact.json`),
     import(`../locales/${locale}/privacy.json`),
@@ -38,6 +39,7 @@ export default getRequestConfig(async ({ locale }) => {
     home: home.default,
     // Page-specific content
     services: services.default,
+    'services-details': servicesDetails.default,
     about: about.default,
     contact: contact.default,
     privacy: privacy.default,

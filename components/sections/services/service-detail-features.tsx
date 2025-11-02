@@ -26,21 +26,19 @@ const featureIcons = {
   delivery: Gauge,
 };
 
+// Service-specific feature keys mapping
+const serviceFeatureKeys: Record<string, string[]> = {
+  laserCutting: ["precision", "capacity", "speed", "materials"],
+  cncBending: ["precision", "capacity", "automation", "flexibility"],
+  flangingDishing: ["flanging", "dishing", "quality", "custom"],
+  customFabrication: ["design", "manufacturing", "quality", "delivery"],
+};
+
 export function ServiceDetailFeatures({ serviceKey }: ServiceDetailFeaturesProps) {
   const t = useTranslations(`services-details.${serviceKey}.features`);
 
-  // Get all feature keys dynamically from the translation namespace
-  const featureKeys = ["precision", "capacity", "speed", "materials", "automation", "flexibility", "flanging", "dishing", "quality", "custom", "design", "manufacturing", "delivery"];
-
-  // Filter to only include features that exist for this service
-  const availableFeatures = featureKeys.filter((key) => {
-    try {
-      t(`items.${key}.title`);
-      return true;
-    } catch {
-      return false;
-    }
-  });
+  // Get service-specific feature keys
+  const featureKeys = serviceFeatureKeys[serviceKey] || [];
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -86,7 +84,7 @@ export function ServiceDetailFeatures({ serviceKey }: ServiceDetailFeaturesProps
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
         >
-          {availableFeatures.map((featureKey) => {
+          {featureKeys.map((featureKey) => {
             const IconComponent = featureIcons[featureKey as keyof typeof featureIcons] || Package;
 
             return (
