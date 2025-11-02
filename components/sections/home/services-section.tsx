@@ -4,7 +4,7 @@ import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { useLocale } from "next-intl";
 import { motion } from "framer-motion";
-import { Zap, Settings, Layers, Package } from "lucide-react";
+import { Zap, Settings, Layers } from "lucide-react";
 
 export function ServicesSection() {
   const t = useTranslations("home.services");

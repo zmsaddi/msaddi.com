@@ -40,7 +40,7 @@ export default async function LocaleLayout({
         <WhatsAppButton />
       </ThemeProvider>
       <GoogleAnalytics />
-      <Analytics />
+      <Analytics mode={process.env.NODE_ENV === 'production' ? 'production' : 'development'} />
       <SpeedInsights />
     </NextIntlClientProvider>
   );
