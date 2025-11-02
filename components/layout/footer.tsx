@@ -4,7 +4,6 @@ import { useTranslations, useLocale } from "next-intl";
 import Link from "next/link";
 import Image from "next/image";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
-import { cn } from "@/lib/utils";
 
 export function Footer() {
   const t = useTranslations("footer");
@@ -12,7 +11,7 @@ export function Footer() {
   const tCommon = useTranslations("common.accessibility");
   const locale = useLocale();
   const currentYear = new Date().getFullYear();
-  const isRTL = locale === "ar";
+  const _isRTL = locale === "ar";
 
   const quickLinks = [
     { href: `/${locale}`, label: tNav("home") },
