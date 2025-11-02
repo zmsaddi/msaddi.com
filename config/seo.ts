@@ -60,10 +60,10 @@ export const seoConfig = {
       contact: "Contact MSADDI.EST for metal fabrication quotes. Laser cutting, bending, tank manufacturing. Call +963 944 244 604 or email info@msaddi.com. Located in Aleppo, Syria."
     },
     ar: {
-      home: "مصدي للصناعات المعدنية - رائدة تصنيع المعادن في سوريا. قص ليزر حتى 40مم، ثني 135 طن، تصنيع مخصص. خبرة 30+ سنة في حلب.",
+      home: "مسدّي للصناعات المعدنية - رائدة تصنيع المعادن في سوريا. قص ليزر حتى 40مم، ثني 135 طن، تصنيع مخصص. خبرة 30+ سنة في حلب.",
       services: "خدمات تصنيع معادن احترافية: قص ليزر (6000×2500مم)، ثني (135طن/3200مم)، تشفيه وتقعير للخزانات، تصنيع مخصص. معايير جودة ISO.",
-      about: "مصدي - أكثر من 30 عامًا من التميز في تصنيع المعادن. موثوق من قادة الصناعة للقص بالليزر الدقيق والثني وحلول المعادن المخصصة في سوريا.",
-      contact: "اتصل بمصدي للحصول على عروض أسعار تصنيع المعادن. قص ليزر، ثني، تصنيع خزانات. اتصل +963 944 244 604 أو info@msaddi.com. حلب، سوريا."
+      about: "مسدّي - أكثر من 30 عامًا من التميز في تصنيع المعادن. موثوق من قادة الصناعة للقص بالليزر الدقيق والثني وحلول المعادن المخصصة في سوريا.",
+      contact: "اتصل بمسدّي للحصول على عروض أسعار تصنيع المعادن. قص ليزر، ثني، تصنيع خزانات. اتصل +963 944 244 604 أو info@msaddi.com. حلب، سوريا."
     },
     tr: {
       home: "MSADDI.EST - Suriye'nin önde gelen sac metal işleme şirketi. 40mm'ye kadar lazer kesim, 135T pres fren, özel üretim. Halep'te 30+ yıllık mükemmellik.",
@@ -79,7 +79,7 @@ export const seoConfig = {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "MSADDI.EST",
-      "alternateName": "مصدي للصناعات المعدنية",
+      "alternateName": "مسدّي للصناعات المعدنية",
       "url": "https://www.msaddi.com",
       "logo": "https://www.msaddi.com/logo.png",
       "foundingDate": "1994",
@@ -189,10 +189,10 @@ export const seoConfig = {
       contact: "Contact MSADDI | Metal Fabrication Quote | Aleppo Syria"
     },
     ar: {
-      home: "مصدي للصناعات المعدنية | قص ليزر | ثني معادن | سوريا",
-      services: "خدمات تصنيع المعادن | قص ليزر وثني | مصدي",
-      about: "عن مصدي | 30+ سنة تميز في تصنيع المعادن | سوريا",
-      contact: "اتصل بمصدي | عرض أسعار تصنيع معادن | حلب سوريا"
+      home: "مسدّي للصناعات المعدنية | قص ليزر | ثني معادن | سوريا",
+      services: "خدمات تصنيع المعادن | قص ليزر وثني | مسدّي",
+      about: "عن مسدّي | 30+ سنة تميز في تصنيع المعادن | سوريا",
+      contact: "اتصل بمسدّي | عرض أسعار تصنيع معادن | حلب سوريا"
     },
     tr: {
       home: "MSADDI.EST - Sac Metal İşleme | Lazer Kesim | Suriye",
