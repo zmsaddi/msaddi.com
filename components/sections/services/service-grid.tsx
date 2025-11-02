@@ -39,7 +39,13 @@ export function ServiceGrid() {
       icon: Layers,
       title: t("flanging.title"),
       description: t("flanging.description"),
-      applications: Object.values(t("flanging.applications", { returnObjects: true }) as unknown as Record<string, string>),
+      applications: [
+        t("flanging.applications.0"),
+        t("flanging.applications.1"),
+        t("flanging.applications.2"),
+        t("flanging.applications.3"),
+        t("flanging.applications.4"),
+      ],
       color: "from-green-500 to-teal-500",
     },
     {
@@ -47,7 +53,14 @@ export function ServiceGrid() {
       icon: Package,
       title: t("customFabrication.title"),
       description: t("customFabrication.description"),
-      process: Object.values(t("customFabrication.process", { returnObjects: true }) as unknown as Record<string, string>),
+      process: [
+        t("customFabrication.process.0"),
+        t("customFabrication.process.1"),
+        t("customFabrication.process.2"),
+        t("customFabrication.process.3"),
+        t("customFabrication.process.4"),
+        t("customFabrication.process.5"),
+      ],
       color: "from-orange-500 to-red-500",
     },
   ];
