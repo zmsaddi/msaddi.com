@@ -28,7 +28,8 @@
   },
   "services": {
     "title": "Metal Fabrication Services",
-    "subtitle": "Laser Cutting, CNC Bending & Custom Sheet Metal Solutions"
+    "subtitle": "Laser Cutting, CNC Bending & Custom Sheet Metal Solutions",
+    "learnMore": "Learn More"
   },
   "capabilities": {
     "title": "Advanced Metal Processing Capabilities",

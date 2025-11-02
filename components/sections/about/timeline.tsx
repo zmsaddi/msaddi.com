@@ -1,10 +1,13 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { motion } from "framer-motion";
+import { cn } from "@/lib/utils";
 
 export function Timeline() {
   const t = useTranslations("about.timeline");
+  const locale = useLocale();
+  const isRTL = locale === "ar";
 
   const milestones = [
     { year: "1994", title: "Foundation", description: "MSADDI.EST established in Aleppo with a vision to revolutionize metal fabrication" },
@@ -29,7 +32,10 @@ export function Timeline() {
         <div className="max-w-4xl mx-auto">
           <div className="relative">
             {/* Timeline line */}
-            <div className="absolute left-8 md:left-1/2 transform md:-translate-x-px h-full w-0.5 bg-gradient-to-b from-primary via-blue-500 to-primary/30" />
+            <div className={cn(
+              "absolute h-full w-0.5 bg-gradient-to-b from-primary via-accent to-primary/30",
+              "ltr:left-8 rtl:right-8 md:left-1/2 md:right-auto transform md:-translate-x-px"
+            )} />
 
             {milestones.map((milestone, index) => (
               <motion.div
@@ -43,14 +49,19 @@ export function Timeline() {
                 }`}
               >
                 {/* Content */}
-                <div className={`flex-1 ${index % 2 === 0 ? "md:pr-12 md:text-right" : "md:pl-12"}`}>
-                  <div className="ml-20 md:ml-0">
-                    <div className="bg-white dark:bg-metal-gray/20 rounded-lg p-6 shadow-lg">
-                      <span className="text-primary font-bold text-2xl">{milestone.year}</span>
-                      <h3 className="text-xl font-heading font-semibold mt-2 mb-2">
+                <div className={cn(
+                  "flex-1",
+                  index % 2 === 0
+                    ? "md:pr-12 md:rtl:pr-0 md:rtl:pl-12 md:text-right md:rtl:text-left"
+                    : "md:pl-12 md:rtl:pl-0 md:rtl:pr-12"
+                )}>
+                  <div className="ltr:ml-20 rtl:mr-20 md:ltr:ml-0 md:rtl:mr-0">
+                    <div className="card-md3 p-6">
+                      <span className="text-primary font-bold text-headline-sm latin-numerals">{milestone.year}</span>
+                      <h3 className="text-title-lg font-heading font-semibold mt-2 mb-2">
                         {milestone.title}
                       </h3>
-                      <p className="text-sm text-metal-gray dark:text-silver-accent">
+                      <p className="text-body-md text-text-secondary">
                         {milestone.description}
                       </p>
                     </div>
@@ -58,7 +69,10 @@ export function Timeline() {
                 </div>
 
                 {/* Center dot */}
-                <div className="absolute left-8 md:left-1/2 transform -translate-x-1/2 flex items-center justify-center">
+                <div className={cn(
+                  "absolute flex items-center justify-center",
+                  "ltr:left-8 rtl:right-8 md:left-1/2 md:right-auto transform -translate-x-1/2"
+                )}>
                   <div className="relative">
                     <div className="w-4 h-4 bg-primary rounded-full" />
                     <div className="absolute inset-0 w-4 h-4 bg-primary rounded-full animate-ping" />

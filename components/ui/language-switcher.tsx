@@ -5,11 +5,12 @@ import { useRouter, usePathname } from "next/navigation";
 import { useState, useRef, useEffect } from "react";
 import { Globe, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 const languages = [
-  { code: "en", name: "English", flag: "🇬🇧", label: "EN", dir: "ltr" },
-  { code: "ar", name: "العربية", flag: "🇸🇦", label: "عربي", dir: "rtl" },
-  { code: "tr", name: "Türkçe", flag: "🇹🇷", label: "TR", dir: "ltr" },
+  { code: "en", name: "English", flag: "/flags/uk.svg", label: "EN", dir: "ltr", alt: "United Kingdom" },
+  { code: "ar", name: "العربية", flag: "/flags/sy.svg", label: "عربي", dir: "rtl", alt: "Syria" },
+  { code: "tr", name: "Türkçe", flag: "/flags/tr.svg", label: "TR", dir: "ltr", alt: "Turkey" },
 ];
 
 interface LanguageSwitcherProps {
@@ -62,8 +63,16 @@ export function LanguageSwitcher({ className }: LanguageSwitcherProps) {
         aria-expanded={isOpen}
       >
         <Globe className="h-5 w-5 text-primary" />
-        <span className="flex items-center gap-1.5">
-          {currentLanguage?.flag}
+        <span className="flex items-center gap-2">
+          {currentLanguage?.flag && (
+            <Image
+              src={currentLanguage.flag}
+              alt={currentLanguage.alt}
+              width={24}
+              height={16}
+              className="rounded-sm shadow-sm"
+            />
+          )}
           <span className="hidden sm:inline">{currentLanguage?.label}</span>
         </span>
         <ChevronDown className={cn("h-4 w-4 transition-transform duration-200", isOpen && "rotate-180")} />
@@ -90,7 +99,13 @@ export function LanguageSwitcher({ className }: LanguageSwitcherProps) {
               )}
               dir={lang.dir}
             >
-              <span className="text-xl">{lang.flag}</span>
+              <Image
+                src={lang.flag}
+                alt={lang.alt}
+                width={28}
+                height={19}
+                className="rounded-sm shadow-sm flex-shrink-0"
+              />
               <div className="flex flex-col items-start">
                 <span className="font-medium">{lang.label}</span>
                 <span className="text-xs text-text-secondary">{lang.name}</span>

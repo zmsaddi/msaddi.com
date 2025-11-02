@@ -20,7 +20,11 @@
     "email": "E-posta",
     "phone": "Telefon",
     "address": "Adres",
-    "location": "Halep, Suriye"
+    "location": "Halep, Suriye",
+    "businessHours": "Çalışma Saatleri",
+    "workDays": "Cumartesi - Perşembe",
+    "friday": "Cuma",
+    "closed": "Kapalı"
   },
   "buttons": {
     "learnMore": "Daha Fazla Bilgi",

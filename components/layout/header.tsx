@@ -15,6 +15,7 @@ export function Header() {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const isRTL = locale === "ar";
 
   const navItems = [
     { href: `/${locale}`, label: t("home") },
@@ -25,7 +26,7 @@ export function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+      setIsScrolled(window.scrollY > 50);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -47,146 +48,158 @@ export function Header() {
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        "h-20 bg-surface backdrop-blur-md",
-        isScrolled ? "shadow-elevation-2" : "shadow-elevation-1"
+        "bg-white/95 backdrop-blur-md border-b border-gray-100",
+        // Desktop height: 88px normal, 76px scrolled
+        // Mobile height: 72px normal, 64px scrolled
+        isScrolled
+          ? "lg:h-[76px] h-[64px] shadow-md"
+          : "lg:h-[88px] h-[72px] shadow-sm"
       )}
     >
-      <nav className="h-full px-6 lg:px-12">
-        <div className="flex items-center justify-between h-full">
-          {/* Logo - Material Design 3: 250% larger */}
-          <Link
-            className={cn(
-              "flex items-center gap-4 p-4 -ml-4",
-              "hover:bg-primary/5 rounded-md-lg transition-colors"
-            )}
-            href={`/${locale}`}
-          >
-            <div className="relative">
-              {/* Larger logo with Material elevation */}
-              <div className="absolute inset-0 bg-primary/10 rounded-md-md blur-xl" />
-              <Image
-                src="/logo.png"
-                alt="MSADDI.EST"
-                width={100}  // Minimum 100px for desktop
-                height={100}
-                priority
-                className="relative rounded-md-md lg:w-[100px] lg:h-[100px] w-[60px] h-[60px]"
-              />
-            </div>
-            <div className="hidden lg:block">
-              <span className="text-headline-sm font-cairo font-bold text-text-primary">
-                MSADDI.EST
-              </span>
-              <span className="block text-label-lg text-text-secondary">
-                {locale === "ar" ? "مسدّي للصناعات المعدنية" : "Metal Fabrication"}
-              </span>
-            </div>
-          </Link>
-
-          {/* Desktop Navigation - Material Design 3 */}
-          <div className="hidden lg:flex items-center gap-8">
-            <ul className="flex items-center gap-2">
-              {navItems.map((item) => (
-                <li key={item.href}>
-                  <Link
-                    className={cn(
-                      "px-6 py-3 rounded-md-full text-body-md font-medium",
-                      "transition-all duration-200",
-                      pathname === item.href
-                        ? "bg-primary text-white shadow-elevation-3"
-                        : "text-text-primary hover:bg-primary/10"
-                    )}
-                    href={item.href}
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-
-            <div className="flex items-center gap-4">
-              <LanguageSwitcher />
-
-              {/* CTA Button - Material Design 3 */}
-              <Link
-                className={cn(
-                  "px-8 py-3 bg-primary text-white rounded-md-full",
-                  "font-medium text-body-md shadow-elevation-3",
-                  "hover:bg-primary-dark hover:shadow-elevation-4",
-                  "transition-all duration-200"
-                )}
-                href={`/${locale}/contact`}
-              >
-                {t("requestQuote")}
-              </Link>
-            </div>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            className={cn(
-              "lg:hidden p-3 rounded-md-md",
-              "hover:bg-primary/10 transition-colors"
-            )}
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            {isMobileMenuOpen ? (
-              <X className="h-6 w-6 text-text-primary" />
-            ) : (
-              <Menu className="h-6 w-6 text-text-primary" />
-            )}
-          </button>
-        </div>
-
-        {/* Mobile Menu - Material Design 3 Drawer */}
-        <div
+      <nav className="h-full container-custom flex items-center justify-between">
+        {/* Logo Container with Safe Area */}
+        <Link
           className={cn(
-            "lg:hidden fixed left-0 right-0 bg-surface shadow-elevation-5",
-            "transition-all duration-300",
-            isMobileMenuOpen
-              ? "top-20 opacity-100 visible"
-              : "top-16 opacity-0 invisible"
+            "flex items-center",
+            // Ensure proper spacing from edges
+            isRTL ? "ml-4 lg:ml-6" : "mr-4 lg:mr-6"
           )}
+          href={`/${locale}`}
         >
-          <div className="px-6 py-6">
-            <ul className="space-y-2">
-              {navItems.map((item) => (
-                <li key={item.href}>
-                  <Link
-                    className={cn(
-                      "block px-6 py-3 rounded-md-lg text-body-md font-medium",
-                      "transition-all duration-200",
-                      pathname === item.href
-                        ? "bg-primary text-white"
-                        : "text-text-primary hover:bg-primary/10"
-                    )}
-                    href={item.href}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+          <div className={cn(
+            "relative flex items-center justify-center",
+            // Safe area padding: Desktop 20px, Mobile 16px
+            "py-4 lg:py-5"
+          )}>
+            {/* Logo with responsive dimensions maintaining aspect ratio 2.77:1 */}
+            <Image
+              src="/logo.png"
+              alt="MSADDI.EST"
+              width={240}
+              height={87}  // Actual aspect ratio: 240/87 = 2.76
+              priority
+              className={cn(
+                "object-contain transition-all duration-300",
+                // Desktop: 240px width when normal, 200px when scrolled
+                // Mobile: 140px width when normal, 120px when scrolled
+                isScrolled
+                  ? "lg:w-[200px] lg:h-[72px] w-[120px] h-[43px]"
+                  : "lg:w-[240px] lg:h-[87px] w-[140px] h-[50px]"
+              )}
+            />
+          </div>
+        </Link>
 
-            <div className="mt-6 pt-6 border-t border-outline space-y-4">
-              <LanguageSwitcher />
-              <Link
-                className={cn(
-                  "block text-center px-8 py-3",
-                  "bg-primary text-white rounded-md-full",
-                  "font-medium text-body-md shadow-elevation-3"
-                )}
-                href={`/${locale}/contact`}
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                {t("requestQuote")}
-              </Link>
-            </div>
+        {/* Desktop Navigation */}
+        <div className="hidden lg:flex items-center gap-6">
+          <ul className="flex items-center gap-1">
+            {navItems.map((item) => (
+              <li key={item.href}>
+                <Link
+                  className={cn(
+                    "px-5 py-2.5 rounded-xl text-sm font-medium",
+                    "transition-all duration-200",
+                    pathname === item.href
+                      ? "bg-blue-600 text-white shadow-md"
+                      : "text-gray-700 hover:bg-blue-50 hover:text-blue-600"
+                  )}
+                  href={item.href}
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+
+          <div className="flex items-center gap-3">
+            <LanguageSwitcher />
+
+            {/* CTA Button */}
+            <Link
+              className={cn(
+                "px-6 py-2.5 bg-blue-600 text-white rounded-xl",
+                "font-medium text-sm shadow-md",
+                "hover:bg-blue-700 hover:shadow-lg",
+                "transition-all duration-200",
+                "whitespace-nowrap"
+              )}
+              href={`/${locale}/contact`}
+            >
+              {t("requestQuote")}
+            </Link>
           </div>
         </div>
+
+        {/* Mobile Menu Button */}
+        <button
+          className={cn(
+            "lg:hidden p-2.5 rounded-lg",
+            "hover:bg-gray-100 transition-colors"
+          )}
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label="Toggle menu"
+        >
+          {isMobileMenuOpen ? (
+            <X className="h-5 w-5 text-gray-700" />
+          ) : (
+            <Menu className="h-5 w-5 text-gray-700" />
+          )}
+        </button>
       </nav>
+
+      {/* Mobile Menu Drawer */}
+      <div
+        className={cn(
+          "lg:hidden fixed left-0 right-0 bg-white border-t border-gray-100",
+          "transition-all duration-300 shadow-lg",
+          isMobileMenuOpen
+            ? cn(
+                isScrolled ? "top-[64px]" : "top-[72px]",
+                "opacity-100 visible"
+              )
+            : cn(
+                isScrolled ? "top-[56px]" : "top-[64px]",
+                "opacity-0 invisible"
+              )
+        )}
+      >
+        <div className="px-6 py-4">
+          <ul className="space-y-1">
+            {navItems.map((item) => (
+              <li key={item.href}>
+                <Link
+                  className={cn(
+                    "block px-4 py-3 rounded-lg text-sm font-medium",
+                    "transition-all duration-200",
+                    pathname === item.href
+                      ? "bg-blue-600 text-white"
+                      : "text-gray-700 hover:bg-blue-50 hover:text-blue-600"
+                  )}
+                  href={item.href}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+
+          <div className="mt-4 pt-4 border-t border-gray-200 space-y-3">
+            <LanguageSwitcher />
+            <Link
+              className={cn(
+                "block text-center px-6 py-3",
+                "bg-blue-600 text-white rounded-xl",
+                "font-medium text-sm shadow-md"
+              )}
+              href={`/${locale}/contact`}
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              {t("requestQuote")}
+            </Link>
+          </div>
+        </div>
+      </div>
     </header>
   );
 }

@@ -10,36 +10,35 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Material You Color System
+        // Material You Color System - Updated per directive
         primary: {
-          DEFAULT: "#007AFF",
+          DEFAULT: "#007BFF",  // Electric blue primary
+          hover: "#005AC1",    // Hover/active state
           light: "#4DA3FF",
-          dark: "#0052CC",
+          dark: "#005AC1",
         },
-        secondary: {
-          DEFAULT: "#CBA135",  // Golden accent
-          light: "#E5C15A",
-          dark: "#9E7E29",
-        },
+        accent: "#00C0FF",     // Highlight accent
         surface: {
           DEFAULT: "#FFFFFF",
           light: "#FAFAFA",
-          container: "#F5F5F5",
+          container: "#F5F6F7",  // Cards and sections
+          dark: "#0E1114",       // Dark mode background
         },
         text: {
-          primary: "#1A1A1A",
-          secondary: "#5A5A5A",
+          primary: "#0D1116",    // Primary text
+          secondary: "#5E646A",  // Secondary text
           disabled: "#9E9E9E",
+          inverse: "#FFFFFF",
         },
-        outline: "#E5E7EB",
-        divider: "#E0E0E0",
+        outline: "#D5D8DC",      // Soft borders
+        divider: "#D5D8DC",      // Dividers
         success: "#16A34A",
         error: "#DC2626",
         warning: "#F59E0B",
-        // Legacy colors (for backward compatibility)
-        "metal-gray": "#5E5E5E",
-        "metal-light": "#B0B0B0",
-        "dark-base": "#23282A",
+        // Legacy colors (backward compatibility)
+        "metal-gray": "#5E646A",
+        "metal-light": "#D5D8DC",
+        "dark-base": "#0E1114",
         "light-neutral": "#FAFAFA",
         "silver-accent": "#9FA3A7",
       },

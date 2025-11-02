@@ -4,171 +4,201 @@
 
 @layer base {
   :root {
-    --primary: 0 113 215;
-    --metal-gray: 94 94 94;
-    --metal-light: 176 176 176;
-    --dark-base: 35 40 42;
-    --light-neutral: 233 233 233;
-    --silver-accent: 159 163 167;
+    /* Material You Color System */
+    --primary: #007BFF;
+    --primary-hover: #005AC1;
+    --accent: #00C0FF;
+    --surface: #FFFFFF;
+    --surface-container: #F5F6F7;
+    --text-primary: #0D1116;
+    --text-secondary: #5E646A;
+    --divider: #D5D8DC;
+  }
+
+  /* CRITICAL: ENFORCE LATIN NUMERALS GLOBALLY */
+  * {
+    font-variant-numeric: lining-nums;
+    font-feature-settings: "lnum" 1;
+  }
+
+  /* Force Latin numerals for all number inputs and displays */
+  input[type="number"],
+  input[type="tel"],
+  input[type="date"],
+  input[type="time"],
+  .number,
+  .latin-num {
+    font-variant-numeric: lining-nums tabular-nums;
+    font-feature-settings: "lnum" 1, "tnum" 1;
+    direction: ltr !important;
   }
 
   html {
     scroll-behavior: smooth;
+    /* Ensure Latin numerals in all contexts */
+    font-variant-numeric: lining-nums;
   }
 
   body {
-    @apply bg-white text-[#5E5E5E] dark:bg-[#23282A] dark:text-[#E9E9E9];
+    @apply bg-surface text-text-primary;
+    font-variant-numeric: lining-nums;
+    font-feature-settings: "lnum" 1;
   }
 
-  /* RTL Support */
+  /* RTL Support - but numbers stay LTR */
   [dir="rtl"] {
     @apply text-right;
   }
 
-  /* Custom scrollbar */
+  [dir="rtl"] .number,
+  [dir="rtl"] input[type="number"],
+  [dir="rtl"] input[type="tel"],
+  [dir="rtl"] .latin-num {
+    direction: ltr !important;
+    text-align: left !important;
+  }
+
+  /* Custom scrollbar - Material Design 3 */
   ::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
   }
 
   ::-webkit-scrollbar-track {
-    @apply bg-[#E9E9E9] dark:bg-[#23282A];
+    @apply bg-surface-container;
   }
 
   ::-webkit-scrollbar-thumb {
-    @apply bg-[#B0B0B0] dark:bg-[#5E5E5E] rounded-md;
+    @apply bg-outline rounded-md;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-[#5E5E5E] dark:bg-[#9FA3A7];
+    @apply bg-text-secondary;
   }
 }
 
 @layer components {
-  /* Button styles */
+  /* Material Design 3 Button styles - FAB & Elevated */
   .btn-primary {
-    @apply bg-[#0078D7] text-white px-6 py-3 rounded-md font-semibold
-    hover:shadow-lg hover:shadow-[#0078D7]/25 transition-all duration-300
-    active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed;
+    @apply bg-primary text-white px-8 py-4 rounded-full font-medium
+    hover:bg-primary-hover transition-all duration-300 ease-out
+    shadow-elevation-3 hover:shadow-elevation-4
+    active:shadow-elevation-2 transform hover:-translate-y-0.5
+    active:scale-[0.97] disabled:opacity-50 disabled:cursor-not-allowed
+    relative overflow-hidden;
   }
 
+  /* Material Design 3 Filled Tonal Button */
   .btn-secondary {
-    @apply border-2 border-[#0078D7] text-[#0078D7] px-6 py-3 rounded-md font-semibold
-    hover:bg-[#0078D7] hover:text-white transition-all duration-300
-    active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed;
+    @apply bg-primary/12 text-primary px-8 py-4 rounded-full font-medium
+    hover:bg-primary/18 transition-all duration-300 ease-out
+    shadow-elevation-1 hover:shadow-elevation-2
+    active:shadow-elevation-0 transform hover:-translate-y-0.5
+    active:scale-[0.97] disabled:opacity-50 disabled:cursor-not-allowed
+    relative overflow-hidden;
   }
 
+  /* Material Design 3 Text Button */
   .btn-ghost {
-    @apply text-[#5E5E5E] dark:text-[#E9E9E9] px-6 py-3 rounded-md font-semibold
-    hover:bg-[#E9E9E9] dark:hover:bg-[#5E5E5E]/20 transition-all duration-300
-    active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed;
+    @apply text-primary px-6 py-3.5 rounded-full font-medium
+    hover:bg-primary/8 transition-all duration-300 ease-out
+    active:bg-primary/12
+    active:scale-[0.97] disabled:opacity-50 disabled:cursor-not-allowed
+    relative overflow-hidden;
   }
 
-  /* Container */
+  /* Material Design 3 FAB Button */
+  .btn-fab {
+    @apply bg-accent text-white w-14 h-14 rounded-2xl
+    flex items-center justify-center font-medium
+    shadow-elevation-3 hover:shadow-elevation-4
+    transition-all duration-300 ease-out
+    hover:bg-accent/90 transform hover:-translate-y-0.5
+    active:scale-[0.95] disabled:opacity-50 disabled:cursor-not-allowed
+    relative overflow-hidden;
+  }
+
+  /* Material Design 3 Extended FAB */
+  .btn-fab-extended {
+    @apply bg-accent text-white px-8 py-4 rounded-2xl
+    flex items-center gap-3 font-medium
+    shadow-elevation-3 hover:shadow-elevation-4
+    transition-all duration-300 ease-out
+    hover:bg-accent/90 transform hover:-translate-y-1
+    active:scale-[0.97] disabled:opacity-50 disabled:cursor-not-allowed
+    relative overflow-hidden;
+  }
+
+  /* Material Design 3 Ripple Effect */
+  .btn-primary::before,
+  .btn-secondary::before,
+  .btn-ghost::before,
+  .btn-fab::before,
+  .btn-fab-extended::before {
+    content: '';
+    @apply absolute inset-0 bg-white/20 opacity-0 scale-0 rounded-full
+    transition-all duration-500 ease-out;
+  }
+
+  .btn-primary:active::before,
+  .btn-secondary:active::before,
+  .btn-ghost:active::before,
+  .btn-fab:active::before,
+  .btn-fab-extended:active::before {
+    @apply opacity-100 scale-100;
+  }
+
+  /* Material Design 3 Card */
+  .card-md3 {
+    @apply bg-surface rounded-md-lg border border-outline
+    shadow-elevation-1 hover:shadow-elevation-2
+    transition-shadow duration-200;
+  }
+
+  /* Container with proper spacing */
   .container-custom {
-    @apply max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8;
+    @apply max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12;
   }
 
-  /* Section padding */
+  /* Section padding - Material Design spacing */
   .section-padding {
-    @apply py-16 md:py-20 lg:py-24;
+    @apply py-md-4xl md:py-md-5xl;
   }
 
-  /* Gradient text */
+  /* Gradient text - Updated colors */
   .gradient-text {
-    @apply bg-gradient-to-r from-[#0078D7] to-blue-600 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
   }
 
-  /* Metal shine effect */
-  .metal-shine {
-    background: linear-gradient(
-      45deg,
-      transparent 30%,
-      rgba(255, 255, 255, 0.2) 50%,
-      transparent 70%
-    );
-    background-size: 200% 100%;
-    background-position: -100% 0;
-    animation: shine 3s ease-in-out infinite;
-  }
-
-  /* Laser beam effect */
-  .laser-beam {
-    position: relative;
-    overflow: hidden;
-  }
-
-  .laser-beam::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: -100%;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(
-      90deg,
-      transparent,
-      #0078d7,
-      #00a8ff,
-      #0078d7,
-      transparent
-    );
-    animation: laser 3s ease-in-out infinite;
-    opacity: 0;
-  }
-
-  @keyframes shine {
-    0% {
-      background-position: -100% 0;
-    }
-    100% {
-      background-position: 100% 0;
-    }
-  }
-
-  @keyframes laser {
-    0%,
-    100% {
-      left: -100%;
-      opacity: 0;
-    }
-    50% {
-      left: 100%;
-      opacity: 1;
-    }
-  }
-
-  /* Card hover effects */
-  .card-hover {
-    @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl;
-  }
-
-  /* Form inputs */
+  /* Material Design 3 Input fields */
   .input-field {
-    @apply w-full px-4 py-3 rounded-md border border-[#B0B0B0]/30
-    bg-white dark:bg-[#5E5E5E]/10 text-[#5E5E5E] dark:text-[#E9E9E9]
-    focus:outline-none focus:ring-2 focus:ring-[#0078D7] focus:border-transparent
+    @apply w-full px-4 py-3.5 rounded-lg border border-outline
+    bg-surface text-text-primary placeholder:text-text-secondary
+    focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary
     transition-all duration-200;
+    /* Ensure Latin numerals in inputs */
+    font-variant-numeric: lining-nums tabular-nums;
+    font-feature-settings: "lnum" 1, "tnum" 1;
   }
 
   /* Loading spinner */
   .spinner {
-    @apply inline-block w-6 h-6 border-3 border-current border-t-transparent rounded-full animate-spin;
+    @apply inline-block w-6 h-6 border-2 border-primary border-t-transparent rounded-full animate-spin;
   }
 }
 
 @layer utilities {
   /* Text selection color */
   ::selection {
-    @apply bg-[#0078D7] text-white;
+    @apply bg-primary text-white;
   }
 
   /* Focus visible for accessibility */
   .focus-visible-ring {
-    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0078D7] focus-visible:ring-offset-2;
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2;
   }
 
-  /* Responsive text sizes */
+  /* Responsive text sizes - Material Design 3 */
   .text-responsive-xs {
     @apply text-xs sm:text-sm;
   }
@@ -178,42 +208,46 @@
   }
 
   .text-responsive-base {
-    @apply text-base sm:text-lg;
+    @apply text-body-md sm:text-body-lg;
   }
 
   .text-responsive-lg {
-    @apply text-lg sm:text-xl md:text-2xl;
+    @apply text-body-lg sm:text-title-lg;
   }
 
   .text-responsive-xl {
-    @apply text-xl sm:text-2xl md:text-3xl;
+    @apply text-title-lg sm:text-headline-sm;
   }
 
   .text-responsive-2xl {
-    @apply text-2xl sm:text-3xl md:text-4xl;
+    @apply text-headline-sm sm:text-headline-md;
   }
 
   .text-responsive-3xl {
-    @apply text-3xl sm:text-4xl md:text-5xl;
+    @apply text-headline-md sm:text-headline-lg;
   }
 
   .text-responsive-4xl {
-    @apply text-4xl sm:text-5xl md:text-6xl;
+    @apply text-headline-lg sm:text-display-sm;
   }
 
-  /* Animations */
+  /* Material Design 3 Animations */
   .animate-fade-up {
-    animation: fadeUp 0.6s ease-out;
+    animation: fadeUp 0.3s ease-out;
   }
 
   .animate-fade-in {
-    animation: fadeIn 0.6s ease-out;
+    animation: fadeIn 0.3s ease-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.3s ease-out;
   }
 
   @keyframes fadeUp {
     from {
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(10px);
     }
     to {
       opacity: 1;
@@ -229,4 +263,29 @@
       opacity: 1;
     }
   }
+
+  @keyframes slideUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  /* Utility class for enforcing Latin numerals */
+  .latin-numerals {
+    font-variant-numeric: lining-nums tabular-nums !important;
+    font-feature-settings: "lnum" 1, "tnum" 1 !important;
+    direction: ltr !important;
+  }
+}
+
+/* Override any Arabic numerals that might appear */
+@font-face {
+  font-family: 'Inter';
+  unicode-range: U+0660-0669, U+06F0-06F9; /* Arabic-Indic digits */
+  src: local('Inter'); /* Force fallback to Inter which uses Latin numerals */
 }

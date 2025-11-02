@@ -19,12 +19,12 @@ export function HeroSection() {
   ];
 
   return (
-    <section className="relative min-h-screen flex items-center bg-gradient-to-b from-surface-light to-surface">
+    <section className="relative min-h-screen flex items-center bg-gradient-to-b from-gray-50 to-white">
       {/* Simple gradient background - Material Design 3 */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5" />
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 via-transparent to-cyan-50/20" />
 
-      {/* Content Container with 120px spacing as specified */}
-      <div className="container mx-auto px-6 lg:px-12 py-32 relative z-10">
+      {/* Content Container with proper spacing from header */}
+      <div className="container mx-auto px-6 lg:px-12 pt-[120px] lg:pt-[136px] pb-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
 
           {/* Text Content - Material Design 3 Typography */}
@@ -76,7 +76,7 @@ export function HeroSection() {
               ))}
             </ul>
 
-            {/* Single CTA Button - Material Design 3 */}
+            {/* Material Design 3 Extended FAB Button */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -86,12 +86,8 @@ export function HeroSection() {
                 href={`/${locale}/contact`}
                 onClick={() => trackButtonClick("hero_cta_primary")}
                 className={cn(
-                  "inline-flex items-center gap-3",
-                  "px-8 py-4 bg-primary text-white",
-                  "rounded-md-full font-medium text-body-lg",
-                  "shadow-elevation-3 hover:shadow-elevation-4",
-                  "hover:bg-primary-dark transition-all duration-200",
-                  "transform hover:scale-105",
+                  "btn-fab-extended inline-flex",
+                  "text-body-lg",
                   isRTL ? "font-tajawal" : "font-inter"
                 )}
               >

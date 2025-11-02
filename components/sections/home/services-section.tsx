@@ -63,21 +63,21 @@ export function ServicesSection() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="group"
               >
-                <div className="bg-white dark:bg-metal-gray/10 rounded-lg p-6 h-full border border-metal-light/20 card-hover">
-                  <div className="bg-primary/10 w-16 h-16 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary transition-colors">
+                <div className="card-md3 p-6 h-full group-hover:shadow-elevation-3 transition-all duration-300">
+                  <div className="bg-primary/10 w-16 h-16 rounded-md-lg flex items-center justify-center mb-4 group-hover:bg-primary transition-all duration-300">
                     <Icon className="h-8 w-8 text-primary group-hover:text-white transition-colors" />
                   </div>
-                  <h3 className="text-xl font-heading font-semibold mb-3">
+                  <h3 className="text-title-lg font-heading font-semibold mb-3 text-text-primary">
                     {service.title}
                   </h3>
-                  <p className="text-sm text-metal-gray dark:text-silver-accent mb-4">
+                  <p className="text-body-md text-text-secondary mb-4 line-clamp-3">
                     {service.description}
                   </p>
                   <Link
                     href={`/${locale}/services`}
-                    className="text-primary font-medium text-sm hover:underline"
+                    className="inline-flex items-center gap-1 text-primary font-medium text-body-sm hover:gap-2 transition-all duration-200"
                   >
-                    Learn More →
+                    {t("learnMore")} →
                   </Link>
                 </div>
               </motion.div>
