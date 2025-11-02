@@ -73,7 +73,7 @@ export default function RootLayout({
       className={`${poppins.variable} ${roboto.variable}`}
       suppressHydrationWarning
     >
-      <body className="font-body antialiased">{children}</body>
+      <body className="font-body antialiased min-h-screen flex flex-col">{children}</body>
     </html>
   );
 }
