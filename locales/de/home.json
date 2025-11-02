@@ -1,7 +1,48 @@
 {
   "hero": {
-    "title": "MSADDI.EST - Laserschneiden und Blechverarbeitung in Syrien",
-    "subtitle": "Führender Anbieter von Präzisions-Laserschneiden und CNC-Biegen seit 1994",
-    "description": "Spezialist für Laserschneiden bis 40mm, 135T Biegen und maßgeschneiderte Fertigung."
+    "title": "Präzisions-Laserschneiddienste",
+    "subtitle": "Exzellenz in der Blechbearbeitung",
+    "description": "Führend in der Metallverarbeitung in Syrien mit fortschrittlichem Laserschneiden bis 40mm, CNC-Biegen 135T/3200mm und maßgeschneiderten Blechlösungen für industrielle Anwendungen",
+    "cta1": "Kostenloses Angebot Anfordern",
+    "cta2": "Dienste Ansehen",
+    "stats": {
+      "years": "30+ Jahre",
+      "yearsLabel": "Erfahrung in der Metallverarbeitung",
+      "projects": "500+",
+      "projectsLabel": "Industrieprojekte",
+      "satisfaction": "99%",
+      "satisfactionLabel": "Kundenzufriedenheit"
+    }
+  },
+  "about": {
+    "title": "MSADDI.EST - Metallverarbeitung Syrien",
+    "subtitle": "Führende Blechbearbeitung und Laserschneiddienste",
+    "description": "MSADDI.EST spezialisiert auf industrielle Metallverarbeitung, bietet Laserschneiddienste für Edelstahl, Aluminium, Kupfer und Messing. Unsere Laserschneidkapazitäten von 6000×2500mm und CNC-Biegemaschinen 135T produzieren präzise Metallteile für die Bau-, Automobil- und Fertigungsindustrie in Aleppo und Syrien.",
+    "features": {
+      "quality": "ISO 9001 zertifizierte Metallverarbeitung",
+      "technology": "40mm Laserschneidtechnologie",
+      "team": "Metallverarbeitungsexperten",
+      "delivery": "Schnelle und pünktliche Lieferung"
+    },
+    "cta": "Unsere Fähigkeiten entdecken"
+  },
+  "services": {
+    "title": "Metallverarbeitungsdienste",
+    "subtitle": "Laserschneiden, CNC-Biegen und maßgeschneiderte Blechlösungen",
+    "learnMore": "Mehr erfahren"
+  },
+  "capabilities": {
+    "title": "Fortschrittliche Metallverarbeitungsfähigkeiten",
+    "subtitle": "Laserschneiden 6000×2500mm und CNC-Presse 135T",
+    "description": "Vollständige Metallverarbeitungsanlage, die Edelstahl bis 40mm, Aluminiumplatten und maßgeschneiderte Metallteile mit hoher Präzision für industrielle Anwendungen verarbeitet"
+  },
+  "clients": {
+    "title": "Zuverlässiger Metallverarbeitungspartner in Syrien",
+    "subtitle": "Bedient Bau-, Automobil- und Fertigungsindustrie mit hochwertigen Blechlösungen"
+  },
+  "cta": {
+    "title": "Starten Sie Ihr Metallverarbeitungsprojekt",
+    "subtitle": "Erhalten Sie maßgeschneiderte Angebote für Laserschneiden und Blechbearbeitung",
+    "button": "Kostenloses Angebot anfordern"
   }
 }

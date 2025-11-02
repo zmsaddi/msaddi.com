@@ -1,6 +1,48 @@
 {
   "hero": {
-    "title": "MSADDI.EST - Taglio Laser e Lavorazione Lamiere in Siria",
-    "subtitle": "Leader nel taglio laser di precisione e piegatura CNC dal 1994"
+    "title": "Servizi di Taglio Laser di Precisione",
+    "subtitle": "Eccellenza nella Lavorazione della Lamiera",
+    "description": "Leader nella lavorazione dei metalli in Siria con taglio laser avanzato fino a 40mm, piegatura CNC 135T/3200mm e soluzioni di lamiera personalizzate per applicazioni industriali",
+    "cta1": "Richiedi Preventivo Gratuito",
+    "cta2": "Visualizza Servizi",
+    "stats": {
+      "years": "30+ anni",
+      "yearsLabel": "Esperienza nella lavorazione dei metalli",
+      "projects": "500+",
+      "projectsLabel": "Progetti industriali",
+      "satisfaction": "99%",
+      "satisfactionLabel": "Soddisfazione del cliente"
+    }
+  },
+  "about": {
+    "title": "MSADDI.EST - Lavorazione Metalli Siria",
+    "subtitle": "Servizi leader di lavorazione lamiera e taglio laser",
+    "description": "MSADDI.EST specializzata nella lavorazione industriale dei metalli, offre servizi di taglio laser per acciaio inossidabile, alluminio, rame e ottone. Le nostre capacità di taglio laser 6000×2500mm e macchine piegatrici CNC 135T producono parti metalliche precise per le industrie edili, automobilistiche e manifatturiere ad Aleppo e in Siria.",
+    "features": {
+      "quality": "Lavorazione metalli certificata ISO 9001",
+      "technology": "Tecnologia di taglio laser 40mm",
+      "team": "Esperti di lavorazione metalli",
+      "delivery": "Consegna rapida e puntuale"
+    },
+    "cta": "Scopri le nostre capacità"
+  },
+  "services": {
+    "title": "Servizi di Lavorazione Metalli",
+    "subtitle": "Taglio laser, piegatura CNC e soluzioni lamiera personalizzate",
+    "learnMore": "Scopri di più"
+  },
+  "capabilities": {
+    "title": "Capacità Avanzate di Lavorazione Metalli",
+    "subtitle": "Taglio laser 6000×2500mm e pressa CNC 135T",
+    "description": "Impianto completo di lavorazione metalli che lavora acciaio inossidabile fino a 40mm, lastre di alluminio e parti metalliche personalizzate con alta precisione per applicazioni industriali"
+  },
+  "clients": {
+    "title": "Partner affidabile per la lavorazione metalli in Siria",
+    "subtitle": "Al servizio delle industrie edili, automobilistiche e manifatturiere con soluzioni di lamiera di alta qualità"
+  },
+  "cta": {
+    "title": "Inizia il tuo progetto di lavorazione metalli",
+    "subtitle": "Ottieni preventivi personalizzati per taglio laser e lavorazione lamiera",
+    "button": "Richiedi preventivo gratuito"
   }
 }

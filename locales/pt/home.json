@@ -1,6 +1,48 @@
 {
   "hero": {
-    "title": "MSADDI.EST - Corte a Laser e Fabricação Metálica na Síria",
-    "subtitle": "Líder em corte a laser de precisão e dobra CNC desde 1994"
+    "title": "Serviços de Corte a Laser de Precisão",
+    "subtitle": "Excelência em Fabricação de Chapa Metálica",
+    "description": "Líder em fabricação de metais na Síria com corte a laser avançado até 40mm, dobra CNC 135T/3200mm e soluções de chapa personalizadas para aplicações industriais",
+    "cta1": "Obter Orçamento Grátis",
+    "cta2": "Ver Serviços",
+    "stats": {
+      "years": "30+ anos",
+      "yearsLabel": "Experiência em fabricação de metais",
+      "projects": "500+",
+      "projectsLabel": "Projetos industriais",
+      "satisfaction": "99%",
+      "satisfactionLabel": "Satisfação do cliente"
+    }
+  },
+  "about": {
+    "title": "MSADDI.EST - Fabricação de Metais Síria",
+    "subtitle": "Serviços líderes em fabricação de chapa e corte a laser",
+    "description": "MSADDI.EST especializada em fabricação industrial de metais, oferecendo serviços de corte a laser para aço inoxidável, alumínio, cobre e latão. Nossas capacidades de corte a laser 6000×2500mm e máquinas de dobra CNC 135T produzem peças metálicas precisas para as indústrias de construção, automotiva e manufatura em Aleppo e Síria.",
+    "features": {
+      "quality": "Fabricação de metais certificada ISO 9001",
+      "technology": "Tecnologia de corte a laser 40mm",
+      "team": "Especialistas em fabricação de metais",
+      "delivery": "Entrega rápida e pontual"
+    },
+    "cta": "Descobrir nossas capacidades"
+  },
+  "services": {
+    "title": "Serviços de Fabricação de Metais",
+    "subtitle": "Corte a laser, dobra CNC e soluções de chapa personalizadas",
+    "learnMore": "Saber mais"
+  },
+  "capabilities": {
+    "title": "Capacidades Avançadas de Processamento de Metais",
+    "subtitle": "Corte a laser 6000×2500mm e prensa CNC 135T",
+    "description": "Instalação completa de fabricação de metais que processa aço inoxidável até 40mm, placas de alumínio e peças metálicas personalizadas com alta precisão para aplicações industriais"
+  },
+  "clients": {
+    "title": "Parceiro confiável de fabricação de metais na Síria",
+    "subtitle": "Atendendo às indústrias de construção, automotiva e manufatura com soluções de chapa metálica de alta qualidade"
+  },
+  "cta": {
+    "title": "Comece seu projeto de fabricação de metais",
+    "subtitle": "Obtenha orçamentos personalizados de corte a laser e fabricação de chapa",
+    "button": "Solicitar orçamento grátis"
   }
 }

@@ -1,6 +1,48 @@
 {
   "hero": {
-    "title": "MSADDI.EST - Corte Láser y Fabricación Metálica en Siria",
-    "subtitle": "Líder en corte láser de precisión y plegado CNC desde 1994"
+    "title": "Servicios de Corte Láser de Precisión",
+    "subtitle": "Excelencia en Fabricación de Chapa Metálica",
+    "description": "Líder en fabricación de metales en Siria con corte láser avanzado hasta 40mm, plegado CNC 135T/3200mm y soluciones de chapa personalizadas para aplicaciones industriales",
+    "cta1": "Obtener Presupuesto Gratuito",
+    "cta2": "Ver Servicios",
+    "stats": {
+      "years": "30+ años",
+      "yearsLabel": "Experiencia en fabricación de metales",
+      "projects": "500+",
+      "projectsLabel": "Proyectos industriales",
+      "satisfaction": "99%",
+      "satisfactionLabel": "Satisfacción del cliente"
+    }
+  },
+  "about": {
+    "title": "MSADDI.EST - Fabricación de Metales Siria",
+    "subtitle": "Servicios líderes en fabricación de chapa y corte láser",
+    "description": "MSADDI.EST especializada en fabricación industrial de metales, ofreciendo servicios de corte láser para acero inoxidable, aluminio, cobre y latón. Nuestras capacidades de corte láser 6000×2500mm y máquinas de plegado CNC 135T producen piezas metálicas precisas para las industrias de construcción, automotriz y manufactura en Alepo y Siria.",
+    "features": {
+      "quality": "Fabricación de metales certificada ISO 9001",
+      "technology": "Tecnología de corte láser 40mm",
+      "team": "Expertos en fabricación de metales",
+      "delivery": "Entrega rápida y puntual"
+    },
+    "cta": "Descubrir nuestras capacidades"
+  },
+  "services": {
+    "title": "Servicios de Fabricación de Metales",
+    "subtitle": "Corte láser, plegado CNC y soluciones de chapa personalizadas",
+    "learnMore": "Saber más"
+  },
+  "capabilities": {
+    "title": "Capacidades Avanzadas de Procesamiento de Metales",
+    "subtitle": "Corte láser 6000×2500mm y prensa CNC 135T",
+    "description": "Instalación completa de fabricación de metales que procesa acero inoxidable hasta 40mm, placas de aluminio y piezas metálicas personalizadas con alta precisión para aplicaciones industriales"
+  },
+  "clients": {
+    "title": "Socio confiable de fabricación de metales en Siria",
+    "subtitle": "Sirviendo a las industrias de construcción, automotriz y manufactura con soluciones de chapa metálica de alta calidad"
+  },
+  "cta": {
+    "title": "Comience su proyecto de fabricación de metales",
+    "subtitle": "Obtenga presupuestos personalizados de corte láser y fabricación de chapa",
+    "button": "Solicitar presupuesto gratuito"
   }
 }
