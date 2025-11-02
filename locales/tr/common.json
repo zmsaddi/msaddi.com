@@ -75,7 +75,8 @@
     "selectLanguage": "Dil seçin",
     "toggleMenu": "Menüyü aç/kapat",
     "mapTitle": "MSADDI.EST Konum Haritası",
-    "companyLogo": "MSADDI.EST"
+    "companyLogo": "MSADDI.EST",
+    "closeTooltip": "İpucunu kapat"
   },
   "placeholders": {
     "workshopImage": "Atölye Resmi"

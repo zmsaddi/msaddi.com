@@ -52,6 +52,7 @@ export function WhatsAppButton() {
               <button
                 onClick={() => setIsTooltipVisible(false)}
                 className="absolute -top-2 -right-2 w-5 h-5 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors"
+                aria-label={tAccessibility("closeTooltip")}
               >
                 <X className="w-3 h-3 text-gray-600" />
               </button>

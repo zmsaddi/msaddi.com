@@ -75,7 +75,8 @@
     "selectLanguage": "اختر اللغة",
     "toggleMenu": "تبديل القائمة",
     "mapTitle": "خريطة موقع MSADDI.EST",
-    "companyLogo": "MSADDI.EST"
+    "companyLogo": "MSADDI.EST",
+    "closeTooltip": "إغلاق التلميح"
   },
   "placeholders": {
     "workshopImage": "صورة الورشة"

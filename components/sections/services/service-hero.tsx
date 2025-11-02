@@ -15,7 +15,7 @@ export function ServiceHero() {
           src="/images/hero-metal-workshop.jpg"
           alt="MSADDI Laser Cutting and CNC Services - Industrial Workshop"
           fill
-          quality={90}
+          quality={75}
           sizes="100vw"
           className="object-cover object-center"
         />

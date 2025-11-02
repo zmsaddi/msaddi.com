@@ -15,7 +15,7 @@ export function AboutHero() {
           src="/images/hero-metal-workshop.jpg"
           alt="MSADDI Company History - 30+ Years Metal Fabrication Experience"
           fill
-          quality={90}
+          quality={75}
           sizes="100vw"
           className="object-cover object-center"
         />

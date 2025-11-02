@@ -40,5 +40,19 @@
     "eslint-config-next": "14.2.16",
     "@tailwindcss/forms": "^0.5.9",
     "@tailwindcss/typography": "^0.5.15"
+  },
+  "browserslist": {
+    "production": [
+      ">0.5%",
+      "not dead",
+      "not op_mini all",
+      "last 2 versions",
+      "not IE 11"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

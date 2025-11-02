@@ -22,7 +22,7 @@ const config: Config = {
           light: "#1E2329",
           dark: "#000000",
         },
-        accent: "#1E88E5",     // Links and important text
+        accent: "#1565C0",     // Links and important text - Darker blue for better contrast
         surface: {
           DEFAULT: "#F8FAFC",  // Card backgrounds
           white: "#FFFFFF",

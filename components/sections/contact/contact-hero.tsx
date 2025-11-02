@@ -15,7 +15,7 @@ export function ContactHero() {
           src="/images/hero-metal-workshop.jpg"
           alt="Contact MSADDI - Professional Metal Fabrication Services Aleppo Syria"
           fill
-          quality={90}
+          quality={75}
           sizes="100vw"
           className="object-cover object-center"
         />

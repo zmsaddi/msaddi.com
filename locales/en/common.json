@@ -75,7 +75,8 @@
     "selectLanguage": "Select language",
     "toggleMenu": "Toggle menu",
     "mapTitle": "MSADDI.EST Location Map",
-    "companyLogo": "MSADDI.EST"
+    "companyLogo": "MSADDI.EST",
+    "closeTooltip": "Close tooltip"
   },
   "placeholders": {
     "workshopImage": "Workshop Image"
