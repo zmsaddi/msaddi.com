@@ -2,6 +2,7 @@
 
 import { useTranslations, useLocale } from "next-intl";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import { trackButtonClick } from "@/lib/gtag";
@@ -20,13 +21,17 @@ export function HeroSection() {
 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Industrial background image with overlay - Material Design 3 */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: "url('/images/msaddi-metal-fabrication-workshop-hero.jpg')",
-        }}
-      >
+      {/* Industrial background image with overlay - Material Design 3 - OPTIMIZED */}
+      <div className="absolute inset-0">
+        <Image
+          src="/images/hero-metal-workshop.jpg"
+          alt="MSADDI Metal Fabrication Workshop - Professional Laser Cutting Services Aleppo Syria"
+          fill
+          priority
+          quality={90}
+          sizes="100vw"
+          className="object-cover object-center"
+        />
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-gradient-to-br from-secondary/90 via-secondary/85 to-primary/80" />
       </div>
