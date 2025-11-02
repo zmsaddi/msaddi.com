@@ -10,12 +10,20 @@ interface ServiceDetailProcessProps {
   serviceKey: "laserCutting" | "cncBending" | "flangingDishing" | "customFabrication";
 }
 
+// Service-specific process step keys mapping
+const serviceProcessSteps: Record<string, string[]> = {
+  laserCutting: ["design", "optimization", "cutting", "inspection", "delivery"],
+  cncBending: ["design", "setup", "forming", "inspection"],
+  flangingDishing: ["design", "dishing", "flanging", "finishing"],
+  customFabrication: ["consultation", "design", "prototyping", "production", "qa", "delivery"],
+};
+
 export function ServiceDetailProcess({ serviceKey }: ServiceDetailProcessProps) {
   const t = useTranslations(`services-details.${serviceKey}`);
   const locale = useLocale();
   const isRTL = locale === "ar";
 
-  // Check if process section exists (EN/TR only)
+  // Check if process section exists
   let hasProcess = false;
   try {
     t("process.title");
@@ -29,17 +37,8 @@ export function ServiceDetailProcess({ serviceKey }: ServiceDetailProcessProps) 
     return null;
   }
 
-  // Get process steps dynamically
-  const stepKeys = ["design", "optimization", "cutting", "bending", "inspection", "delivery", "prototyping", "production", "welding", "finishing", "assembly", "consultation", "engineering", "manufacturing", "testing"];
-
-  const availableSteps = stepKeys.filter((key) => {
-    try {
-      t(`process.steps.${key}.title`);
-      return true;
-    } catch {
-      return false;
-    }
-  });
+  // Get service-specific process steps
+  const availableSteps = serviceProcessSteps[serviceKey] || [];
 
   const containerVariants = {
     hidden: { opacity: 0 },
