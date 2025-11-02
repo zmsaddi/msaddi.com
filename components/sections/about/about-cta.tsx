@@ -18,10 +18,10 @@ export function AboutCTA() {
           viewport={{ once: true }}
           className="text-center max-w-3xl mx-auto"
         >
-          <h2 className="text-responsive-3xl font-heading font-bold mb-4">
+          <h2 className="text-responsive-3xl font-heading font-bold mb-4 text-text-primary">
             {t("title")}
           </h2>
-          <p className="text-responsive-lg text-metal-gray dark:text-silver-accent mb-8">
+          <p className="text-responsive-lg text-text-secondary mb-8">
             {t("subtitle")}
           </p>
           <Link

@@ -2,51 +2,47 @@
 
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
-import { Award, Lightbulb, Shield, HardHat } from "lucide-react";
+import { Award, Lightbulb, Shield } from "lucide-react";
 
 export function ValuesSection() {
   const t = useTranslations("about.values");
 
+  // Limited to 3 values as per MD3 specifications
   const values = [
     {
       icon: Award,
       title: t("items.quality.title"),
       description: t("items.quality.description"),
-      color: "from-blue-500 to-cyan-500",
+      color: "from-primary to-accent",
     },
     {
       icon: Lightbulb,
       title: t("items.innovation.title"),
       description: t("items.innovation.description"),
-      color: "from-yellow-500 to-orange-500",
+      color: "from-accent to-primary",
     },
     {
       icon: Shield,
       title: t("items.integrity.title"),
       description: t("items.integrity.description"),
-      color: "from-green-500 to-emerald-500",
-    },
-    {
-      icon: HardHat,
-      title: t("items.safety.title"),
-      description: t("items.safety.description"),
-      color: "from-red-500 to-pink-500",
+      color: "from-primary to-primary-dark",
     },
   ];
 
   return (
-    <section className="section-padding bg-light-neutral dark:bg-metal-gray/10">
+    <section className="section-padding bg-surface">
       <div className="container-custom">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-responsive-3xl font-heading font-bold text-center mb-12"
+          className="text-responsive-3xl font-heading font-bold text-center mb-12 text-text-primary"
         >
           {t("title")}
         </motion.h2>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* MD3 Three-column layout with 20px/32px gap */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8">
           {values.map((value, index) => {
             const Icon = value.icon;
             return (
@@ -56,13 +52,13 @@ export function ValuesSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white dark:bg-dark-base rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
+                className="card-md3 p-8 hover:shadow-elevation-3 transition-shadow"
               >
-                <div className={`bg-gradient-to-r ${value.color} w-14 h-14 rounded-lg flex items-center justify-center mb-4`}>
-                  <Icon className="h-7 w-7 text-white" />
+                <div className={`bg-gradient-to-r ${value.color} w-16 h-16 rounded-md-lg flex items-center justify-center mb-6`}>
+                  <Icon className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-lg font-heading font-semibold mb-2">{value.title}</h3>
-                <p className="text-sm text-metal-gray dark:text-silver-accent">
+                <h3 className="text-title-lg font-heading font-semibold mb-3 text-text-primary">{value.title}</h3>
+                <p className="text-body-md text-text-secondary">
                   {value.description}
                 </p>
               </motion.div>
