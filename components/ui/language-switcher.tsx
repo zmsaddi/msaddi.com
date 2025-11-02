@@ -129,7 +129,7 @@ export function LanguageSwitcher({ className }: LanguageSwitcherProps) {
         >
           <div className="px-3 py-2 border-b border-gray-100">
             <p className="text-xs font-medium text-gray-500 uppercase tracking-wider">
-              Select Language
+              {t("selectLanguage")}
             </p>
           </div>
 

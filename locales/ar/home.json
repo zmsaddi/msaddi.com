@@ -6,12 +6,14 @@
     "cta1": "احصل على عرض سعر مجاني",
     "cta2": "عرض الخدمات",
     "stats": {
-      "years": "30+ سنة",
-      "yearsLabel": "خبرة في تصنيع المعادن",
-      "projects": "500+",
-      "projectsLabel": "مشروع صناعي",
+      "cuttingArea": "6000×2500",
+      "cuttingAreaLabel": "مساحة القص",
+      "bendingForce": "135T",
+      "bendingForceLabel": "قوة الثني",
       "satisfaction": "99%",
-      "satisfactionLabel": "رضا العملاء"
+      "satisfactionLabel": "رضا العملاء",
+      "projects": "500+",
+      "projectsLabel": "مشاريع منجزة"
     }
   },
   "about": {

@@ -9,6 +9,8 @@ export function Footer() {
   const t = useTranslations("footer");
   const tNav = useTranslations("nav");
   const tCommon = useTranslations("common.accessibility");
+  const tContact = useTranslations("contact.info");
+  const tHours = useTranslations("contact.hours");
   const locale = useLocale();
   const currentYear = new Date().getFullYear();
   const _isRTL = locale === "ar";
@@ -69,21 +71,21 @@ export function Footer() {
               <li className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-primary flex-shrink-0" />
                 <a
-                  href="mailto:info@msaddi.com"
+                  href={`mailto:${tContact("items.email.value")}`}
                   className="text-base text-text-secondary hover:text-primary transition-colors duration-200"
                   dir="ltr"
                 >
-                  info@msaddi.com
+                  {tContact("items.email.value")}
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="h-5 w-5 text-primary flex-shrink-0" />
                 <a
-                  href="tel:+963944244604"
+                  href={`tel:${tContact("items.phone.value").replace(/\s/g, '')}`}
                   className="text-base text-text-secondary hover:text-primary transition-colors duration-200 latin-numerals"
                   dir="ltr"
                 >
-                  +963 944 244 604
+                  {tContact("items.phone.value")}
                 </a>
               </li>
               <li className="flex items-start gap-3">
@@ -102,14 +104,14 @@ export function Footer() {
               <li className="flex items-center gap-3">
                 <Clock className="h-5 w-5 text-primary flex-shrink-0" />
                 <span className="text-base text-text-secondary">
-                  {t("workDays")}:
-                  <span className="latin-numerals font-medium text-text-primary" dir="ltr"> 8:00 - 18:00</span>
+                  {tHours("days.weekdays")}:
+                  <span className="latin-numerals font-medium text-text-primary" dir="ltr"> {tHours("times.weekdays")}</span>
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Clock className="h-5 w-5 text-primary flex-shrink-0" />
                 <span className="text-base text-text-secondary">
-                  {t("friday")}: <span className="text-text-primary font-medium">{t("closed")}</span>
+                  {tHours("days.weekend")}: <span className="text-text-primary font-medium">{tHours("times.weekend")}</span>
                 </span>
               </li>
             </ul>

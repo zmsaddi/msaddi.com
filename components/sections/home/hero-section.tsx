@@ -9,7 +9,7 @@ import { trackButtonClick } from "@/lib/gtag";
 import { cn } from "@/lib/utils";
 
 export function HeroSection() {
-  const t = useTranslations("hero");
+  const t = useTranslations("home.hero");
   const locale = useLocale();
   const isRTL = locale === "ar";
 
@@ -17,6 +17,13 @@ export function HeroSection() {
     t("stats.years") + " " + t("stats.yearsLabel"),
     t("stats.projects") + " " + t("stats.projectsLabel"),
     t("stats.satisfaction") + " " + t("stats.satisfactionLabel"),
+  ];
+
+  const stats = [
+    { valueKey: "stats.cuttingArea", labelKey: "stats.cuttingAreaLabel", unit: "mm" },
+    { valueKey: "stats.bendingForce", labelKey: "stats.bendingForceLabel", unit: "" },
+    { valueKey: "stats.satisfaction", labelKey: "stats.satisfactionLabel", unit: "" },
+    { valueKey: "stats.projects", labelKey: "stats.projectsLabel", unit: "" },
   ];
 
   return (
@@ -122,12 +129,7 @@ export function HeroSection() {
           className="mt-24 bg-white/70 backdrop-blur-md rounded-2xl p-8 lg:p-12 shadow-2xl"
         >
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { value: "6000×2500", label: locale === "ar" ? "مساحة القص" : "Cutting Area", unit: "mm" },
-              { value: "135T", label: locale === "ar" ? "قوة الثني" : "Bending Force", unit: "" },
-              { value: "99%", label: locale === "ar" ? "رضا العملاء" : "Satisfaction", unit: "" },
-              { value: "500+", label: locale === "ar" ? "مشاريع منجزة" : "Projects", unit: "" },
-            ].map((stat, index) => (
+            {stats.map((stat, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 10 }}
@@ -139,14 +141,14 @@ export function HeroSection() {
                   "text-headline-lg font-bold text-accent latin-numerals",
                   isRTL ? "font-cairo" : "font-inter"
                 )}>
-                  {stat.value}
+                  {t(stat.valueKey)}
                   {stat.unit && <span className="text-body-lg font-normal">{stat.unit}</span>}
                 </p>
                 <p className={cn(
                   "text-label-lg text-gray-700 mt-1",
                   isRTL ? "font-tajawal" : "font-inter"
                 )}>
-                  {stat.label}
+                  {t(stat.labelKey)}
                 </p>
               </motion.div>
             ))}

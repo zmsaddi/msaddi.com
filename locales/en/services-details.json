@@ -1,0 +1,491 @@
+{
+  "laserCutting": {
+    "meta": {
+      "title": "Laser Cutting Services - MSADDI | MSADDI.EST",
+      "description": "High-precision laser cutting services up to 40mm thickness with 6000×2500mm work area. Advanced fiber laser technology for metals in Aleppo, Syria."
+    },
+    "hero": {
+      "title": "Laser Cutting",
+      "subtitle": "Advanced Cutting Technology with High Precision",
+      "description": "We provide laser cutting services using the latest Fiber Laser technology for materials up to 40mm thick with a work area of 6000×2500mm"
+    },
+    "features": {
+      "title": "Laser Cutting Service Features",
+      "items": {
+        "precision": {
+          "title": "Superior Precision",
+          "description": "Cutting accuracy up to ±0.1mm with clean edges"
+        },
+        "capacity": {
+          "title": "Large Capacity",
+          "description": "Work area of 6000×2500mm and thickness up to 40mm"
+        },
+        "speed": {
+          "title": "High Speed",
+          "description": "High productivity with consistent quality"
+        },
+        "materials": {
+          "title": "Material Versatility",
+          "description": "Cutting all types of ferrous and non-ferrous metals"
+        }
+      }
+    },
+    "specs": {
+      "title": "Technical Specifications",
+      "maxThickness": "Maximum Thickness",
+      "workArea": "Work Area",
+      "laserType": "Laser Type",
+      "precision": "Precision",
+      "materials": "Supported Materials",
+      "values": {
+        "thickness": "40mm",
+        "area": "6000×2500mm",
+        "type": "Fiber Laser",
+        "precisionValue": "±0.1mm",
+        "materialsList": "Steel, Stainless Steel, Aluminum, Copper, Bronze"
+      }
+    },
+    "applications": {
+      "title": "Applications & Industries",
+      "description": "Our laser cutting services are ideal for various industries and applications",
+      "items": {
+        "automotive": "Automotive components and parts",
+        "construction": "Construction and architectural metalwork",
+        "manufacturing": "Industrial manufacturing and machinery",
+        "hvac": "HVAC systems and ducting",
+        "aerospace": "Aerospace precision components",
+        "custom": "Custom metal fabrication projects"
+      }
+    },
+    "process": {
+      "title": "Our Process",
+      "description": "Professional workflow from design to delivery",
+      "steps": {
+        "design": {
+          "title": "Design Review",
+          "description": "We review your CAD files and specifications to ensure optimal cutting parameters"
+        },
+        "optimization": {
+          "title": "Material Optimization",
+          "description": "Efficient nesting algorithms to minimize material waste and reduce costs"
+        },
+        "cutting": {
+          "title": "Precision Cutting",
+          "description": "State-of-the-art fiber laser cutting with real-time quality monitoring"
+        },
+        "inspection": {
+          "title": "Quality Inspection",
+          "description": "Thorough inspection to ensure parts meet your exact specifications"
+        },
+        "delivery": {
+          "title": "Fast Delivery",
+          "description": "Timely delivery with careful packaging to protect your parts"
+        }
+      }
+    },
+    "advantages": {
+      "title": "Why Choose Our Laser Cutting Services",
+      "items": {
+        "noContact": {
+          "title": "No Contact Cutting",
+          "description": "Laser cutting is a non-contact process, eliminating tool wear and material distortion"
+        },
+        "flexibility": {
+          "title": "Design Flexibility",
+          "description": "Complex shapes and intricate designs can be cut with ease"
+        },
+        "speed": {
+          "title": "Rapid Turnaround",
+          "description": "Fast cutting speeds mean shorter lead times for your projects"
+        },
+        "quality": {
+          "title": "Consistent Quality",
+          "description": "Computer-controlled precision ensures repeatability across all parts"
+        },
+        "minimal": {
+          "title": "Minimal Finishing",
+          "description": "Clean cuts reduce or eliminate the need for secondary operations"
+        },
+        "versatile": {
+          "title": "Material Versatility",
+          "description": "Works with various metal types and thicknesses"
+        }
+      }
+    },
+    "gallery": {
+      "title": "Project Gallery",
+      "imageAlt": "Laser Cutting Work Samples - MSADDI"
+    },
+    "cta": {
+      "title": "Need Laser Cutting Services?",
+      "description": "Get a free quote for your project",
+      "button": "Request Quote"
+    }
+  },
+  "cncBending": {
+    "meta": {
+      "title": "CNC Bending Services - MSADDI | MSADDI.EST",
+      "description": "Professional CNC bending services with 135T/3200mm capacity. Precise metal bending with CNC technology in Aleppo, Syria."
+    },
+    "hero": {
+      "title": "CNC Bending",
+      "subtitle": "Precise Bending with Full Digital Control",
+      "description": "We offer metal bending services using CNC technology with 135T force and 3200mm bending length with high precision"
+    },
+    "features": {
+      "title": "CNC Bending Service Features",
+      "items": {
+        "precision": {
+          "title": "Angle Precision",
+          "description": "Accurate bending with predefined angles up to ±0.5°"
+        },
+        "capacity": {
+          "title": "High Force",
+          "description": "135T bending force with 3200mm working length"
+        },
+        "automation": {
+          "title": "Full Automation",
+          "description": "CNC control for consistent and repeatable production"
+        },
+        "flexibility": {
+          "title": "High Flexibility",
+          "description": "Capable of bending complex shapes with multiple angles"
+        }
+      }
+    },
+    "specs": {
+      "title": "Technical Specifications",
+      "bendingForce": "Bending Force",
+      "workLength": "Working Length",
+      "maxThickness": "Maximum Thickness",
+      "precision": "Precision",
+      "materials": "Supported Materials",
+      "values": {
+        "force": "135T",
+        "length": "3200mm",
+        "thickness": "20mm (Steel)",
+        "precisionValue": "±0.5°",
+        "materialsList": "Steel, Stainless Steel, Aluminum"
+      }
+    },
+    "capabilities": {
+      "title": "Bending Capabilities",
+      "description": "Advanced press brake technology for diverse applications",
+      "items": {
+        "airBending": "Air bending for various materials",
+        "bottomBending": "Bottom bending for sharp angles",
+        "coining": "Coining for precision parts",
+        "hemming": "Hemming for edge finishing",
+        "offset": "Offset bending for complex profiles",
+        "wipe": "Wipe bending for tight radii"
+      }
+    },
+    "process": {
+      "title": "Our Bending Process",
+      "description": "Expert approach to metal forming",
+      "steps": {
+        "design": {
+          "title": "Engineering Analysis",
+          "description": "Review of part design for bend sequence and tooling selection"
+        },
+        "setup": {
+          "title": "CNC Programming",
+          "description": "Precise programming of all bending parameters and angles"
+        },
+        "forming": {
+          "title": "CNC Forming",
+          "description": "Automated bending with real-time angle verification"
+        },
+        "inspection": {
+          "title": "Dimensional Check",
+          "description": "Comprehensive measurement to ensure accuracy"
+        }
+      }
+    },
+    "advantages": {
+      "title": "CNC Bending Advantages",
+      "items": {
+        "repeatability": {
+          "title": "Perfect Repeatability",
+          "description": "CNC control ensures identical parts every time"
+        },
+        "complex": {
+          "title": "Complex Geometries",
+          "description": "Multiple bends in one setup without repositioning"
+        },
+        "efficiency": {
+          "title": "High Efficiency",
+          "description": "Faster setup and production compared to manual bending"
+        },
+        "precision": {
+          "title": "Superior Precision",
+          "description": "Tight tolerances and consistent angles across all parts"
+        }
+      }
+    },
+    "gallery": {
+      "title": "Project Gallery",
+      "imageAlt": "CNC Bending Work Samples - MSADDI"
+    },
+    "cta": {
+      "title": "Need CNC Bending Services?",
+      "description": "Get a free quote for your project",
+      "button": "Request Quote"
+    }
+  },
+  "flangingDishing": {
+    "meta": {
+      "title": "Flanging & Dishing Services - MSADDI | MSADDI.EST",
+      "description": "Professional flanging and dishing services for metals. Precise edge forming and metal shaping in Aleppo, Syria."
+    },
+    "hero": {
+      "title": "Flanging & Dishing",
+      "subtitle": "Professional Metal Edge Forming",
+      "description": "We provide specialized Flanging and Dishing services for precise forming and bending of metal edges with high accuracy"
+    },
+    "features": {
+      "title": "Flanging & Dishing Service Features",
+      "items": {
+        "flanging": {
+          "title": "Precise Flanging",
+          "description": "Forming and bending metal edges at specified angles"
+        },
+        "dishing": {
+          "title": "Expert Dishing",
+          "description": "Creating circular and concave curvatures"
+        },
+        "quality": {
+          "title": "High Quality",
+          "description": "Excellent surface finish without distortion"
+        },
+        "custom": {
+          "title": "Custom Solutions",
+          "description": "Tailored designs for any industrial application"
+        }
+      }
+    },
+    "specs": {
+      "title": "Technical Specifications",
+      "flangeAngle": "Flange Angle",
+      "maxDiameter": "Maximum Diameter",
+      "thickness": "Thickness Range",
+      "materials": "Supported Materials",
+      "values": {
+        "angle": "30°-180°",
+        "diameter": "2000mm",
+        "thicknessValue": "1-10mm",
+        "materialsList": "Steel, Stainless Steel, Aluminum, Copper"
+      }
+    },
+    "applications": {
+      "title": "Applications",
+      "description": "Ideal for various industrial requirements",
+      "items": {
+        "tanks": "Storage tanks and pressure vessels",
+        "heads": "Dish heads and end caps",
+        "containers": "Industrial containers and hoppers",
+        "ductwork": "HVAC and industrial ductwork",
+        "architectural": "Architectural metal elements",
+        "custom": "Custom formed components"
+      }
+    },
+    "process": {
+      "title": "Forming Process",
+      "description": "Two-stage metal forming technique",
+      "steps": {
+        "design": {
+          "title": "Design Assessment",
+          "description": "Evaluation of part geometry and material requirements"
+        },
+        "dishing": {
+          "title": "Dishing Operation",
+          "description": "Forming the dome or dish shape using hydraulic press"
+        },
+        "flanging": {
+          "title": "Flanging Operation",
+          "description": "Creating the flange or edge with specified angle"
+        },
+        "finishing": {
+          "title": "Surface Finishing",
+          "description": "Final touches for smooth, professional appearance"
+        }
+      }
+    },
+    "advantages": {
+      "title": "Service Advantages",
+      "items": {
+        "structural": {
+          "title": "Structural Integrity",
+          "description": "Improved strength and rigidity of formed parts"
+        },
+        "seamless": {
+          "title": "Seamless Forming",
+          "description": "Single-piece construction without welding"
+        },
+        "versatility": {
+          "title": "Design Versatility",
+          "description": "Various shapes including flat, conical, and elliptical"
+        },
+        "economy": {
+          "title": "Cost Effective",
+          "description": "Efficient process reducing material waste"
+        }
+      }
+    },
+    "gallery": {
+      "title": "Project Gallery",
+      "imageAlt": "Flanging & Dishing Work Samples - MSADDI"
+    },
+    "cta": {
+      "title": "Need Flanging & Dishing Services?",
+      "description": "Get a free quote for your project",
+      "button": "Request Quote"
+    }
+  },
+  "customFabrication": {
+    "meta": {
+      "title": "Custom Metal Fabrication - MSADDI | MSADDI.EST",
+      "description": "Custom metal fabrication services. Design and manufacture custom metal parts in Aleppo, Syria."
+    },
+    "hero": {
+      "title": "Custom Fabrication",
+      "subtitle": "Complete Manufacturing Solutions for Your Needs",
+      "description": "We offer comprehensive metal fabrication services from design to final delivery according to your exact specifications"
+    },
+    "features": {
+      "title": "Custom Fabrication Service Features",
+      "items": {
+        "design": {
+          "title": "Engineering Design",
+          "description": "Specialized engineering team to turn your ideas into reality"
+        },
+        "manufacturing": {
+          "title": "Integrated Manufacturing",
+          "description": "Cutting, bending, welding, and finishing in one facility"
+        },
+        "quality": {
+          "title": "Quality Control",
+          "description": "Comprehensive inspection to ensure full compliance"
+        },
+        "delivery": {
+          "title": "Fast Delivery",
+          "description": "Commitment to deadlines with high quality"
+        }
+      }
+    },
+    "specs": {
+      "title": "Available Services",
+      "services": {
+        "cutting": "Cutting (Laser, Plasma, Mechanical)",
+        "bending": "Bending (CNC, Hydraulic)",
+        "welding": "Welding (MIG, TIG, Arc)",
+        "finishing": "Finishing (Coating, Grinding, Polishing)",
+        "assembly": "Assembly and Installation"
+      }
+    },
+    "capabilities": {
+      "title": "Full Fabrication Capabilities",
+      "description": "Complete in-house manufacturing from concept to completion",
+      "items": {
+        "cutting": {
+          "title": "Multi-Process Cutting",
+          "description": "Laser, plasma, and mechanical cutting for all materials"
+        },
+        "forming": {
+          "title": "Advanced Forming",
+          "description": "CNC bending, rolling, and press brake operations"
+        },
+        "welding": {
+          "title": "Expert Welding",
+          "description": "MIG, TIG, Arc welding by certified professionals"
+        },
+        "machining": {
+          "title": "Precision Machining",
+          "description": "CNC machining for tight tolerances"
+        },
+        "finishing": {
+          "title": "Surface Finishing",
+          "description": "Grinding, polishing, powder coating, and painting"
+        },
+        "assembly": {
+          "title": "Complete Assembly",
+          "description": "Full product assembly and testing services"
+        }
+      }
+    },
+    "process": {
+      "title": "Our Fabrication Process",
+      "description": "Comprehensive approach from concept to completion",
+      "steps": {
+        "consultation": {
+          "title": "Initial Consultation",
+          "description": "Understanding your requirements and project goals"
+        },
+        "design": {
+          "title": "Design & Engineering",
+          "description": "Creating detailed drawings and specifications"
+        },
+        "prototyping": {
+          "title": "Prototyping",
+          "description": "Building and testing prototypes for approval"
+        },
+        "production": {
+          "title": "Full Production",
+          "description": "Manufacturing using optimized processes"
+        },
+        "qa": {
+          "title": "Quality Assurance",
+          "description": "Rigorous testing and inspection protocols"
+        },
+        "delivery": {
+          "title": "Delivery & Support",
+          "description": "On-time delivery with ongoing support"
+        }
+      }
+    },
+    "industries": {
+      "title": "Industries We Serve",
+      "description": "Trusted by diverse industries",
+      "items": {
+        "construction": "Construction & Infrastructure",
+        "automotive": "Automotive & Transportation",
+        "industrial": "Industrial Equipment",
+        "agriculture": "Agriculture & Farming",
+        "food": "Food & Beverage Processing",
+        "energy": "Energy & Utilities",
+        "hvac": "HVAC Systems",
+        "architectural": "Architectural Metalwork"
+      }
+    },
+    "advantages": {
+      "title": "Why Choose Custom Fabrication",
+      "items": {
+        "tailored": {
+          "title": "Tailored Solutions",
+          "description": "Every project designed specifically for your needs"
+        },
+        "expertise": {
+          "title": "Technical Expertise",
+          "description": "30+ years of fabrication experience"
+        },
+        "efficiency": {
+          "title": "One-Stop Shop",
+          "description": "All processes under one roof for efficiency"
+        },
+        "scalability": {
+          "title": "Scalable Production",
+          "description": "From prototypes to high-volume production"
+        }
+      }
+    },
+    "gallery": {
+      "title": "Project Gallery",
+      "imageAlt": "Custom Fabrication Work Samples - MSADDI"
+    },
+    "cta": {
+      "title": "Have a Custom Project?",
+      "description": "Contact us to discuss your requirements",
+      "button": "Start Your Project"
+    }
+  }
+}

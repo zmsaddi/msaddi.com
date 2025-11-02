@@ -6,12 +6,14 @@
     "cta1": "Ücretsiz Teklif Al",
     "cta2": "Hizmetleri Görüntüle",
     "stats": {
-      "years": "30+ Yıl",
-      "yearsLabel": "Metal İşleme Deneyimi",
-      "projects": "500+",
-      "projectsLabel": "Endüstriyel Proje",
+      "cuttingArea": "6000×2500",
+      "cuttingAreaLabel": "Kesim Alanı",
+      "bendingForce": "135T",
+      "bendingForceLabel": "Bükme Gücü",
       "satisfaction": "%99",
-      "satisfactionLabel": "Müşteri Memnuniyeti"
+      "satisfactionLabel": "Müşteri Memnuniyeti",
+      "projects": "500+",
+      "projectsLabel": "Tamamlanan Proje"
     }
   },
   "about": {

@@ -1,11 +1,16 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { motion } from "framer-motion";
-import { Zap, Settings, Layers, Package, CheckCircle } from "lucide-react";
+import Link from "next/link";
+import { Zap, Settings, Layers, Package, CheckCircle, ArrowRight } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 export function ServiceGrid() {
   const t = useTranslations("services.services");
+  const tCommon = useTranslations("common");
+  const locale = useLocale();
+  const isRTL = locale === "ar";
 
   const services = [
     {
@@ -19,6 +24,7 @@ export function ServiceGrid() {
         t("laserCutting.features.thickness.steel"),
       ],
       color: "from-primary to-accent",
+      link: `/${locale}/services/laser-cutting`,
     },
     {
       id: "bending",
@@ -31,6 +37,7 @@ export function ServiceGrid() {
         t("bending.features.length"),
       ],
       color: "from-secondary to-primary",
+      link: `/${locale}/services/cnc-bending`,
     },
     {
       id: "flanging",
@@ -43,6 +50,7 @@ export function ServiceGrid() {
         t("flanging.applications.2"),
       ],
       color: "from-accent to-primary",
+      link: `/${locale}/services/flanging-dishing`,
     },
     {
       id: "custom",
@@ -55,6 +63,7 @@ export function ServiceGrid() {
         t("customFabrication.process.2"),
       ],
       color: "from-primary to-secondary",
+      link: `/${locale}/services/custom-fabrication`,
     },
   ];
 
@@ -124,6 +133,25 @@ export function ServiceGrid() {
                     </ol>
                   </div>
                 )}
+
+                {/* Learn More Link */}
+                <div className="mt-6 pt-6 border-t border-divider">
+                  <Link
+                    href={service.link}
+                    className={cn(
+                      "group inline-flex items-center gap-2",
+                      "text-primary font-semibold text-responsive-base",
+                      "hover:text-primary-hover transition-colors duration-200"
+                    )}
+                  >
+                    {tCommon("learnMore")}
+                    <ArrowRight className={cn(
+                      "w-4 h-4 transition-transform duration-300",
+                      "group-hover:translate-x-1",
+                      isRTL && "rotate-180 group-hover:-translate-x-1"
+                    )} />
+                  </Link>
+                </div>
               </motion.div>
             );
           })}

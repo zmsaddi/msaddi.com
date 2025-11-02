@@ -1,0 +1,491 @@
+{
+  "laserCutting": {
+    "meta": {
+      "title": "Lazer Kesim Hizmetleri - MSADDI | MSADDI.EST",
+      "description": "40mm kalınlığa kadar yüksek hassasiyetli lazer kesim hizmetleri, 6000×2500mm çalışma alanı. Halep, Suriye'de metaller için gelişmiş fiber lazer teknolojisi."
+    },
+    "hero": {
+      "title": "Lazer Kesim",
+      "subtitle": "Yüksek Hassasiyetle Gelişmiş Kesim Teknolojisi",
+      "description": "40mm kalınlığa kadar malzemeler için 6000×2500mm çalışma alanı ile en son Fiber Lazer teknolojisini kullanarak lazer kesim hizmetleri sunuyoruz"
+    },
+    "features": {
+      "title": "Lazer Kesim Hizmeti Özellikleri",
+      "items": {
+        "precision": {
+          "title": "Üstün Hassasiyet",
+          "description": "Temiz kenarlarla ±0.1mm'ye kadar kesim hassasiyeti"
+        },
+        "capacity": {
+          "title": "Büyük Kapasite",
+          "description": "6000×2500mm çalışma alanı ve 40mm'ye kadar kalınlık"
+        },
+        "speed": {
+          "title": "Yüksek Hız",
+          "description": "Tutarlı kalite ile yüksek verimlilik"
+        },
+        "materials": {
+          "title": "Malzeme Çeşitliliği",
+          "description": "Tüm demir ve demir dışı metal türlerinin kesilmesi"
+        }
+      }
+    },
+    "specs": {
+      "title": "Teknik Özellikler",
+      "maxThickness": "Maksimum Kalınlık",
+      "workArea": "Çalışma Alanı",
+      "laserType": "Lazer Tipi",
+      "precision": "Hassasiyet",
+      "materials": "Desteklenen Malzemeler",
+      "values": {
+        "thickness": "40mm",
+        "area": "6000×2500mm",
+        "type": "Fiber Lazer",
+        "precisionValue": "±0.1mm",
+        "materialsList": "Çelik, Paslanmaz Çelik, Alüminyum, Bakır, Bronz"
+      }
+    },
+    "applications": {
+      "title": "Uygulamalar ve Endüstriler",
+      "description": "Lazer kesim hizmetlerimiz çeşitli endüstriler ve uygulamalar için idealdir",
+      "items": {
+        "automotive": "Otomotiv bileşenleri ve parçaları",
+        "construction": "İnşaat ve mimari metal işleri",
+        "manufacturing": "Endüstriyel üretim ve makineler",
+        "hvac": "HVAC sistemleri ve kanal işleri",
+        "aerospace": "Havacılık hassas bileşenleri",
+        "custom": "Özel metal imalat projeleri"
+      }
+    },
+    "process": {
+      "title": "Sürecimiz",
+      "description": "Tasarımdan teslimata profesyonel iş akışı",
+      "steps": {
+        "design": {
+          "title": "Tasarım İncelemesi",
+          "description": "Optimal kesim parametrelerini sağlamak için CAD dosyalarınızı ve özelliklerinizi inceliyoruz"
+        },
+        "optimization": {
+          "title": "Malzeme Optimizasyonu",
+          "description": "Malzeme israfını minimize etmek ve maliyetleri azaltmak için verimli yerleştirme algoritmaları"
+        },
+        "cutting": {
+          "title": "Hassas Kesim",
+          "description": "Gerçek zamanlı kalite izleme ile son teknoloji fiber lazer kesim"
+        },
+        "inspection": {
+          "title": "Kalite Kontrolü",
+          "description": "Parçaların tam özelliklerinizi karşıladığından emin olmak için kapsamlı inceleme"
+        },
+        "delivery": {
+          "title": "Hızlı Teslimat",
+          "description": "Parçalarınızı korumak için özenli paketleme ile zamanında teslimat"
+        }
+      }
+    },
+    "advantages": {
+      "title": "Lazer Kesim Hizmetlerimizi Neden Seçmelisiniz",
+      "items": {
+        "noContact": {
+          "title": "Temassız Kesim",
+          "description": "Lazer kesim temassız bir işlemdir, takım aşınması ve malzeme deformasyonunu ortadan kaldırır"
+        },
+        "flexibility": {
+          "title": "Tasarım Esnekliği",
+          "description": "Karmaşık şekiller ve detaylı tasarımlar kolaylıkla kesilebilir"
+        },
+        "speed": {
+          "title": "Hızlı İşlem",
+          "description": "Hızlı kesim hızları, projeleriniz için daha kısa teslim süreleri anlamına gelir"
+        },
+        "quality": {
+          "title": "Tutarlı Kalite",
+          "description": "Bilgisayar kontrollü hassasiyet tüm parçalarda tekrarlanabilirlik sağlar"
+        },
+        "minimal": {
+          "title": "Minimum Bitirme",
+          "description": "Temiz kesimler ikincil işlemlere olan ihtiyacı azaltır veya ortadan kaldırır"
+        },
+        "versatile": {
+          "title": "Malzeme Çok Yönlülüğü",
+          "description": "Çeşitli metal türleri ve kalınlıkları ile çalışır"
+        }
+      }
+    },
+    "gallery": {
+      "title": "Proje Galerisi",
+      "imageAlt": "Lazer Kesim İş Örnekleri - MSADDI"
+    },
+    "cta": {
+      "title": "Lazer Kesim Hizmetine mi İhtiyacınız Var?",
+      "description": "Projeniz için ücretsiz teklif alın",
+      "button": "Teklif İste"
+    }
+  },
+  "cncBending": {
+    "meta": {
+      "title": "CNC Bükme Hizmetleri - MSADDI | MSADDI.EST",
+      "description": "135T/3200mm kapasiteli profesyonel CNC bükme hizmetleri. Halep, Suriye'de CNC teknolojisi ile hassas metal bükme."
+    },
+    "hero": {
+      "title": "CNC Bükme",
+      "subtitle": "Tam Dijital Kontrol ile Hassas Bükme",
+      "description": "135T kuvvet ve 3200mm bükme uzunluğu ile yüksek hassasiyetle CNC teknolojisi kullanarak metal bükme hizmetleri sunuyoruz"
+    },
+    "features": {
+      "title": "CNC Bükme Hizmeti Özellikleri",
+      "items": {
+        "precision": {
+          "title": "Açı Hassasiyeti",
+          "description": "±0.5°'ye kadar önceden tanımlanmış açılarla doğru bükme"
+        },
+        "capacity": {
+          "title": "Yüksek Kuvvet",
+          "description": "3200mm çalışma uzunluğu ile 135T bükme kuvveti"
+        },
+        "automation": {
+          "title": "Tam Otomasyon",
+          "description": "Tutarlı ve tekrarlanabilir üretim için CNC kontrolü"
+        },
+        "flexibility": {
+          "title": "Yüksek Esneklik",
+          "description": "Çoklu açılarla karmaşık şekilleri bükme yeteneği"
+        }
+      }
+    },
+    "specs": {
+      "title": "Teknik Özellikler",
+      "bendingForce": "Bükme Kuvveti",
+      "workLength": "Çalışma Uzunluğu",
+      "maxThickness": "Maksimum Kalınlık",
+      "precision": "Hassasiyet",
+      "materials": "Desteklenen Malzemeler",
+      "values": {
+        "force": "135T",
+        "length": "3200mm",
+        "thickness": "20mm (Çelik)",
+        "precisionValue": "±0.5°",
+        "materialsList": "Çelik, Paslanmaz Çelik, Alüminyum"
+      }
+    },
+    "capabilities": {
+      "title": "Bükme Yetenekleri",
+      "description": "Çeşitli uygulamalar için gelişmiş abkant teknolojisi",
+      "items": {
+        "airBending": "Çeşitli malzemeler için hava bükme",
+        "bottomBending": "Keskin açılar için alt bükme",
+        "coining": "Hassas parçalar için damgalama",
+        "hemming": "Kenar bitirme için kıvırma",
+        "offset": "Karmaşık profiller için ofset bükme",
+        "wipe": "Dar yarıçaplar için silme bükme"
+      }
+    },
+    "process": {
+      "title": "Bükme Sürecimiz",
+      "description": "Metal şekillendirmeye uzman yaklaşım",
+      "steps": {
+        "design": {
+          "title": "Mühendislik Analizi",
+          "description": "Bükme sırası ve takım seçimi için parça tasarımının gözden geçirilmesi"
+        },
+        "setup": {
+          "title": "CNC Programlama",
+          "description": "Tüm bükme parametreleri ve açılarının hassas programlanması"
+        },
+        "forming": {
+          "title": "CNC Şekillendirme",
+          "description": "Gerçek zamanlı açı doğrulama ile otomatik bükme"
+        },
+        "inspection": {
+          "title": "Boyutsal Kontrol",
+          "description": "Hassasiyeti sağlamak için kapsamlı ölçüm"
+        }
+      }
+    },
+    "advantages": {
+      "title": "CNC Bükme Avantajları",
+      "items": {
+        "repeatability": {
+          "title": "Mükemmel Tekrarlanabilirlik",
+          "description": "CNC kontrolü her seferinde aynı parçaları garanti eder"
+        },
+        "complex": {
+          "title": "Karmaşık Geometriler",
+          "description": "Yeniden konumlandırma olmadan tek kurulumda çoklu bükmeler"
+        },
+        "efficiency": {
+          "title": "Yüksek Verimlilik",
+          "description": "Manuel bükmeye kıyasla daha hızlı kurulum ve üretim"
+        },
+        "precision": {
+          "title": "Üstün Hassasiyet",
+          "description": "Tüm parçalarda dar toleranslar ve tutarlı açılar"
+        }
+      }
+    },
+    "gallery": {
+      "title": "Proje Galerisi",
+      "imageAlt": "CNC Bükme İş Örnekleri - MSADDI"
+    },
+    "cta": {
+      "title": "CNC Bükme Hizmetine mi İhtiyacınız Var?",
+      "description": "Projeniz için ücretsiz teklif alın",
+      "button": "Teklif İste"
+    }
+  },
+  "flangingDishing": {
+    "meta": {
+      "title": "Flanş ve Bombeli Şekillendirme Hizmetleri - MSADDI | MSADDI.EST",
+      "description": "Metaller için profesyonel flanş ve bombeli şekillendirme hizmetleri. Halep, Suriye'de hassas kenar şekillendirme ve metal biçimlendirme."
+    },
+    "hero": {
+      "title": "Flanş ve Bombeli Şekillendirme",
+      "subtitle": "Profesyonel Metal Kenar Şekillendirme",
+      "description": "Yüksek hassasiyetle metal kenarların hassas şekillendirme ve bükme için özel Flanş ve Bombeli Şekillendirme hizmetleri sağlıyoruz"
+    },
+    "features": {
+      "title": "Flanş ve Bombeli Şekillendirme Hizmeti Özellikleri",
+      "items": {
+        "flanging": {
+          "title": "Hassas Flanş",
+          "description": "Belirtilen açılarda metal kenarların şekillendirilmesi ve bükülmesi"
+        },
+        "dishing": {
+          "title": "Uzman Bombeli Şekillendirme",
+          "description": "Dairesel ve içbükey eğrilikler oluşturma"
+        },
+        "quality": {
+          "title": "Yüksek Kalite",
+          "description": "Bozulma olmadan mükemmel yüzey bitişi"
+        },
+        "custom": {
+          "title": "Özel Çözümler",
+          "description": "Her endüstriyel uygulama için özel tasarımlar"
+        }
+      }
+    },
+    "specs": {
+      "title": "Teknik Özellikler",
+      "flangeAngle": "Flanş Açısı",
+      "maxDiameter": "Maksimum Çap",
+      "thickness": "Kalınlık Aralığı",
+      "materials": "Desteklenen Malzemeler",
+      "values": {
+        "angle": "30°-180°",
+        "diameter": "2000mm",
+        "thicknessValue": "1-10mm",
+        "materialsList": "Çelik, Paslanmaz Çelik, Alüminyum, Bakır"
+      }
+    },
+    "applications": {
+      "title": "Uygulamalar",
+      "description": "Çeşitli endüstriyel gereksinimler için ideal",
+      "items": {
+        "tanks": "Depolama tankları ve basınçlı kaplar",
+        "heads": "Bombeli başlıklar ve son kapaklar",
+        "containers": "Endüstriyel kaplar ve huniler",
+        "ductwork": "HVAC ve endüstriyel kanal işleri",
+        "architectural": "Mimari metal elemanlar",
+        "custom": "Özel şekillendirilmiş bileşenler"
+      }
+    },
+    "process": {
+      "title": "Şekillendirme Süreci",
+      "description": "İki aşamalı metal şekillendirme tekniği",
+      "steps": {
+        "design": {
+          "title": "Tasarım Değerlendirmesi",
+          "description": "Parça geometrisi ve malzeme gereksinimlerinin değerlendirilmesi"
+        },
+        "dishing": {
+          "title": "Bombeli Şekillendirme İşlemi",
+          "description": "Hidrolik pres kullanarak kubbe veya bombeli şekil oluşturma"
+        },
+        "flanging": {
+          "title": "Flanş İşlemi",
+          "description": "Belirtilen açıyla flanş veya kenar oluşturma"
+        },
+        "finishing": {
+          "title": "Yüzey Bitirme",
+          "description": "Pürüzsüz, profesyonel görünüm için son dokunuşlar"
+        }
+      }
+    },
+    "advantages": {
+      "title": "Hizmet Avantajları",
+      "items": {
+        "structural": {
+          "title": "Yapısal Bütünlük",
+          "description": "Şekillendirilmiş parçaların geliştirilmiş mukavemeti ve sertliği"
+        },
+        "seamless": {
+          "title": "Dikişsiz Şekillendirme",
+          "description": "Kaynak olmadan tek parça yapı"
+        },
+        "versatility": {
+          "title": "Tasarım Çok Yönlülüğü",
+          "description": "Düz, konik ve eliptik dahil çeşitli şekiller"
+        },
+        "economy": {
+          "title": "Uygun Maliyetli",
+          "description": "Malzeme israfını azaltan verimli süreç"
+        }
+      }
+    },
+    "gallery": {
+      "title": "Proje Galerisi",
+      "imageAlt": "Flanş ve Bombeli Şekillendirme İş Örnekleri - MSADDI"
+    },
+    "cta": {
+      "title": "Flanş ve Bombeli Şekillendirme Hizmetine mi İhtiyacınız Var?",
+      "description": "Projeniz için ücretsiz teklif alın",
+      "button": "Teklif İste"
+    }
+  },
+  "customFabrication": {
+    "meta": {
+      "title": "Özel Metal İmalat - MSADDI | MSADDI.EST",
+      "description": "Özel metal imalat hizmetleri. Halep, Suriye'de özel metal parçaların tasarımı ve imalatı."
+    },
+    "hero": {
+      "title": "Özel İmalat",
+      "subtitle": "İhtiyaçlarınız İçin Komple Üretim Çözümleri",
+      "description": "Tam özelliklerinize göre tasarımdan nihai teslimata kadar kapsamlı metal imalat hizmetleri sunuyoruz"
+    },
+    "features": {
+      "title": "Özel İmalat Hizmeti Özellikleri",
+      "items": {
+        "design": {
+          "title": "Mühendislik Tasarımı",
+          "description": "Fikirlerinizi gerçeğe dönüştürmek için uzman mühendislik ekibi"
+        },
+        "manufacturing": {
+          "title": "Entegre Üretim",
+          "description": "Tek tesiste kesim, bükme, kaynak ve bitirme"
+        },
+        "quality": {
+          "title": "Kalite Kontrolü",
+          "description": "Tam uyumluluğu sağlamak için kapsamlı inceleme"
+        },
+        "delivery": {
+          "title": "Hızlı Teslimat",
+          "description": "Yüksek kalite ile son tarihlere bağlılık"
+        }
+      }
+    },
+    "specs": {
+      "title": "Mevcut Hizmetler",
+      "services": {
+        "cutting": "Kesim (Lazer, Plazma, Mekanik)",
+        "bending": "Bükme (CNC, Hidrolik)",
+        "welding": "Kaynak (MIG, TIG, Arc)",
+        "finishing": "Bitirme (Kaplama, Taşlama, Cilalama)",
+        "assembly": "Montaj ve Kurulum"
+      }
+    },
+    "capabilities": {
+      "title": "Tam İmalat Yetenekleri",
+      "description": "Konseptten tamamlanmaya kadar tam kurum içi üretim",
+      "items": {
+        "cutting": {
+          "title": "Çoklu İşlem Kesim",
+          "description": "Tüm malzemeler için lazer, plazma ve mekanik kesim"
+        },
+        "forming": {
+          "title": "Gelişmiş Şekillendirme",
+          "description": "CNC bükme, haddeleme ve abkant operasyonları"
+        },
+        "welding": {
+          "title": "Uzman Kaynak",
+          "description": "Sertifikalı profesyoneller tarafından MIG, TIG, Arc kaynak"
+        },
+        "machining": {
+          "title": "Hassas İşleme",
+          "description": "Dar toleranslar için CNC işleme"
+        },
+        "finishing": {
+          "title": "Yüzey Bitirme",
+          "description": "Taşlama, cilalama, toz kaplama ve boyama"
+        },
+        "assembly": {
+          "title": "Komple Montaj",
+          "description": "Tam ürün montaj ve test hizmetleri"
+        }
+      }
+    },
+    "process": {
+      "title": "İmalat Sürecimiz",
+      "description": "Konseptten tamamlanmaya kapsamlı yaklaşım",
+      "steps": {
+        "consultation": {
+          "title": "İlk Danışma",
+          "description": "Gereksinimlerinizi ve proje hedeflerinizi anlama"
+        },
+        "design": {
+          "title": "Tasarım ve Mühendislik",
+          "description": "Detaylı çizimler ve özellikler oluşturma"
+        },
+        "prototyping": {
+          "title": "Prototipleme",
+          "description": "Onay için prototip oluşturma ve test etme"
+        },
+        "production": {
+          "title": "Tam Üretim",
+          "description": "Optimize edilmiş süreçler kullanarak üretim"
+        },
+        "qa": {
+          "title": "Kalite Güvencesi",
+          "description": "Titiz test ve inceleme protokolleri"
+        },
+        "delivery": {
+          "title": "Teslimat ve Destek",
+          "description": "Devam eden destek ile zamanında teslimat"
+        }
+      }
+    },
+    "industries": {
+      "title": "Hizmet Verdiğimiz Endüstriler",
+      "description": "Çeşitli endüstriler tarafından güvenilen",
+      "items": {
+        "construction": "İnşaat ve Altyapı",
+        "automotive": "Otomotiv ve Ulaşım",
+        "industrial": "Endüstriyel Ekipman",
+        "agriculture": "Tarım ve Çiftçilik",
+        "food": "Gıda ve İçecek İşleme",
+        "energy": "Enerji ve Kamu Hizmetleri",
+        "hvac": "HVAC Sistemleri",
+        "architectural": "Mimari Metal İşleri"
+      }
+    },
+    "advantages": {
+      "title": "Özel İmalat Neden Seçilmeli",
+      "items": {
+        "tailored": {
+          "title": "Özel Çözümler",
+          "description": "Her proje özellikle ihtiyaçlarınız için tasarlanmıştır"
+        },
+        "expertise": {
+          "title": "Teknik Uzmanlık",
+          "description": "30+ yıllık imalat deneyimi"
+        },
+        "efficiency": {
+          "title": "Tek Nokta",
+          "description": "Verimlilik için tek çatı altında tüm süreçler"
+        },
+        "scalability": {
+          "title": "Ölçeklenebilir Üretim",
+          "description": "Prototiplerden yüksek hacimli üretime"
+        }
+      }
+    },
+    "gallery": {
+      "title": "Proje Galerisi",
+      "imageAlt": "Özel İmalat İş Örnekleri - MSADDI"
+    },
+    "cta": {
+      "title": "Özel Bir Projeniz mi Var?",
+      "description": "Gereksinimlerinizi görüşmek için bizimle iletişime geçin",
+      "button": "Projenizi Başlatın"
+    }
+  }
+}
