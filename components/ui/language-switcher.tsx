@@ -3,14 +3,38 @@
 import { useLocale } from "next-intl";
 import { useRouter, usePathname } from "next/navigation";
 import { useState, useRef, useEffect } from "react";
-import { Globe, ChevronDown } from "lucide-react";
+import { Globe, Check } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 
 const languages = [
-  { code: "en", name: "English", flag: "/flags/uk.svg", label: "EN", dir: "ltr", alt: "United Kingdom" },
-  { code: "ar", name: "العربية", flag: "/flags/sy.svg", label: "عربي", dir: "rtl", alt: "Syria" },
-  { code: "tr", name: "Türkçe", flag: "/flags/tr.svg", label: "TR", dir: "ltr", alt: "Turkey" },
+  {
+    code: "en",
+    name: "English",
+    flag: "/flags/uk.svg",
+    label: "English",
+    shortLabel: "EN",
+    dir: "ltr",
+    alt: "United Kingdom"
+  },
+  {
+    code: "ar",
+    name: "العربية",
+    flag: "/flags/sy.svg",
+    label: "العربية",
+    shortLabel: "AR",
+    dir: "rtl",
+    alt: "Syria"
+  },
+  {
+    code: "tr",
+    name: "Türkçe",
+    flag: "/flags/tr.svg",
+    label: "Türkçe",
+    shortLabel: "TR",
+    dir: "ltr",
+    alt: "Turkey"
+  },
 ];
 
 interface LanguageSwitcherProps {
@@ -49,71 +73,92 @@ export function LanguageSwitcher({ className }: LanguageSwitcherProps) {
 
   return (
     <div className={cn("relative", className)} ref={dropdownRef}>
+      {/* Professional Language Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
         className={cn(
-          "flex items-center gap-2 px-4 py-2.5",
-          "bg-surface-container rounded-md-full border border-outline",
-          "hover:bg-primary/10 transition-all duration-200",
-          "text-body-md font-medium text-text-primary",
-          "shadow-elevation-1 hover:shadow-elevation-2",
-          "focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+          "flex items-center gap-2 px-3 py-2",
+          "bg-white border border-gray-200 rounded-lg",
+          "hover:border-blue-400 hover:shadow-md",
+          "transition-all duration-200",
+          "text-sm font-medium text-gray-700",
+          "focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-1"
         )}
         aria-label="Select language"
         aria-expanded={isOpen}
       >
-        <Globe className="h-5 w-5 text-primary" />
-        <span className="flex items-center gap-2">
-          {currentLanguage?.flag && (
-            <Image
-              src={currentLanguage.flag}
-              alt={currentLanguage.alt}
-              width={24}
-              height={16}
-              className="rounded-sm shadow-sm"
-            />
-          )}
-          <span className="hidden sm:inline">{currentLanguage?.label}</span>
+        {currentLanguage?.flag && (
+          <Image
+            src={currentLanguage.flag}
+            alt={currentLanguage.alt}
+            width={20}
+            height={14}
+            className="rounded-sm"
+          />
+        )}
+        <span className="hidden sm:inline text-gray-700">
+          {currentLanguage?.label}
         </span>
-        <ChevronDown className={cn("h-4 w-4 transition-transform duration-200", isOpen && "rotate-180")} />
+        <span className="sm:hidden text-gray-700">
+          {currentLanguage?.shortLabel}
+        </span>
+        <svg
+          className={cn(
+            "w-4 h-4 text-gray-500 transition-transform duration-200",
+            isOpen && "rotate-180"
+          )}
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+        </svg>
       </button>
 
+      {/* Professional Dropdown Menu */}
       {isOpen && (
-        <div className={cn(
-          "absolute mt-2 w-48 py-2",
-          locale === "ar" ? "left-0" : "right-0",
-          "bg-surface rounded-md-lg border border-outline",
-          "shadow-elevation-4 animate-fade-in z-50"
-        )}>
+        <div
+          className={cn(
+            "absolute mt-2 w-52 py-1",
+            locale === "ar" ? "left-0" : "right-0",
+            "bg-white rounded-lg border border-gray-200",
+            "shadow-lg z-50",
+            "animate-in fade-in-0 zoom-in-95 duration-200"
+          )}
+        >
+          <div className="px-3 py-2 border-b border-gray-100">
+            <p className="text-xs font-medium text-gray-500 uppercase tracking-wider">
+              Select Language
+            </p>
+          </div>
+
           {languages.map((lang) => (
             <button
               key={lang.code}
               onClick={() => handleLanguageChange(lang.code)}
               className={cn(
-                "flex items-center gap-3 w-full px-4 py-3 text-left",
-                "hover:bg-primary/10 transition-colors duration-150",
-                "text-body-md",
+                "flex items-center gap-3 w-full px-3 py-2.5",
+                "hover:bg-gray-50 transition-colors duration-150",
+                "text-sm",
                 locale === lang.code
-                  ? "bg-primary/10 text-primary font-medium"
-                  : "text-text-primary"
+                  ? "bg-blue-50 text-blue-700"
+                  : "text-gray-700"
               )}
               dir={lang.dir}
             >
               <Image
                 src={lang.flag}
                 alt={lang.alt}
-                width={28}
-                height={19}
+                width={24}
+                height={17}
                 className="rounded-sm shadow-sm flex-shrink-0"
               />
-              <div className="flex flex-col items-start">
-                <span className="font-medium">{lang.label}</span>
-                <span className="text-xs text-text-secondary">{lang.name}</span>
+              <div className="flex-1 text-left">
+                <div className="font-medium">{lang.label}</div>
+                <div className="text-xs text-gray-500">{lang.name}</div>
               </div>
               {locale === lang.code && (
-                <svg className="w-5 h-5 text-primary ml-auto" fill="none" strokeWidth="2" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                </svg>
+                <Check className="w-4 h-4 text-blue-600" />
               )}
             </button>
           ))}

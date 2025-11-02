@@ -6,6 +6,7 @@ import { LayoutDirection } from "@/components/providers/layout-direction";
 import { GoogleAnalytics } from "@/components/analytics/google-analytics";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
+import { WhatsAppButton } from "@/components/ui/whatsapp-button";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
@@ -36,6 +37,7 @@ export default async function LocaleLayout({
         <Header />
         <main className="flex-grow">{children}</main>
         <Footer />
+        <WhatsAppButton />
       </ThemeProvider>
       <GoogleAnalytics />
       <Analytics />
