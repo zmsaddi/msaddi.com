@@ -19,7 +19,8 @@ Allow: /*/services
 Allow: /*/about
 Allow: /*/contact
 
-# Disallow admin/system pages
+# Disallow admin/system pages (except sitemap)
+Allow: /api/sitemap
 Disallow: /api/
 Disallow: /_next/static/
 Disallow: /_next/image/
