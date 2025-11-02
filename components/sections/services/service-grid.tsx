@@ -144,7 +144,7 @@ export function ServiceGrid() {
                       "hover:text-primary-hover transition-colors duration-200"
                     )}
                   >
-                    {tCommon("learnMore")}
+                    {tCommon("buttons.learnMore")}
                     <ArrowRight className={cn(
                       "w-4 h-4 transition-transform duration-300",
                       "group-hover:translate-x-1",
