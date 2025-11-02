@@ -76,6 +76,11 @@
       ]
     }
   },
+  "labels": {
+    "features": "المميزات:",
+    "applications": "التطبيقات:",
+    "process": "عمليتنا:"
+  },
   "industries": {
     "title": "الصناعات التي نخدمها",
     "list": [

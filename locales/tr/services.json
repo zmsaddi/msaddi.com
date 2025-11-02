@@ -76,6 +76,11 @@
       ]
     }
   },
+  "labels": {
+    "features": "Özellikler:",
+    "applications": "Uygulamalar:",
+    "process": "Sürecimiz:"
+  },
   "industries": {
     "title": "Hizmet Verdiğimiz Sektörler",
     "list": [

@@ -39,12 +39,7 @@ export function ServiceGrid() {
       icon: Layers,
       title: t("flanging.title"),
       description: t("flanging.description"),
-      applications: [
-        "Tank Head Manufacturing",
-        "Silos & Storage Tanks",
-        "Road & Railway Tankers",
-        "Pressure Vessel Components",
-      ],
+      applications: t("flanging.applications", { returnObjects: true }) as string[],
       color: "from-green-500 to-teal-500",
     },
     {
@@ -52,14 +47,7 @@ export function ServiceGrid() {
       icon: Package,
       title: t("customFabrication.title"),
       description: t("customFabrication.description"),
-      process: [
-        "Design consultation",
-        "Material selection",
-        "Precision manufacturing",
-        "Quality inspection",
-        "Surface finishing",
-        "Delivery & installation",
-      ],
+      process: t("customFabrication.process", { returnObjects: true }) as string[],
       color: "from-orange-500 to-red-500",
     },
   ];
@@ -88,7 +76,7 @@ export function ServiceGrid() {
 
                 {service.features && (
                   <div>
-                    <h4 className="font-semibold mb-3">Features:</h4>
+                    <h4 className="font-semibold mb-3">{t("labels.features")}</h4>
                     <ul className="space-y-2">
                       {service.features.map((feature, idx) => (
                         <li key={idx} className="flex items-start gap-2">
@@ -102,7 +90,7 @@ export function ServiceGrid() {
 
                 {service.applications && (
                   <div>
-                    <h4 className="font-semibold mb-3">Applications:</h4>
+                    <h4 className="font-semibold mb-3">{t("labels.applications")}</h4>
                     <ul className="space-y-2">
                       {service.applications.map((app, idx) => (
                         <li key={idx} className="flex items-start gap-2">
@@ -116,7 +104,7 @@ export function ServiceGrid() {
 
                 {service.process && (
                   <div>
-                    <h4 className="font-semibold mb-3">Our Process:</h4>
+                    <h4 className="font-semibold mb-3">{t("labels.process")}</h4>
                     <ol className="space-y-2">
                       {service.process.map((step, idx) => (
                         <li key={idx} className="flex items-start gap-3">

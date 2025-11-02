@@ -10,11 +10,22 @@
     },
     "flanging": {
       "title": "Flangiatura",
-      "description": "Fondi per serbatoi e silos"
+      "description": "Fondi per serbatoi e silos",
+      "benefits": [
+        "Soluzioni di formatura personalizzate",
+        "Capacità di grande diametro",
+        "Varie qualità di materiali",
+        "Processi certificati di qualità"
+      ]
     },
     "custom": {
       "title": "Fabbricazione su Misura",
       "description": "Soluzioni complete"
     }
+  },
+  "labels": {
+    "features": "Caratteristiche:",
+    "applications": "Applicazioni:",
+    "process": "Il nostro processo:"
   }
 }

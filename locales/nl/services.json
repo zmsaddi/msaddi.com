@@ -10,11 +10,22 @@
     },
     "flanging": {
       "title": "Flensen",
-      "description": "Tankbodems en silo's"
+      "description": "Tankbodems en silo's",
+      "benefits": [
+        "Op maat gemaakte vormoplossingen",
+        "Grote diameter mogelijkheden",
+        "Verschillende materiaalkwaliteiten",
+        "Kwaliteitsgecertificeerde processen"
+      ]
     },
     "custom": {
       "title": "Maatwerk",
       "description": "Complete oplossingen"
     }
+  },
+  "labels": {
+    "features": "Kenmerken:",
+    "applications": "Toepassingen:",
+    "process": "Ons proces:"
   }
 }

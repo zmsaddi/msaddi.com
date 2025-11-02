@@ -10,11 +10,22 @@
     },
     "flanging": {
       "title": "Rebordeado",
-      "description": "Cabezales de tanques y silos"
+      "description": "Cabezales de tanques y silos",
+      "benefits": [
+        "Soluciones de conformado personalizadas",
+        "Capacidades de gran diámetro",
+        "Varios grados de material",
+        "Procesos certificados de calidad"
+      ]
     },
     "custom": {
       "title": "Fabricación a Medida",
       "description": "Soluciones completas"
     }
+  },
+  "labels": {
+    "features": "Características:",
+    "applications": "Aplicaciones:",
+    "process": "Nuestro proceso:"
   }
 }

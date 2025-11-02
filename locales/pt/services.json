@@ -10,11 +10,22 @@
     },
     "flanging": {
       "title": "Flangeamento",
-      "description": "Tampos de tanques e silos"
+      "description": "Tampos de tanques e silos",
+      "benefits": [
+        "Soluções de conformação personalizadas",
+        "Capacidades de grande diâmetro",
+        "Vários graus de material",
+        "Processos certificados de qualidade"
+      ]
     },
     "custom": {
       "title": "Fabricação Personalizada",
       "description": "Soluções completas"
     }
+  },
+  "labels": {
+    "features": "Características:",
+    "applications": "Aplicações:",
+    "process": "Nosso processo:"
   }
 }

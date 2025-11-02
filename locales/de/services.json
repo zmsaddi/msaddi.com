@@ -13,11 +13,22 @@
     },
     "flanging": {
       "title": "Bördeln & Wölben",
-      "description": "Spezialisiert auf Tankköpfe und Silos"
+      "description": "Spezialisiert auf Tankköpfe und Silos",
+      "benefits": [
+        "Kundenspezifische Umformungslösungen",
+        "Große Durchmesserfähigkeiten",
+        "Verschiedene Materialgüten",
+        "Qualitätszertifizierte Prozesse"
+      ]
     },
     "custom": {
       "title": "Maßanfertigung",
       "description": "Komplette Blechverarbeitungslösungen"
     }
+  },
+  "labels": {
+    "features": "Eigenschaften:",
+    "applications": "Anwendungen:",
+    "process": "Unser Prozess:"
   }
 }

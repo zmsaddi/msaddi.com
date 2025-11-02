@@ -39,7 +39,13 @@
         "silos": "Construction de silos",
         "tankers": "Citernes routières",
         "custom": "Formes personnalisées"
-      }
+      },
+      "benefits": [
+        "Solutions de formage personnalisées",
+        "Capacités de grand diamètre",
+        "Diverses qualités de matériaux",
+        "Processus certifiés de qualité"
+      ]
     },
     "custom": {
       "title": "Fabrication Sur Mesure",
@@ -78,5 +84,10 @@
     "title": "Besoin d'un Devis?",
     "subtitle": "Contactez-nous pour vos besoins en fabrication métallique",
     "button": "Demander un Devis"
+  },
+  "labels": {
+    "features": "Caractéristiques:",
+    "applications": "Applications:",
+    "process": "Notre processus:"
   }
 }
