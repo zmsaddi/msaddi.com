@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 export function Timeline() {
   const t = useTranslations("about.timeline");
   const locale = useLocale();
-  const isRTL = locale === "ar";
+  const _isRTL = locale === "ar";
 
   const milestones = [
     { year: "1994", title: "Foundation", description: "MSADDI.EST established in Aleppo with a vision to revolutionize metal fabrication" },
