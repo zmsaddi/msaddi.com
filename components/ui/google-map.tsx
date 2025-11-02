@@ -9,11 +9,11 @@ interface GoogleMapProps {
 export function GoogleMap({ className }: GoogleMapProps) {
   const t = useTranslations("contact");
 
-  // MSADDI.EST Location in Aleppo Industrial City
+  // MSADDI.EST Location in Al-Shaqeef Industrial Zone
   // Coordinates from the provided Google Maps link
-  const latitude = "36.3089";
-  const longitude = "37.0713";
-  const mapUrl = "https://maps.app.goo.gl/qBBd4SVV8WXAarraA";
+  const latitude = "36.253684";
+  const longitude = "37.1688932";
+  const mapUrl = "https://maps.app.goo.gl/fJug9ePVizwekFcJA";
 
   // Embed map URL with proper coordinates
   const embedUrl = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3224.8923456789!2d${longitude}!3d${latitude}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzbCsDE4JzMyLjAiTiAzN8KwMDQnMTYuNyJF!5e0!3m2!1sen!2s!4v${Date.now()}`;
@@ -27,7 +27,7 @@ export function GoogleMap({ className }: GoogleMapProps) {
             {t("map.title")}
           </h3>
           <p className="text-sm text-gray-600 mt-1">
-            Sheikh Najjar Industrial City, Aleppo, Syria
+            Al-Shaqeef Industrial Zone, Aleppo, Syria
           </p>
         </div>
 
@@ -54,7 +54,7 @@ export function GoogleMap({ className }: GoogleMapProps) {
                 MSADDI.EST Metal Fabrication
               </p>
               <p className="text-xs text-gray-600 mt-0.5">
-                Industrial Zone, Sheikh Najjar, Aleppo
+                Al-Shaqeef Industrial Zone, Aleppo
               </p>
             </div>
             <a
