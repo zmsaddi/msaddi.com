@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
 export function CTASection() {
-  const t = useTranslations("cta");
+  const t = useTranslations("home.cta");
   const locale = useLocale();
 
   return (

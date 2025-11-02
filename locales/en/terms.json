@@ -1,0 +1,45 @@
+{
+  "page": {
+    "title": "Terms of Service - MSADDI.EST",
+    "description": "Terms of service for MSADDI.EST metal fabrication services in Syria",
+    "lastUpdated": "Last updated"
+  },
+  "sections": {
+    "acceptance": {
+      "title": "Acceptance of Terms",
+      "content": "By using our website or services, you agree to these terms of service. If you do not agree with these terms, please do not use our services."
+    },
+    "services": {
+      "title": "Our Services",
+      "content": "MSADDI.EST provides professional metal fabrication services including:",
+      "items": {
+        "laser": "Laser cutting up to 40mm thickness",
+        "bending": "CNC bending with 135T/3200mm capacity",
+        "flanging": "Flanging and dishing services",
+        "custom": "Custom metal fabrication solutions"
+      }
+    },
+    "ordering": {
+      "title": "Ordering Process",
+      "content": "All orders are subject to acceptance and availability. We reserve the right to refuse service to anyone. Quotes are valid for 30 days unless otherwise specified. Final pricing may vary based on material costs and project specifications."
+    },
+    "pricing": {
+      "title": "Pricing and Payment",
+      "content": "Prices are subject to change without notice. Payment terms are net 30 days unless otherwise agreed. We accept bank transfers and cash payments. A deposit may be required for large orders."
+    },
+    "warranty": {
+      "title": "Quality and Warranty",
+      "content": "We guarantee the quality of our workmanship according to industry standards. Any defects resulting from our manufacturing process will be corrected at no additional charge. This warranty does not cover normal wear and tear or damage from misuse."
+    },
+    "liability": {
+      "title": "Limitation of Liability",
+      "content": "MSADDI.EST shall not be liable for any indirect, incidental, or consequential damages arising from the use of our services. Our total liability shall not exceed the amount paid for the specific service in question."
+    },
+    "contact": {
+      "title": "Contact Information",
+      "content": "For questions about these terms of service, please contact us at:",
+      "email": "Email",
+      "phone": "Phone"
+    }
+  }
+}

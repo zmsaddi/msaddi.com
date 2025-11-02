@@ -1,0 +1,37 @@
+{
+  "page": {
+    "title": "Gizlilik Politikası - MSADDI.EST",
+    "description": "MSADDI.EST Suriye metal işleme hizmetleri gizlilik politikası",
+    "lastUpdated": "Son güncelleme"
+  },
+  "sections": {
+    "introduction": {
+      "title": "Giriş",
+      "content": "MSADDI.EST olarak, gizliliğinizi korumaya ve kişisel bilgilerinizin güvenliğini sağlamaya kararlıyız. Bu gizlilik politikası, web sitemizi veya hizmetlerimizi kullandığınızda verilerinizi nasıl topladığımızı, kullandığımızı ve koruduğumuzu açıklar."
+    },
+    "dataCollection": {
+      "title": "Topladığımız Bilgiler",
+      "content": "Bizimle iletişime geçtiğinizde veya teklif istediğinizde aşağıdaki bilgileri toplarız:",
+      "items": {
+        "name": "Ad ve şirket adı",
+        "email": "E-posta adresi",
+        "phone": "Telefon numarası",
+        "message": "Proje detayları ve gereksinimler"
+      }
+    },
+    "dataUse": {
+      "title": "Bilgilerinizi Nasıl Kullanıyoruz",
+      "content": "Bilgilerinizi yalnızca sorularınızı yanıtlamak, metal işleme hizmetleri için teklifler sunmak ve projeleriniz hakkında iletişim kurmak için kullanırız. Kişisel bilgilerinizi asla pazarlama amaçlı üçüncü taraflarla satmaz veya paylaşmayız."
+    },
+    "dataProtection": {
+      "title": "Veri Koruması",
+      "content": "Kişisel bilgilerinizi yetkisiz erişim, ifşa veya kötüye kullanımdan korumak için endüstri standardı güvenlik önlemleri uygularız. Verileriniz güvenli bir şekilde saklanır ve yalnızca yetkili personel tarafından erişilir."
+    },
+    "contact": {
+      "title": "Bize Ulaşın",
+      "content": "Gizlilik politikamız veya verilerinizi nasıl işlediğimiz hakkında sorularınız varsa, lütfen bizimle iletişime geçin:",
+      "email": "E-posta",
+      "phone": "Telefon"
+    }
+  }
+}

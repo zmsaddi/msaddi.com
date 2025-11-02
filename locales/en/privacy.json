@@ -1,0 +1,37 @@
+{
+  "page": {
+    "title": "Privacy Policy - MSADDI.EST",
+    "description": "Privacy policy for MSADDI.EST metal fabrication services in Syria",
+    "lastUpdated": "Last updated"
+  },
+  "sections": {
+    "introduction": {
+      "title": "Introduction",
+      "content": "At MSADDI.EST, we are committed to protecting your privacy and ensuring the security of your personal information. This privacy policy explains how we collect, use, and protect your data when you use our website or services."
+    },
+    "dataCollection": {
+      "title": "Information We Collect",
+      "content": "We collect the following information when you contact us or request a quote:",
+      "items": {
+        "name": "Name and company name",
+        "email": "Email address",
+        "phone": "Phone number",
+        "message": "Project details and requirements"
+      }
+    },
+    "dataUse": {
+      "title": "How We Use Your Information",
+      "content": "We use your information solely to respond to your inquiries, provide quotes for metal fabrication services, and communicate about your projects. We never sell or share your personal information with third parties for marketing purposes."
+    },
+    "dataProtection": {
+      "title": "Data Protection",
+      "content": "We implement industry-standard security measures to protect your personal information from unauthorized access, disclosure, or misuse. Your data is stored securely and accessed only by authorized personnel."
+    },
+    "contact": {
+      "title": "Contact Us",
+      "content": "If you have any questions about our privacy policy or how we handle your data, please contact us:",
+      "email": "Email",
+      "phone": "Phone"
+    }
+  }
+}

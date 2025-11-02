@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import { Zap, Settings, Layers, Package } from "lucide-react";
 
 export function ServicesSection() {
-  const t = useTranslations("services");
+  const t = useTranslations("home.services");
   const tServices = useTranslations("services.services");
   const locale = useLocale();
 

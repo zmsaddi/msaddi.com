@@ -1,0 +1,45 @@
+{
+  "page": {
+    "title": "Hizmet Şartları - MSADDI.EST",
+    "description": "MSADDI.EST Suriye metal işleme hizmetleri için hizmet şartları",
+    "lastUpdated": "Son güncelleme"
+  },
+  "sections": {
+    "acceptance": {
+      "title": "Şartların Kabulü",
+      "content": "Web sitemizi veya hizmetlerimizi kullanarak bu hizmet şartlarını kabul etmiş olursunuz. Bu şartları kabul etmiyorsanız, lütfen hizmetlerimizi kullanmayın."
+    },
+    "services": {
+      "title": "Hizmetlerimiz",
+      "content": "MSADDI.EST profesyonel metal işleme hizmetleri sunar:",
+      "items": {
+        "laser": "40mm kalınlığa kadar lazer kesim",
+        "bending": "135T/3200mm kapasiteli CNC büküm",
+        "flanging": "Flanş ve dishing hizmetleri",
+        "custom": "Özel metal işleme çözümleri"
+      }
+    },
+    "ordering": {
+      "title": "Sipariş Süreci",
+      "content": "Tüm siparişler kabul ve müsaitliğe tabidir. Herkese hizmet vermeyi reddetme hakkımızı saklı tutarız. Teklifler, aksi belirtilmedikçe 30 gün geçerlidir. Nihai fiyatlandırma, malzeme maliyetlerine ve proje özelliklerine göre değişebilir."
+    },
+    "pricing": {
+      "title": "Fiyatlandırma ve Ödeme",
+      "content": "Fiyatlar önceden haber verilmeksizin değiştirilebilir. Ödeme koşulları, aksi kararlaştırılmadıkça net 30 gündür. Banka transferleri ve nakit ödemeleri kabul ediyoruz. Büyük siparişler için depozito gerekebilir."
+    },
+    "warranty": {
+      "title": "Kalite ve Garanti",
+      "content": "İşçiliğimizin kalitesini endüstri standartlarına göre garanti ederiz. Üretim sürecimizden kaynaklanan herhangi bir kusur ek ücret alınmadan düzeltilecektir. Bu garanti normal aşınma ve yıpranma veya yanlış kullanımdan kaynaklanan hasarları kapsamaz."
+    },
+    "liability": {
+      "title": "Sorumluluk Sınırlaması",
+      "content": "MSADDI.EST, hizmetlerimizin kullanımından doğan dolaylı, tesadüfi veya sonuç olarak ortaya çıkan zararlardan sorumlu değildir. Toplam sorumluluğumuz, söz konusu belirli hizmet için ödenen tutarı aşmayacaktır."
+    },
+    "contact": {
+      "title": "İletişim Bilgileri",
+      "content": "Bu hizmet şartları hakkında sorularınız için lütfen bizimle iletişime geçin:",
+      "email": "E-posta",
+      "phone": "Telefon"
+    }
+  }
+}
