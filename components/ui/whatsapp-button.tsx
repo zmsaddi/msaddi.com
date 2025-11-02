@@ -6,7 +6,8 @@ import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
 
 export function WhatsAppButton() {
-  const t = useTranslations("common");
+  const tWhatsApp = useTranslations("common.whatsapp");
+  const tAccessibility = useTranslations("common.accessibility");
   const [isVisible, setIsVisible] = useState(false);
   const [isTooltipVisible, setIsTooltipVisible] = useState(false);
 
@@ -28,7 +29,7 @@ export function WhatsAppButton() {
   }, []);
 
   const phoneNumber = "+963944244604";
-  const message = t("whatsapp.message");
+  const message = tWhatsApp("message");
   const whatsappUrl = `https://wa.me/${phoneNumber.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(message)}`;
 
   const handleClick = () => {
@@ -55,10 +56,10 @@ export function WhatsAppButton() {
                 <X className="w-3 h-3 text-gray-600" />
               </button>
               <p className="text-sm font-medium text-gray-700">
-                💬 {t("whatsapp.tooltip")}
+                💬 {tWhatsApp("tooltip")}
               </p>
               <p className="text-xs text-gray-500 mt-0.5">
-                {t("whatsapp.quickQuote")}
+                {tWhatsApp("quickQuote")}
               </p>
               {/* Arrow pointing down */}
               <div className="absolute -bottom-2 right-6 w-4 h-4 bg-white border-r border-b border-gray-200 transform rotate-45"></div>
@@ -76,7 +77,7 @@ export function WhatsAppButton() {
             "transition-all duration-300 hover:scale-110",
             "focus:outline-none focus:ring-4 focus:ring-green-500/30"
           )}
-          aria-label={t("accessibility.contactWhatsApp")}
+          aria-label={tAccessibility("contactWhatsApp")}
         >
           {/* Pulse animation */}
           <span className="absolute inset-0 rounded-full bg-green-500 animate-ping opacity-25"></span>
@@ -93,13 +94,13 @@ export function WhatsAppButton() {
 
           {/* Hover Label */}
           <span className="absolute right-full mr-3 px-3 py-1.5 bg-gray-800 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap">
-            {t("whatsapp.label")}
+            {tWhatsApp("label")}
           </span>
         </button>
 
         {/* Mobile Label (always visible on mobile) */}
         <div className="sm:hidden mt-2 text-center">
-          <span className="text-xs text-gray-600 font-medium">{t("whatsapp.button")}</span>
+          <span className="text-xs text-gray-600 font-medium">{tWhatsApp("button")}</span>
         </div>
       </div>
     </>

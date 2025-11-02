@@ -12,7 +12,7 @@ interface ThemeSwitcherProps {
 }
 
 export function ThemeSwitcher({ className, showLabel = false }: ThemeSwitcherProps) {
-  const t = useTranslations("common");
+  const t = useTranslations("common.theme");
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
 
@@ -33,17 +33,17 @@ export function ThemeSwitcher({ className, showLabel = false }: ThemeSwitcherPro
         "focus:outline-none focus:ring-2 focus:ring-primary",
         className
       )}
-      aria-label={`${t("theme.switchTo")} ${theme === "dark" ? t("theme.lightMode") : t("theme.darkMode")}`}
+      aria-label={`${t("switchTo")} ${theme === "dark" ? t("lightMode") : t("darkMode")}`}
     >
       {theme === "dark" ? (
         <>
           <Sun className="h-5 w-5" />
-          {showLabel && <span className="text-sm">{t("theme.lightMode")}</span>}
+          {showLabel && <span className="text-sm">{t("lightMode")}</span>}
         </>
       ) : (
         <>
           <Moon className="h-5 w-5" />
-          {showLabel && <span className="text-sm">{t("theme.darkMode")}</span>}
+          {showLabel && <span className="text-sm">{t("darkMode")}</span>}
         </>
       )}
     </button>
