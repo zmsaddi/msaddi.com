@@ -25,9 +25,10 @@ const translations = {
     urgent: "If you have any urgent requirements, please feel free to call us directly at:",
     regards: "Best regards,",
     team: "MSADDI.EST Team",
-    footer: "© 2024 MSADDI.EST - Leading Metal Fabrication in Syria",
+    footer: "© 2025 MSADDI.EST - Leading Metal Fabrication in Syria",
     contact: "Aleppo, Syria | info@msaddi.com | www.msaddi.com",
     whatsappButton: "Contact us on WhatsApp",
+    whatsappMessage: "Hello, I'm interested in your metal fabrication services.",
     mapButton: "View our location",
     // Company notification email
     companyTitle: "New Contact Form Submission",
@@ -56,9 +57,10 @@ const translations = {
     urgent: "إذا كانت لديك أي متطلبات عاجلة، يرجى الاتصال بنا مباشرة على:",
     regards: "مع أطيب التحيات،",
     team: "فريق MSADDI.EST",
-    footer: "© 2024 MSADDI.EST - الريادة في التصنيع المعدني في سوريا",
+    footer: "© 2025 MSADDI.EST - الريادة في التصنيع المعدني في سوريا",
     contact: "حلب، سوريا | info@msaddi.com | www.msaddi.com",
     whatsappButton: "تواصل معنا عبر واتساب",
+    whatsappMessage: "مرحباً، أنا مهتم بخدمات تصنيع المعادن الخاصة بكم.",
     mapButton: "عرض موقعنا",
     // Company notification email
     companyTitle: "طلب تواصل جديد من الموقع",
@@ -87,9 +89,10 @@ const translations = {
     urgent: "Acil bir talebiniz varsa, lütfen bizi doğrudan aramaktan çekinmeyin:",
     regards: "Saygılarımızla,",
     team: "MSADDI.EST Ekibi",
-    footer: "© 2024 MSADDI.EST - Suriye'de Önde Gelen Metal İşleme",
+    footer: "© 2025 MSADDI.EST - Suriye'de Önde Gelen Metal İşleme",
     contact: "Halep, Suriye | info@msaddi.com | www.msaddi.com",
     whatsappButton: "WhatsApp'tan iletişime geçin",
+    whatsappMessage: "Merhaba, metal fabrikasyon hizmetlerinizle ilgileniyorum.",
     mapButton: "Konumumuzu görüntüleyin",
     // Company notification email
     companyTitle: "Yeni İletişim Formu Gönderimi",
@@ -117,6 +120,9 @@ export function getUserConfirmationEmail(
     html: `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; direction: ${isRTL ? 'rtl' : 'ltr'};">
         <div style="background: linear-gradient(135deg, #0066cc 0%, #004499 100%); padding: 40px 20px; border-radius: 8px 8px 0 0;">
+          <div style="text-align: center; margin-bottom: 15px;">
+            <img src="https://www.msaddi.com/logo.png" alt="MSADDI.EST" style="height: 60px; width: auto;" />
+          </div>
           <h1 style="color: white; margin: 0; text-align: center;">MSADDI.EST</h1>
           <p style="color: white; text-align: center; margin: 10px 0 0 0;">Metal Fabrication Excellence</p>
         </div>
@@ -152,10 +158,10 @@ export function getUserConfirmationEmail(
           </p>
 
           <div style="display: flex; gap: 10px; margin: 30px 0; flex-wrap: wrap;">
-            <a href="https://wa.me/963944244604" style="flex: 1; min-width: 200px; background: linear-gradient(135deg, #25D366 0%, #128C7E 100%); color: white; padding: 14px 24px; text-decoration: none; border-radius: 8px; font-weight: bold; text-align: center; display: inline-block; box-shadow: 0 4px 6px rgba(37, 211, 102, 0.3);">
+            <a href="https://wa.me/963944244604?text=${encodeURIComponent(t.whatsappMessage)}" style="flex: 1; min-width: 200px; background: linear-gradient(135deg, #25D366 0%, #128C7E 100%); color: white; padding: 14px 24px; text-decoration: none; border-radius: 8px; font-weight: bold; text-align: center; display: inline-block; box-shadow: 0 4px 6px rgba(37, 211, 102, 0.3);">
               📱 ${t.whatsappButton}
             </a>
-            <a href="https://www.google.com/maps/search/?api=1&query=Al-Shaqeef+Industrial+Zone+Aleppo+Syria" style="flex: 1; min-width: 200px; background: linear-gradient(135deg, #0066cc 0%, #004499 100%); color: white; padding: 14px 24px; text-decoration: none; border-radius: 8px; font-weight: bold; text-align: center; display: inline-block; box-shadow: 0 4px 6px rgba(0, 102, 204, 0.3);">
+            <a href="https://www.google.com/maps?q=36.25730305,37.16812130" style="flex: 1; min-width: 200px; background: linear-gradient(135deg, #0066cc 0%, #004499 100%); color: white; padding: 14px 24px; text-decoration: none; border-radius: 8px; font-weight: bold; text-align: center; display: inline-block; box-shadow: 0 4px 6px rgba(0, 102, 204, 0.3);">
               📍 ${t.mapButton}
             </a>
           </div>

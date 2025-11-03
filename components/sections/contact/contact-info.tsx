@@ -28,14 +28,14 @@ export function ContactInfo() {
       icon: MessageCircle,
       label: t("items.whatsapp.label"),
       value: "+963 944 244 604",
-      href: "https://wa.me/963944244604",
+      href: `https://wa.me/963944244604?text=${encodeURIComponent(tCommon("message"))}`,
       trackingType: "whatsapp" as const,
     },
     {
       icon: MapPin,
       label: t("items.address.label"),
       value: t("items.address.value"),
-      href: "https://maps.app.goo.gl/QYUZ6pu1xHxtaPD59",
+      href: "https://www.google.com/maps?q=36.25730305,37.16812130",
       trackingType: null,
     },
   ];
@@ -102,7 +102,7 @@ export function ContactInfo() {
         <h4 className="font-heading font-semibold mb-2">{tCommon("label")}</h4>
         <p className="text-sm mb-4">{tCommon("quickResponse")}</p>
         <a
-          href="https://wa.me/963944244604"
+          href={`https://wa.me/963944244604?text=${encodeURIComponent(tCommon("message"))}`}
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => trackContactClick("whatsapp")}
