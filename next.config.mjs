@@ -65,7 +65,7 @@ const nextConfig = {
               "default-src 'self'",
 
               // Scripts: Allow self, inline styles (Tailwind), Google services, Vercel
-              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google.com https://www.gstatic.com https://www.googletagmanager.com https://va.vercel-scripts.com",
+              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google.com https://www.gstatic.com https://www.googletagmanager.com https://www.recaptcha.net https://va.vercel-scripts.com",
 
               // Styles: Allow self, inline (required for Tailwind & styled-jsx), Google Fonts
               "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
@@ -77,10 +77,10 @@ const nextConfig = {
               "font-src 'self' data: https://fonts.gstatic.com",
 
               // Connect: Allow self, Google services, Vercel analytics
-              "connect-src 'self' https://www.google.com https://www.gstatic.com https://vitals.vercel-insights.com https://va.vercel-scripts.com https://www.google-analytics.com https://region1.google-analytics.com https://maps.googleapis.com https://www.googletagmanager.com",
+              "connect-src 'self' https://www.google.com https://www.gstatic.com https://vitals.vercel-insights.com https://va.vercel-scripts.com https://www.google-analytics.com https://region1.google-analytics.com https://ssl.google-analytics.com https://maps.googleapis.com https://www.googletagmanager.com https://www.recaptcha.net",
 
-              // Frames: Deny all (no iframes)
-              "frame-src 'self' https://www.google.com https://www.gstatic.com https://maps.google.com https://www.google.com/maps/embed/",
+              // Frames: Allow Google services (Maps, ReCAPTCHA)
+              "frame-src 'self' https://www.google.com https://www.gstatic.com https://www.recaptcha.net https://maps.google.com https://www.google.com/maps/embed/",
 
               // Objects: Deny all (no plugins)
               "object-src 'none'",
