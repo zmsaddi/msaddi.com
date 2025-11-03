@@ -43,40 +43,32 @@ export function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-br from-secondary/60 via-secondary/50 to-primary/55" />
       </div>
 
-      {/* Content Container with proper spacing from header */}
-      <div className="container mx-auto px-6 lg:px-12 pt-[120px] lg:pt-[136px] pb-20 relative z-10">
+      {/* ⚡ MOBILE-OPTIMIZED: Responsive container and spacing */}
+      <div className="container-custom pt-32 sm:pt-40 lg:pt-48 pb-12 sm:pb-16 lg:pb-20 relative z-10">
         <div className="max-w-4xl mx-auto">
 
-          {/* Text Content Card - 70% Transparent */}
+          {/* Text Content Card - 70% Transparent - MOBILE-OPTIMIZED */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="bg-white/70 backdrop-blur-md rounded-2xl p-8 lg:p-12 shadow-2xl"
+            className="bg-white/70 backdrop-blur-md rounded-2xl p-6 sm:p-8 lg:p-12 shadow-2xl"
           >
-            {/* Main Heading - 48px as specified */}
-            <h1 className={cn(
-              "text-[42px] lg:text-[48px] leading-[1.2]",
-              isRTL ? "font-cairo" : "font-inter",
-              "font-bold text-gray-900 mb-6"
-            )}>
+            {/* ⚡ MOBILE-OPTIMIZED: Responsive heading using text-responsive utility */}
+            <h1 className="text-responsive-4xl font-heading font-bold text-text-primary mb-4 sm:mb-6">
               {t("title")}
               <span className="block text-accent mt-2">
                 {t("subtitle")}
               </span>
             </h1>
 
-            {/* Description - Material body text */}
-            <p className={cn(
-              "text-body-lg text-gray-700 mb-8",
-              "max-w-xl leading-[1.8]",
-              isRTL ? "font-tajawal" : "font-inter"
-            )}>
+            {/* ⚡ MOBILE-OPTIMIZED: Responsive description */}
+            <p className="text-responsive-base text-text-secondary mb-6 sm:mb-8 max-w-xl leading-relaxed">
               {t("description")}
             </p>
 
-            {/* Features List - Simple and clean */}
-            <ul className="space-y-4 mb-12">
+            {/* Features List - Mobile-optimized spacing */}
+            <ul className="space-y-3 sm:space-y-4 mb-8 sm:mb-12">
               {features.map((feature, index) => (
                 <motion.li
                   key={index}
@@ -86,17 +78,14 @@ export function HeroSection() {
                   className="flex items-center gap-3"
                 >
                   <CheckCircle className="h-5 w-5 text-accent flex-shrink-0" />
-                  <span className={cn(
-                    "text-body-md text-gray-800",
-                    isRTL ? "font-tajawal" : "font-inter"
-                  )}>
+                  <span className="text-responsive-base text-text-primary">
                     {feature}
                   </span>
                 </motion.li>
               ))}
             </ul>
 
-            {/* Material Design 3 Extended FAB Button */}
+            {/* Material Design 3 Extended FAB Button - Touch-friendly */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -105,11 +94,7 @@ export function HeroSection() {
               <Link
                 href={`/${locale}/contact`}
                 onClick={() => trackButtonClick("hero_cta_primary")}
-                className={cn(
-                  "btn-fab-extended inline-flex",
-                  "text-body-lg",
-                  isRTL ? "font-tajawal" : "font-inter"
-                )}
+                className="btn-fab-extended inline-flex min-h-[48px]"
               >
                 {t("cta1")}
                 <ArrowRight className={cn(
@@ -121,14 +106,14 @@ export function HeroSection() {
           </motion.div>
         </div>
 
-        {/* Bottom stats bar Card - 70% Transparent */}
+        {/* Bottom stats bar Card - 70% Transparent - MOBILE-OPTIMIZED */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.5 }}
-          className="mt-24 bg-white/70 backdrop-blur-md rounded-2xl p-8 lg:p-12 shadow-2xl"
+          className="mt-12 sm:mt-16 lg:mt-24 bg-white/70 backdrop-blur-md rounded-2xl p-6 sm:p-8 lg:p-12 shadow-2xl"
         >
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {stats.map((stat, index) => (
               <motion.div
                 key={index}
@@ -137,17 +122,11 @@ export function HeroSection() {
                 transition={{ delay: 1.6 + index * 0.1 }}
                 className="text-center"
               >
-                <p className={cn(
-                  "text-headline-lg font-bold text-accent latin-numerals",
-                  isRTL ? "font-cairo" : "font-inter"
-                )}>
+                <p className="text-responsive-3xl font-bold text-accent latin-numerals">
                   {t(stat.valueKey)}
-                  {stat.unit && <span className="text-body-lg font-normal">{stat.unit}</span>}
+                  {stat.unit && <span className="text-responsive-base font-normal">{stat.unit}</span>}
                 </p>
-                <p className={cn(
-                  "text-label-lg text-gray-700 mt-1",
-                  isRTL ? "font-tajawal" : "font-inter"
-                )}>
+                <p className="text-responsive-sm text-text-secondary mt-1">
                   {t(stat.labelKey)}
                 </p>
               </motion.div>
