@@ -65,7 +65,7 @@ const nextConfig = {
               "default-src 'self'",
 
               // Scripts: Allow self, inline styles (Tailwind), Google services, Vercel
-              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google.com https://www.gstatic.com https://va.vercel-scripts.com",
+              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google.com https://www.gstatic.com https://www.googletagmanager.com https://va.vercel-scripts.com",
 
               // Styles: Allow self, inline (required for Tailwind & styled-jsx), Google Fonts
               "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
