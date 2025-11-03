@@ -38,6 +38,8 @@
 
   html {
     scroll-behavior: smooth;
+    /* iOS momentum scrolling */
+    -webkit-overflow-scrolling: touch;
     /* Ensure Latin numerals in all contexts */
     font-variant-numeric: lining-nums;
   }
@@ -158,14 +160,30 @@
     transition-shadow duration-200;
   }
 
-  /* Container with proper spacing */
+  /* ⚡ MOBILE-FIRST: Optimized spacing for small screens */
+
+  /* Container with mobile-optimized padding */
   .container-custom {
-    @apply max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12;
+    @apply max-w-[1400px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12;
+    /* Mobile: 16px → Tablet: 24px → Desktop: 32px → Large: 48px */
   }
 
-  /* Section padding - Material Design spacing (48px mobile / 80px desktop) */
+  /* Section padding - Mobile-first (32px → 48px → 80px) */
   .section-padding {
-    @apply py-md-2xl md:py-md-4xl;
+    @apply py-8 sm:py-12 md:py-md-2xl lg:py-md-4xl;
+    /* Mobile: 32px → Small: 48px → Medium: 48px → Large: 80px */
+  }
+
+  /* Mobile-specific card padding */
+  .card-padding-mobile {
+    @apply p-4 sm:p-5 md:p-6 lg:p-8;
+    /* Mobile: 16px → Tablet: 20px → Desktop: 24px → Large: 32px */
+  }
+
+  /* Mobile-specific gap utilities */
+  .gap-mobile {
+    @apply gap-4 sm:gap-5 md:gap-6 lg:gap-8;
+    /* Mobile: 16px → Tablet: 20px → Desktop: 24px → Large: 32px */
   }
 
   /* Gradient text - Updated colors */
@@ -173,15 +191,37 @@
     @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
   }
 
-  /* Material Design 3 Input fields */
+  /* Material Design 3 Input fields - Mobile-optimized */
   .input-field {
     @apply w-full px-4 py-3.5 rounded-lg border border-outline
     bg-surface text-text-primary placeholder:text-text-secondary
     focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary
     transition-all duration-200;
+    /* Mobile-friendly height (48px minimum) */
+    min-height: 48px;
     /* Ensure Latin numerals in inputs */
     font-variant-numeric: lining-nums tabular-nums;
     font-feature-settings: "lnum" 1, "tnum" 1;
+  }
+
+  /* ⚡ TOUCH-FRIENDLY: Minimum 44x44px for all interactive elements */
+
+  /* Mobile buttons with proper touch targets */
+  .btn-mobile {
+    @apply min-h-[44px] min-w-[44px] px-6 py-3;
+    /* iOS/Android minimum touch target: 44x44px */
+  }
+
+  /* Navigation items - mobile friendly */
+  .nav-item-mobile {
+    @apply block py-4 px-4 min-h-[48px];
+    /* 16px padding = 48px total height (easy to tap) */
+  }
+
+  /* Clickable cards - mobile friendly */
+  .card-clickable-mobile {
+    @apply min-h-[72px] p-4;
+    /* Easy to tap anywhere on card */
   }
 
   /* Loading spinner */
@@ -201,7 +241,46 @@
     @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2;
   }
 
-  /* Responsive text sizes - Material Design 3 */
+  /* ⚡ MOBILE-FIRST: Optimized text sizes for small screens */
+  /* Mobile-specific text utilities */
+  .text-mobile-sm {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .text-mobile-base {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .text-mobile-lg {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .text-mobile-xl {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .text-mobile-2xl {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .text-mobile-3xl {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .text-mobile-4xl {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  /* ⚡ OPTIMIZED: Mobile-first responsive text sizes */
+  /* Readable on small screens (375px), scales up for tablets/desktops */
+
   .text-responsive-xs {
     @apply text-xs sm:text-sm;
   }
@@ -211,27 +290,38 @@
   }
 
   .text-responsive-base {
-    @apply text-body-md sm:text-body-lg;
+    @apply text-[14px] leading-[20px] sm:text-body-md md:text-body-lg;
+    /* Mobile: 14px → Tablet: 16px → Desktop: 18px */
   }
 
   .text-responsive-lg {
-    @apply text-body-lg sm:text-title-lg;
+    @apply text-[16px] leading-[24px] sm:text-body-lg md:text-title-lg;
+    /* Mobile: 16px → Tablet: 18px → Desktop: 22px */
   }
 
   .text-responsive-xl {
-    @apply text-title-lg sm:text-headline-sm;
+    @apply text-[18px] leading-[26px] sm:text-title-lg md:text-headline-sm;
+    /* Mobile: 18px → Tablet: 22px → Desktop: 24px */
   }
 
   .text-responsive-2xl {
-    @apply text-headline-sm sm:text-headline-md;
+    @apply text-[20px] leading-[28px] sm:text-headline-sm md:text-headline-md;
+    /* Mobile: 20px → Tablet: 24px → Desktop: 28px */
   }
 
   .text-responsive-3xl {
-    @apply text-headline-md sm:text-headline-lg;
+    @apply text-[24px] leading-[32px] sm:text-headline-md md:text-headline-lg;
+    /* Mobile: 24px → Tablet: 28px → Desktop: 32px */
   }
 
   .text-responsive-4xl {
-    @apply text-headline-lg sm:text-display-sm;
+    @apply text-[28px] leading-[36px] sm:text-headline-lg md:text-display-sm lg:text-display-md;
+    /* Mobile: 28px → Tablet: 32px → Desktop: 36px → Large: 45px */
+  }
+
+  .text-responsive-5xl {
+    @apply text-[32px] leading-[40px] sm:text-display-sm md:text-display-md lg:text-display-lg;
+    /* Mobile: 32px → Tablet: 36px → Desktop: 45px → Large: 57px */
   }
 
   /* Material Design 3 Animations */
@@ -283,6 +373,73 @@
     font-variant-numeric: lining-nums tabular-nums !important;
     font-feature-settings: "lnum" 1, "tnum" 1 !important;
     direction: ltr !important;
+  }
+
+  /* ⚡ MOBILE UX: Touch-friendly interactions */
+
+  /* Remove tap highlight on touch devices */
+  button, .btn, a {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+  }
+
+  /* Prevent text selection on buttons */
+  button, .btn {
+    user-select: none;
+  }
+
+  /* No hover effects on touch devices */
+  @media (hover: none) {
+    .hover\:scale-110 {
+      transform: scale(1) !important;
+    }
+    .hover\:scale-105 {
+      transform: scale(1) !important;
+    }
+    .hover\:-translate-y-0\.5 {
+      transform: translateY(0) !important;
+    }
+    .hover\:-translate-y-1 {
+      transform: translateY(0) !important;
+    }
+  }
+
+  /* ⚡ ASPECT RATIOS: Consistent image sizing */
+
+  /* Hero images - wider on desktop */
+  .hero-image {
+    @apply aspect-[16/9] md:aspect-[21/9];
+  }
+
+  /* Service/Card images - consistent video ratio */
+  .card-image {
+    @apply aspect-video; /* 16:9 */
+  }
+
+  /* Profile/Avatar images - square */
+  .profile-image {
+    @apply aspect-square; /* 1:1 */
+  }
+
+  /* ⚡ RESPONSIVE GRID: Mobile-first patterns */
+
+  /* Auto-adjusting grid (no media queries needed) */
+  .grid-auto-responsive {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+  }
+
+  @media (min-width: 640px) {
+    .grid-auto-responsive {
+      gap: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .grid-auto-responsive {
+      gap: 2rem;
+    }
   }
 }
 

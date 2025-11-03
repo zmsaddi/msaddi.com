@@ -50,11 +50,13 @@ export function Header() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         "bg-surface-white border-b border-outline",
-        // Desktop height: 88px normal, 76px scrolled
-        // Mobile height: 72px normal, 64px scrolled
+        // ⚡ MOBILE-OPTIMIZED: Smaller header on mobile devices
+        // Mobile: 56px normal, 52px scrolled
+        // Tablet: 64px normal, 60px scrolled
+        // Desktop: 88px normal, 76px scrolled
         isScrolled
-          ? "lg:h-[76px] h-[64px] shadow-elevation-2"
-          : "lg:h-[88px] h-[72px] shadow-elevation-1"
+          ? "h-[52px] sm:h-[60px] lg:h-[76px] shadow-elevation-2"
+          : "h-[56px] sm:h-[64px] lg:h-[88px] shadow-elevation-1"
       )}
     >
       <nav className="h-full container-custom flex items-center justify-between">
@@ -72,7 +74,7 @@ export function Header() {
             // Safe area padding: Desktop 20px, Mobile 16px
             "py-4 lg:py-5"
           )}>
-            {/* Logo with responsive dimensions - MD3 specs: 260px min width with 16px clearance */}
+            {/* ⚡ MOBILE-OPTIMIZED: Smaller logo on mobile devices */}
             <Image
               src="/logo.png"
               alt={tCommon("companyLogo")}
@@ -80,11 +82,12 @@ export function Header() {
               height={94}  // Maintaining aspect ratio: 260/94 = 2.77
               className={cn(
                 "object-contain transition-all duration-300",
-                // Desktop: 260px width when normal, 220px when scrolled
-                // Mobile: 160px width when normal, 140px when scrolled
+                // ⚡ Mobile: 110px normal, 100px scrolled (smaller)
+                // Tablet: 140px normal, 130px scrolled
+                // Desktop: 260px normal, 220px scrolled
                 isScrolled
-                  ? "lg:w-[220px] lg:h-[79px] w-[140px] h-[51px]"
-                  : "lg:w-[260px] lg:h-[94px] w-[160px] h-[58px]"
+                  ? "w-[100px] h-[36px] sm:w-[130px] sm:h-[47px] lg:w-[220px] lg:h-[79px]"
+                  : "w-[110px] h-[40px] sm:w-[140px] sm:h-[51px] lg:w-[260px] lg:h-[94px]"
               )}
             />
           </div>
@@ -116,47 +119,51 @@ export function Header() {
           </div>
         </div>
 
-        {/* Mobile Menu Button */}
+        {/* ⚡ MOBILE-OPTIMIZED: Larger touch targets and icons */}
         <button
           className={cn(
-            "lg:hidden p-2.5 rounded-lg",
-            "hover:bg-surface transition-colors"
+            "lg:hidden p-3 rounded-lg min-h-[44px] min-w-[44px]",
+            "hover:bg-surface transition-colors",
+            "flex items-center justify-center"
           )}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label={tCommon("toggleMenu")}
         >
           {isMobileMenuOpen ? (
-            <X className="h-5 w-5 text-text-primary" />
+            <X className="h-6 w-6 text-text-primary" />
           ) : (
-            <Menu className="h-5 w-5 text-text-primary" />
+            <Menu className="h-6 w-6 text-text-primary" />
           )}
         </button>
       </nav>
 
-      {/* Mobile Menu Drawer */}
+      {/* ⚡ MOBILE-OPTIMIZED: Faster animations and better touch targets */}
       <div
         className={cn(
           "lg:hidden fixed left-0 right-0 bg-surface-white border-t border-outline",
-          "transition-all duration-300 shadow-elevation-3",
+          "transition-all duration-200 shadow-elevation-3",
           isMobileMenuOpen
             ? cn(
-                isScrolled ? "top-[64px]" : "top-[72px]",
+                // Updated for new header heights: 52px/60px scrolled, 56px/64px normal
+                isScrolled ? "top-[52px] sm:top-[60px]" : "top-[56px] sm:top-[64px]",
                 "opacity-100 visible"
               )
             : cn(
-                isScrolled ? "top-[56px]" : "top-[64px]",
+                isScrolled ? "top-[44px] sm:top-[52px]" : "top-[48px] sm:top-[56px]",
                 "opacity-0 invisible"
               )
         )}
       >
-        <div className="px-6 py-4">
+        <div className="px-4 py-4 sm:px-6">
           <ul className="space-y-1">
             {navItems.map((item) => (
               <li key={item.href}>
                 <Link
                   className={cn(
-                    "block px-4 py-3 rounded-lg text-sm font-medium",
-                    "transition-all duration-200",
+                    // ⚡ Larger touch targets: min 56px height
+                    "block px-4 py-4 rounded-lg text-base font-medium",
+                    "transition-all duration-200 min-h-[56px]",
+                    "flex items-center",
                     pathname === item.href
                       ? "bg-primary text-white shadow-elevation-1"
                       : "text-text-primary hover:bg-primary/10 hover:text-primary"
