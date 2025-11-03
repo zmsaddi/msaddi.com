@@ -5,7 +5,6 @@ import { useTranslations, useLocale } from "next-intl";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { Menu, X } from "lucide-react";
 import { LanguageSwitcher } from "@/components/ui/language-switcher";
 import { cn } from "@/lib/utils";
 
@@ -119,7 +118,7 @@ export function Header() {
           </div>
         </div>
 
-        {/* ⚡ MOBILE-OPTIMIZED: Larger touch targets and icons */}
+        {/* ⚡ MOBILE-OPTIMIZED: Larger touch targets and inline SVG icons for instant loading */}
         <button
           className={cn(
             "lg:hidden p-3 rounded-lg min-h-[44px] min-w-[44px]",
@@ -130,9 +129,37 @@ export function Header() {
           aria-label={tCommon("toggleMenu")}
         >
           {isMobileMenuOpen ? (
-            <X className="h-6 w-6 text-text-primary" />
+            // X (Close) Icon - Inline SVG
+            <svg
+              className="h-6 w-6 text-text-primary"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
           ) : (
-            <Menu className="h-6 w-6 text-text-primary" />
+            // Menu (Hamburger) Icon - Inline SVG
+            <svg
+              className="h-6 w-6 text-text-primary"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
           )}
         </button>
       </nav>
