@@ -30,6 +30,7 @@ export default async function LocaleLayout({
       {/* ⚡ Performance: Conditional Arabic Font Preloading */}
       {isArabic && (
         <>
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
           <link
             rel="preload"
