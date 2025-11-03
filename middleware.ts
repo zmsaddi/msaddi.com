@@ -58,9 +58,21 @@ export default function middleware(request: NextRequest) {
     const acceptLanguage = request.headers.get('accept-language');
     const detectedLocale = detectLocaleFromHeader(acceptLanguage);
 
-    // Redirect to detected locale, preserving query params (except detect param)
+    // Remove existing locale from pathname if present
+    // e.g., /en/about → /about, /ar → /, /tr/services → /services
+    let pathWithoutLocale = pathname;
+    for (const locale of locales) {
+      if (pathname === `/${locale}` || pathname.startsWith(`/${locale}/`)) {
+        pathWithoutLocale = pathname.slice(locale.length + 1) || '/';
+        break;
+      }
+    }
+
+    // Redirect to detected locale, preserving path and query params (except detect param)
     const url = request.nextUrl.clone();
-    url.pathname = `/${detectedLocale}${pathname === '/' ? '' : pathname}`;
+    url.pathname = pathWithoutLocale === '/'
+      ? `/${detectedLocale}`
+      : `/${detectedLocale}${pathWithoutLocale}`;
 
     // Remove detect parameter from URL
     if (forceDetect) {
