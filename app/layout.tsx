@@ -21,7 +21,7 @@ const cairo = Cairo({
   subsets: ["arabic"], // Removed "latin" subset (not needed)
   display: "swap",
   variable: "--font-cairo",
-  preload: false, // Don't preload - only used in Arabic pages
+  preload: true, // ⚡ CHANGED: Enable preload to fix 1.5s render delay on /ar pages
   fallback: ['Tajawal', 'Arial', 'sans-serif'],
 });
 
@@ -31,7 +31,7 @@ const tajawal = Tajawal({
   subsets: ["arabic"], // Removed "latin" subset
   display: "swap",
   variable: "--font-tajawal",
-  preload: false, // Don't preload - only used in Arabic pages
+  preload: true, // ⚡ CHANGED: Enable preload to fix 1.5s render delay on /ar pages
   fallback: ['Arial', 'sans-serif'],
 });
 
@@ -107,6 +107,13 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
+        {/* ⚡ Performance: Resource Hints */}
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://www.google-analytics.com" />
+
+        {/* ⚡ Performance: Preload Critical Assets */}
         <link
           rel="preload"
           href="/logo.png"

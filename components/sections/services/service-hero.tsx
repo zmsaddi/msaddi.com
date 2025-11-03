@@ -15,9 +15,10 @@ export function ServiceHero() {
           src="/images/hero-metal-workshop.jpg"
           alt="MSADDI Laser Cutting and CNC Services - Industrial Workshop"
           fill
-          quality={75}
+          quality={70}
           sizes="100vw"
           className="object-cover object-center"
+          priority
         />
         <div className="absolute inset-0 bg-gradient-to-br from-secondary/60 via-secondary/50 to-primary/55" />
       </div>

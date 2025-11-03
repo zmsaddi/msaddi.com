@@ -77,10 +77,10 @@ export function ServiceGrid() {
             return (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{ duration: 0.4, delay: index * 0.08 }}
                 className="card-md3 p-8 hover:shadow-elevation-3 transition-shadow"
               >
                 <div className={`bg-gradient-to-r ${service.color} w-20 h-20 rounded-md-lg flex items-center justify-center mb-6`}>
