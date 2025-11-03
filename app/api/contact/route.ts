@@ -54,7 +54,22 @@ export async function POST(request: NextRequest) {
       requestCounts.set(ip, { count: 1, resetTime: now + 3600000 });
     }
 
-    const body = await request.json();
+    // Parse FormData instead of JSON to support file uploads
+    const formData = await request.formData();
+
+    // Extract form fields
+    const body = {
+      name: formData.get('name') as string,
+      email: formData.get('email') as string,
+      phone: formData.get('phone') as string,
+      subject: formData.get('subject') as string,
+      message: formData.get('message') as string,
+      recaptchaToken: formData.get('recaptchaToken') as string,
+      locale: (formData.get('locale') as string) || 'en',
+    };
+
+    // Extract file if present
+    const attachmentFile = formData.get('attachment') as File | null;
 
     // Validate input
     const validatedData = contactSchema.parse(body);
@@ -96,6 +111,18 @@ export async function POST(request: NextRequest) {
     const safeSubject = he.encode(validatedData.subject);
     const safeMessage = he.encode(validatedData.message);
 
+    // Process attachment if present
+    let attachments: Array<{ filename: string; content: Buffer }> = [];
+    if (attachmentFile && attachmentFile.size > 0) {
+      const arrayBuffer = await attachmentFile.arrayBuffer();
+      const buffer = Buffer.from(arrayBuffer);
+
+      attachments = [{
+        filename: attachmentFile.name,
+        content: buffer,
+      }];
+    }
+
     // Generate company notification email using template
     const companyEmail = getCompanyNotificationEmail({
       name: safeName,
@@ -106,12 +133,13 @@ export async function POST(request: NextRequest) {
       locale: validatedData.locale as EmailLocale
     });
 
-    // Send email to company
+    // Send email to company with attachment
     const companyEmailResult = await resend.emails.send({
       from: env.EMAIL_FROM,
       to: env.EMAIL_TO,
       subject: companyEmail.subject,
       html: companyEmail.html,
+      attachments: attachments.length > 0 ? attachments : undefined,
     });
 
     // Check if company email was sent successfully
@@ -135,12 +163,13 @@ export async function POST(request: NextRequest) {
       }
     );
 
-    // Send confirmation email to user
+    // Send confirmation email to user with attachment
     const userEmailResult = await resend.emails.send({
       from: env.EMAIL_FROM,
       to: validatedData.email,
       subject: userEmail.subject,
       html: userEmail.html,
+      attachments: attachments.length > 0 ? attachments : undefined,
     });
 
     // Log if user confirmation email failed (but don't block the request since main email succeeded)
