@@ -82,7 +82,7 @@ function validateServerEnv() {
           console.warn(urlWarning);
         }
       }
-    } catch (_error) {
+    } catch {
       const urlError = `❌ Invalid NEXT_PUBLIC_SITE_URL format: "${process.env.NEXT_PUBLIC_SITE_URL}". Must be a valid URL.`;
       if (isProduction) {
         throw new Error(urlError);
@@ -94,6 +94,7 @@ function validateServerEnv() {
 
   // Success message (only in development)
   if (!isProduction && missing.length === 0) {
+    // eslint-disable-next-line no-console
     console.log('✅ All required environment variables are present');
   }
 }

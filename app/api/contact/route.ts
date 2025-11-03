@@ -97,6 +97,7 @@ export async function POST(request: NextRequest) {
       }
 
       // Log successful file validation
+      // eslint-disable-next-line no-console
       console.log(`File validated: ${attachmentFile.name} (${fileValidation.mimeType}, ${fileValidation.size} bytes)`);
     }
 

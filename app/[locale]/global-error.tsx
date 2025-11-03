@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
-import { AlertTriangle, Home } from 'lucide-react';
+import { AlertTriangle } from 'lucide-react';
 
 /**
  * Global Error Boundary
