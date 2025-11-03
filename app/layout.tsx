@@ -21,8 +21,9 @@ const cairo = Cairo({
   subsets: ["arabic"], // Removed "latin" subset (not needed)
   display: "swap",
   variable: "--font-cairo",
-  preload: true, // ⚡ CHANGED: Enable preload to fix 1.5s render delay on /ar pages
+  preload: false, // ⚡ Conditional preload via locale layout for Arabic pages only
   fallback: ['Tajawal', 'Arial', 'sans-serif'],
+  adjustFontFallback: false, // Disable for better performance
 });
 
 // Material Design 3 Typography - Arabic (Body)
@@ -31,8 +32,9 @@ const tajawal = Tajawal({
   subsets: ["arabic"], // Removed "latin" subset
   display: "swap",
   variable: "--font-tajawal",
-  preload: true, // ⚡ CHANGED: Enable preload to fix 1.5s render delay on /ar pages
+  preload: false, // ⚡ Conditional preload via locale layout for Arabic pages only
   fallback: ['Arial', 'sans-serif'],
+  adjustFontFallback: false, // Disable for better performance
 });
 
 export const metadata: Metadata = {
@@ -111,7 +113,6 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://www.googletagmanager.com" />
-        <link rel="preconnect" href="https://www.google-analytics.com" />
 
         {/* ⚡ Performance: Preload Critical Assets */}
         <link
