@@ -8,7 +8,7 @@ export { envPublic } from './env-public';
 
 /**
  * Validates that all required server environment variables are present
- * @throws {Error} if any required variables are missing
+ * Logs warnings but doesn't throw to prevent build failures
  */
 function validateServerEnv() {
   const required = [
@@ -21,12 +21,12 @@ function validateServerEnv() {
   const missing = required.filter((key) => !process.env[key]);
 
   if (missing.length > 0) {
-    throw new Error(
-      `❌ Missing required server environment variables: ${missing.join(', ')}\n\n` +
+    console.warn(
+      `⚠️  Missing required server environment variables: ${missing.join(', ')}\n` +
+      `Contact form will not work until these are set.\n` +
       `Please add them to:\n` +
       `- Vercel Dashboard → Settings → Environment Variables\n` +
-      `- Local development: .env.local file\n\n` +
-      `See VERCEL_ENV_SETUP.md for the complete list of required variables.`
+      `- Local development: .env.local file`
     );
   }
 }

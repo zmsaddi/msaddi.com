@@ -4,9 +4,6 @@ import * as z from "zod";
 import he from "he";
 import { env } from "@/lib/env";
 
-// Initialize Resend with API key from centralized environment variables
-const resend = new Resend(env.RESEND_API_KEY);
-
 // Rate limiting: track request counts per IP address
 const requestCounts = new Map<string, { count: number; resetTime: number }>();
 
@@ -21,6 +18,18 @@ const contactSchema = z.object({
 
 export async function POST(request: NextRequest) {
   try {
+    // Check if required environment variables are set
+    if (!env.RESEND_API_KEY || !env.RECAPTCHA_SECRET_KEY || !env.EMAIL_FROM || !env.EMAIL_TO) {
+      console.error('Missing required environment variables for contact form');
+      return NextResponse.json(
+        { error: "Contact form is temporarily unavailable. Please email us directly at info@msaddi.com or call +963 944 244 604" },
+        { status: 503 }
+      );
+    }
+
+    // Initialize Resend with API key
+    const resend = new Resend(env.RESEND_API_KEY);
+
     // Rate limiting: prevent spam by limiting requests per IP
     const ip = request.headers.get('x-forwarded-for') || request.headers.get('x-real-ip') || 'unknown';
     const now = Date.now();
