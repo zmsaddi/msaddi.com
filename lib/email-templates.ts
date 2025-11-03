@@ -118,63 +118,107 @@ export function getUserConfirmationEmail(
   return {
     subject: t.thankYou,
     html: `
-      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; direction: ${isRTL ? 'rtl' : 'ltr'};">
-        <div style="background: #fafafa; padding: 30px 20px; border-radius: 8px 8px 0 0; border-bottom: 3px solid #0066cc;">
-          <div style="text-align: center;">
-            <img src="https://www.msaddi.com/logo.png" alt="MSADDI.EST" style="height: 54px; width: auto;" />
+      <!DOCTYPE html>
+      <html>
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <style>
+          @media only screen and (max-width: 600px) {
+            .email-container {
+              width: 100% !important;
+              padding: 0 !important;
+            }
+            .email-content {
+              padding: 20px 15px !important;
+            }
+            .button-container {
+              display: block !important;
+            }
+            .email-button {
+              display: block !important;
+              width: 100% !important;
+              margin: 10px 0 !important;
+              min-width: auto !important;
+              box-sizing: border-box !important;
+            }
+            .logo-img {
+              height: 48px !important;
+              max-width: 90% !important;
+            }
+            h2 {
+              font-size: 20px !important;
+            }
+            h3 {
+              font-size: 16px !important;
+            }
+            .message-box, .next-steps-box {
+              padding: 15px !important;
+              margin: 15px 0 !important;
+            }
+          }
+        </style>
+      </head>
+      <body style="margin: 0; padding: 0; background-color: #f4f4f4;">
+        <div class="email-container" style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; direction: ${isRTL ? 'rtl' : 'ltr'}; background-color: #ffffff;">
+          <div style="background: #fafafa; padding: 30px 20px; border-radius: 8px 8px 0 0; border-bottom: 3px solid #0066cc;">
+            <div style="text-align: center;">
+              <img src="https://www.msaddi.com/logo.png" alt="MSADDI.EST" class="logo-img" style="height: 54px; width: auto; max-width: 200px;" />
+            </div>
+          </div>
+
+          <div class="email-content" style="padding: 40px 20px; background-color: #ffffff;">
+            <h2 style="color: #333; margin-top: 0; font-size: 24px;">${t.thankYou}</h2>
+
+            <p style="color: #666; line-height: 1.6; font-size: 15px;">
+              ${t.greeting} ${data.name},
+            </p>
+
+            <p style="color: #666; line-height: 1.6; font-size: 15px;">
+              ${t.received}
+            </p>
+
+            <div class="message-box" style="background-color: #f5f5f5; padding: 20px; border-radius: 8px; margin: 20px 0;">
+              <h3 style="color: #0066cc; margin-top: 0; font-size: 18px;">${t.messageDetails}</h3>
+              <p style="font-size: 15px; margin: 10px 0;"><strong>${isRTL ? 'الموضوع' : locale === 'tr' ? 'Konu' : 'Subject'}:</strong> ${data.subject}</p>
+              <p style="font-size: 15px; margin: 10px 0;"><strong>${isRTL ? 'الرسالة' : locale === 'tr' ? 'Mesaj' : 'Message'}:</strong></p>
+              <p style="color: #666; line-height: 1.6; white-space: pre-wrap; font-size: 15px;">${data.message}</p>
+            </div>
+
+            <div class="next-steps-box" style="background-color: #e8f4f8; padding: 20px; border-radius: 8px; margin: 20px 0; border-${isRTL ? 'right' : 'left'}: 4px solid #0066cc;">
+              <h3 style="color: #0066cc; margin-top: 0; font-size: 18px;">${t.whatNext}</h3>
+              <ul style="color: #666; line-height: 1.8; font-size: 15px; margin: 10px 0; padding-${isRTL ? 'right' : 'left'}: 20px;">
+                ${t.steps.map(step => `<li style="margin: 8px 0;">${step}</li>`).join('')}
+              </ul>
+            </div>
+
+            <p style="color: #666; line-height: 1.6; font-size: 15px; text-align: center; background-color: #fff9e6; padding: 15px; border-radius: 8px; border: 1px solid #ffd700;">
+              ${t.urgent}
+              <br><strong style="font-size: 18px; color: #0066cc;">+963 944 244 604</strong>
+            </p>
+
+            <div class="button-container" style="margin: 30px 0;">
+              <a href="https://wa.me/963944244604?text=${encodeURIComponent(t.whatsappMessage)}" class="email-button" style="display: inline-block; width: calc(50% - 5px); min-width: 200px; background: linear-gradient(135deg, #25D366 0%, #128C7E 100%); color: white !important; padding: 16px 20px; text-decoration: none; border-radius: 8px; font-weight: bold; text-align: center; box-shadow: 0 4px 6px rgba(37, 211, 102, 0.3); font-size: 15px; margin: 5px 0; box-sizing: border-box;">
+                📱 ${t.whatsappButton}
+              </a>
+              <a href="https://www.google.com/maps?q=36.25730305,37.16812130" class="email-button" style="display: inline-block; width: calc(50% - 5px); min-width: 200px; background: linear-gradient(135deg, #0066cc 0%, #004499 100%); color: white !important; padding: 16px 20px; text-decoration: none; border-radius: 8px; font-weight: bold; text-align: center; box-shadow: 0 4px 6px rgba(0, 102, 204, 0.3); font-size: 15px; margin: 5px 0; box-sizing: border-box;">
+                📍 ${t.mapButton}
+              </a>
+            </div>
+
+            <p style="color: #666; line-height: 1.6; font-size: 15px; margin-top: 30px;">
+              ${t.regards}<br>
+              <strong>${t.team}</strong>
+            </p>
+          </div>
+
+          <div style="background-color: #f5f5f5; padding: 20px 15px; text-align: center; color: #666; font-size: 12px; line-height: 1.6;">
+            <p style="margin: 5px 0;">${t.footer}</p>
+            <p style="margin: 5px 0;">${t.contact}</p>
           </div>
         </div>
-
-        <div style="padding: 40px 20px; background-color: #ffffff;">
-          <h2 style="color: #333; margin-top: 0;">${t.thankYou}</h2>
-
-          <p style="color: #666; line-height: 1.6;">
-            ${t.greeting} ${data.name},
-          </p>
-
-          <p style="color: #666; line-height: 1.6;">
-            ${t.received}
-          </p>
-
-          <div style="background-color: #f5f5f5; padding: 20px; border-radius: 8px; margin: 20px 0;">
-            <h3 style="color: #0066cc; margin-top: 0;">${t.messageDetails}</h3>
-            <p><strong>${isRTL ? 'الموضوع' : locale === 'tr' ? 'Konu' : 'Subject'}:</strong> ${data.subject}</p>
-            <p><strong>${isRTL ? 'الرسالة' : locale === 'tr' ? 'Mesaj' : 'Message'}:</strong></p>
-            <p style="color: #666; line-height: 1.6; white-space: pre-wrap;">${data.message}</p>
-          </div>
-
-          <div style="background-color: #e8f4f8; padding: 20px; border-radius: 8px; margin: 20px 0; border-${isRTL ? 'right' : 'left'}: 4px solid #0066cc;">
-            <h3 style="color: #0066cc; margin-top: 0;">${t.whatNext}</h3>
-            <ul style="color: #666; line-height: 1.8;">
-              ${t.steps.map(step => `<li>${step}</li>`).join('')}
-            </ul>
-          </div>
-
-          <p style="color: #666; line-height: 1.6;">
-            ${t.urgent}
-            <br><strong>+963 944 244 604</strong>
-          </p>
-
-          <div style="display: flex; gap: 10px; margin: 30px 0; flex-wrap: wrap;">
-            <a href="https://wa.me/963944244604?text=${encodeURIComponent(t.whatsappMessage)}" style="flex: 1; min-width: 200px; background: linear-gradient(135deg, #25D366 0%, #128C7E 100%); color: white; padding: 14px 24px; text-decoration: none; border-radius: 8px; font-weight: bold; text-align: center; display: inline-block; box-shadow: 0 4px 6px rgba(37, 211, 102, 0.3);">
-              📱 ${t.whatsappButton}
-            </a>
-            <a href="https://www.google.com/maps?q=36.25730305,37.16812130" style="flex: 1; min-width: 200px; background: linear-gradient(135deg, #0066cc 0%, #004499 100%); color: white; padding: 14px 24px; text-decoration: none; border-radius: 8px; font-weight: bold; text-align: center; display: inline-block; box-shadow: 0 4px 6px rgba(0, 102, 204, 0.3);">
-              📍 ${t.mapButton}
-            </a>
-          </div>
-
-          <p style="color: #666; line-height: 1.6;">
-            ${t.regards}<br>
-            <strong>${t.team}</strong>
-          </p>
-        </div>
-
-        <div style="background-color: #f5f5f5; padding: 20px; text-align: center; color: #666; font-size: 12px;">
-          <p>${t.footer}</p>
-          <p>${t.contact}</p>
-        </div>
-      </div>
+      </body>
+      </html>
     `
   };
 }
