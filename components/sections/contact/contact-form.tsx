@@ -48,29 +48,64 @@ function ContactFormContent() {
       return;
     }
 
-    // Validate file size (max 5MB)
-    const maxSize = 5 * 1024 * 1024; // 5MB in bytes
+    // Validate file size (max 20MB)
+    const maxSize = 20 * 1024 * 1024; // 20MB in bytes
     if (file.size > maxSize) {
-      setFileError("File size must be less than 5MB");
+      setFileError("File size must be less than 20MB");
       setAttachedFile(null);
       e.target.value = "";
       return;
     }
 
-    // Validate file type
+    // Validate file type - accept all common engineering and document files
     const allowedTypes = [
-      'image/jpeg', 'image/jpg', 'image/png', 'image/gif', 'image/webp',
+      // Images
+      'image/jpeg', 'image/jpg', 'image/png', 'image/gif', 'image/webp', 'image/bmp', 'image/tiff', 'image/svg+xml',
+      // Documents
       'application/pdf',
-      'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
-      'application/vnd.ms-excel', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+      'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', // DOC, DOCX
+      'application/vnd.ms-excel', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', // XLS, XLSX
+      'text/csv', 'application/vnd.ms-excel', // CSV
+      // Compressed files
       'application/zip', 'application/x-zip-compressed',
-      'application/x-rar-compressed',
+      'application/x-rar-compressed', 'application/vnd.rar',
+      'application/x-7z-compressed',
+      // Text files
       'text/plain',
-      'application/dxf', 'image/vnd.dxf', 'image/x-dxf'
+      // CAD files - AutoCAD
+      'application/dxf', 'image/vnd.dxf', 'image/x-dxf',
+      'application/dwg', 'image/vnd.dwg', 'application/acad',
+      // CAD files - SolidWorks
+      'application/sldprt', 'application/vnd.solidworks.part',
+      'application/sldasm', 'application/vnd.solidworks.assembly',
+      'application/slddrw', 'application/vnd.solidworks.drawing',
+      // CAD files - Inventor
+      'application/vnd.autodesk.inventor.part',
+      'application/vnd.autodesk.inventor.assembly',
+      'application/vnd.autodesk.inventor.drawing',
+      // CAD files - STEP/IGES
+      'application/step', 'application/stp',
+      'application/iges', 'application/igs',
+      // CAD files - 3D formats
+      'model/stl', 'application/sla', 'application/vnd.ms-pki.stl',
+      'application/x-step', 'application/x-iges',
     ];
 
-    if (!allowedTypes.includes(file.type)) {
-      setFileError("File type not supported. Please upload images, PDF, documents, or CAD files.");
+    // Also check file extension for CAD files (since MIME types vary)
+    const fileExtension = file.name.split('.').pop()?.toLowerCase();
+    const allowedExtensions = [
+      'jpg', 'jpeg', 'png', 'gif', 'webp', 'bmp', 'tiff', 'svg',
+      'pdf', 'doc', 'docx', 'xls', 'xlsx', 'csv', 'txt',
+      'zip', 'rar', '7z',
+      'dwg', 'dxf', 'dwf',
+      'sldprt', 'sldasm', 'slddrw',
+      'ipt', 'iam', 'idw',
+      'step', 'stp', 'iges', 'igs',
+      'stl', 'x_t', 'x_b', 'sat'
+    ];
+
+    if (!allowedTypes.includes(file.type) && !allowedExtensions.includes(fileExtension || '')) {
+      setFileError("File type not supported. Please upload images, PDF, documents, CAD files, or compressed archives.");
       setAttachedFile(null);
       e.target.value = "";
       return;
@@ -221,7 +256,7 @@ function ContactFormContent() {
                   id="file-upload"
                   onChange={handleFileChange}
                   className="hidden"
-                  accept=".pdf,.doc,.docx,.xls,.xlsx,.jpg,.jpeg,.png,.gif,.webp,.zip,.rar,.txt,.dxf"
+                  accept=".pdf,.doc,.docx,.xls,.xlsx,.csv,.jpg,.jpeg,.png,.gif,.webp,.bmp,.tiff,.svg,.zip,.rar,.7z,.txt,.dwg,.dxf,.dwf,.sldprt,.sldasm,.slddrw,.ipt,.iam,.idw,.step,.stp,.iges,.igs,.stl,.x_t,.x_b,.sat"
                 />
                 <label
                   htmlFor="file-upload"
@@ -229,7 +264,7 @@ function ContactFormContent() {
                 >
                   <Paperclip className="h-5 w-5 text-gray-500" />
                   <span className="text-sm text-gray-600 dark:text-gray-400">
-                    Click to upload file (Max 5MB)
+                    Click to upload file (Max 20MB)
                   </span>
                 </label>
               </div>
@@ -238,7 +273,7 @@ function ContactFormContent() {
                 <Paperclip className="h-5 w-5 text-primary" />
                 <span className="flex-1 text-sm truncate">{attachedFile.name}</span>
                 <span className="text-xs text-gray-500">
-                  {(attachedFile.size / 1024).toFixed(1)} KB
+                  {(attachedFile.size / (1024 * 1024)).toFixed(2)} MB
                 </span>
                 <button
                   type="button"
@@ -253,7 +288,7 @@ function ContactFormContent() {
               <p className="text-red-500 text-sm">{fileError}</p>
             )}
             <p className="text-xs text-gray-500">
-              Supported files: Images, PDF, Documents, CAD files (DXF) - Max 5MB
+              Supported: Images, PDF, Word, Excel, CSV, CAD files (AutoCAD, SolidWorks, Inventor, STEP, IGES, STL), Archives - Max 20MB
             </p>
           </div>
         </div>
