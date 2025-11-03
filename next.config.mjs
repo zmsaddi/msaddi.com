@@ -152,14 +152,11 @@ const nextConfig = {
       },
     ];
   },
+  // ⚡ AUTO-DETECT: Redirects handled by middleware based on browser language
+  // next-intl middleware will automatically redirect '/' to the user's preferred locale
+  // Falls back to 'en' if browser language is not supported
   async redirects() {
-    return [
-      {
-        source: '/',
-        destination: '/en',
-        permanent: false,
-      },
-    ];
+    return [];
   },
 };
 
