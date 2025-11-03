@@ -1,9 +1,26 @@
+import dynamic from "next/dynamic";
 import { ContactHero } from "@/components/sections/contact/contact-hero";
 import { ContactForm } from "@/components/sections/contact/contact-form";
 import { ContactInfo } from "@/components/sections/contact/contact-info";
-import { MapSection } from "@/components/sections/contact/map-section";
 import { StructuredData } from "@/components/seo/structured-data";
 import { generatePageMetadata } from "@/components/seo/seo-meta";
+
+// ⚡ PERFORMANCE: Lazy load Google Maps (heavy component ~30KB)
+// Maps are below the fold and contain Google Maps SDK
+// Loading dynamically reduces initial bundle size significantly
+const MapSection = dynamic(
+  () => import("@/components/sections/contact/map-section").then(mod => ({ default: mod.MapSection })),
+  {
+    ssr: false, // Don't SSR maps (requires browser APIs)
+    loading: () => (
+      <div className="h-[400px] md:h-[500px] bg-surface-container animate-pulse">
+        <div className="h-full flex items-center justify-center">
+          <div className="text-text-secondary">Loading map...</div>
+        </div>
+      </div>
+    )
+  }
+);
 
 interface ContactPageProps {
   params: { locale: string };

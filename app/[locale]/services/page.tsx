@@ -1,9 +1,19 @@
+import dynamic from "next/dynamic";
 import { ServiceHero } from "@/components/sections/services/service-hero";
 import { ServiceGrid } from "@/components/sections/services/service-grid";
-import { IndustriesSection } from "@/components/sections/services/industries-section";
-import { ServiceCTA } from "@/components/sections/services/service-cta";
 import { StructuredData } from "@/components/seo/structured-data";
 import { generatePageMetadata } from "@/components/seo/seo-meta";
+
+// ⚡ PERFORMANCE: Lazy load below-the-fold sections
+const IndustriesSection = dynamic(
+  () => import("@/components/sections/services/industries-section").then(mod => ({ default: mod.IndustriesSection })),
+  { ssr: true }
+);
+
+const ServiceCTA = dynamic(
+  () => import("@/components/sections/services/service-cta").then(mod => ({ default: mod.ServiceCTA })),
+  { ssr: true }
+);
 
 interface ServicesPageProps {
   params: { locale: string };
