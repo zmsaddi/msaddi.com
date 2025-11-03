@@ -10,7 +10,7 @@ export function CTASection() {
   const locale = useLocale();
 
   return (
-    <section className="section-padding bg-gradient-to-r from-primary to-blue-600 relative overflow-hidden">
+    <section className="section-padding bg-gradient-to-r from-metal-gray to-dark-base relative overflow-hidden">
       {/* Animated background pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 laser-beam" />
@@ -27,12 +27,12 @@ export function CTASection() {
           <h2 className="text-responsive-3xl font-heading font-bold text-white mb-4">
             {t("title")}
           </h2>
-          <p className="text-responsive-lg text-white/90 mb-8">
+          <p className="text-responsive-lg text-light-neutral/90 mb-8">
             {t("subtitle")}
           </p>
           <Link
             href={`/${locale}/contact`}
-            className="inline-flex items-center gap-2 bg-white text-primary px-8 py-4 rounded-md font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-300"
+            className="inline-flex items-center gap-2 btn-primary"
           >
             {t("button")}
             <ArrowRight className="h-5 w-5" />
