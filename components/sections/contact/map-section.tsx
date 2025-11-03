@@ -1,12 +1,12 @@
 "use client";
 
-import { GoogleMap } from "@/components/ui/google-map";
+import GoogleMapDynamic from "@/components/ui/google-map-dynamic";
 
 export function MapSection() {
   return (
     <section className="section-padding bg-surface">
       <div className="container-custom">
-        <GoogleMap />
+        <GoogleMapDynamic />
       </div>
     </section>
   );

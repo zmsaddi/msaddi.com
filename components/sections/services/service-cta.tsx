@@ -2,7 +2,7 @@
 
 import { useTranslations, useLocale } from "next-intl";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion } from "@/components/ui/motion";
 import { ArrowRight } from "lucide-react";
 
 export function ServiceCTA() {

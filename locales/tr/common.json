@@ -80,5 +80,10 @@
   },
   "placeholders": {
     "workshopImage": "Atölye Resmi"
+  },
+  "errors": {
+    "title": "Hata! Bir şeyler yanlış gitti",
+    "description": "Beklenmeyen bir hatayla karşılaştık. Lütfen tekrar deneyin.",
+    "persist": "Sorun devam ederse, lütfen"
   }
 }

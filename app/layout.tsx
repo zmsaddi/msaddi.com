@@ -2,28 +2,37 @@ import type { Metadata } from "next";
 import { Inter, Cairo, Tajawal } from "next/font/google";
 import "./globals.css";
 
+// ⚡ PERFORMANCE: Optimized Font Loading
+// Only load weights that are actually used to reduce bundle size
+
 // Material Design 3 Typography - English
 const inter = Inter({
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "600", "700"], // Reduced from 4 to 3 weights (removed 500)
   subsets: ["latin"],
-  display: "swap",
+  display: "swap", // Prevent FOIT (Flash of Invisible Text)
   variable: "--font-inter",
+  preload: true, // Preload critical font
+  fallback: ['system-ui', '-apple-system', 'sans-serif'],
 });
 
 // Material Design 3 Typography - Arabic (Headers)
 const cairo = Cairo({
-  weight: ["400", "500", "600", "700"],
-  subsets: ["arabic", "latin"],
+  weight: ["600", "700"], // Reduced from 4 to 2 weights (only bold for headers)
+  subsets: ["arabic"], // Removed "latin" subset (not needed)
   display: "swap",
   variable: "--font-cairo",
+  preload: false, // Don't preload - only used in Arabic pages
+  fallback: ['Tajawal', 'Arial', 'sans-serif'],
 });
 
 // Material Design 3 Typography - Arabic (Body)
 const tajawal = Tajawal({
-  weight: ["400", "500", "700"],
-  subsets: ["arabic", "latin"],
+  weight: ["400", "700"], // Reduced from 3 to 2 weights (removed 500)
+  subsets: ["arabic"], // Removed "latin" subset
   display: "swap",
   variable: "--font-tajawal",
+  preload: false, // Don't preload - only used in Arabic pages
+  fallback: ['Arial', 'sans-serif'],
 });
 
 export const metadata: Metadata = {

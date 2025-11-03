@@ -19,25 +19,84 @@ const nextConfig = {
       {
         source: '/(.*)',
         headers: [
+          // 🔒 SECURITY HEADERS - Comprehensive Protection
+
+          // Prevent MIME type sniffing
           {
             key: 'X-Content-Type-Options',
             value: 'nosniff',
           },
+
+          // Prevent clickjacking attacks
           {
             key: 'X-Frame-Options',
-            value: 'SAMEORIGIN',
+            value: 'DENY', // Changed from SAMEORIGIN to DENY (more secure)
           },
+
+          // Enable XSS filter in older browsers
           {
             key: 'X-XSS-Protection',
             value: '1; mode=block',
           },
+
+          // Control referrer information
           {
             key: 'Referrer-Policy',
             value: 'strict-origin-when-cross-origin',
           },
+
+          // Disable unnecessary browser features
           {
             key: 'Permissions-Policy',
-            value: 'camera=(), microphone=(), geolocation=()',
+            value: 'camera=(), microphone=(), geolocation=(), payment=(), usb=(), magnetometer=(), gyroscope=()',
+          },
+
+          // Force HTTPS connections (HSTS)
+          {
+            key: 'Strict-Transport-Security',
+            value: 'max-age=31536000; includeSubDomains; preload',
+          },
+
+          // 🛡️ Content Security Policy (CSP) - Comprehensive
+          {
+            key: 'Content-Security-Policy',
+            value: [
+              // Default: Only same origin
+              "default-src 'self'",
+
+              // Scripts: Allow self, inline styles (Tailwind), Google services, Vercel
+              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google.com https://www.gstatic.com https://va.vercel-scripts.com",
+
+              // Styles: Allow self, inline (required for Tailwind & styled-jsx), Google Fonts
+              "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+
+              // Images: Allow self, data URLs, Google services, Vercel
+              "img-src 'self' data: https: blob:",
+
+              // Fonts: Allow self, data URLs, Google Fonts
+              "font-src 'self' data: https://fonts.gstatic.com",
+
+              // Connect: Allow self, Google services, Vercel analytics
+              "connect-src 'self' https://www.google.com https://www.gstatic.com https://vitals.vercel-insights.com https://va.vercel-scripts.com https://www.google-analytics.com https://region1.google-analytics.com https://maps.googleapis.com https://www.googletagmanager.com",
+
+              // Frames: Deny all (no iframes)
+              "frame-src 'self' https://www.google.com https://www.gstatic.com https://maps.google.com https://www.google.com/maps/embed/",
+
+              // Objects: Deny all (no plugins)
+              "object-src 'none'",
+
+              // Base URI: Only same origin
+              "base-uri 'self'",
+
+              // Form actions: Only same origin (prevent form hijacking)
+              "form-action 'self'",
+
+              // Upgrade insecure requests to HTTPS
+              "upgrade-insecure-requests",
+
+              // Block mixed content (HTTP content on HTTPS pages)
+              "block-all-mixed-content",
+            ].join('; '),
           },
         ],
       },

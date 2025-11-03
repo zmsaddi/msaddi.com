@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations, useLocale } from "next-intl";
-import { motion } from "framer-motion";
+import { motion } from "@/components/ui/motion";
 import Link from "next/link";
 import { Zap, Settings, Layers, Package, CheckCircle, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";

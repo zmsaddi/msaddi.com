@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { motion } from "framer-motion";
+import { motion } from "@/components/ui/motion";
 import Image from "next/image";
 
 export function AboutHero() {

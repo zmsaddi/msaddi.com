@@ -6,7 +6,7 @@ import { LayoutDirection } from "@/components/providers/layout-direction";
 import { GoogleAnalytics } from "@/components/analytics/google-analytics";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
-import { WhatsAppButton } from "@/components/ui/whatsapp-button";
+import WhatsAppButtonDynamic from "@/components/ui/whatsapp-button-dynamic";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { isValidLocale } from "@/config/locales";
@@ -36,7 +36,7 @@ export default async function LocaleLayout({
         <Header />
         <main className="flex-grow">{children}</main>
         <Footer />
-        <WhatsAppButton />
+        <WhatsAppButtonDynamic />
       </ThemeProvider>
       <GoogleAnalytics />
       <Analytics mode={process.env.NODE_ENV === 'production' ? 'production' : 'development'} />

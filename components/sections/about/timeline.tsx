@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations, useLocale } from "next-intl";
-import { motion } from "framer-motion";
+import { motion } from "@/components/ui/motion";
 import { cn } from "@/lib/utils";
 
 export function Timeline() {

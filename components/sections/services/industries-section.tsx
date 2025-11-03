@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { motion } from "framer-motion";
+import { motion } from "@/components/ui/motion";
 import { Factory, Building2, Tractor, Truck, Cpu, Zap } from "lucide-react";
 
 export function IndustriesSection() {

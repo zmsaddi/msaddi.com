@@ -3,7 +3,7 @@
 import { useTranslations, useLocale } from "next-intl";
 import Link from "next/link";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion } from "@/components/ui/motion";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import { trackButtonClick } from "@/lib/gtag";
 import { cn } from "@/lib/utils";

@@ -4,9 +4,8 @@ import * as z from "zod";
 import he from "he";
 import { env } from "@/lib/env";
 import { getUserConfirmationEmail, getCompanyNotificationEmail, type EmailLocale } from "@/lib/email-templates";
-
-// Rate limiting: track request counts per IP address
-const requestCounts = new Map<string, { count: number; resetTime: number }>();
+import { rateLimitContactForm } from "@/lib/rate-limiter";
+import { validateFile } from "@/lib/file-validator";
 
 const contactSchema = z.object({
   name: z.string().min(2),
@@ -32,26 +31,33 @@ export async function POST(request: NextRequest) {
     // Initialize Resend with API key
     const resend = new Resend(env.RESEND_API_KEY);
 
-    // Rate limiting: prevent spam by limiting requests per IP
-    const ip = request.headers.get('x-forwarded-for') || request.headers.get('x-real-ip') || 'unknown';
-    const now = Date.now();
-    const rateLimit = requestCounts.get(ip);
+    // ⚡ Distributed Rate Limiting: Prevent spam across multiple servers
+    // Uses Vercel KV (Redis) for persistence and scalability
+    const ip = request.headers.get('x-forwarded-for')?.split(',')[0].trim() ||
+               request.headers.get('x-real-ip') ||
+               'unknown';
 
-    if (rateLimit) {
-      if (now < rateLimit.resetTime) {
-        if (rateLimit.count >= 3) { // Max 3 requests per hour
-          return NextResponse.json(
-            { error: "Too many requests. Please try again later." },
-            { status: 429 }
-          );
+    const rateLimitResult = await rateLimitContactForm(ip);
+
+    if (!rateLimitResult.success) {
+      // Log rate limit violation for monitoring
+      console.warn(`Rate limit exceeded for IP: ${ip}`);
+
+      return NextResponse.json(
+        {
+          error: "Too many requests. Please try again later.",
+          retryAfter: rateLimitResult.reset
+        },
+        {
+          status: 429,
+          headers: {
+            'Retry-After': String(rateLimitResult.reset),
+            'X-RateLimit-Limit': '3',
+            'X-RateLimit-Remaining': '0',
+            'X-RateLimit-Reset': String(Math.floor(Date.now() / 1000) + rateLimitResult.reset),
+          }
         }
-        rateLimit.count++;
-      } else {
-        // Reset counter after 1 hour
-        requestCounts.set(ip, { count: 1, resetTime: now + 3600000 });
-      }
-    } else {
-      requestCounts.set(ip, { count: 1, resetTime: now + 3600000 });
+      );
     }
 
     // Parse FormData instead of JSON to support file uploads
@@ -70,6 +76,29 @@ export async function POST(request: NextRequest) {
 
     // Extract file if present
     const attachmentFile = formData.get('attachment') as File | null;
+
+    // 🔒 SECURITY: Validate file using Magic Byte detection
+    // This prevents malicious files disguised with safe extensions
+    if (attachmentFile && attachmentFile.size > 0) {
+      const fileValidation = await validateFile(attachmentFile);
+
+      if (!fileValidation.valid) {
+        console.warn(`File validation failed for ${attachmentFile.name}: ${fileValidation.error}`);
+        return NextResponse.json(
+          {
+            error: fileValidation.error || "Invalid file",
+            details: {
+              filename: attachmentFile.name,
+              size: attachmentFile.size,
+            },
+          },
+          { status: 400 }
+        );
+      }
+
+      // Log successful file validation
+      console.log(`File validated: ${attachmentFile.name} (${fileValidation.mimeType}, ${fileValidation.size} bytes)`);
+    }
 
     // Validate input
     const validatedData = contactSchema.parse(body);
