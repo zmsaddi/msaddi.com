@@ -119,12 +119,10 @@ export function getUserConfirmationEmail(
     subject: t.thankYou,
     html: `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; direction: ${isRTL ? 'rtl' : 'ltr'};">
-        <div style="background: linear-gradient(135deg, #0066cc 0%, #004499 100%); padding: 40px 20px; border-radius: 8px 8px 0 0;">
-          <div style="text-align: center; margin-bottom: 15px;">
-            <img src="https://www.msaddi.com/logo.png" alt="MSADDI.EST" style="height: 60px; width: auto;" />
+        <div style="background: #fafafa; padding: 30px 20px; border-radius: 8px 8px 0 0; border-bottom: 3px solid #0066cc;">
+          <div style="text-align: center;">
+            <img src="https://www.msaddi.com/logo.png" alt="MSADDI.EST" style="height: 54px; width: auto;" />
           </div>
-          <h1 style="color: white; margin: 0; text-align: center;">MSADDI.EST</h1>
-          <p style="color: white; text-align: center; margin: 10px 0 0 0;">Metal Fabrication Excellence</p>
         </div>
 
         <div style="padding: 40px 20px; background-color: #ffffff;">
