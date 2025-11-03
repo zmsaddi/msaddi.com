@@ -204,7 +204,7 @@ export function getUserConfirmationEmail(
                 </svg>
                 ${t.whatsappButton}
               </a>
-              <a href="https://www.google.com/maps?q=36.25730305,37.16812130" class="email-button" style="display: inline-block; width: calc(50% - 5px); min-width: 200px; background: linear-gradient(135deg, #0066cc 0%, #004499 100%); color: white !important; padding: 16px 20px; text-decoration: none; border-radius: 8px; font-weight: bold; text-align: center; box-shadow: 0 4px 6px rgba(0, 102, 204, 0.3); font-size: 15px; margin: 5px 0; box-sizing: border-box;">
+              <a href="https://maps.app.goo.gl/fJug9ePVizwekFcJA" class="email-button" style="display: inline-block; width: calc(50% - 5px); min-width: 200px; background: linear-gradient(135deg, #0066cc 0%, #004499 100%); color: white !important; padding: 16px 20px; text-decoration: none; border-radius: 8px; font-weight: bold; text-align: center; box-shadow: 0 4px 6px rgba(0, 102, 204, 0.3); font-size: 15px; margin: 5px 0; box-sizing: border-box;">
                 <svg width="20" height="20" viewBox="0 0 48 48" fill="none" style="display: inline-block; vertical-align: middle; margin-right: 8px;">
                   <path d="M24 4C15.2 4 8 11.2 8 20c0 11.4 14.4 23.2 15.2 23.8.4.4 1.2.4 1.6 0C25.6 43.2 40 31.4 40 20c0-8.8-7.2-16-16-16zm0 22c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6z" fill="#EA4335"/>
                   <path d="M24 14c-3.3 0-6 2.7-6 6s2.7 6 6 6 6-2.7 6-6-2.7-6-6-6zm0 8c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z" fill="#FBBC04"/>

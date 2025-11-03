@@ -35,7 +35,7 @@ export function ContactInfo() {
       icon: MapPin,
       label: t("items.address.label"),
       value: t("items.address.value"),
-      href: "https://www.google.com/maps?q=36.25730305,37.16812130",
+      href: "https://maps.app.goo.gl/fJug9ePVizwekFcJA",
       trackingType: null,
     },
   ];
