@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -23,6 +23,7 @@ type FormData = z.infer<typeof formSchema>;
 
 function ContactFormContent() {
   const t = useTranslations("contact.form");
+  const locale = useLocale();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
   const { executeRecaptcha } = useGoogleReCaptcha();
@@ -51,7 +52,7 @@ function ContactFormContent() {
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...data, recaptchaToken: token }),
+        body: JSON.stringify({ ...data, recaptchaToken: token, locale }),
       });
 
       if (response.ok) {
