@@ -46,30 +46,54 @@ function detectLocaleFromHeader(acceptLanguage: string | null): string {
 }
 
 export default function middleware(request: NextRequest) {
-  const { pathname } = request.nextUrl;
+  const { pathname, searchParams } = request.nextUrl;
+
+  // ⚡ FORCE DETECTION: Check if user wants to force language detection
+  // Usage: Add ?detect=1 to any URL to force browser language detection
+  const forceDetect = searchParams.get('detect') === '1';
 
   // ⚡ ROOT PATH HANDLER: Auto-detect browser language for root path
   // Handles: /, /?query, /#hash
-  if (pathname === '/' || pathname === '') {
+  if (pathname === '/' || pathname === '' || forceDetect) {
     const acceptLanguage = request.headers.get('accept-language');
     const detectedLocale = detectLocaleFromHeader(acceptLanguage);
 
-    // Redirect to detected locale, preserving query params and hash
+    // Redirect to detected locale, preserving query params (except detect param)
     const url = request.nextUrl.clone();
-    url.pathname = `/${detectedLocale}`;
+    url.pathname = `/${detectedLocale}${pathname === '/' ? '' : pathname}`;
+
+    // Remove detect parameter from URL
+    if (forceDetect) {
+      url.searchParams.delete('detect');
+    }
 
     // Create response with redirect
     const response = NextResponse.redirect(url);
 
-    // ⚡ IMPORTANT: Delete any existing NEXT_LOCALE cookie to ensure
-    // fresh detection on every visit to root path
+    // ⚡ CRITICAL: Always delete NEXT_LOCALE cookie to prevent interference
     response.cookies.delete('NEXT_LOCALE');
+
+    // Also set cookie domain to ensure deletion across all paths
+    response.cookies.set('NEXT_LOCALE', '', {
+      maxAge: 0,
+      path: '/',
+      domain: request.nextUrl.hostname
+    });
 
     return response;
   }
 
-  // For all other paths, use next-intl middleware
-  return intlMiddleware(request);
+  // ⚡ COOKIE CLEANUP: Delete NEXT_LOCALE cookie on every request
+  // This ensures no stale cookies interfere with detection
+  const response = intlMiddleware(request);
+  response.cookies.delete('NEXT_LOCALE');
+  response.cookies.set('NEXT_LOCALE', '', {
+    maxAge: 0,
+    path: '/',
+    domain: request.nextUrl.hostname
+  });
+
+  return response;
 }
 
 export const config = {
