@@ -1,16 +1,16 @@
 {
   "page": {
     "title": "About MSADDI.EST - Metal Fabrication Syria",
-    "subtitle": "Leading Sheet Metal Fabrication & Laser Cutting Services Since 1994",
-    "imageAlt": "MSADDI Company History - 30+ Years Metal Fabrication Experience Aleppo Syria"
+    "subtitle": "Leading Sheet Metal Fabrication & Laser Cutting Services Since 1960",
+    "imageAlt": "MSADDI Company History - 60+ Years Metal Fabrication Experience Aleppo Syria"
   },
   "intro": {
-    "title": "30+ Years of Metal Fabrication Excellence in Syria",
+    "title": "60+ Years of Metal Fabrication Excellence in Syria",
     "description": "MSADDI.EST is a premier metal fabrication company in Aleppo, Syria, specializing in laser cutting services, CNC bending, and custom sheet metal solutions. With over 30 years of experience, our 6000×2500mm laser cutting capacity and 135T press brake serve construction, automotive, and industrial sectors across Syria and the Middle East."
   },
   "mission": {
     "title": "Our Mission",
-    "description": "To provide superior sheet metal fabrication and laser cutting services in Syria, delivering precision-engineered metal parts with advanced CNC technology, skilled craftsmanship, and ISO 9001 quality standards."
+    "description": "To provide superior sheet metal fabrication and laser cutting services in Syria, delivering precision-engineered metal parts with advanced CNC technology, skilled craftsmanship, and international quality standards."
   },
   "vision": {
     "title": "Our Vision",
@@ -41,7 +41,7 @@
     "title": "Our Journey",
     "milestones": [
       {
-        "year": "1994",
+        "year": "1960",
         "title": "Foundation",
         "description": "MSADDI.EST established in Aleppo with a vision to revolutionize metal fabrication"
       },
@@ -58,7 +58,7 @@
       {
         "year": "2020",
         "title": "Excellence",
-        "description": "Achieved ISO certification and expanded services to international markets"
+        "description": "Enhanced quality standards and expanded services to international markets"
       },
       {
         "year": "2024",
@@ -71,7 +71,7 @@
     "title": "Our Expertise",
     "description": "With three decades of experience, we bring unmatched expertise to every project",
     "stats": {
-      "years": "30+",
+      "years": "60+",
       "yearsLabel": "Years Experience",
       "projects": "500+",
       "projectsLabel": "Completed Projects",

@@ -1,16 +1,16 @@
 {
   "page": {
     "title": "MSADDI.EST Hakkında - Suriye Metal İşleme",
-    "subtitle": "1994'ten Beri Lider Sac Metal İşleme & Lazer Kesim Hizmetleri",
-    "imageAlt": "MSADDI Şirket Tarihi - 30+ Yıl Metal İşleme Deneyimi Halep Suriye"
+    "subtitle": "1960'ten Beri Lider Sac Metal İşleme & Lazer Kesim Hizmetleri",
+    "imageAlt": "MSADDI Şirket Tarihi - 60+ Yıl Metal İşleme Deneyimi Halep Suriye"
   },
   "intro": {
-    "title": "Suriye'de 30+ Yıllık Metal İşleme Mükemmelliği",
+    "title": "Suriye'de 60+ Yıllık Metal İşleme Mükemmelliği",
     "description": "MSADDI.EST, Halep, Suriye'de lazer kesim hizmetleri, CNC bükme ve özel sac metal çözümlerinde uzmanlaşmış lider bir metal işleme şirketidir. 30 yılı aşkın deneyimimiz, 6000×2500mm lazer kesim kapasitemiz ve 135T abkant presimizle Suriye ve Orta Doğu'da inşaat, otomotiv ve endüstriyel sektörlere hizmet veriyoruz."
   },
   "mission": {
     "title": "Misyonumuz",
-    "description": "Suriye'de üstün sac metal işleme ve lazer kesim hizmetleri sunmak, gelişmiş CNC teknolojisi, yetenekli işçilik ve ISO 9001 kalite standartlarıyla hassas mühendislik metal parçaları üretmek."
+    "description": "Suriye'de üstün sac metal işleme ve lazer kesim hizmetleri sunmak, gelişmiş CNC teknolojisi, yetenekli işçilik ve international quality kalite standartlarıyla hassas mühendislik metal parçaları üretmek."
   },
   "vision": {
     "title": "Vizyonumuz",
@@ -41,7 +41,7 @@
     "title": "Yolculuğumuz",
     "milestones": [
       {
-        "year": "1994",
+        "year": "1960",
         "title": "Kuruluş",
         "description": "MSADDI.EST, metal işlemede devrim yaratma vizyonuyla Halep'te kuruldu"
       },
@@ -71,7 +71,7 @@
     "title": "Uzmanlığımız",
     "description": "Otuz yıllık deneyimimizle her projeye eşsiz uzmanlık getiriyoruz",
     "stats": {
-      "years": "30+",
+      "years": "60+",
       "yearsLabel": "Yıllık Deneyim",
       "projects": "500+",
       "projectsLabel": "Tamamlanan Proje",

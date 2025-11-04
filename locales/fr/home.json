@@ -1,7 +1,7 @@
 {
   "hero": {
     "title": "MSADDI.EST - Découpe Laser et Fabrication Métallique en Syrie",
-    "subtitle": "Leader de la découpe laser de précision et du pliage CNC depuis 1994",
+    "subtitle": "Leader de la découpe laser de précision et du pliage CNC depuis 1960",
     "description": "Spécialiste de la découpe laser jusqu'à 40mm, pliage 135T, et fabrication sur mesure. Plus de 30 ans d'excellence dans la fabrication métallique à Alep, Syrie.",
     "cta": {
       "primary": "Demander un devis",
@@ -10,12 +10,12 @@
   },
   "about": {
     "badge": "À propos de MSADDI",
-    "title": "Excellence en Fabrication Métallique depuis 1994",
+    "title": "Excellence en Fabrication Métallique depuis 1960",
     "subtitle": "Leader de la découpe laser et du pliage CNC en Syrie et au Moyen-Orient",
     "description": "MSADDI.EST est votre partenaire de confiance pour la découpe laser de précision, le pliage CNC et la fabrication métallique sur mesure. Avec plus de 30 ans d'expertise, nous servons des clients en Syrie, Turquie, et dans toute l'Europe avec des solutions métalliques de haute qualité.",
     "features": {
       "experience": {
-        "title": "30+ Ans d'Expérience",
+        "title": "60+ Ans d'Expérience",
         "description": "Expertise établie dans la fabrication de précision"
       },
       "technology": {
@@ -39,10 +39,10 @@
   },
   "stats": {
     "title": "MSADDI en Chiffres",
-    "subtitle": "Fournisseur de confiance de solutions métalliques depuis 1994",
+    "subtitle": "Fournisseur de confiance de solutions métalliques depuis 1960",
     "items": {
       "experience": {
-        "value": "30+",
+        "value": "60+",
         "label": "Années d'expérience"
       },
       "projects": {
