@@ -3,6 +3,19 @@
   "outputDirectory": ".next",
   "framework": "nextjs",
   "regions": ["fra1"],
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "msaddi.com"
+        }
+      ],
+      "destination": "https://www.msaddi.com/:path*",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",

@@ -13,7 +13,7 @@ export function ServiceHero() {
       <div className="absolute inset-0">
         <Image
           src="/images/hero-metal-workshop.jpg"
-          alt="MSADDI Laser Cutting and CNC Services - Industrial Workshop"
+          alt={t("imageAlt")}
           fill
           quality={70}
           sizes="100vw"

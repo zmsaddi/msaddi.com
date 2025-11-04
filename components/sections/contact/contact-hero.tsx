@@ -13,7 +13,7 @@ export function ContactHero() {
       <div className="absolute inset-0">
         <Image
           src="/images/hero-metal-workshop.jpg"
-          alt="Contact MSADDI - Professional Metal Fabrication Services Aleppo Syria"
+          alt={t("imageAlt")}
           fill
           quality={75}
           sizes="100vw"

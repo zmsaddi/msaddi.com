@@ -32,7 +32,7 @@ export function HeroSection() {
       <div className="absolute inset-0">
         <Image
           src="/images/hero-metal-workshop.jpg"
-          alt="MSADDI Metal Fabrication Workshop - Professional Laser Cutting Services Aleppo Syria"
+          alt={t("imageAlt")}
           fill
           quality={70}
           sizes="100vw"

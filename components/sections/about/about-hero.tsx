@@ -13,7 +13,7 @@ export function AboutHero() {
       <div className="absolute inset-0">
         <Image
           src="/images/hero-metal-workshop.jpg"
-          alt="MSADDI Company History - 30+ Years Metal Fabrication Experience"
+          alt={t("imageAlt")}
           fill
           quality={75}
           sizes="100vw"
