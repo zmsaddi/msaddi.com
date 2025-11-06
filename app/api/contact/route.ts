@@ -102,7 +102,18 @@ export async function POST(request: NextRequest) {
     }
 
     // Validate input
-    const validatedData = contactSchema.parse(body);
+    let validatedData;
+    try {
+      validatedData = contactSchema.parse(body);
+    } catch (zodError) {
+      if (zodError instanceof z.ZodError) {
+        console.error('Contact form validation error:', {
+          errors: zodError.errors,
+          body: { ...body, recaptchaToken: '***' } // Hide token in logs
+        });
+      }
+      throw zodError;
+    }
 
     // Verify reCAPTCHA
     const recaptchaResponse = await fetch(
@@ -222,8 +233,16 @@ export async function POST(request: NextRequest) {
     console.error("Contact form error:", error);
 
     if (error instanceof z.ZodError) {
+      // Log detailed validation errors for debugging
+      console.error('Form validation failed:', error.errors);
+
       return NextResponse.json(
-        { error: "Invalid form data", details: error.errors },
+        {
+          error: "Invalid form data",
+          details: error.errors,
+          // Provide user-friendly error message
+          message: error.errors.map(e => `${e.path.join('.')}: ${e.message}`).join(', ')
+        },
         { status: 400 }
       );
     }
