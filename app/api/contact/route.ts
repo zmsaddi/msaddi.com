@@ -139,6 +139,7 @@ export async function POST(request: NextRequest) {
     const recaptchaData = await recaptchaResponse.json();
 
     // Enhanced reCAPTCHA debugging
+    // eslint-disable-next-line no-console
     console.log('reCAPTCHA verification result:', {
       success: recaptchaData.success,
       score: recaptchaData.score,
