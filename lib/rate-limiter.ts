@@ -109,7 +109,7 @@ export async function rateLimit(
     // Check if limit exceeded
     if (requestCount >= config.maxRequests) {
       // Get oldest request timestamp to calculate reset time
-      const oldestRequest = await kv.zrange<number[]>(key, 0, 0, { withScores: true });
+      const oldestRequest = await kv.zrange(key, 0, 0, { withScores: true }) as number[];
       const resetTime = oldestRequest[1] ? oldestRequest[1] + config.windowMs : now + config.windowMs;
 
       return {
