@@ -1,4 +1,36 @@
-import { kv } from "@vercel/kv";
+/**
+ * Distributed Rate Limiter using Vercel KV (Redis)
+ *
+ * ⚠️ IMPORTANT: Rate limiting is OPTIONAL
+ * - If KV_REST_API_URL and KV_REST_API_TOKEN are not configured, rate limiting is disabled
+ * - The contact form will still work without rate limiting
+ * - To enable rate limiting, set up Vercel KV:
+ *   1. Go to Vercel Dashboard → Storage → Create KV Database
+ *   2. Add to your project (automatically adds env vars)
+ *   3. Redeploy
+ *
+ * Security: It's recommended to enable rate limiting in production to prevent spam
+ */
+
+// Conditional import of Vercel KV - only if environment variables are present
+let kv: any = null;
+let kvAvailable = false;
+
+try {
+  // Check if KV environment variables are available
+  if (process.env.KV_REST_API_URL && process.env.KV_REST_API_TOKEN) {
+    // Dynamic import to prevent initialization errors
+    kv = require("@vercel/kv").kv;
+    kvAvailable = true;
+    // eslint-disable-next-line no-console
+    console.log("✅ Vercel KV rate limiting is enabled");
+  } else {
+    // eslint-disable-next-line no-console
+    console.log("⚠️  Vercel KV not configured - Rate limiting is DISABLED");
+  }
+} catch (error) {
+  console.warn("Vercel KV not available, rate limiting will be disabled:", error);
+}
 
 interface RateLimitResult {
   success: boolean;
@@ -47,6 +79,17 @@ export async function rateLimit(
   namespace: string = "default",
   config: RateLimitConfig = DEFAULT_CONFIG
 ): Promise<RateLimitResult> {
+  // If KV is not available, allow all requests
+  if (!kvAvailable || !kv) {
+    console.warn("Rate limiting disabled: Vercel KV not configured");
+    return {
+      success: true,
+      remaining: config.maxRequests,
+      reset: 0,
+      error: "Rate limiting disabled (KV not configured)",
+    };
+  }
+
   try {
     // Create a unique key for this identifier and namespace
     const key = `ratelimit:${namespace}:${identifier}`;
@@ -148,6 +191,14 @@ export async function getRateLimitStatus(
   namespace: string = "default",
   config: RateLimitConfig = DEFAULT_CONFIG
 ): Promise<{ count: number; remaining: number }> {
+  // If KV is not available, return default values
+  if (!kvAvailable || !kv) {
+    return {
+      count: 0,
+      remaining: config.maxRequests,
+    };
+  }
+
   try {
     const key = `ratelimit:${namespace}:${identifier}`;
     const now = Date.now();

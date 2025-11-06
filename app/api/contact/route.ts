@@ -33,13 +33,15 @@ export async function POST(request: NextRequest) {
 
     // ⚡ Distributed Rate Limiting: Prevent spam across multiple servers
     // Uses Vercel KV (Redis) for persistence and scalability
+    // ⚠️ NOTE: Rate limiting is optional - if KV is not configured, requests are allowed
     const ip = request.headers.get('x-forwarded-for')?.split(',')[0].trim() ||
                request.headers.get('x-real-ip') ||
                'unknown';
 
     const rateLimitResult = await rateLimitContactForm(ip);
 
-    if (!rateLimitResult.success) {
+    // Only block if rate limit is explicitly exceeded (not if KV is unavailable)
+    if (!rateLimitResult.success && rateLimitResult.error === "Rate limit exceeded") {
       // Log rate limit violation for monitoring
       console.warn(`Rate limit exceeded for IP: ${ip}`);
 
@@ -58,6 +60,12 @@ export async function POST(request: NextRequest) {
           }
         }
       );
+    }
+
+    // Log rate limiter status for debugging
+    if (rateLimitResult.error && rateLimitResult.error !== "Rate limit exceeded") {
+      // eslint-disable-next-line no-console
+      console.log(`Rate limiter status: ${rateLimitResult.error}`);
     }
 
     // Parse FormData instead of JSON to support file uploads
