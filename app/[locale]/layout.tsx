@@ -23,7 +23,6 @@ export default async function LocaleLayout({
   }
 
   const messages = await getMessages();
-  const isArabic = locale === 'ar';
 
   return (
     <>

@@ -138,9 +138,33 @@ export async function POST(request: NextRequest) {
 
     const recaptchaData = await recaptchaResponse.json();
 
+    // Enhanced reCAPTCHA debugging
+    console.log('reCAPTCHA verification result:', {
+      success: recaptchaData.success,
+      score: recaptchaData.score,
+      action: recaptchaData.action,
+      challenge_ts: recaptchaData.challenge_ts,
+      hostname: recaptchaData.hostname,
+      'error-codes': recaptchaData['error-codes']
+    });
+
     if (!recaptchaData.success || recaptchaData.score < 0.5) {
+      console.warn('reCAPTCHA verification failed:', {
+        success: recaptchaData.success,
+        score: recaptchaData.score,
+        errorCodes: recaptchaData['error-codes'],
+        reason: !recaptchaData.success ? 'Verification failed' : `Score too low: ${recaptchaData.score}`
+      });
+
       return NextResponse.json(
-        { error: "reCAPTCHA verification failed" },
+        {
+          error: "reCAPTCHA verification failed",
+          details: process.env.NODE_ENV === 'development' ? {
+            success: recaptchaData.success,
+            score: recaptchaData.score,
+            errorCodes: recaptchaData['error-codes']
+          } : undefined
+        },
         { status: 400 }
       );
     }
