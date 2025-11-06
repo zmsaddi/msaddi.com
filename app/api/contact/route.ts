@@ -14,7 +14,7 @@ const contactSchema = z.object({
   subject: z.string().min(3),
   message: z.string().min(20),
   recaptchaToken: z.string(),
-  locale: z.enum(['en', 'ar', 'tr']).optional().default('en'),
+  locale: z.enum(['en', 'ar', 'tr', 'fr', 'de', 'es', 'it', 'pt', 'nl']).optional().default('en'),
 });
 
 export async function POST(request: NextRequest) {
@@ -154,13 +154,19 @@ export async function POST(request: NextRequest) {
     }
 
     // Generate company notification email using template
+    // Map locale to supported email template language (en, ar, tr)
+    // For languages without email templates (fr, de, es, it, pt, nl), fallback to English
+    const emailLocale: EmailLocale = ['en', 'ar', 'tr'].includes(validatedData.locale)
+      ? validatedData.locale as EmailLocale
+      : 'en';
+
     const companyEmail = getCompanyNotificationEmail({
       name: safeName,
       email: safeEmail,
       phone: safePhone,
       subject: safeSubject,
       message: safeMessage,
-      locale: validatedData.locale as EmailLocale
+      locale: emailLocale
     });
 
     // Send email to company with attachment
@@ -182,8 +188,9 @@ export async function POST(request: NextRequest) {
     }
 
     // Generate user confirmation email using template with user's language
+    // Uses emailLocale (mapped to en/ar/tr) from above
     const userEmail = getUserConfirmationEmail(
-      validatedData.locale as EmailLocale,
+      emailLocale,
       {
         name: safeName,
         email: safeEmail,
