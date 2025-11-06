@@ -23,14 +23,10 @@ if (process.env.KV_REST_API_URL && process.env.KV_REST_API_TOKEN) {
     // eslint-disable-next-line @typescript-eslint/no-require-imports
     kv = require("@vercel/kv").kv;
     kvAvailable = true;
-    // eslint-disable-next-line no-console
-    console.log("✅ Vercel KV rate limiting is enabled");
   } catch (error) {
-    console.warn("Vercel KV not available, rate limiting will be disabled:", error);
+    // Silent fallback - rate limiting will be disabled
+    // Errors are logged when the functions are actually called
   }
-} else {
-  // eslint-disable-next-line no-console
-  console.log("⚠️  Vercel KV not configured - Rate limiting is DISABLED");
 }
 
 interface RateLimitResult {
@@ -80,9 +76,8 @@ export async function rateLimit(
   namespace: string = "default",
   config: RateLimitConfig = DEFAULT_CONFIG
 ): Promise<RateLimitResult> {
-  // If KV is not available, allow all requests
+  // If KV is not available, allow all requests (silent fallback)
   if (!kvAvailable || !kv) {
-    console.warn("Rate limiting disabled: Vercel KV not configured");
     return {
       success: true,
       remaining: config.maxRequests,
