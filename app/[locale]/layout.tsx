@@ -27,27 +27,6 @@ export default async function LocaleLayout({
 
   return (
     <>
-      {/* ⚡ Performance: Conditional Arabic Font Preloading */}
-      {isArabic && (
-        <>
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-          <link
-            rel="preload"
-            href="https://fonts.gstatic.com/s/cairo/v28/SLXgc1nY6HkvalIhTp2mxdt0UX8.woff2"
-            as="font"
-            type="font/woff2"
-            crossOrigin="anonymous"
-          />
-          <link
-            rel="preload"
-            href="https://fonts.gstatic.com/s/tajawal/v9/Iurf6YBj_oCad4k1l_6gLrZjiLlJ-G0.woff2"
-            as="font"
-            type="font/woff2"
-            crossOrigin="anonymous"
-          />
-        </>
-      )}
       <NextIntlClientProvider locale={locale} messages={messages}>
         <LayoutDirection />
         <ThemeProvider
