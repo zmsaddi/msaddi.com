@@ -23,7 +23,7 @@ if (process.env.KV_REST_API_URL && process.env.KV_REST_API_TOKEN) {
     // eslint-disable-next-line @typescript-eslint/no-require-imports
     kv = require("@vercel/kv").kv;
     kvAvailable = true;
-  } catch (error) {
+  } catch {
     // Silent fallback - rate limiting will be disabled
     // Errors are logged when the functions are actually called
   }
