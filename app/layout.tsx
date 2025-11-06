@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   creator: "MSADDI.EST",
   publisher: "MSADDI.EST",
   alternates: {
-    canonical: "https://www.msaddi.com",
+    canonical: "https://www.msaddi.com/en",
     languages: {
       'en': 'https://www.msaddi.com/en',
       'ar': 'https://www.msaddi.com/ar',

@@ -1,11 +1,31 @@
 import { NextResponse } from "next/server";
 import { env } from "@/lib/env";
+import { locales } from "@/config/locales";
 
-export async function GET() {
+/**
+ * Language-specific sitemap generation
+ * Generates a sitemap for a single language
+ *
+ * Benefits:
+ * - Faster crawling (Google can parallelize)
+ * - Better organization
+ * - Easier debugging per language
+ */
+export async function GET(
+  request: Request,
+  { params }: { params: { locale: string } }
+) {
+  const { locale } = params;
+
+  // Validate locale
+  if (!locales.includes(locale as any)) {
+    return new NextResponse("Invalid locale", { status: 404 });
+  }
+
   const baseUrl = env.NEXT_PUBLIC_SITE_URL;
-  const languages = ["en", "ar", "tr", "fr", "de", "es", "it", "nl", "pt"];
+  const currentDate = new Date().toISOString().split('T')[0];
 
-  // Main pages with their priorities and change frequencies for better SEO
+  // Main pages
   const mainPages = [
     { path: "", priority: "1.0", changefreq: "daily" },
     { path: "/services", priority: "0.9", changefreq: "weekly" },
@@ -15,7 +35,7 @@ export async function GET() {
     { path: "/terms", priority: "0.5", changefreq: "yearly" },
   ];
 
-  // Service detail pages - ALL 9 languages
+  // Service detail pages
   const servicePages = [
     { slug: "laser-cutting", priority: "0.9", changefreq: "weekly" },
     { slug: "cnc-bending", priority: "0.9", changefreq: "weekly" },
@@ -23,50 +43,47 @@ export async function GET() {
     { slug: "custom-fabrication", priority: "0.9", changefreq: "weekly" },
   ];
 
-  const currentDate = new Date().toISOString().split('T')[0]; // Format: YYYY-MM-DD
-
-  // Helper function to generate URL entries with hreflang
-  const generateUrlEntry = (path: string, priority: string, changefreq: string, includeImage = false) => {
-    return languages
-      .map(
-        (lang) => `
-  <url>
-    <loc>${baseUrl}/${lang}${path}</loc>
-    <lastmod>${currentDate}</lastmod>
-    <changefreq>${changefreq}</changefreq>
-    <priority>${priority}</priority>${includeImage && path === "" ? `
-    <image:image>
-      <image:loc>${baseUrl}/logo.png</image:loc>
-      <image:title>MSADDI.EST Logo</image:title>
-      <image:caption>MSADDI.EST - Leading Sheet Metal Fabrication in Syria</image:caption>
-    </image:image>` : ""}${languages
-      .map(
-        (altLang) => `
-    <xhtml:link
-      rel="alternate"
-      hreflang="${altLang}"
-      href="${baseUrl}/${altLang}${path}" />`
-      )
-      .join("")}
-    <xhtml:link
-      rel="alternate"
-      hreflang="x-default"
-      href="${baseUrl}/en${path}" />
-  </url>`
-      )
-      .join("");
-  };
+  // Generate all page URLs for this locale
+  const allPages = [
+    ...mainPages,
+    ...servicePages.map((s) => ({ path: `/services/${s.slug}`, priority: s.priority, changefreq: s.changefreq })),
+  ];
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
-  <!-- Main Pages - All 9 Languages (${languages.length * mainPages.length} URLs) -->
-  ${mainPages.map((page) => generateUrlEntry(page.path, page.priority, page.changefreq, page.path === "")).join("")}
-
-  <!-- Service Detail Pages - All 9 Languages (${languages.length * servicePages.length} URLs) -->
-  ${servicePages.map((service) => generateUrlEntry(`/services/${service.slug}`, service.priority, service.changefreq)).join("")}
+  <!-- Language: ${locale.toUpperCase()} - ${allPages.length} URLs -->
+  ${allPages
+    .map(
+      (page) => `
+  <url>
+    <loc>${baseUrl}/${locale}${page.path}</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>${page.changefreq}</changefreq>
+    <priority>${page.priority}</priority>${page.path === "" ? `
+    <image:image>
+      <image:loc>${baseUrl}/logo.png</image:loc>
+      <image:title>MSADDI.EST Logo</image:title>
+      <image:caption>MSADDI.EST - Leading Sheet Metal Fabrication in Syria</image:caption>
+    </image:image>` : ""}
+    ${locales
+      .map(
+        (altLang) => `
+    <xhtml:link
+      rel="alternate"
+      hreflang="${altLang}"
+      href="${baseUrl}/${altLang}${page.path}" />`
+      )
+      .join("")}
+    <xhtml:link
+      rel="alternate"
+      hreflang="x-default"
+      href="${baseUrl}/en${page.path}" />
+  </url>`
+    )
+    .join("")}
 
 </urlset>`;
 

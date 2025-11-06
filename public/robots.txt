@@ -89,8 +89,22 @@ User-agent: ClaudeBot
 Allow: /
 
 # Sitemap locations (contains all 9 languages)
-Sitemap: https://www.msaddi.com/sitemap.xml
+# Primary sitemap index (points to all language-specific sitemaps)
+Sitemap: https://www.msaddi.com/api/sitemap-index
+
+# Comprehensive sitemap (all languages in one file)
 Sitemap: https://www.msaddi.com/api/sitemap
+
+# Language-specific sitemaps (for better crawl efficiency)
+Sitemap: https://www.msaddi.com/api/sitemap/en
+Sitemap: https://www.msaddi.com/api/sitemap/ar
+Sitemap: https://www.msaddi.com/api/sitemap/tr
+Sitemap: https://www.msaddi.com/api/sitemap/fr
+Sitemap: https://www.msaddi.com/api/sitemap/de
+Sitemap: https://www.msaddi.com/api/sitemap/es
+Sitemap: https://www.msaddi.com/api/sitemap/it
+Sitemap: https://www.msaddi.com/api/sitemap/nl
+Sitemap: https://www.msaddi.com/api/sitemap/pt
 
 # Host specification (primary domain)
 Host: https://www.msaddi.com
