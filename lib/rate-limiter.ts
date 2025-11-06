@@ -16,20 +16,21 @@
 let kv: any = null;
 let kvAvailable = false;
 
-try {
-  // Check if KV environment variables are available
-  if (process.env.KV_REST_API_URL && process.env.KV_REST_API_TOKEN) {
+// Check if KV environment variables are available
+if (process.env.KV_REST_API_URL && process.env.KV_REST_API_TOKEN) {
+  try {
     // Dynamic import to prevent initialization errors
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
     kv = require("@vercel/kv").kv;
     kvAvailable = true;
     // eslint-disable-next-line no-console
     console.log("✅ Vercel KV rate limiting is enabled");
-  } else {
-    // eslint-disable-next-line no-console
-    console.log("⚠️  Vercel KV not configured - Rate limiting is DISABLED");
+  } catch (error) {
+    console.warn("Vercel KV not available, rate limiting will be disabled:", error);
   }
-} catch (error) {
-  console.warn("Vercel KV not available, rate limiting will be disabled:", error);
+} else {
+  // eslint-disable-next-line no-console
+  console.log("⚠️  Vercel KV not configured - Rate limiting is DISABLED");
 }
 
 interface RateLimitResult {
